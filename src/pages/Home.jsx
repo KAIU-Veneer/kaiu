@@ -7,13 +7,23 @@ import useReveal from "../useReveal.js";
 import "./Home.css";
 
 const HERO_IMAGES = [
-  "/assets/image/CANNES WASHED OAK.jpg",
-  "/assets/image/CANNES GOLDEN WALNUT.jpg",
-  "/assets/image/CANNES ECLIPSE.jpg",
-  "/assets/image/OSLO CHAMPAGNE ELM.jpg",
-  "/assets/image/ATHENS SABLE WALNUT.jpg",
-  "/assets/image/BERLIN BLACK OAKWOOD.jpg",
+  "/assets/image/CANNES WASHED OAK.webp",
+  "/assets/image/CANNES GOLDEN WALNUT.webp",
+  "/assets/image/CANNES ECLIPSE.webp",
+  "/assets/image/OSLO CHAMPAGNE ELM.webp",
+  "/assets/image/ATHENS SABLE WALNUT.webp",
+  "/assets/image/BERLIN BLACK OAKWOOD.webp",
 ];
+
+function shortDesc(text) {
+  if (!text) return '';
+  return text.split(/(?<=[.!?])\s/)[0];
+}
+
+function displayName(name, collectionLabel) {
+  const prefix = collectionLabel + ' ';
+  return name.startsWith(prefix) ? name.slice(prefix.length) : name;
+}
 
 export default function Home() {
   const navigate = useNavigate();
@@ -65,8 +75,9 @@ export default function Home() {
                 alt={p.name}
                 loading="lazy"
               />
-              <h4>{p.name}</h4>
-              <span>{lang === "id" ? p.idCut : p.cut}</span>
+              <h4>{displayName(p.name, p.collectionLabel)}</h4>
+              <span className="product-collection-label">{t.productDetail.collection}: {p.collectionLabel.toUpperCase()}</span>
+              <span className="product-short-desc">{shortDesc(lang === "id" ? p.idLongDesc : p.longDesc)}</span>
             </Link>
           ))}
         </div>

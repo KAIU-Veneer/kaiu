@@ -10,7 +10,7 @@ const TRANSLATIONS = {
     home: {
       eyebrow: 'KAIU · Natural Wood Veneer',
       heroTitle1: "Where nature's elegance", heroTitle2: 'meets modern craftsmanship.',
-      learnMore: 'Learn More →',
+      learnMore: 'Learn More',
       collectionsEyebrow: 'Our Collections', collectionsTitle: 'A palette drawn from the grain.',
       collectionsDesc: 'Six veneer families, each cut to reveal the character already living inside the timber — from pale Scandinavian oak to deep, smoke-dark walnut.',
       viewAllCollections: 'View All Collections',
@@ -67,7 +67,7 @@ const TRANSLATIONS = {
     home: {
       eyebrow: 'KAIU · Veneer Kayu Alami',
       heroTitle1: 'Di mana keanggunan alam', heroTitle2: 'bertemu keahlian modern.',
-      learnMore: 'Pelajari Lebih Lanjut →',
+      learnMore: 'Pelajari Lebih Lanjut',
       collectionsEyebrow: 'Koleksi Kami', collectionsTitle: 'Palet warna yang lahir dari serat kayu.',
       collectionsDesc: 'Enam keluarga veneer, masing-masing dipotong untuk menampilkan karakter yang sudah ada dalam kayu — dari oak Skandinavia yang pucat hingga walnut gelap berasap.',
       viewAllCollections: 'Lihat Semua Koleksi',
