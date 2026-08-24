@@ -20,9 +20,19 @@ function displayName(name, collectionLabel) {
 export default function Products() {
   const { t, lang } = useLanguage();
   const [filter, setFilter] = useState('all');
+  const [query, setQuery] = useState('');
+  const [searchOpen, setSearchOpen] = useState(false);
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const ctaRef = useReveal();
-  const filtered = filter === 'all' ? PRODUCTS : PRODUCTS.filter((p) => p.collection === filter);
+  const byCollection = filter === 'all' ? PRODUCTS : PRODUCTS.filter((p) => p.collection === filter);
+  const q = query.trim().toLowerCase();
+  const filtered = q
+    ? byCollection.filter((p) =>
+        [p.name, p.collectionLabel, p.cut, p.idCut, p.species, p.idSpecies]
+          .filter(Boolean)
+          .some((field) => field.toLowerCase().includes(q))
+      )
+    : byCollection;
   const visible = filtered.slice(0, visibleCount);
   const hasMore = filtered.length > visibleCount;
   const activeInfo = filter !== 'all' ? COLLECTION_INFO[filter] : null;
@@ -43,6 +53,29 @@ export default function Products() {
                 {lang === 'id' ? f.idLabel : f.label}
               </button>
             ))}
+          </div>
+          <div className={`product-search${searchOpen || query ? ' open' : ''}`}>
+            <button
+              type="button"
+              className="product-search-toggle"
+              onClick={() => setSearchOpen((o) => !o)}
+              aria-label={lang === 'id' ? 'Cari veneer' : 'Search veneer'}
+            >
+              <svg className="product-search-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+                <circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" strokeWidth="1.6" />
+                <line x1="15.4" y1="15.4" x2="20.5" y2="20.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+              </svg>
+            </button>
+            <input
+              type="search"
+              value={query}
+              onChange={(e) => { setQuery(e.target.value); setVisibleCount(PAGE_SIZE); }}
+              onBlur={() => { if (!query) setSearchOpen(false); }}
+              placeholder={lang === 'id' ? 'Cari veneer…' : 'Search veneer…'}
+              aria-label={lang === 'id' ? 'Cari veneer' : 'Search veneer'}
+              autoFocus={searchOpen}
+              tabIndex={searchOpen || query ? 0 : -1}
+            />
           </div>
         </div>
       </div>
@@ -66,6 +99,13 @@ export default function Products() {
             </Link>
           ))}
         </div>
+        {filtered.length === 0 && (
+          <p className="products-empty">
+            {lang === 'id'
+              ? 'Tidak ada veneer yang cocok dengan pencarian Anda.'
+              : 'No veneer matches your search.'}
+          </p>
+        )}
         {hasMore && (
           <div className="show-more">
             <button className={pillClass('outline')} onClick={() => setVisibleCount((c) => c + PAGE_SIZE_MORE)}>{t.products.showMore}</button>

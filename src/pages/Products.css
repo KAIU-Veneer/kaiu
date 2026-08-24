@@ -19,6 +19,35 @@
 .filters button.active::after,
 .filters button:hover::after { width: 100%; }
 
+.product-search {
+  display: flex; align-items: center; gap: 10px;
+  border-bottom: 1px solid transparent;
+  padding: 6px 2px; min-width: 0;
+  transition: border-color .2s ease;
+}
+.product-search.open { border-bottom-color: rgba(51,40,36,.22); min-width: 240px; }
+.product-search.open:focus-within { border-bottom-color: var(--kaiu-tan); }
+.product-search-toggle {
+  background: none; border: 0; padding: 0; cursor: pointer; flex: none;
+  display: flex; align-items: center; color: var(--kaiu-brown-deep);
+  transition: color .15s ease;
+}
+.product-search-toggle:hover { color: var(--kaiu-tan); }
+.product-search-icon { flex: none; }
+.product-search.open:focus-within .product-search-toggle { color: var(--kaiu-tan); }
+.product-search input {
+  border: 0; background: none; outline: none;
+  width: 0; opacity: 0; padding: 0; pointer-events: none;
+  transition: width .28s ease, opacity .2s ease;
+  font-family: var(--font-label); font-size: 12.5px; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--text-primary);
+}
+.product-search.open input { width: 100%; opacity: 1; pointer-events: auto; }
+.product-search input::placeholder {
+  color: var(--kaiu-brown-deep); opacity: .65; text-transform: none; letter-spacing: .04em;
+}
+.product-search input::-webkit-search-cancel-button { cursor: pointer; }
+
 .products-body { padding: 0 68px 96px; }
 .product-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 32px 24px; }
 .product-card { cursor: pointer; display: block; }
@@ -27,6 +56,7 @@
 .product-card .product-collection-label { display: block; font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--kaiu-tan); margin-top: 4px; }
 .product-card .product-short-desc { display: block; font-size: 12px; line-height: 1.5; color: var(--kaiu-brown-deep); margin-top: 6px; }
 .show-more { text-align: center; margin-top: 56px; }
+.products-empty { text-align: center; padding: 40px 0 8px; font-size: 15px; font-style: italic; color: var(--kaiu-brown-deep); }
 .collection-tagline { margin: -20px 0 0; font-size: 15px; font-style: italic; color: var(--kaiu-tan); }
 
 .collection-banner {
@@ -64,6 +94,7 @@
   .products-header { padding: 32px 20px 0; }
   .products-body { padding: 0 20px 48px; }
   .filters { gap: 18px; }
+  .product-search.open { min-width: 0; width: 100%; }
   .collection-banner { padding: 0 20px 40px; }
   .collection-banner h2 { font-size: 24px; letter-spacing: .14em; }
   .collection-banner p { font-size: 15px; }
