@@ -40,7 +40,7 @@
   width: 0; opacity: 0; padding: 0; pointer-events: none;
   transition: width .28s ease, opacity .2s ease;
   font-family: var(--font-label); font-size: 12.5px; letter-spacing: .08em;
-  text-transform: uppercase; color: var(--text-primary);
+  color: var(--text-primary);
 }
 .product-search.open input { width: 100%; opacity: 1; pointer-events: auto; }
 .product-search input::placeholder {
