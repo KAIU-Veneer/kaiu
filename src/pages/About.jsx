@@ -12,7 +12,6 @@ export default function About() {
   const introRef = useReveal();
   const wideRef = useReveal();
   const missionRef = useReveal();
-  const statsRef = useReveal();
   const ctaRef = useReveal();
   return (
     <div>
@@ -38,15 +37,6 @@ export default function About() {
             <h3>{t.about.missionTitle}</h3>
             <p>{t.about.missionDesc}</p>
           </div>
-        </div>
-
-        <div className="about-stats reveal" ref={statsRef}>
-          {t.about.stats.map(([num, label]) => (
-            <div key={label} className="about-stat">
-              <b>{num}</b>
-              <span>{label}</span>
-            </div>
-          ))}
         </div>
       </div>
       {/* <section className="section-alt reveal" ref={ctaRef}>
