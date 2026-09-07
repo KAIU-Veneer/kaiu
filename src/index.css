@@ -1,5 +1,5 @@
 /* ============================================================
-   KAIU — design tokens (from the KAIU Design System)
+   KAIU design tokens (from the KAIU Design System)
    ============================================================ */
 :root {
   --kaiu-cream: #FFFFFF;
@@ -28,6 +28,65 @@
 
   --section-bg-alt: #EFE7D8;
   --hairline: rgba(51,40,36,.14);
+
+  /* ----------------------------------------------------------
+     Spacing scale. Every page pulls its padding and gaps from
+     here, so the whole site breathes at the same rhythm and
+     only these three blocks change across breakpoints.
+     ---------------------------------------------------------- */
+  --space-xs: 12px;
+  --space-sm: 20px;
+  --space-md: 30px;
+  --space-lg: 44px;
+  --space-xl: 64px;
+
+  --page-x: 68px;       /* horizontal gutter, shared by header, pages, footer */
+  --page-top: 56px;     /* first block on a page */
+  --page-bottom: 96px;  /* last block before the footer */
+  --section-y: 96px;    /* vertical padding of a full-width section */
+  --stack: 80px;        /* between stacked blocks within one page */
+  --gap-grid: 30px;     /* card grid gutter */
+  --gap-split: 70px;    /* two-column split */
+  --header-y: 30px;
+  --footer-y: 48px;
+}
+
+@media (max-width: 900px) {
+  :root {
+    --space-md: 24px;
+    --space-lg: 36px;
+    --space-xl: 48px;
+
+    --page-x: 32px;
+    --page-top: 40px;
+    --page-bottom: 64px;
+    --section-y: 64px;
+    --stack: 56px;
+    --gap-grid: 22px;
+    --gap-split: 36px;
+    --header-y: 16px;
+    --footer-y: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --space-xs: 10px;
+    --space-sm: 16px;
+    --space-md: 20px;
+    --space-lg: 30px;
+    --space-xl: 40px;
+
+    --page-x: 20px;
+    --page-top: 32px;
+    --page-bottom: 56px;
+    --section-y: 48px;
+    --stack: 40px;
+    --gap-grid: 16px;
+    --gap-split: 28px;
+    --header-y: 14px;
+    --footer-y: 32px;
+  }
 }
 
 * { box-sizing: border-box; }
@@ -101,9 +160,18 @@ button { font-family: var(--font-display); cursor: pointer; }
 }
 .app-main { flex: 1; }
 
+/* Standard page padding: top gutter, side gutter, bottom gutter. */
+.page-section { padding: var(--page-top) var(--page-x) var(--page-bottom); }
+
+/* A page whose content continues below (header block only). */
+.page-section-head { padding: var(--page-top) var(--page-x) 0; }
+
+/* A page's closing block, when a head block sits above it. */
+.page-section-body { padding: 0 var(--page-x) var(--page-bottom); }
+
 .section-alt {
   background: var(--section-bg-alt);
-  padding: 96px 68px;
+  padding: var(--section-y) var(--page-x);
   text-align: center;
 }
 .section-alt h2 { margin: 14px auto 0; font-size: 32px; font-weight: 300; }
@@ -117,7 +185,7 @@ button { font-family: var(--font-display); cursor: pointer; }
 }
 .detail-info-cell {
   background: var(--kaiu-cream);
-  padding: 20px 24px;
+  padding: var(--space-sm) var(--space-sm);
 }
 .detail-info-cell .label {
   display: block;

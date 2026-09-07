@@ -10,9 +10,9 @@ const HERO_IMAGES = [
   "/assets/image/CANNES WASHED OAK.webp",
   "/assets/image/CANNES GOLDEN WALNUT.webp",
   "/assets/image/CANNES ECLIPSE.webp",
-  "/assets/image/OSLO CHAMPAGNE ELM.webp",
-  "/assets/image/ATHENS SABLE WALNUT.webp",
-  "/assets/image/BERLIN BLACK OAKWOOD.webp",
+  "/assets/image/ZURICH DOMINO.webp",
+  "/assets/image/ZURICH MIDNIGHT.webp",
+  "/assets/image/ZURICH COLOR POP.webp",
 ];
 
 function shortDesc(text) {
@@ -97,7 +97,7 @@ export default function Home() {
             {t.home.storyCta}
           </Link>
         </div>
-        <img src="/assets/stock images/wood.jpg" className="story-swatch" style={{ objectFit: 'cover', width: '100%', display: 'block' }} alt="" />
+        <img src="/assets/stock images/wood.webp" className="story-swatch" style={{ objectFit: 'cover', width: '100%', display: 'block' }} alt="" />
       </section>
 
       <section className="home-section reveal" ref={worksRef}>

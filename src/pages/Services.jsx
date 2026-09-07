@@ -12,7 +12,7 @@ export default function Services() {
   const ctaRef = useReveal();
   return (
     <div>
-      <div className="services-body">
+      <div className="services-body page-section">
         <span className="eyebrow">{t.services.eyebrow}</span>
         <h1>{t.services.title}</h1>
         <div className="service-list reveal" ref={listRef}>

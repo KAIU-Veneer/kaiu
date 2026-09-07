@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import { Swatch, pillClass } from '../components/Shared.jsx';
 import RoomGallery from '../components/RoomGallery.jsx';
-import { PRODUCTS } from '../data.js';
+import { PRODUCTS, DEFAULT_DIMENSION } from '../data.js';
 import { useLanguage } from '../LanguageContext.jsx';
 import './ProductDetail.css';
 
@@ -16,7 +16,7 @@ export default function ProductDetail() {
 
   if (!product) {
     return (
-      <div className="product-detail" style={{ textAlign: 'center' }}>
+      <div className="product-detail page-section" style={{ textAlign: 'center' }}>
         <p style={{ fontSize: 18, color: 'var(--kaiu-brown-deep)' }}>{t.productDetail.notFound}</p>
         <Link to="/products" className={pillClass('outline')} style={{ marginTop: 20 }}>{t.productDetail.back}</Link>
       </div>
@@ -32,7 +32,7 @@ export default function ProductDetail() {
   ];
 
   return (
-    <div className="product-detail">
+    <div className="product-detail page-section">
       <Link to="/products" className="back-link">{t.productDetail.back}</Link>
       <div className="product-detail-grid">
         <div>
@@ -40,7 +40,11 @@ export default function ProductDetail() {
             <RoomGallery images={product.roomImages} label={product.name} swatchImage={product.image} onBackToSwatch={() => setShowRoom(false)} />
           ) : (
             <div style={{ position: 'relative' }}>
-              <img src={product.image} className="product-detail-swatch" loading="lazy"/>
+              <img
+                src={product.image}
+                className="product-detail-swatch"
+                loading="lazy"
+              />
               {hasRooms && (
                 <button
                   onClick={() => setShowRoom(true)}
@@ -57,6 +61,18 @@ export default function ProductDetail() {
               )}
             </div>
           )}
+          <div className="product-detail-dimrow">
+            <div>
+              <span className="label">{t.productDetail.dimension}</span>
+              <span className="value">{product.dimension || DEFAULT_DIMENSION}</span>
+            </div>
+            <a href={product.hiResImage || product.image} download className="download-hires-link">{t.productDetail.downloadHiRes}</a>
+          </div>
+          <img
+            src={product.hiResImage}
+            className="product-detail-hires"
+            loading="lazy"
+          />
         </div>
         <div>
           <span className="eyebrow">{product.collectionLabel} {t.productDetail.collection}</span>

@@ -1,10 +1,9 @@
-.products-header { padding: 56px 68px 0; }
-.products-header h1 { margin: 10px 0 0; font-size: 40px; font-weight: 300; }
+.products-header h1 { margin: 10px 0 0; font-size: clamp(28px, 4.4vw, 40px); font-weight: 300; }
 .filter-row {
   display: flex; align-items: center; justify-content: space-between;
-  gap: 24px; flex-wrap: wrap; margin: 36px 0 44px;
+  gap: var(--space-md); flex-wrap: wrap; margin: var(--space-lg) 0;
 }
-.filters { display: flex; gap: 28px; flex-wrap: wrap; }
+.filters { display: flex; gap: var(--space-md); flex-wrap: wrap; }
 .filters button {
   background: none; border: 0; font-family: var(--font-label); font-size: 12.5px; font-weight: 600;
   letter-spacing: .1em; text-transform: uppercase; padding: 4px 0 6px; cursor: pointer;
@@ -48,34 +47,33 @@
 }
 .product-search input::-webkit-search-cancel-button { cursor: pointer; }
 
-.products-body { padding: 0 68px 96px; }
-.product-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 32px 24px; }
+.product-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: var(--gap-grid); }
 .product-card { cursor: pointer; display: block; }
 .product-card .swatch { width: 100%; aspect-ratio: 230/330; border-radius: 2px; box-shadow: 0 14px 30px -18px rgba(51,40,36,.35); }
 .product-card h4 { margin: 14px 0 0; font-family: var(--font-label); font-size: 12.5px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
 .product-card .product-collection-label { display: block; font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--kaiu-tan); margin-top: 4px; }
 .product-card .product-short-desc { display: block; font-size: 12px; line-height: 1.5; color: var(--kaiu-brown-deep); margin-top: 6px; }
-.show-more { text-align: center; margin-top: 56px; }
-.products-empty { text-align: center; padding: 40px 0 8px; font-size: 15px; font-style: italic; color: var(--kaiu-brown-deep); }
-.collection-tagline { margin: -20px 0 0; font-size: 15px; font-style: italic; color: var(--kaiu-tan); }
+.show-more { text-align: center; margin-top: var(--space-xl); }
+.products-empty { text-align: center; padding: var(--space-lg) 0 8px; font-size: 15px; font-style: italic; color: var(--kaiu-brown-deep); }
+.collection-tagline { margin: calc(var(--space-sm) * -1) 0 0; font-size: 15px; font-style: italic; color: var(--kaiu-tan); }
 
 .collection-banner {
   text-align: center;
-  padding: 8px 32px 68px;
+  padding: 0 var(--page-x) var(--space-xl);
   margin: 0 auto;
   max-width: 720px;
   animation: collectionFadeIn .5s ease;
 }
 .collection-banner-rule {
-  display: block; width: 36px; height: 1px; margin: 0 auto 22px;
+  display: block; width: 36px; height: 1px; margin: 0 auto var(--space-sm);
   background: var(--kaiu-tan);
 }
 .collection-banner h2 {
-  margin: 0; font-size: 34px; font-weight: 300; letter-spacing: .18em;
+  margin: 0; font-size: clamp(24px, 3.8vw, 34px); font-weight: 300; letter-spacing: .18em;
   font-family: var(--font-display, inherit); color: var(--text-primary);
 }
 .collection-banner p {
-  margin: 16px 0 0; font-size: 17px; font-style: italic; letter-spacing: .01em;
+  margin: var(--space-sm) 0 0; font-size: 17px; font-style: italic; letter-spacing: .01em;
   color: var(--kaiu-brown-deep); font-family: var(--font-display, inherit);
 }
 @keyframes collectionFadeIn {
@@ -83,19 +81,13 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* Padding and gaps come from the tokens in index.css; only the column
+   counts change per breakpoint. */
 @media (max-width: 900px) {
-  .products-header { padding: 40px 32px 0; }
-  .products-body { padding: 0 32px 64px; }
-  .product-grid { grid-template-columns: repeat(2,1fr); gap: 24px 16px; }
-  .collection-banner { padding: 4px 24px 52px; }
-  .collection-banner h2 { font-size: 28px; }
+  .product-grid { grid-template-columns: repeat(2,1fr); }
 }
 @media (max-width: 640px) {
-  .products-header { padding: 32px 20px 0; }
-  .products-body { padding: 0 20px 48px; }
-  .filters { gap: 18px; }
   .product-search.open { min-width: 0; width: 100%; }
-  .collection-banner { padding: 0 20px 40px; }
-  .collection-banner h2 { font-size: 24px; letter-spacing: .14em; }
+  .collection-banner h2 { letter-spacing: .14em; }
   .collection-banner p { font-size: 15px; }
 }

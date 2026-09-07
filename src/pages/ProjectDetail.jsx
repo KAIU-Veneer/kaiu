@@ -12,7 +12,7 @@ export default function ProjectDetail() {
 
   if (!project) {
     return (
-      <div className="project-detail" style={{ textAlign: 'center' }}>
+      <div className="project-detail page-section" style={{ textAlign: 'center' }}>
         <p style={{ fontSize: 18, color: 'var(--kaiu-brown-deep)' }}>{t.projectDetail.notFound}</p>
         <Link to="/projects" className={pillClass('outline')} style={{ marginTop: 20 }}>{t.projectDetail.back}</Link>
       </div>
@@ -27,7 +27,7 @@ export default function ProjectDetail() {
   ];
 
   return (
-    <div className="project-detail">
+    <div className="project-detail page-section">
       <Link to="/projects" className="back-link">{t.projectDetail.back}</Link>
       <div className="project-detail-banner">
         <img src={project.image} className="scene" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} alt={lang === 'id' ? project.idRoom : project.room} />

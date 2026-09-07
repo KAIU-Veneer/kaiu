@@ -39,7 +39,7 @@ export default function Products() {
 
   return (
     <div>
-      <div className="products-header">
+      <div className="products-header page-section-head">
         <span className="eyebrow">{t.products.eyebrow}</span>
         <h1>{t.products.title}</h1>
         <div className="filter-row">
@@ -88,7 +88,7 @@ export default function Products() {
         </div>
       )}
 
-      <div className="products-body">
+      <div className="products-body page-section-body">
         <div className="product-grid">
           {visible.map((p) => (
             <Link key={p.id} to={`/products/${p.id}`} className="product-card">

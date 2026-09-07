@@ -11,11 +11,11 @@ export default function Projects() {
   const ctaRef = useReveal();
   return (
     <div>
-      <div className="projects-header">
+      <div className="projects-header page-section-head">
         <span className="eyebrow">{t.projects.eyebrow}</span>
         <h1>{t.projects.title}</h1>
       </div>
-      <div className="projects-body">
+      <div className="projects-body page-section-body">
         <div className="project-grid">
           {PROJECTS.map((pr) => (
             <ProjectCard key={pr.id} project={pr} to={`/projects/${pr.id}`} />

@@ -1,16 +1,13 @@
-.contact-body {
-  padding: 56px 68px 96px;
-}
 .contact-body h1 {
-  margin: 10px 0 40px;
-  font-size: 40px;
+  margin: 10px 0 var(--space-lg);
+  font-size: clamp(28px, 4.4vw, 40px);
   font-weight: 300;
   max-width: 600px;
 }
 .contact-grid {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
-  gap: 70px;
+  gap: var(--gap-split);
 }
 .contact-info dl {
   margin: 0;
@@ -21,7 +18,7 @@
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--kaiu-tan);
-  margin-top: 30px;
+  margin-top: var(--space-md);
 }
 .contact-info dt:first-child {
   margin-top: 0;
@@ -32,8 +29,8 @@
 }
 .contact-socials {
   display: flex;
-  gap: 14px;
-  margin-top: 34px;
+  gap: var(--space-xs);
+  margin-top: var(--space-md);
 }
 .contact-socials a {
   width: 38px;
@@ -50,7 +47,7 @@
 }
 
 .contact-form-field {
-  margin-bottom: 20px;
+  margin-bottom: var(--space-sm);
 }
 .contact-form-field label {
   display: block;
@@ -83,7 +80,18 @@
   min-height: 110px;
   resize: vertical;
 }
+
+/* Honeypot: off-screen for people, still fillable by bots. */
+.contact-hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .contact-submit {
+  margin-top: var(--space-xs);
   padding: 14px 30px;
   border-radius: var(--radius-pill);
   font-size: 12.5px;
@@ -94,17 +102,27 @@
   background: var(--action-fill);
   color: var(--kaiu-white);
   cursor: pointer;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), background 0.35s ease;
 }
-
-.contact-submit:hover {
+.contact-submit:hover:not(:disabled) {
   transform: translateY(-2px);
   background: var(--action-fill-hover);
-  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.contact-submit:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.contact-error {
+  margin: var(--space-xs) 0 0;
+  font-size: 13px;
+  color: #b23b3b;
 }
 
 .contact-success {
-  padding: 40px;
-  background: var(--kaiu-cream);
+  padding: var(--space-lg);
+  background: var(--section-bg-alt);
+  border-radius: 2px;
 }
 .contact-success p {
   font-size: 16px;
@@ -113,19 +131,7 @@
 }
 
 @media (max-width: 900px) {
-  .contact-body {
-    padding: 40px 32px 64px;
-  }
   .contact-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
-  }
-}
-@media (max-width: 640px) {
-  .contact-body {
-    padding: 32px 20px 56px;
-  }
-  .contact-body h1 {
-    font-size: clamp(28px, 7vw, 34px);
   }
 }

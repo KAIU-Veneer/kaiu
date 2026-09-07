@@ -2,7 +2,7 @@ import React from 'react';
 import { useLanguage } from '../LanguageContext.jsx';
 import './LanguageSwitch.css';
 
-/** EN/ID language pill — click to toggle site language. */
+/** EN/ID language pill: click to toggle site language. */
 export default function LanguageSwitch() {
   const { lang, toggle } = useLanguage();
   return (

@@ -3,12 +3,14 @@ import { useLanguage } from '../LanguageContext.jsx';
 import useReveal from '../useReveal.js';
 import './Contact.css';
 
-// Google Apps Script Web App endpoint (writes each submission as a row in the connected Google Sheet)
-const SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzCdoB0ZOT1TAbTZqn2QfKkr69AF3dFczAWSPKQ6BTBMTv4Yr8z7zqs8IBXxWNJOaRn/exec';
+// Submissions go to our own server function, which validates them and forwards
+// them on. The storage endpoint lives in a server-side env var, never here.
+const CONTACT_ENDPOINT = '/api/contact';
 
 export default function Contact() {
   const { t } = useLanguage();
   const [status, setStatus] = useState('idle'); // idle | sending | sent | error
+  const [errorKey, setErrorKey] = useState('error');
   const infoRef = useReveal();
   const formRef = useReveal();
 
@@ -16,29 +18,42 @@ export default function Contact() {
     e.preventDefault();
     const form = e.target;
     setStatus('sending');
+
     const payload = {
       name: form.name.value,
       email: form.email.value,
-      phone: form.enquiryType.value,
+      phone: form.phone.value,
       message: form.message.value,
+      company: form.company.value, // honeypot, left empty by real visitors
     };
+
     try {
-      await fetch(SHEET_ENDPOINT, {
+      const res = await fetch(CONTACT_ENDPOINT, {
         method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'text/plain' },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
       });
-      // no-cors gives an opaque response (can't check res.ok), so treat the request completing as success
-      setStatus('sent');
-      form.reset();
+      const data = await res.json().catch(() => ({}));
+
+      if (res.ok && data.ok) {
+        setStatus('sent');
+        form.reset();
+        return;
+      }
+      setErrorKey(
+        res.status === 429 ? 'errorRateLimited'
+          : data.error === 'validation_failed' ? 'errorValidation'
+            : 'error'
+      );
+      setStatus('error');
     } catch {
+      setErrorKey('errorNetwork');
       setStatus('error');
     }
   };
 
   return (
-    <div className="contact-body">
+    <div className="contact-body page-section">
       <span className="eyebrow">{t.contact.eyebrow}</span>
       <h1>{t.contact.title}</h1>
       <div className="contact-grid">
@@ -54,8 +69,8 @@ export default function Contact() {
             <dd>{t.contact.hoursValue}</dd>
           </dl>
           <div className="contact-socials">
-            <a href="https://www.instagram.com/kaiuveneer/" aria-label="Instagram"><img src="/assets/icons/instagram.svg" alt="Instagram" /></a>
-            <a href="https://wa.me/628131205377" aria-label="WhatsApp"><img src="/assets/icons/whatsapp.svg" alt="WhatsApp" /></a>
+            <a href="https://www.instagram.com/kaiuveneer/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><img src="/assets/icons/instagram.svg" alt="Instagram" /></a>
+            <a href="https://wa.me/628131205377" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><img src="/assets/icons/whatsapp.svg" alt="WhatsApp" /></a>
           </div>
         </div>
 
@@ -64,27 +79,36 @@ export default function Contact() {
             <p>{t.contact.success}</p>
           </div>
         ) : (
-          <form className="reveal" ref={formRef} onSubmit={handleSubmit}>
+          <form className="reveal" ref={formRef} onSubmit={handleSubmit} noValidate={false}>
             <div className="contact-form-field">
-              <label>{t.contact.fullName}</label>
-              <input type="text" name="name" required placeholder={t.contact.fullNamePh} />
+              <label htmlFor="contact-name">{t.contact.fullName}</label>
+              <input id="contact-name" type="text" name="name" required maxLength={100} autoComplete="name" placeholder={t.contact.fullNamePh} />
             </div>
             <div className="contact-form-field">
-              <label>{t.contact.emailField}</label>
-              <input type="email" name="email" required placeholder={t.contact.emailPh} />
+              <label htmlFor="contact-email">{t.contact.emailField}</label>
+              <input id="contact-email" type="email" name="email" required maxLength={254} autoComplete="email" placeholder={t.contact.emailPh} />
             </div>
             <div className="contact-form-field">
-              <label>{t.contact.enquiryType}</label>
-              <input type="tel" name="enquiryType" placeholder={t.contact.enquiryPh} />
+              <label htmlFor="contact-phone">{t.contact.enquiryType}</label>
+              <input id="contact-phone" type="tel" name="phone" maxLength={40} autoComplete="tel" placeholder={t.contact.enquiryPh} />
             </div>
             <div className="contact-form-field">
-              <label>{t.contact.message}</label>
-              <textarea name="message" required placeholder={t.contact.messagePh} />
+              <label htmlFor="contact-message">{t.contact.message}</label>
+              <textarea id="contact-message" name="message" required maxLength={4000} placeholder={t.contact.messagePh} />
             </div>
+
+            {/* Honeypot: hidden from people, tempting to bots. */}
+            <div className="contact-hp" aria-hidden="true">
+              <label htmlFor="contact-company">Company</label>
+              <input id="contact-company" type="text" name="company" tabIndex={-1} autoComplete="off" />
+            </div>
+
             <button type="submit" className="contact-submit" disabled={status === 'sending'}>
               {status === 'sending' ? t.contact.sending : t.contact.send}
             </button>
-            {status === 'error' && <p style={{ color: '#b23b3b', fontSize: 13, marginTop: 10 }}>{t.contact.error}</p>}
+            {status === 'error' && (
+              <p className="contact-error" role="alert">{t.contact[errorKey] || t.contact.error}</p>
+            )}
           </form>
         )}
       </div>

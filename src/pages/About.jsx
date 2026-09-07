@@ -15,7 +15,7 @@ export default function About() {
   const ctaRef = useReveal();
   return (
     <div>
-      <div className="about-hero">
+      <div className="about-hero page-section">
         <div className="about-intro reveal" ref={introRef}>
           <div>
             <span className="eyebrow">{t.about.eyebrow}</span>
@@ -23,15 +23,15 @@ export default function About() {
             <p>{t.about.p1}</p>
             <p>{t.about.p2}</p>
           </div>
-          <img src="/assets/stock images/about-intro.jpg" className="about-swatch-tall" style={{ objectFit: 'cover', width: '100%', display: 'block' }} alt="" />
+          <img src="/assets/stock images/about-intro.webp" className="about-swatch-tall" style={{ objectFit: 'cover', width: '100%', display: 'block' }} alt="" />
         </div>
 
         <div className="reveal" ref={wideRef}>
-          <img src="/assets/stock images/about-wide.jpg" className="about-wide" style={{ objectFit: 'cover', width: '100%', display: 'block' }} alt="" />
+          <img src="/assets/stock images/about-wide.webp" className="about-wide" style={{ objectFit: 'cover', width: '100%', display: 'block' }} alt="" />
         </div>
 
         <div className="about-mission reveal" ref={missionRef}>
-          <img src="/assets/stock images/about-mission.jpg" className="swatch" style={{ objectFit: 'cover', width: '100%', display: 'block' }} alt="" />
+          <img src="/assets/stock images/about-mission.webp" className="swatch" style={{ objectFit: 'cover', width: '100%', display: 'block' }} alt="" />
           <div>
             <span className="eyebrow">{t.about.missionEyebrow}</span>
             <h3>{t.about.missionTitle}</h3>

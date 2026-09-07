@@ -1,20 +1,24 @@
-.product-detail { padding: 56px 68px 96px; }
-.product-detail-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 70px; margin-top: 34px; align-items: flex-start; }
+.product-detail-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: var(--gap-split); margin-top: var(--space-md); align-items: flex-start; }
 .product-detail-swatch { width: 100%; aspect-ratio: 1/1.1; border-radius: 2px; }
-.product-detail h1 { margin: 12px 0 0; font-size: 38px; font-weight: 300; }
+.product-detail h1 { margin: var(--space-xs) 0 0; font-size: clamp(28px, 4.2vw, 38px); font-weight: 300; }
 .product-detail-cut { display: block; margin-top: 8px; font-size: 14px; color: var(--kaiu-brown-deep); letter-spacing: .04em; }
-.product-detail-desc { margin-top: 26px; color: var(--kaiu-brown-deep); font-size: 16px; max-width: 520px; line-height: 1.75; }
-.product-detail .detail-info-grid { margin-top: 34px; max-width: 480px; }
-.product-detail-cta { margin-top: 34px; }
+.product-detail-desc { margin-top: var(--space-md); color: var(--kaiu-brown-deep); font-size: 16px; max-width: 520px; line-height: 1.75; }
+.product-detail .detail-info-grid { margin-top: var(--space-md); max-width: 480px; }
+.product-detail-cta { margin-top: var(--space-md); }
+.product-detail-dimrow { display: flex; justify-content: space-between; align-items: center; margin-top: 18px; padding-top: var(--space-sm); border-top: 1px solid rgba(51,40,36,0.15); }
+.product-detail-dimrow .label { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--kaiu-brown-deep); }
+.product-detail-dimrow .value { display: block; font-size: 14px; margin-top: 6px; }
+.download-hires-link { font-size: 14px; font-weight: 500; color: var(--kaiu-ink); text-decoration: underline; }
+.download-hires-link:hover { color: var(--kaiu-brown-mid); }
+.product-detail-hires { display: block; width: 100%; margin-top: var(--space-sm); border-radius: 2px; }
 
+/* Padding and gaps come from the tokens in index.css; only the layout
+   changes per breakpoint. */
 @media (max-width: 900px) {
-  .product-detail { padding: 40px 32px 64px; }
-  .product-detail-grid { grid-template-columns: 1fr; gap: 32px; margin-top: 24px; }
+  .product-detail-grid { grid-template-columns: 1fr; }
   .product-detail-swatch { max-width: 420px; margin: 0 auto; aspect-ratio: 4/3; }
 }
 @media (max-width: 640px) {
-  .product-detail { padding: 32px 20px 56px; }
-  .product-detail h1 { font-size: clamp(28px, 7vw, 34px); }
   .product-detail-desc { max-width: none; }
   .product-detail .detail-info-grid { max-width: none; grid-template-columns: 1fr 1fr; }
 }

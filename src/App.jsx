@@ -13,6 +13,7 @@ import Projects from './pages/Projects.jsx';
 import ProjectDetail from './pages/ProjectDetail.jsx';
 import Services from './pages/Services.jsx';
 import Contact from './pages/Contact.jsx';
+import NotFound from './pages/NotFound.jsx';
 
 export default function App() {
   return (
@@ -30,6 +31,7 @@ export default function App() {
           <Route path="/projects/:id" element={<ProjectDetail />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
       <Footer />
