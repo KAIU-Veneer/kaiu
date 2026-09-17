@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
-import { Swatch, pillClass } from '../components/Shared.jsx';
-import RoomGallery from '../components/RoomGallery.jsx';
+import { pillClass } from '../components/Shared.jsx';
+import ProductVisual from '../components/ProductVisual.jsx';
 import { PRODUCTS, DEFAULT_DIMENSION } from '../data.js';
 import { useLanguage } from '../LanguageContext.jsx';
+import { webSheetUrl, fallBackTo } from '../hiRes.js';
 import './ProductDetail.css';
 
 export default function ProductDetail() {
@@ -11,8 +12,6 @@ export default function ProductDetail() {
   const navigate = useNavigate();
   const { t, lang } = useLanguage();
   const product = PRODUCTS.find((p) => p.id === id);
-  const [showRoom, setShowRoom] = useState(false);
-  const hasRooms = product && product.roomImages && product.roomImages.length > 0;
 
   if (!product) {
     return (
@@ -36,31 +35,7 @@ export default function ProductDetail() {
       <Link to="/products" className="back-link">{t.productDetail.back}</Link>
       <div className="product-detail-grid">
         <div>
-          {showRoom ? (
-            <RoomGallery images={product.roomImages} label={product.name} swatchImage={product.image} onBackToSwatch={() => setShowRoom(false)} />
-          ) : (
-            <div style={{ position: 'relative' }}>
-              <img
-                src={product.image}
-                className="product-detail-swatch"
-                loading="lazy"
-              />
-              {hasRooms && (
-                <button
-                  onClick={() => setShowRoom(true)}
-                  aria-label="View in room"
-                  style={{
-                    position: 'absolute', right: 12, top: '50%', transform: 'translateY(-50%)',
-                    width: 40, height: 40, borderRadius: '50%', border: 'none',
-                    background: 'rgba(255,255,255,0.85)', color: '#332824', fontSize: 18,
-                    cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  }}
-                >
-                  ›
-                </button>
-              )}
-            </div>
-          )}
+          <ProductVisual product={product} />
           <div className="product-detail-dimrow">
             <div>
               <span className="label">{t.productDetail.dimension}</span>
@@ -68,11 +43,16 @@ export default function ProductDetail() {
             </div>
             <a href={product.hiResImage || product.image} download className="download-hires-link">{t.productDetail.downloadHiRes}</a>
           </div>
-          <img
-            src={product.hiResImage}
-            className="product-detail-hires"
-            loading="lazy"
-          />
+          {product.hiResImage && (
+            <img
+              key={product.hiResImage}
+              src={webSheetUrl(product.hiResImage)}
+              onError={fallBackTo(product.hiResImage)}
+              className="product-detail-hires"
+              alt=""
+              loading="lazy"
+            />
+          )}
         </div>
         <div>
           <span className="eyebrow">{product.collectionLabel} {t.productDetail.collection}</span>

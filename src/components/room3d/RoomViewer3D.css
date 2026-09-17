@@ -1,0 +1,145 @@
+.room3d {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 2px;
+  overflow: hidden;
+  background: var(--section-bg-alt);
+  outline: none;
+}
+.room3d:focus-visible { box-shadow: 0 0 0 2px var(--kaiu-tan); }
+.room3d.is-fullscreen { aspect-ratio: auto; width: 100vw; height: 100vh; border-radius: 0; }
+
+.room3d-canvas,
+.room3d-canvas canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Loading and error states */
+.room3d-state {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  text-align: center;
+  background: var(--section-bg-alt);
+}
+.room3d-state-label {
+  font-family: var(--font-label);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--kaiu-brown-deep);
+}
+.room3d-progress {
+  width: min(180px, 60%);
+  height: 2px;
+  background: var(--hairline);
+  overflow: hidden;
+}
+.room3d-progress span {
+  display: block;
+  height: 100%;
+  background: var(--kaiu-tan);
+  transition: width 0.2s ease;
+}
+
+/* Round glass buttons: arrows and fullscreen */
+.room3d-icon {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.88);
+  color: var(--kaiu-ink);
+  font-size: 22px;
+  line-height: 1;
+  box-shadow: 0 4px 14px rgba(51, 40, 36, 0.18);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.room3d-icon:hover { background: #fff; transform: scale(1.06); }
+.room3d-icon svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.room3d-prev { left: 12px; top: 50%; margin-top: -20px; }
+.room3d-next { right: 12px; top: 50%; margin-top: -20px; }
+.room3d-fullscreen { top: 12px; right: 12px; }
+
+/* Back-to-swatch thumbnail */
+.room3d-swatch {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  width: 52px;
+  height: 52px;
+  border-radius: 4px;
+  border: 2px solid #fff;
+  padding: 0;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+.room3d-swatch img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* Bottom bar: angle dots + close-up toggle */
+.room3d-bar {
+  position: absolute;
+  left: 50%;
+  bottom: 14px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 6px 6px 6px 16px;
+  border-radius: var(--radius-pill);
+  background: rgba(51, 40, 36, 0.78);
+  backdrop-filter: blur(8px);
+  white-space: nowrap;
+}
+.room3d-dots { display: flex; gap: 8px; }
+.room3d-dots button {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.room3d-dots button:hover { background: rgba(255, 255, 255, 0.75); }
+.room3d-dots button.active { background: #fff; transform: scale(1.25); }
+
+.room3d-close {
+  padding: 9px 16px;
+  border: none;
+  border-radius: var(--radius-pill);
+  background: var(--kaiu-cream);
+  color: var(--kaiu-ink);
+  font-family: var(--font-label);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.room3d-close:hover { background: var(--kaiu-cream-deep); }
+.room3d-close.active { background: var(--kaiu-tan); color: #fff; }
+
+@media (max-width: 640px) {
+  .room3d-icon { width: 34px; height: 34px; font-size: 19px; }
+  .room3d-prev, .room3d-next { margin-top: -17px; }
+  .room3d-swatch { width: 42px; height: 42px; }
+  .room3d-bar { bottom: 10px; gap: var(--space-xs); padding: 5px 5px 5px 12px; }
+  .room3d-close { padding: 8px 12px; font-size: 10px; }
+}

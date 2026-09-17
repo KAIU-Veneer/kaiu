@@ -3,6 +3,10 @@ dist/
 .vite/
 .vercel/
 
+# Blender exports. Too large for GitHub (100 MB file limit); run
+# `npm run model` to produce the web-ready public/models/room.glb.
+models-src/
+
 # Secrets: never commit real values, only .env.example
 .env
 .env.*

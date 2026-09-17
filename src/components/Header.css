@@ -3,8 +3,6 @@
   top: 0;
   z-index: 100;
   min-height: 56px;
-  background: rgba(255,255,255,.86);
-  backdrop-filter: blur(10px);
   display: flex;
   align-items: center;
   /* Shares --page-x with every page, so the logo lines up with page content. */
@@ -12,6 +10,17 @@
   justify-content: space-between;
   gap: var(--space-md);
   flex-wrap: wrap;
+}
+/* The frosted backdrop lives on a pseudo-element: backdrop-filter on the
+   header itself would make it the containing block for the fixed mobile
+   drawer, so the off-screen drawer would widen the page. */
+.site-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: rgba(255,255,255,.86);
+  backdrop-filter: blur(10px);
 }
 .site-header .logo-link { display: flex; align-items: center;}
 .site-header .logo-img { height: 26px; display: block;}

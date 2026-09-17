@@ -40,6 +40,13 @@ const TRANSLATIONS = {
       bestFor: 'Best For', finish: 'Finish', requestSample: 'Request a Sample', notFound: 'Product not found.',
       dimension: 'Dimension', downloadHiRes: 'Download Hi-Res',
     },
+    viewer: {
+      open: 'View in 3D Room', title: '3D room view', loading: 'Preparing the room',
+      error: 'The 3D room could not be loaded on this device.',
+      closeUp: 'Close-up', roomView: 'Room View', prev: 'Previous angle', next: 'Next angle',
+      angles: 'Camera angles', angle: 'Angle', fullscreen: 'Enter fullscreen', exitFullscreen: 'Exit fullscreen',
+      backToSwatch: 'View veneer swatch',
+    },
     projects: { eyebrow: 'Projects', title: 'Selected Work' },
     projectDetail: {
       back: '← Back to Projects', hotel: 'Mercure Hotel', location: 'Location', veneerUsed: 'Veneer Used',
@@ -108,6 +115,13 @@ const TRANSLATIONS = {
       back: '← Kembali ke Koleksi', collection: 'Koleksi', species: 'Spesies', cutMethod: 'Metode Potong',
       bestFor: 'Cocok Untuk', finish: 'Finishing', requestSample: 'Minta Sampel', notFound: 'Produk tidak ditemukan.',
       dimension: 'Dimensi', downloadHiRes: 'Unduh Resolusi Tinggi',
+    },
+    viewer: {
+      open: 'Lihat di Ruang 3D', title: 'Tampilan ruang 3D', loading: 'Menyiapkan ruangan',
+      error: 'Ruang 3D tidak dapat dimuat di perangkat ini.',
+      closeUp: 'Tampak Dekat', roomView: 'Tampilan Ruang', prev: 'Sudut sebelumnya', next: 'Sudut berikutnya',
+      angles: 'Sudut kamera', angle: 'Sudut', fullscreen: 'Layar penuh', exitFullscreen: 'Keluar layar penuh',
+      backToSwatch: 'Lihat sampel veneer',
     },
     projects: { eyebrow: 'Proyek', title: 'Karya Pilihan' },
     projectDetail: {
