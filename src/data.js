@@ -2227,6 +2227,7 @@ export const PRODUCTS = [
     idCut: 'Oak potongan rift',
     species: 'White Oak (Quercus alba)',
     idSpecies: 'Oak Putih (Quercus alba)',
+    hiResImage: '/assets/hires/CAIRO SOFT WHITE OAK.png',
     image: '/assets/image/CAIRO SOFT WHITE OAK.webp',
     cutMethod: 'Rift-cut',
     idCutMethod: 'Potongan rift',
