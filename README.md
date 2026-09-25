@@ -18,11 +18,12 @@ The dev server runs the `api/` functions itself (see the `kaiu-api-routes` plugi
 
 - `src/App.jsx` is the shell (header/footer) plus `react-router-dom` routes.
 - `src/pages/` holds one `.jsx` and matching `.css` per page: `Home`, `About`, `Products`, `ProductDetail`, `Projects`, `ProjectDetail`, `Services`, `Contact`, `NotFound`.
-- `src/data.js` holds the veneer products, Mercure Hotel project rooms, and services list. Edit copy and colors here.
-- `src/components/` holds `Header`, `Footer`, `Component1` (nav link), `LanguageSwitch`, `RoomViewer3D`, `WhatsAppButton`, and `Shared.jsx` (Swatch, ProjectCard, woodgrain filter).
+- `src/data.js` holds the veneer products, the projects, and the services list. Edit copy and colors here.
+- `src/components/` holds `Header`, `Footer`, `Component1` (nav link), `LanguageSwitch`, `ProductVisual`, `RoomViews`, `WhatsAppButton`, and `Shared.jsx` (Swatch, ProjectCard, woodgrain filter).
 - `src/index.css` holds the design tokens (colors, type, spacing scale) plus shared classes (`.eyebrow`, `.pill-btn`, `.swatch`, `.project-card`, `.page-section`, etc.) reused across pages.
-- `scripts/build-room-model.mjs` turns the Blender export into the web-ready room model (`npm run model`).
-- `scripts/build-veneer-textures.mjs` makes web copies of the hi-res sheets for the 3D room (`npm run textures`).
+- `scripts/build-room-renders.mjs` publishes the room renders you make by hand (`npm run rooms:renders`).
+- `scripts/build-room-views.mjs` renders and composites room images for veneers you have not rendered (`npm run rooms`, `npm run rooms:render`), using the Blender scripts in `scripts/blender/`.
+- `scripts/build-veneer-textures.mjs` makes web copies of the hi-res sheets for the page preview (`npm run textures`).
 - `api/` holds the server-side functions. They run on Vercel in production and inside the dev server locally.
 - `public/assets/` holds the logo, icons, and veneer imagery.
 
@@ -50,30 +51,32 @@ The Apps Script URL lives in the `CONTACT_SHEET_ENDPOINT` environment variable a
 
 Never commit a real `.env`. Only `.env.example` is tracked.
 
-## 3D room viewer
+## Room views
 
-The 3D room is the only room view on the site; the old per-veneer room photos are gone. A product page shows a **View in 3D Room** button once that product has a hi-res sheet (`hiResImage` in `src/data.js`). It opens one shared room (`public/models/room.glb`) and lays that sheet on the veneer wall, so every veneer uses a single model. Visitors can step between four fixed camera angles and a close-up; there is no free orbit.
+A product page shows a **View in Room** button once that veneer has room images. They are Cycles renders of one shared room with the veneer on the feature wall, and visitors step between the camera angles, one image per view.
 
-### Adding a hi-res sheet
+Images come from either of two places, and hand renders always win:
+
+1. **Renders you make** (`npm run rooms:renders`). Put the PNGs in `photos-src/room-renders`, named `<VENEER NAME> <n>.png` (`ATHENS CIDER OAK 1.png`, `... 2.png`, ...). The numbers are the order the views appear; a veneer can have any number of them. The folder sits outside `public/` because the PNGs are hundreds of megabytes and only the WebPs belong in the site.
+2. **Composites** (`npm run rooms`), for veneers with a hi-res sheet but no render of their own. Rendering every veneer from every camera would take hours, so the room is rendered once and each sheet is composited onto it:
+   - **Render once** (`npm run rooms:render`, a few minutes on the GPU). Blender opens the room `.blend` in the background, never saving it, and renders every camera twice: once with the wall a dark grey and once a light grey. It also saves the texture coordinates the wall's Mapping node produces, and a mask of where the wall is. Because light scales with a surface's colour, the two renders give how much light each pixel receives per unit of wall colour: the sun streak, shadows, and the wall's bounce light.
+   - **Composite per veneer** (a few seconds each). The sheet is sampled exactly as Blender's Image Texture node would, multiplied by that light, and passed through the `.blend`'s own colour settings (AgX, exposure). The only thing a composite can't reproduce is a veneer's colour being reflected in shiny objects; bounce light onto the floor and ceiling uses the sheet's average colour.
+
+Both write `public/assets/room-views/<VENEER NAME>/<n>.webp` and then rebuild `src/roomViews.json`, which lists each veneer and how many views it has. A product finds its folder by its hi-res sheet name, or failing that by its own name in capitals. The viewer is `src/components/RoomViews.jsx`.
+
+### Adding a veneer
 
 1. Put the full-sheet photo in `public/assets/hires/`, named exactly like the product's swatch in `public/assets/image/` (e.g. `ATHENS ALMOND OAK.png` for `ATHENS ALMOND OAK.webp`).
 2. Add `hiResImage: '/assets/hires/ATHENS ALMOND OAK.png'` to that product in `src/data.js`. That file is what "Download Hi-Res" serves.
-3. Run `npm run textures`. It writes a light WebP copy to `public/assets/hires-web/`, which the 3D room and the page preview use. Without it the site still works, just slower, because it falls back to the full sheet.
+3. Run `npm run textures` (the page's hi-res preview) and `npm run rooms` (the room images). Both only process what's new. If you rendered the veneer yourself, run `npm run rooms:renders` instead of `npm run rooms`.
 
-The viewer lives in `src/components/RoomViewer3D.jsx` and is lazy-loaded, so three.js and the model download only when someone clicks the button.
+### Changing the room
 
-### Updating the room from Blender
+Edit the room `.blend` (cameras, lighting, furniture), then run `npm run rooms:render`. It re-renders the passes and re-composites every veneer that has no hand render.
 
-1. Give the veneer wall faces their own material. Name it `KAIU_Veneer` (the script also accepts the current `Material.001`). The wall does not need to be a separate object; a separate material is enough.
-2. Add your cameras. The first four, in name order, become the angles (name them `View 1` to `View 4`). Optionally add one with "close" in its name, e.g. `Closeup`, for the close-up; otherwise it is placed automatically in front of the wall.
-3. File > Export > glTF 2.0 (.glb). Under **Include**, tick **Cameras**. Save to `models-src/kaiu new model.glb`.
-4. Run `npm run model`. It writes `public/models/room.glb` and prints what it kept.
-
-The build script (`scripts/build-room-model.mjs`) keeps only the room holding the wall and drops anything outside it, simplifies dense meshes, converts textures to 1K WebP, and records the wall's real size so veneer is laid at true scale. If the export has no cameras, the viewer falls back to four built-in angles around the wall.
-
-`models-src/` is git-ignored: raw exports are far over GitHub's 100 MB file limit. Commit only the optimised `public/models/room.glb`.
-
-Lighting is set in code, not taken from Blender. Each sheet is laid at true 2440 x 640 mm (short side 640 mm, long side by the photo's aspect ratio), sheets are mirrored where they meet like book-matched leaves, and the photo's uneven lighting is flattened so seams don't show. Tune `SHEET_SHORT_M` in the viewer to change the scale.
+- The veneer wall needs its own material (`Material.001`, or `KAIU_Veneer`) with an Image Texture fed through a Mapping node. Sheet placement and scale come from that Mapping node.
+- Every camera in the file becomes a view. Set their order on the site with `VIEW_ORDER` in `scripts/build-room-views.mjs`.
+- The `.blend` is read from `ROOM_BLEND` (default: two folders above this repo) and Blender from `BLENDER` (default: the Blender 5.2 install path). Render passes go to `models-src/room-passes/`, which is git-ignored.
 
 ## Notes
 

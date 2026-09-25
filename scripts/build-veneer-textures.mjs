@@ -19,7 +19,7 @@ import { mb } from './lib/format.mjs';
 
 const SRC = path.join('public', HIRES_DIR);
 const OUT = path.join('public', HIRES_WEB_DIR);
-const LONG_SIDE = 3072; // ~1.25 px per mm across a 2440 mm sheet: crisp in close-up
+const LONG_SIDE = 3072; // ~1.25 px per mm across a 2440 mm sheet
 const QUALITY = 82;
 
 const isUpToDate = (src, out) => fs.existsSync(out) && fs.statSync(out).mtimeMs >= fs.statSync(src).mtimeMs;

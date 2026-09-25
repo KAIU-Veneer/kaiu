@@ -7,6 +7,10 @@ dist/
 # `npm run model` to produce the web-ready public/models/room.glb.
 models-src/
 
+# Full-size project photographs. The site ships the WebP versions in
+# public/assets/projects; keep the originals here, out of the build.
+photos-src/
+
 # Secrets: never commit real values, only .env.example
 .env
 .env.*

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../LanguageContext.jsx';
+import useImageCycle from '../useImageCycle.js';
 
 /** Wood-grain SVG turbulence filter, shared by every page. */
 export function WoodgrainFilter() {
@@ -29,16 +30,42 @@ export const Swatch = ({ color, className, style }) => (
 /** "View All" / "Learn More" style capsule button/link. */
 export const pillClass = (variant) => `pill-btn${variant === 'outline' ? ' pill-btn-outline' : ''}`;
 
+/**
+ * Photographs stacked in one frame, crossfading from one to the next. The
+ * frame's size comes from whatever class the caller passes.
+ */
+export function PhotoCycle({ images, alt, className }) {
+  const [ref, shown] = useImageCycle(images.length);
+  return (
+    <div className={`photo-cycle${className ? ' ' + className : ''}`} ref={ref}>
+      {images.map((img, i) => (
+        <img
+          key={img.src}
+          src={img.src}
+          width={img.w}
+          height={img.h}
+          className={i === shown ? 'is-active' : undefined}
+          alt={i === shown ? alt : ''}
+          loading={i === 0 ? undefined : 'lazy'}
+          draggable={false}
+        />
+      ))}
+    </div>
+  );
+}
+
+/** A project, its photographs crossfading one into the next on the card. */
 export function ProjectCard({ project, to }) {
   const { lang } = useLanguage();
+  const room = lang === 'id' ? project.idRoom : project.room;
   return (
     <Link to={to} className="project-card">
-      <img src={project.image} className="project-card-scene" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} alt={project.room} />
+      <PhotoCycle images={project.images} alt={`${project.title}, ${room}`} className="project-card-scene" />
       <div className="project-card-shade" />
       <div className="project-card-tag">
         <div>
-          <div className="name">Mercure Hotel</div>
-          <div className="room">{lang === 'id' ? project.idRoom : project.room}</div>
+          <div className="room">{room}</div>
+          <div className="name">{project.title}</div>
         </div>
         <div className="project-card-expand">↗</div>
       </div>

@@ -7,21 +7,18 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "model": "node scripts/build-room-model.mjs",
-    "textures": "node scripts/build-veneer-textures.mjs"
+    "textures": "node scripts/build-veneer-textures.mjs",
+    "rooms": "node scripts/build-room-views.mjs",
+    "rooms:render": "node scripts/build-room-views.mjs --render",
+    "rooms:renders": "node scripts/build-room-renders.mjs"
   },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.22.0",
-    "three": "^0.186.0"
+    "react-router-dom": "^6.22.0"
   },
   "devDependencies": {
-    "@gltf-transform/core": "^4.5.0",
-    "@gltf-transform/extensions": "^4.5.0",
-    "@gltf-transform/functions": "^4.5.0",
     "@vitejs/plugin-react": "^4.2.1",
-    "meshoptimizer": "^1.2.0",
     "sharp": "^0.35.4",
     "vite": "^5.1.0"
   }

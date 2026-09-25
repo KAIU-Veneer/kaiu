@@ -1,11 +1,3 @@
 .projects-header h1 { margin: 10px 0 var(--space-lg); font-size: clamp(28px, 4.4vw, 40px); font-weight: 300; }
-.project-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: var(--gap-grid); }
 
-/* Padding and gaps come from the tokens in index.css; only the column
-   counts change per breakpoint. */
-@media (max-width: 900px) {
-  .project-grid { grid-template-columns: repeat(2,1fr); }
-}
-@media (max-width: 640px) {
-  .project-grid { grid-template-columns: 1fr; }
-}
+/* The project grid itself is in index.css, beside the card it lays out. */

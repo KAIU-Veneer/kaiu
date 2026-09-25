@@ -23,12 +23,6 @@ export default function ProductDetail() {
   }
 
   const shortName = product.name.replace(new RegExp('^' + product.collectionLabel + '\\s+'), '');
-  const rows = [
-    [t.productDetail.species, lang === 'id' ? product.idSpecies : product.species],
-    [t.productDetail.cutMethod, lang === 'id' ? product.idCutMethod : product.cutMethod],
-    [t.productDetail.bestFor, lang === 'id' ? product.idBestFor : product.bestFor],
-    [t.productDetail.finish, lang === 'id' ? product.idFinish : product.finish],
-  ];
 
   return (
     <div className="product-detail page-section">
@@ -59,14 +53,6 @@ export default function ProductDetail() {
           <h1>{shortName}</h1>
           <span className="product-detail-cut">{lang === 'id' ? product.idCut : product.cut}</span>
           <p className="product-detail-desc">{(lang === 'id' ? product.idLongDesc : product.longDesc).split(product.name).join(shortName)}</p>
-          <div className="detail-info-grid">
-            {rows.map(([label, val]) => (
-              <div key={label} className="detail-info-cell">
-                <span className="label">{label}</span>
-                <span className="value">{val}</span>
-              </div>
-            ))}
-          </div>
           <button className={`${pillClass()} product-detail-cta`} onClick={() => navigate('/contact')}>{t.productDetail.requestSample}</button>
         </div>
       </div>

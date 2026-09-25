@@ -1,7 +1,7 @@
 .product-visual { position: relative; }
 .product-visual-swatch { width: 100%; aspect-ratio: 1/1.1; border-radius: 2px; }
 
-.product-visual-3d-btn {
+.product-visual-room-btn {
   position: absolute; left: 12px; bottom: 12px;
   display: inline-flex; align-items: center; gap: 8px;
   padding: 10px 16px; border: none; border-radius: var(--radius-pill);
@@ -10,11 +10,8 @@
   box-shadow: 0 6px 18px rgba(51,40,36,.25);
   transition: background .25s ease, transform .35s cubic-bezier(.22,1,.36,1);
 }
-.product-visual-3d-btn:hover { background: var(--kaiu-brown-mid); transform: translateY(-2px); }
-.product-visual-3d-btn svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linejoin: round; }
-
-/* Holds the space while the 3D viewer's code downloads. */
-.product-visual-loading { width: 100%; aspect-ratio: 4 / 3; border-radius: 2px; background: var(--section-bg-alt); }
+.product-visual-room-btn:hover { background: var(--kaiu-brown-mid); transform: translateY(-2px); }
+.product-visual-room-btn svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
 
 @media (max-width: 900px) {
   .product-visual-swatch { max-width: 420px; margin: 0 auto; aspect-ratio: 4/3; }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { pillClass } from '../components/Shared.jsx';
+import { PhotoCycle, pillClass } from '../components/Shared.jsx';
 import { PROJECTS } from '../data.js';
 import { useLanguage } from '../LanguageContext.jsx';
 import './ProjectDetail.css';
@@ -19,34 +19,55 @@ export default function ProjectDetail() {
     );
   }
 
+  // Indonesian copy lives on the same record under an `id`-prefixed key.
+  const text = (key) => (lang === 'id' ? project[`id${key[0].toUpperCase()}${key.slice(1)}`] : project[key]);
+  const room = text('room');
+  const veneer = text('veneerUsed');
+
+  // Cells without a value are left out rather than shown empty.
   const rows = [
-    [t.projectDetail.location, 'Jakarta, Indonesia'],
-    [t.projectDetail.veneerUsed, lang === 'id' ? project.idVeneerUsed : project.veneerUsed],
-    [t.projectDetail.scope, lang === 'id' ? project.idScope : project.scope],
-    [t.projectDetail.finish, lang === 'id' ? project.idFinish : project.finish],
-  ];
+    [t.projectDetail.client, text('client')],
+    [t.projectDetail.location, text('location')],
+    [
+      t.projectDetail.veneerUsed,
+      project.productId ? <Link to={`/products/${project.productId}`}>{veneer}</Link> : veneer,
+    ],
+    [t.projectDetail.designer, text('designer')],
+  ].filter(([, value]) => value);
 
   return (
     <div className="project-detail page-section">
       <Link to="/projects" className="back-link">{t.projectDetail.back}</Link>
-      <div className="project-detail-banner">
-        <img src={project.image} className="scene" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} alt={lang === 'id' ? project.idRoom : project.room} />
-      </div>
       <div className="project-detail-grid">
+        <PhotoCycle images={project.images} alt={`${project.title}, ${room}`} className="project-detail-lead" />
         <div>
-          <span className="eyebrow">{t.projectDetail.hotel}</span>
-          <h1>{lang === 'id' ? project.idRoom : project.room}</h1>
-          <p className="project-detail-desc">{lang === 'id' ? project.idLongDesc : project.longDesc}</p>
+          <span className="eyebrow">{room}</span>
+          <h1>{project.title}</h1>
+          <p className="project-detail-desc">{text('longDesc')}</p>
+          <div className="detail-info-grid">
+            {rows.map(([label, value]) => (
+              <div key={label} className="detail-info-cell">
+                <span className="label">{label}</span>
+                <span className="value">{value}</span>
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="detail-info-grid">
-          {rows.map(([label, val]) => (
-            <div key={label} className="detail-info-cell">
-              <span className="label">{label}</span>
-              <span className="value">{val}</span>
-            </div>
+      </div>
+      {project.images.length > 1 && (
+        <div className="project-detail-gallery">
+          {project.images.slice(1).map((img, i) => (
+            <img
+              key={img.src}
+              src={img.src}
+              width={img.w}
+              height={img.h}
+              alt={`${project.title}, ${t.projectDetail.photo} ${i + 2}`}
+              loading="lazy"
+            />
           ))}
         </div>
-      </div>
+      )}
     </div>
   );
 }
