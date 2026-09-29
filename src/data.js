@@ -377,6 +377,19 @@ export const PRODUCTS = [
     idLongDesc: "Athens Desert adalah veneer kayu burl bersumber dari Burl Ash Zaitun (Fraxinus excelsior). Finishing poles glossy tinggi memberikan tampilan yang tahan lama dan elegan, cocok untuk aksen dasbor, tatahan mewah, karya seni statement."
   },
   {
+    id: 'athens-dusty-walnut',
+    name: 'Athens Dusty Walnut',
+    collection: 'athens',
+    collectionLabel: 'Athens',
+    cut: 'Flat cut walnut',
+    idCut: 'Walnut potongan flat',
+    species: 'Walnut (Juglans)',
+    idSpecies: 'Walnut (Juglans)',
+    image: '/assets/image/ATHENS DUSTY WALNUT.webp',
+    longDesc: "Athens Dusty Walnut reads as a soft, dusty taupe, its flat-cut grain drifting across the sheet in low, wavering bands rather than sharp cathedrals. The muted tone sits quietly against pale stone and linen, which makes it an easy companion for bedrooms, wardrobes and calm living spaces.",
+    idLongDesc: "Athens Dusty Walnut menampilkan warna taupe lembut keabuan, dengan serat potongan flat yang mengalir dalam pita rendah berombak, bukan pola cathedral yang tegas. Nada warnanya yang kalem berpadu tenang dengan batu pucat dan linen, sehingga mudah dipasangkan untuk kamar tidur, lemari, dan ruang keluarga yang tenang."
+  },
+  {
     id: 'athens-espresso-walnut',
     name: 'Athens Espresso Walnut',
     collection: 'athens',
@@ -462,6 +475,19 @@ export const PRODUCTS = [
     bestFor: 'High-end casework, commercial interiors, minimalist furniture',
     finish: 'Matte lacquer',
     longDesc: "Athens Java Smoked Oak offers a tight, linear rift-cut grain deepened by a specialized smoking process. This technique yields a consistent, dark espresso-brown tone that penetrates the wood, ensuring a rich, lasting color without obscuring the natural grain."
+  },
+  {
+    id: 'athens-latte-oak-01',
+    name: 'Athens Latte Oak 01',
+    collection: 'athens',
+    collectionLabel: 'Athens',
+    cut: 'Straight grain oak',
+    idCut: 'Oak serat lurus',
+    species: 'Oak (Quercus)',
+    idSpecies: 'Oak (Quercus)',
+    image: '/assets/image/ATHENS LATTE OAK 01.webp',
+    longDesc: "Athens Latte Oak 01 runs in straight, closely spaced grain lines, with the milky brown-grey colour that gives the veneer its name. The fine, even texture keeps large runs of panelling calm, so it suits full-height wall linings and long cabinet fronts.",
+    idLongDesc: "Athens Latte Oak 01 memiliki serat lurus yang rapat, dengan warna cokelat keabuan menyerupai susu kopi yang menjadi asal namanya. Teksturnya yang halus dan merata membuat bidang panel luas tetap terlihat tenang, sehingga cocok untuk pelapis dinding setinggi ruangan dan pintu kabinet memanjang."
   },
   {
     id: 'athens-light-ebony',
@@ -1856,6 +1882,32 @@ export const PRODUCTS = [
     idFinish: 'Matte halus',
     longDesc: "Cairo Butter Oak features a remarkably smooth, tight quarter-cut grain finished in a soft, creamy yellowish-beige. This delicate, even texture provides a luxurious and understated surface that radiates gentle warmth.",
     idLongDesc: "Cairo Butter Oak menghadirkan oak potongan quarter dari Oak Putih (Quercus alba), dengan hasil akhir matte halus yang menonjolkan karakter alami kayunya. Veneer ini cocok digunakan untuk transisional kabinet, elegant aksen residensial, ritel butik."
+  },
+  {
+    id: 'cairo-chalk-oak',
+    name: 'Cairo Chalk Oak',
+    collection: 'cairo',
+    collectionLabel: 'Cairo',
+    cut: 'Flat cut oak',
+    idCut: 'Oak potongan flat',
+    species: 'Oak (Quercus)',
+    idSpecies: 'Oak (Quercus)',
+    image: '/assets/image/CAIRO CHALK OAK.webp',
+    longDesc: "Cairo Chalk Oak is a pale, chalky blond, with soft cathedral arches opening across the middle of the sheet. It is one of the lightest oaks in the range, and it keeps a room feeling open where a darker veneer would close it in.",
+    idLongDesc: "Cairo Chalk Oak berwarna pirang pucat seperti kapur, dengan lengkung cathedral lembut yang membuka di bagian tengah lembaran. Ini salah satu oak paling terang dalam koleksi, menjaga ruangan tetap terasa lapang saat veneer yang lebih gelap justru mempersempitnya."
+  },
+  {
+    id: 'cairo-coral-oak',
+    name: 'Cairo Coral Oak',
+    collection: 'cairo',
+    collectionLabel: 'Cairo',
+    cut: 'Straight grain oak',
+    idCut: 'Oak serat lurus',
+    species: 'Oak (Quercus)',
+    idSpecies: 'Oak (Quercus)',
+    image: '/assets/image/CAIRO CORAL OAK.webp',
+    longDesc: "Cairo Coral Oak carries a warm, pinkish sand tone through fine straight grain that stays even from edge to edge. The blush in the colour reads clearly under warm light, which suits hospitality interiors and retail fit-outs after warmth without a strong figure.",
+    idLongDesc: "Cairo Coral Oak menghadirkan warna pasir kemerahan yang hangat melalui serat lurus halus yang merata dari tepi ke tepi. Semburat merah mudanya terbaca jelas di bawah cahaya hangat, cocok untuk interior hospitality dan gerai ritel yang menginginkan kehangatan tanpa corak yang terlalu kuat."
   },
   {
     id: 'cairo-crema-oak',
