@@ -5,6 +5,8 @@ import ProductVisual from '../components/ProductVisual.jsx';
 import { PRODUCTS, DEFAULT_DIMENSION } from '../data.js';
 import { useLanguage } from '../LanguageContext.jsx';
 import { webSheetUrl, fallBackTo } from '../hiRes.js';
+import { clampDescription, productTitle } from '../siteMeta.js';
+import useDocumentMeta from '../useDocumentMeta.js';
 import './ProductDetail.css';
 
 export default function ProductDetail() {
@@ -12,6 +14,17 @@ export default function ProductDetail() {
   const navigate = useNavigate();
   const { t, lang } = useLanguage();
   const product = PRODUCTS.find((p) => p.id === id);
+
+  // A veneer describes itself better than any template could, so the search
+  // result quotes the opening of its own description.
+  useDocumentMeta(
+    product
+      ? {
+          title: productTitle(product),
+          description: clampDescription(lang === 'id' ? product.idLongDesc : product.longDesc),
+        }
+      : { title: t.productDetail.notFound, noindex: true }
+  );
 
   if (!product) {
     return (

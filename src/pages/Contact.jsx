@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../LanguageContext.jsx';
 import useReveal from '../useReveal.js';
+import useDocumentMeta from '../useDocumentMeta.js';
 import './Contact.css';
 
 // Submissions go to our own server function, which validates them and forwards
@@ -9,6 +10,7 @@ const CONTACT_ENDPOINT = '/api/contact';
 
 export default function Contact() {
   const { t } = useLanguage();
+  useDocumentMeta(t.meta.contact);
   const [status, setStatus] = useState('idle'); // idle | sending | sent | error
   const [errorKey, setErrorKey] = useState('error');
   const infoRef = useReveal();

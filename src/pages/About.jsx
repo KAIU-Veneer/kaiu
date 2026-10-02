@@ -3,12 +3,14 @@ import { Link } from 'react-router-dom';
 import { Swatch, pillClass } from '../components/Shared.jsx';
 import { useLanguage } from '../LanguageContext.jsx';
 import useReveal from '../useReveal.js';
+import useDocumentMeta from '../useDocumentMeta.js';
 import './About.css';
 
 const GRAIN = 'linear-gradient(135deg, var(--kaiu-ink), var(--kaiu-brown-deep) 60%, var(--kaiu-brown-mid))';
 
 export default function About() {
   const { t } = useLanguage();
+  useDocumentMeta(t.meta.about);
   const introRef = useReveal();
   const wideRef = useReveal();
   const missionRef = useReveal();

@@ -25,6 +25,7 @@ The dev server runs the `api/` functions itself (see the `kaiu-api-routes` plugi
 - `scripts/build-room-views.mjs` renders and composites room images for veneers you have not rendered (`npm run rooms`, `npm run rooms:render`), using the Blender scripts in `scripts/blender/`.
 - `scripts/build-veneer-textures.mjs` makes web copies of the hi-res sheets for the page preview (`npm run textures`).
 - `scripts/build-image-sizes.mjs` writes the narrow display copies of the swatches and project photographs (`npm run images`). `src/imageSrc.js` is what the pages use to offer them.
+- `scripts/build-sitemap.mjs` writes `public/sitemap.xml` and `public/robots.txt` from the catalogue (`npm run sitemap`, and the first half of `npm run build`).
 - `api/` holds the server-side functions. They run on Vercel in production and inside the dev server locally.
 - `public/assets/` holds the logo, icons, and veneer imagery.
 
@@ -163,6 +164,43 @@ the small copy on an ordinary screen and a larger one on a dense screen. So:
   again, and add a `?v=2` (then `?v=3`, ...) to that photograph's `src` in
   `src/data.js`. Anyone who has already seen the old one is holding it in their
   browser cache for a day, and the query is what tells them to fetch yours.
+
+## What a search engine sees
+
+Every route is served the same `index.html`, so without help all 225 pages
+would carry one title and one description. `src/useDocumentMeta.js` gives each
+page its own, and the wording lives in two places:
+
+- the fixed pages take theirs from `meta` in `src/LanguageContext.jsx`, in both
+  languages;
+- a veneer and a project take theirs from their own record in `src/data.js`,
+  through the helpers in `src/siteMeta.js`.
+
+The hook also writes the canonical link, which names the one address a page
+should be known by. `SITE_URL` in `src/siteMeta.js` is that address, and it has
+to stay as the host that answers rather than the one that redirects — the apex
+`kaiuveneer.co.id` sends a 308 to `www.kaiuveneer.co.id`, so `www` is what
+belongs there. Change it in that one file and the sitemap follows.
+
+`npm run sitemap` writes `public/sitemap.xml` and `public/robots.txt`, and
+`npm run build` runs it first so a deploy cannot ship a sitemap that disagrees
+with the catalogue. Both files are generated but committed, so `npm run dev`
+serves them and a change to either shows up in review.
+
+The sitemap earns its place here more than on most sites: the collections page
+shows four veneers and keeps the rest behind a **Show more** button, and a
+crawler does not press buttons. Four of 216 veneers are reachable by following
+links; the sitemap is what tells a search engine about the other 212.
+
+Still to do, in the order worth doing it:
+
+1. Verify the domain in Google Search Console and submit the sitemap. Until
+   that is connected, nothing here can be measured.
+2. A Google Business Profile for the Pluit studio.
+3. Open Graph and Twitter tags, so a link shared on WhatsApp or Instagram
+   carries a picture and a title.
+4. `/id/` URLs and `hreflang`. The language switch is state on one address, so
+   only one version of each page can be indexed.
 
 ## Notes
 

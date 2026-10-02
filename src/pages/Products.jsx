@@ -5,6 +5,7 @@ import { PRODUCTS, FILTER_OPTIONS, COLLECTION_INFO, PAGE_SIZE, PAGE_SIZE_MORE } 
 import { cardSwatch, IMAGE_SIZES } from '../imageSrc.js';
 import { useLanguage } from '../LanguageContext.jsx';
 import useReveal from '../useReveal.js';
+import useDocumentMeta from '../useDocumentMeta.js';
 import './Products.css';
 
 function shortDesc(text) {
@@ -29,6 +30,7 @@ const lastView = { filter: 'all', query: '', visibleCount: PAGE_SIZE };
 
 export default function Products() {
   const { t, lang } = useLanguage();
+  useDocumentMeta(t.meta.products);
   const { state } = useLocation();
   const resuming = useNavigationType() === 'POP' || Boolean(state && state.resume);
   const [filter, setFilter] = useState(resuming ? lastView.filter : 'all');

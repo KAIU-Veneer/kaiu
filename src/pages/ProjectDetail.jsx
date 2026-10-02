@@ -3,6 +3,8 @@ import { Link, useParams } from 'react-router-dom';
 import { PhotoCycle, pillClass } from '../components/Shared.jsx';
 import { PROJECTS } from '../data.js';
 import { projectPhoto, IMAGE_SIZES } from '../imageSrc.js';
+import { clampDescription, projectTitle } from '../siteMeta.js';
+import useDocumentMeta from '../useDocumentMeta.js';
 import { useLanguage } from '../LanguageContext.jsx';
 import './ProjectDetail.css';
 
@@ -10,6 +12,15 @@ export default function ProjectDetail() {
   const { id } = useParams();
   const { t, lang } = useLanguage();
   const project = PROJECTS.find((p) => p.id === id);
+
+  useDocumentMeta(
+    project
+      ? {
+          title: projectTitle(project),
+          description: clampDescription(lang === 'id' ? project.idLongDesc : project.longDesc),
+        }
+      : { title: t.projectDetail.notFound, noindex: true }
+  );
 
   if (!project) {
     return (

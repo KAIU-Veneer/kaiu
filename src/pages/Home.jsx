@@ -5,6 +5,7 @@ import { PRODUCTS, PROJECTS } from "../data.js";
 import { useLanguage } from "../LanguageContext.jsx";
 import useReveal from "../useReveal.js";
 import { cardSwatch, IMAGE_SIZES } from "../imageSrc.js";
+import useDocumentMeta from '../useDocumentMeta.js';
 import "./Home.css";
 
 // The first three are preloaded in index.html; keep the two lists in step.
@@ -30,6 +31,7 @@ function displayName(name, collectionLabel) {
 export default function Home() {
   const navigate = useNavigate();
   const { t, lang } = useLanguage();
+  useDocumentMeta(t.meta.home);
   const homeProducts = PRODUCTS.slice(0, 4);
   const homeProjects = PROJECTS.slice(0, 3);
   const collectionsRef = useReveal();

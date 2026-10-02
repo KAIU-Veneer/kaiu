@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { pillClass } from '../components/Shared.jsx';
 import { useLanguage } from '../LanguageContext.jsx';
 import useReveal from '../useReveal.js';
+import useDocumentMeta from '../useDocumentMeta.js';
 import './NotFound.css';
 
 const STRIP_IMAGES = [
@@ -13,6 +14,10 @@ const STRIP_IMAGES = [
 
 export default function NotFound() {
   const { t } = useLanguage();
+  // Every unknown address is answered with this page and a 200, since the
+  // rewrite hands them all to index.html. Asking to be left out is what
+  // keeps them from being indexed as if each one were a real page.
+  useDocumentMeta({ ...t.meta.notFound, noindex: true });
   const copyRef = useReveal();
 
   return (

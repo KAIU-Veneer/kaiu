@@ -4,10 +4,12 @@ import { pillClass, ProjectCard } from '../components/Shared.jsx';
 import { PROJECTS } from '../data.js';
 import { useLanguage } from '../LanguageContext.jsx';
 import useReveal from '../useReveal.js';
+import useDocumentMeta from '../useDocumentMeta.js';
 import './Projects.css';
 
 export default function Projects() {
   const { t } = useLanguage();
+  useDocumentMeta(t.meta.projects);
   const ctaRef = useReveal();
   return (
     <div>

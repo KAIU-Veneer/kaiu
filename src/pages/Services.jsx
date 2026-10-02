@@ -4,10 +4,12 @@ import { pillClass } from '../components/Shared.jsx';
 import { SERVICES } from '../data.js';
 import { useLanguage } from '../LanguageContext.jsx';
 import useReveal from '../useReveal.js';
+import useDocumentMeta from '../useDocumentMeta.js';
 import './Services.css';
 
 export default function Services() {
   const { t, lang } = useLanguage();
+  useDocumentMeta(t.meta.services);
   const listRef = useReveal();
   const ctaRef = useReveal();
   return (
