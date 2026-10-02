@@ -4130,6 +4130,7 @@ export const PROJECTS = [
       { src: '/assets/projects/jln-denpasar-kuningan/1.webp?v=2', w: 1600, h: 2133 },
       { src: '/assets/projects/jln-denpasar-kuningan/2.webp?v=2', w: 1600, h: 2133 },
       { src: '/assets/projects/jln-denpasar-kuningan/5.webp?v=2', w: 1600, h: 2133 },
+      { src: '/assets/projects/jln-denpasar-kuningan/6.webp', w: 1600, h: 2000 },
     ],
     longDesc: "A children's room off Jalan Denpasar in Kuningan, South Jakarta, fitted out for Mr. L in Foresta paired with pale oak. The green figured veneer carries the wardrobe fronts and the panelling that wraps the lower wall, while the oak is kept for the shelves, the drawer stack and the soft-cornered open box above them. Holding the figure to the lower half of the room lets its pattern read up close, at a child's eye level, without crowding the space.",
     idLongDesc: "Kamar anak di Jalan Denpasar, Kuningan, Jakarta Selatan, dikerjakan untuk Bapak L dengan Foresta yang dipadukan bersama oak pucat. Veneer hijau bercorak ini mengisi pintu lemari dan panel yang melingkupi bagian bawah dinding, sementara oak dipakai untuk rak, laci, dan kotak terbuka bersudut lembut di atasnya. Dengan menahan corak hanya di separuh bawah ruangan, polanya tetap terbaca dari dekat, sejajar pandangan anak, tanpa membuat ruang terasa penuh."
