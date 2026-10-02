@@ -64,11 +64,63 @@ Images come from either of two places, and hand renders always win:
 
 Both write `public/assets/room-views/<VENEER NAME>/<n>.webp` and then rebuild `src/roomViews.json`, which lists each veneer and how many views it has. A product finds its folder by its hi-res sheet name, or failing that by its own name in capitals. The viewer is `src/components/RoomViews.jsx`.
 
-### Adding a veneer
+### Giving a veneer its sheet and room images
 
-1. Put the full-sheet photo in `public/assets/hires/`, named exactly like the product's swatch in `public/assets/image/` (e.g. `ATHENS ALMOND OAK.png` for `ATHENS ALMOND OAK.webp`).
-2. Add `hiResImage: '/assets/hires/ATHENS ALMOND OAK.png'` to that product in `src/data.js`. That file is what "Download Hi-Res" serves.
-3. Run `npm run textures` (the page's hi-res preview) and `npm run rooms` (the room images). Both only process what's new. If you rendered the veneer yourself, run `npm run rooms:renders` instead of `npm run rooms`.
+Everything is keyed on the veneer's name in capitals. A file called
+`BERLIN PEARL STRIPES.png` belongs to the product named `Berlin Pearl Stripes`,
+and nothing matches up if the two disagree, so start by checking the name
+against `src/data.js`.
+
+Say you shot `BERLIN PEARL STRIPES` and rendered it from three cameras:
+
+1. **The sheet.** Copy the plank photo into `public/assets/hires/`:
+
+   ```
+   cp "../image components/photo plank/BERLIN PEARL STRIPES.png" "public/assets/hires/"
+   ```
+
+2. **Point the product at it.** In `src/data.js`, find that product and add one
+   line above its `image:` line:
+
+   ```js
+   hiResImage: '/assets/hires/BERLIN PEARL STRIPES.png',
+   ```
+
+   This is what "Download Hi-Res" serves and what the preview below the swatch
+   shows. A product with no `hiResImage` simply has neither.
+
+3. **The renders.** Copy them into `photos-src/room-renders/`, keeping the
+   `<VENEER NAME> <n>.png` naming. The numbers are the order the views appear on
+   the site, and a veneer can have as many or as few as you rendered:
+
+   ```
+   cp "../image components/new model/BERLIN PEARL STRIPES "*.png photos-src/room-renders/
+   ```
+
+4. **Build the images.** Each command only processes what is new:
+
+   ```
+   npm run textures
+   npm run rooms:renders
+   ```
+
+   The first makes the web-sized copy of the sheet; the second converts the
+   renders to WebP and rewrites `src/roomViews.json`, which is how a product page
+   knows it has a **View in Room** button.
+
+5. **Look at it.** `npm run dev`, then open the product page and click through
+   the room views.
+
+6. **Ship it.** Commit `src/data.js`, `src/roomViews.json` and the new files
+   under `public/assets/`, then push. Vercel deploys from `main`.
+
+Nothing here needs Blender. `npm run rooms` is only for veneers you have *not*
+rendered: it composites the sheet onto the room instead, and it skips any veneer
+that has renders of its own.
+
+Source photographs stay out of `public/`, which is copied into the build as is.
+Keep the originals in `photos-src/` (git-ignored) or in your own folders outside
+the repo.
 
 ### Changing the room
 

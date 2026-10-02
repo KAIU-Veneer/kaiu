@@ -1565,6 +1565,7 @@ export const PRODUCTS = [
     idCut: 'Kayu rekayasa bergaris',
     species: 'Engineered Wood (Reconstituted)',
     idSpecies: 'Kayu Rekayasa (Rekonstruksi)',
+    hiResImage: '/assets/hires/BERLIN PEARL STRIPES.png',
     image: '/assets/image/BERLIN PEARL STRIPES.webp',
     cutMethod: 'Reconstituted, inlaid pattern',
     idCutMethod: 'Rekonstruksi, pola tatah',
