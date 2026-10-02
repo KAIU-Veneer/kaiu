@@ -24,6 +24,14 @@ export default function ProductDetail() {
 
   const shortName = product.name.replace(new RegExp('^' + product.collectionLabel + '\\s+'), '');
 
+  // Some veneers are carried in more than one collection and share a single
+  // sheet on disk, so the file is named after whichever collection shot it.
+  // Naming the download after the product is what the visitor expects to find
+  // in their downloads folder.
+  const sheet = product.hiResImage || product.image;
+  const sheetPath = sheet.split('?')[0];
+  const downloadName = product.name.toUpperCase() + sheetPath.slice(sheetPath.lastIndexOf('.'));
+
   return (
     <div className="product-detail page-section">
       <Link to="/products" className="back-link">{t.productDetail.back}</Link>
@@ -35,7 +43,7 @@ export default function ProductDetail() {
               <span className="label">{t.productDetail.dimension}</span>
               <span className="value">{product.dimension || DEFAULT_DIMENSION}</span>
             </div>
-            <a href={product.hiResImage || product.image} download className="download-hires-link">{t.productDetail.downloadHiRes}</a>
+            <a href={sheet} download={downloadName} className="download-hires-link">{t.productDetail.downloadHiRes}</a>
           </div>
           {product.hiResImage && (
             <img

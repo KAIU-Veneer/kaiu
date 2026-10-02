@@ -13,7 +13,7 @@ const HERO_IMAGES = [
   "/assets/image/CANNES GOLDEN WALNUT.webp",
   "/assets/image/CANNES ECLIPSE.webp",
   "/assets/image/ZURICH DOMINO.webp",
-  "/assets/image/ZURICH MIDNIGHT.webp",
+  "/assets/image/ZURICH MIDNIGHT.webp?v=2",
   "/assets/image/ZURICH COLOR POP.webp",
 ];
 

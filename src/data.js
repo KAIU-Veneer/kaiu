@@ -1144,7 +1144,7 @@ export const PRODUCTS = [
     idCut: 'Oak potongan rift',
     species: 'White Oak (Quercus alba)',
     idSpecies: 'Oak Putih (Quercus alba)',
-    image: '/assets/image/BERLIN CHROME OAK.webp',
+    image: '/assets/image/BERLIN CHROME OAK.webp?v=2',
     cutMethod: 'Rift-cut, metallic wash',
     idCutMethod: 'Potongan rift, cuci metalik',
     bestFor: 'High-end retail fixtures, modern hospitality design, feature panels',
@@ -1508,6 +1508,7 @@ export const PRODUCTS = [
     species: 'White Oak (Quercus alba)',
     idSpecies: 'Oak Putih (Quercus alba)',
     image: '/assets/image/BERLIN NOIR OAK.webp',
+    hiResImage: '/assets/hires/BERLIN NOIR OAK.png',
     cutMethod: 'Rift-cut, darkened',
     idCutMethod: 'Potongan rift, digelapkan',
     bestFor: 'Luxury cabinetry, modern architectural paneling, contrast elements',
@@ -2263,6 +2264,7 @@ export const PRODUCTS = [
     species: 'Acacia',
     idSpecies: 'Akasia',
     image: '/assets/image/CAIRO SAVANNA ACACIA.webp',
+    hiResImage: '/assets/hires/CAIRO SAVANNA ACACIA.png',
     cutMethod: 'Quarter-cut, bleached',
     idCutMethod: 'Potongan quarter, bleached',
     bestFor: 'Airy residential interiors, coastal designs, modern light cabinetry',
@@ -2310,6 +2312,23 @@ export const PRODUCTS = [
     idFinish: 'Matte bening',
     longDesc: "Cairo Sunbleach Oak highlights the organic, sweeping cathedral arches of plain-sliced oak, brightened by a sun-bleached, sandy blonde finish. It offers a warm, natural character that feels both authentic and refreshingly light.",
     idLongDesc: "Diambil dari Oak Putih (Quercus alba), Cairo Sunbleach Oak diproses melalui oak potongan flat untuk menghasilkan serat yang khas. Dipadukan dengan matte bening, veneer ini ideal untuk scandinavian furnitur, wide panel arsitektural, casual mewah ruang."
+  },
+  {
+    id: 'cairo-tuscan',
+    name: 'Cairo Tuscan',
+    collection: 'cairo',
+    collectionLabel: 'Cairo',
+    cut: 'Rotary cut figured',
+    idCut: 'Potongan rotary bercorak',
+    species: 'Birch (Betula)',
+    idSpecies: 'Birch (Betula)',
+    // The same veneer as Cannes Birchwood, carried in both collections, so it
+    // points at the one set of photographs. The download is renamed after the
+    // product rather than after the file; see ProductDetail.
+    image: '/assets/image/CANNES BIRCHWOOD.webp',
+    hiResImage: '/assets/hires/CANNES BIRCHWOOD.jpeg',
+    longDesc: "Cairo Tuscan is a showstopping veneer featuring a wild, highly figured rotary cut. Bold, topographical swirls and dark, contrasting eye-like knots dance across a pale, pinkish-beige background, offering a captivating and highly organic piece of natural artistry.",
+    idLongDesc: "Cairo Tuscan menghadirkan potongan rotary bercorak dari Birch (Betula), dengan hasil akhir pelapis matte yang menonjolkan karakter alami kayunya. Veneer ini cocok digunakan untuk panel seni statement, butik hospitality, dramatic focal points."
   },
   {
     id: 'cairo-vanilla-oak',
@@ -3826,7 +3845,7 @@ export const PRODUCTS = [
     species: 'Dyed Wood',
     idSpecies: 'Kayu Diwarnai',
     hiResImage: '/assets/hires/ZURICH MIDNIGHT.png',
-    image: '/assets/image/ZURICH MIDNIGHT.webp',
+    image: '/assets/image/ZURICH MIDNIGHT.webp?v=2',
     cutMethod: 'Rotary-cut, deeply dyed',
     idCutMethod: 'Potongan rotary, deeply dyed',
     bestFor: 'Dramatic cabinetry, statement wall panels, luxury retail interiors',

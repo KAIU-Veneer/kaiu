@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link, useNavigationType } from 'react-router-dom';
 import { Swatch, pillClass } from '../components/Shared.jsx';
 import { PRODUCTS, FILTER_OPTIONS, COLLECTION_INFO, PAGE_SIZE, PAGE_SIZE_MORE } from '../data.js';
 import { cardSwatch, IMAGE_SIZES } from '../imageSrc.js';
@@ -18,12 +18,27 @@ function displayName(name, collectionLabel) {
   return name.startsWith(prefix) ? name.slice(prefix.length) : name;
 }
 
+/**
+ * What the visitor had on screen the last time they were here. Opening a
+ * veneer and coming back unmounts this page, and without it they would return
+ * to an unfiltered list of four — too short to hold the place they had
+ * scrolled to. Only a step back in history resumes it; arriving from a link
+ * starts clean.
+ */
+const lastView = { filter: 'all', query: '', visibleCount: PAGE_SIZE };
+
 export default function Products() {
   const { t, lang } = useLanguage();
-  const [filter, setFilter] = useState('all');
-  const [query, setQuery] = useState('');
-  const [searchOpen, setSearchOpen] = useState(false);
-  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+  const resuming = useNavigationType() === 'POP';
+  const [filter, setFilter] = useState(resuming ? lastView.filter : 'all');
+  const [query, setQuery] = useState(resuming ? lastView.query : '');
+  const [searchOpen, setSearchOpen] = useState(resuming ? Boolean(lastView.query) : false);
+  const [visibleCount, setVisibleCount] = useState(resuming ? lastView.visibleCount : PAGE_SIZE);
+
+  useEffect(() => {
+    Object.assign(lastView, { filter, query, visibleCount });
+  }, [filter, query, visibleCount]);
+
   const ctaRef = useReveal();
   const byCollection = filter === 'all' ? PRODUCTS : PRODUCTS.filter((p) => p.collection === filter);
   const q = query.trim().toLowerCase();

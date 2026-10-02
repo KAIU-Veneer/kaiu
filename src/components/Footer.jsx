@@ -22,7 +22,7 @@ export default function Footer() {
           </div>
           <div>
             <h5>{t.footer.studio}</h5>
-            <p>Jl. Pluit Karang Jelita 1<br />Blok R4 Barat No. 2<br /> <br/>Jakarta, Indonesia</p>
+            <p>Jl. Pluit Karang Sari VII<br />RT.1/RW.12, Pluit, Penjaringan<br /> <br/>North Jakarta, Indonesia</p>
             <a href="mailto:kaiuveneer@gmail.com">kaiuveneer@gmail.com</a>
           </div>
         </div>

@@ -60,7 +60,7 @@ export default function Contact() {
         <div className="contact-info reveal" ref={infoRef}>
           <dl>
             <dt>{t.contact.studio}</dt>
-            <dd>Jl. Pluit Karang Jelita 1, Blok R4 Barat No. 2<br/>Jakarta, Indonesia</dd>
+            <dd>Jl. Pluit Karang Sari VII, RT.1/RW.12<br/>Pluit, Kecamatan Penjaringan<br/>North Jakarta, DKI Jakarta, Indonesia</dd>
             <dt>{t.contact.email}</dt>
             <dd><a href="mailto:kaiuveneer@gmail.com">kaiuveneer@gmail.com</a></dd>
             <dt>{t.contact.phone}</dt>
