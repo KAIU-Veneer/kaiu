@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
@@ -6,14 +6,21 @@ import ScrollToTop from './components/ScrollToTop.jsx';
 import WoodgrainFilter from './components/Shared.jsx';
 import WhatsAppButton from './components/WhatsAppButton.jsx';
 import Home from './pages/Home.jsx';
-import About from './pages/About.jsx';
-import Products from './pages/Products.jsx';
-import ProductDetail from './pages/ProductDetail.jsx';
-import Projects from './pages/Projects.jsx';
-import ProjectDetail from './pages/ProjectDetail.jsx';
-import Services from './pages/Services.jsx';
-import Contact from './pages/Contact.jsx';
-import NotFound from './pages/NotFound.jsx';
+
+/**
+ * The home page is part of the first download, since it is what most visitors
+ * land on and waiting on a second request would only delay it. Every other
+ * page is fetched when it is first opened, which keeps its code and its
+ * stylesheet out of that first download.
+ */
+const About = lazy(() => import('./pages/About.jsx'));
+const Products = lazy(() => import('./pages/Products.jsx'));
+const ProductDetail = lazy(() => import('./pages/ProductDetail.jsx'));
+const Projects = lazy(() => import('./pages/Projects.jsx'));
+const ProjectDetail = lazy(() => import('./pages/ProjectDetail.jsx'));
+const Services = lazy(() => import('./pages/Services.jsx'));
+const Contact = lazy(() => import('./pages/Contact.jsx'));
+const NotFound = lazy(() => import('./pages/NotFound.jsx'));
 
 export default function App() {
   return (
@@ -22,17 +29,21 @@ export default function App() {
       <Header />
       <ScrollToTop />
       <main className="app-main">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/products/:id" element={<ProductDetail />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/projects/:id" element={<ProjectDetail />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        {/* Blank rather than a spinner: on a warm connection the page arrives
+            in a few milliseconds and a flashing message reads as a fault. */}
+        <Suspense fallback={<div className="route-pending" />}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/products/:id" element={<ProductDetail />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/projects/:id" element={<ProjectDetail />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
       </main>
       <Footer />
       <WhatsAppButton />

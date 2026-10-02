@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../LanguageContext.jsx';
 import useImageCycle from '../useImageCycle.js';
+import { projectPhoto, IMAGE_SIZES } from '../imageSrc.js';
 
 /** Wood-grain SVG turbulence filter, shared by every page. */
 export function WoodgrainFilter() {
@@ -34,14 +35,15 @@ export const pillClass = (variant) => `pill-btn${variant === 'outline' ? ' pill-
  * Photographs stacked in one frame, crossfading from one to the next. The
  * frame's size comes from whatever class the caller passes.
  */
-export function PhotoCycle({ images, alt, className }) {
+export function PhotoCycle({ images, alt, className, sizes }) {
   const [ref, shown] = useImageCycle(images.length);
   return (
     <div className={`photo-cycle${className ? ' ' + className : ''}`} ref={ref}>
       {images.map((img, i) => (
         <img
           key={img.src}
-          src={img.src}
+          {...projectPhoto(img.src)}
+          sizes={sizes}
           width={img.w}
           height={img.h}
           className={i === shown ? 'is-active' : undefined}
@@ -60,7 +62,7 @@ export function ProjectCard({ project, to }) {
   const room = lang === 'id' ? project.idRoom : project.room;
   return (
     <Link to={to} className="project-card">
-      <PhotoCycle images={project.images} alt={`${project.title}, ${room}`} className="project-card-scene" />
+      <PhotoCycle images={project.images} alt={`${project.title}, ${room}`} className="project-card-scene" sizes={IMAGE_SIZES.projectCard} />
       <div className="project-card-shade" />
       <div className="project-card-tag">
         <div>

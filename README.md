@@ -24,6 +24,7 @@ The dev server runs the `api/` functions itself (see the `kaiu-api-routes` plugi
 - `scripts/build-room-renders.mjs` publishes the room renders you make by hand (`npm run rooms:renders`).
 - `scripts/build-room-views.mjs` renders and composites room images for veneers you have not rendered (`npm run rooms`, `npm run rooms:render`), using the Blender scripts in `scripts/blender/`.
 - `scripts/build-veneer-textures.mjs` makes web copies of the hi-res sheets for the page preview (`npm run textures`).
+- `scripts/build-image-sizes.mjs` writes the narrow display copies of the swatches and project photographs (`npm run images`). `src/imageSrc.js` is what the pages use to offer them.
 - `api/` holds the server-side functions. They run on Vercel in production and inside the dev server locally.
 - `public/assets/` holds the logo, icons, and veneer imagery.
 
@@ -102,11 +103,13 @@ Say you shot `BERLIN PEARL STRIPES` and rendered it from three cameras:
    ```
    npm run textures
    npm run rooms:renders
+   npm run images
    ```
 
    The first makes the web-sized copy of the sheet; the second converts the
    renders to WebP and rewrites `src/roomViews.json`, which is how a product page
-   knows it has a **View in Room** button.
+   knows it has a **View in Room** button; the third writes the narrow copies of
+   the swatch that the card grids display.
 
 5. **Look at it.** `npm run dev`, then open the product page and click through
    the room views.
@@ -129,6 +132,37 @@ Edit the room `.blend` (cameras, lighting, furniture), then run `npm run rooms:r
 - The veneer wall needs its own material (`Material.001`, or `KAIU_Veneer`) with an Image Texture fed through a Mapping node. Sheet placement and scale come from that Mapping node.
 - Every camera in the file becomes a view. Set their order on the site with `VIEW_ORDER` in `scripts/build-room-views.mjs`.
 - The `.blend` is read from `ROOM_BLEND` (default: two folders above this repo) and Blender from `BLENDER` (default: the Blender 5.2 install path). Render passes go to `models-src/room-passes/`, which is git-ignored.
+
+## Photographs on the page
+
+Every photograph is stored once at full size and displayed through smaller
+copies. A swatch original is about 2160px wide because that is what **Download
+Hi-Res** hands over for a veneer with no separate hi-res sheet, and a project
+photograph is 1600px so it still holds up opened large — but a card draws them
+at two or three hundred pixels, so sending the original costs several times the
+bytes it needs.
+
+`npm run images` writes the narrow copies beside each original, in a folder
+named for their width:
+
+```
+public/assets/image/w400/<NAME>.webp
+public/assets/image/w800/<NAME>.webp
+public/assets/projects/<project>/w800/<n>.webp
+```
+
+The pages never name those paths themselves. `src/imageSrc.js` builds the
+`src` and `srcset` for each place a photograph appears, and the browser takes
+the small copy on an ordinary screen and a larger one on a dense screen. So:
+
+- **Adding a swatch or a project photograph.** Drop the full-size WebP in
+  `public/assets/image/` or `public/assets/projects/<project>/`, run
+  `npm run images`, and commit the originals together with the new `w400`/`w800`
+  files. The command only touches what is new or changed.
+- **Replacing one under a name that already exists.** Run `npm run images`
+  again, and add a `?v=2` (then `?v=3`, ...) to that photograph's `src` in
+  `src/data.js`. Anyone who has already seen the old one is holding it in their
+  browser cache for a day, and the query is what tells them to fetch yours.
 
 ## Notes
 

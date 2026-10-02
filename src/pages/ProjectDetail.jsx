@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { PhotoCycle, pillClass } from '../components/Shared.jsx';
 import { PROJECTS } from '../data.js';
+import { projectPhoto, IMAGE_SIZES } from '../imageSrc.js';
 import { useLanguage } from '../LanguageContext.jsx';
 import './ProjectDetail.css';
 
@@ -39,7 +40,7 @@ export default function ProjectDetail() {
     <div className="project-detail page-section">
       <Link to="/projects" className="back-link">{t.projectDetail.back}</Link>
       <div className="project-detail-grid">
-        <PhotoCycle images={project.images} alt={`${project.title}, ${room}`} className="project-detail-lead" />
+        <PhotoCycle images={project.images} alt={`${project.title}, ${room}`} className="project-detail-lead" sizes={IMAGE_SIZES.projectLead} />
         <div>
           <span className="eyebrow">{room}</span>
           <h1>{project.title}</h1>
@@ -59,7 +60,8 @@ export default function ProjectDetail() {
           {project.images.slice(1).map((img, i) => (
             <img
               key={img.src}
-              src={img.src}
+              {...projectPhoto(img.src)}
+              sizes={IMAGE_SIZES.projectGallery}
               width={img.w}
               height={img.h}
               alt={`${project.title}, ${t.projectDetail.photo} ${i + 2}`}

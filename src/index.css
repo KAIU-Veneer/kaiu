@@ -282,3 +282,7 @@ button { font-family: var(--font-display); cursor: pointer; }
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
 }
+
+/* Holds the page's height for the moment a route is being fetched, so the
+   footer does not jump up to meet the header. */
+.route-pending { min-height: 60vh; }

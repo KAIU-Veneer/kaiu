@@ -4,8 +4,10 @@ import { Swatch, pillClass, ProjectCard } from "../components/Shared.jsx";
 import { PRODUCTS, PROJECTS } from "../data.js";
 import { useLanguage } from "../LanguageContext.jsx";
 import useReveal from "../useReveal.js";
+import { cardSwatch, IMAGE_SIZES } from "../imageSrc.js";
 import "./Home.css";
 
+// The first three are preloaded in index.html; keep the two lists in step.
 const HERO_IMAGES = [
   "/assets/image/CANNES WASHED OAK.webp",
   "/assets/image/CANNES GOLDEN WALNUT.webp",
@@ -40,7 +42,14 @@ export default function Home() {
       <section className="hero">
         <div className="hero-swatches">
           {HERO_IMAGES.map((src) => (
-            <img key={src} src={src} className="hero-swatch" alt="Veneer" />
+            <img
+              key={src}
+              {...cardSwatch(src)}
+              sizes={IMAGE_SIZES.heroSwatch}
+              className="hero-swatch"
+              alt="Veneer"
+              decoding="async"
+            />
           ))}
         </div>
         <div className="hero-copy">
@@ -70,10 +79,12 @@ export default function Home() {
           {homeProducts.map((p) => (
             <Link key={p.id} to={`/products/${p.id}`} className="product-card">
               <img
-                src={p.image}
+                {...cardSwatch(p.image)}
+                sizes={IMAGE_SIZES.cardSwatch}
                 className="swatch"
                 alt={p.name}
                 loading="lazy"
+                decoding="async"
               />
               <h4>{displayName(p.name, p.collectionLabel)}</h4>
               <span className="product-collection-label">{t.productDetail.collection}: {p.collectionLabel.toUpperCase()}</span>

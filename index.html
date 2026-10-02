@@ -6,7 +6,18 @@
 <title>KAIU - Premium Wood Veneer</title>
 <link rel="icon" type="image/svg+xml" href="/assets/logo/logo.svg" />
 <meta name="description" content="KAIU designs and supplies premium natural wood veneers for architects, designers, manufacturers and homeowners.">
-<link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@200;300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- The top row of the hero grid. React only asks for these once it has
+     parsed and run, so they are claimed here instead and are on their way
+     while that happens. Keep in step with HERO_IMAGES in src/pages/Home.jsx. -->
+<link rel="preload" as="image" href="/assets/image/w400/CANNES WASHED OAK.webp"
+      imagesrcset="/assets/image/w400/CANNES WASHED OAK.webp 400w, /assets/image/w800/CANNES WASHED OAK.webp 800w"
+      imagesizes="(max-width: 760px) 28vw, 193px">
+<link rel="preload" as="image" href="/assets/image/w400/CANNES GOLDEN WALNUT.webp"
+      imagesrcset="/assets/image/w400/CANNES GOLDEN WALNUT.webp 400w, /assets/image/w800/CANNES GOLDEN WALNUT.webp 800w"
+      imagesizes="(max-width: 760px) 28vw, 193px">
+<link rel="preload" as="image" href="/assets/image/w400/CANNES ECLIPSE.webp"
+      imagesrcset="/assets/image/w400/CANNES ECLIPSE.webp 400w, /assets/image/w800/CANNES ECLIPSE.webp 800w"
+      imagesizes="(max-width: 760px) 28vw, 193px">
 <link rel="stylesheet" href="/src/index.css">
 </head>
 <body>

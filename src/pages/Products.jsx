@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Swatch, pillClass } from '../components/Shared.jsx';
 import { PRODUCTS, FILTER_OPTIONS, COLLECTION_INFO, PAGE_SIZE, PAGE_SIZE_MORE } from '../data.js';
+import { cardSwatch, IMAGE_SIZES } from '../imageSrc.js';
 import { useLanguage } from '../LanguageContext.jsx';
 import useReveal from '../useReveal.js';
 import './Products.css';
@@ -92,7 +93,8 @@ export default function Products() {
         <div className="product-grid">
           {visible.map((p) => (
             <Link key={p.id} to={`/products/${p.id}`} className="product-card">
-              <img src={p.image} className="swatch" loading="lazy"/>
+              <img {...cardSwatch(p.image)} sizes={IMAGE_SIZES.cardSwatch}
+                   className="swatch" alt={p.name} loading="lazy" decoding="async" />
               <h4>{displayName(p.name, p.collectionLabel)}</h4>
               <span className="product-collection-label">{t.productDetail.collection}: {p.collectionLabel.toUpperCase()}</span>
               <span className="product-short-desc">{shortDesc(lang === 'id' ? p.idLongDesc : p.longDesc)}</span>

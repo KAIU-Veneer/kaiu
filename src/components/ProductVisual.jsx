@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../LanguageContext.jsx';
 import RoomViews, { hasRoomViews } from './RoomViews.jsx';
+import { visualSwatch, IMAGE_SIZES } from '../imageSrc.js';
 import './ProductVisual.css';
 
 const RoomIcon = () => (
@@ -23,7 +24,14 @@ export default function ProductVisual({ product }) {
 
   return (
     <div className="product-visual">
-      <img src={product.image} className="product-visual-swatch" alt={product.name} loading="lazy" />
+      <img
+        {...visualSwatch(product.image)}
+        sizes={IMAGE_SIZES.productVisual}
+        className="product-visual-swatch"
+        alt={product.name}
+        loading="lazy"
+        decoding="async"
+      />
       {hasRoom && (
         <button type="button" className="product-visual-room-btn" onClick={() => setWantsRoom(true)}>
           <RoomIcon />
