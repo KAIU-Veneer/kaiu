@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useNavigationType } from 'react-router-dom';
+import { Link, useLocation, useNavigationType } from 'react-router-dom';
 import { Swatch, pillClass } from '../components/Shared.jsx';
 import { PRODUCTS, FILTER_OPTIONS, COLLECTION_INFO, PAGE_SIZE, PAGE_SIZE_MORE } from '../data.js';
 import { cardSwatch, IMAGE_SIZES } from '../imageSrc.js';
@@ -22,14 +22,15 @@ function displayName(name, collectionLabel) {
  * What the visitor had on screen the last time they were here. Opening a
  * veneer and coming back unmounts this page, and without it they would return
  * to an unfiltered list of four — too short to hold the place they had
- * scrolled to. Only a step back in history resumes it; arriving from a link
- * starts clean.
+ * scrolled to. A step back in history resumes it, as does the back link on a
+ * veneer's own page; arriving from the menu or a fresh link starts clean.
  */
 const lastView = { filter: 'all', query: '', visibleCount: PAGE_SIZE };
 
 export default function Products() {
   const { t, lang } = useLanguage();
-  const resuming = useNavigationType() === 'POP';
+  const { state } = useLocation();
+  const resuming = useNavigationType() === 'POP' || Boolean(state && state.resume);
   const [filter, setFilter] = useState(resuming ? lastView.filter : 'all');
   const [query, setQuery] = useState(resuming ? lastView.query : '');
   const [searchOpen, setSearchOpen] = useState(resuming ? Boolean(lastView.query) : false);

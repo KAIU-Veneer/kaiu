@@ -34,7 +34,7 @@ export default function ProductDetail() {
 
   return (
     <div className="product-detail page-section">
-      <Link to="/products" className="back-link">{t.productDetail.back}</Link>
+      <Link to="/products" state={{ resume: true }} className="back-link">{t.productDetail.back}</Link>
       <div className="product-detail-grid">
         <div>
           <ProductVisual product={product} />

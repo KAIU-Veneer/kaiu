@@ -38,7 +38,7 @@ export default function ProjectDetail() {
 
   return (
     <div className="project-detail page-section">
-      <Link to="/projects" className="back-link">{t.projectDetail.back}</Link>
+      <Link to="/projects" state={{ resume: true }} className="back-link">{t.projectDetail.back}</Link>
       <div className="project-detail-grid">
         <PhotoCycle images={project.images} alt={`${project.title}, ${room}`} className="project-detail-lead" sizes={IMAGE_SIZES.projectLead} />
         <div>
