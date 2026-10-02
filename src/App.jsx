@@ -1,5 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 import ScrollToTop from './components/ScrollToTop.jsx';
@@ -47,6 +48,12 @@ export default function App() {
       </main>
       <Footer />
       <WhatsAppButton />
+      {/* Counts visits. Vercel serves its script and takes its readings from
+          this site's own domain, under /_vercel/insights, so the policy in
+          vercel.json needs no third party added to it and no cookie is set.
+          It reports nothing until Web Analytics is switched on for the
+          project in the Vercel dashboard. */}
+      <Analytics />
     </div>
   );
 }

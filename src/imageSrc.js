@@ -10,18 +10,27 @@
  * reconsiders, and the rest of the set is an upgrade for a dense screen.
  */
 
+/**
+ * Nearly every swatch is named after its veneer, spaces and all. A srcset is
+ * read as a comma-separated list of URL-then-descriptor pairs split on
+ * whitespace, so a raw space inside the URL makes the browser read the rest
+ * of the name as the descriptor, fail on it, and drop the candidate. Encoding
+ * the path is what keeps the list readable.
+ */
+const url = (path) => encodeURI(path);
+
 /** `/assets/x/1.webp?v=2` and 800 -> `/assets/x/w800/1.webp?v=2`. */
 const variant = (image, width) => {
   const [file, query] = image.split('?');
   const cut = file.lastIndexOf('/');
-  return `${file.slice(0, cut)}/w${width}${file.slice(cut)}${query ? `?${query}` : ''}`;
+  return url(`${file.slice(0, cut)}/w${width}${file.slice(cut)}`) + (query ? `?${query}` : '');
 };
 
 // 'full' is the original. Its descriptor is the width of the common original
 // in that set; the few that are narrower are still the largest that exists,
 // which is all the descriptor has to rank.
 const candidate = (image, width, fullWidth) =>
-  width === 'full' ? `${image} ${fullWidth}w` : `${variant(image, width)} ${width}w`;
+  width === 'full' ? `${url(image)} ${fullWidth}w` : `${variant(image, width)} ${width}w`;
 
 const pick = (image, widths, fullWidth) => ({
   src: variant(image, widths[0]),
