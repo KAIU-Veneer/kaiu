@@ -26,6 +26,7 @@ The dev server runs the `api/` functions itself (see the `kaiu-api-routes` plugi
 - `scripts/build-veneer-textures.mjs` makes web copies of the hi-res sheets for the page preview (`npm run textures`).
 - `scripts/build-image-sizes.mjs` writes the narrow display copies of the swatches and project photographs (`npm run images`). `src/imageSrc.js` is what the pages use to offer them.
 - `scripts/build-sitemap.mjs` writes `public/sitemap.xml` and `public/robots.txt` from the catalogue (`npm run sitemap`, and the first half of `npm run build`).
+- `scripts/build-icons.mjs` writes `favicon.ico`, `icon-192.png` and `apple-touch-icon.png` from the logo (`npm run icons`). Run it if the logo changes.
 - `api/` holds the server-side functions. They run on Vercel in production and inside the dev server locally.
 - `public/assets/` holds the logo, icons, and veneer imagery.
 

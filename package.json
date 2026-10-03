@@ -12,7 +12,8 @@
     "rooms:render": "node scripts/build-room-views.mjs --render",
     "rooms:renders": "node scripts/build-room-renders.mjs",
     "images": "node scripts/build-image-sizes.mjs",
-    "sitemap": "node scripts/build-sitemap.mjs"
+    "sitemap": "node scripts/build-sitemap.mjs",
+    "icons": "node scripts/build-icons.mjs"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
