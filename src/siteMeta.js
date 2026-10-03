@@ -35,11 +35,11 @@ export const shortProductName = (product) =>
     ? product.name.slice(product.collectionLabel.length + 1)
     : product.name;
 
-/** The title bar for one veneer, e.g. "Cement Grey Veneer — Oslo | KAIU". */
+/** The title bar for one veneer, e.g. "Cement Grey Veneer | Oslo | KAIU". */
 export const productTitle = (product) =>
-  `${shortProductName(product)} Veneer — ${product.collectionLabel} | ${TITLE_SUFFIX}`;
+  `${shortProductName(product)} Veneer | ${product.collectionLabel} | ${TITLE_SUFFIX}`;
 
-/** The title bar for one project, e.g. "Teazzi — Ciputra Mall | KAIU". */
+/** The title bar for one project, e.g. "Teazzi | KAIU". */
 export const projectTitle = (project) => `${project.title} | ${TITLE_SUFFIX}`;
 
 /** Every page the sitemap should list, in the order a visitor would meet them. */
