@@ -6,7 +6,7 @@ const TRANSLATIONS = {
     // project; those two take their wording from the catalogue itself.
     meta: {
       home: {
-        title: 'KAIU - Natural Wood Veneer Supplier in Jakarta',
+        title: 'KAIU - Natural Wood Veneer',
         description: 'KAIU supplies premium natural wood veneer to architects, designers, manufacturers and homeowners in Jakarta. Six collections, cut and matched to order.',
       },
       about: {
@@ -108,7 +108,7 @@ const TRANSLATIONS = {
   id: {
     meta: {
       home: {
-        title: 'KAIU - Pemasok Veneer Kayu Alami di Jakarta',
+        title: 'KAIU - Veneer Kayu Alami',
         description: 'KAIU memasok veneer kayu alami premium untuk arsitek, desainer, produsen, dan pemilik rumah di Jakarta. Enam koleksi, dipotong dan dipasangkan sesuai pesanan.',
       },
       about: {
