@@ -931,6 +931,25 @@ export const PRODUCTS = [
     idLongDesc: "Berlin Arrow Slate adalah veneer kayu rekayasa potongan rift bersumber dari Kayu Rekayasa (Rekonstruksi). Finishing matte memberikan tampilan yang tahan lama dan elegan, cocok untuk modern minimalis kabinet, panel arsitektural, interior komersials."
   },
   {
+    id: 'berlin-ashen-oak',
+    name: 'Berlin Ashen Oak',
+    collection: 'berlin',
+    collectionLabel: 'Berlin',
+    cut: 'Quarter cut oak',
+    idCut: 'Oak potongan quarter',
+    species: 'European Oak (Quercus robur)',
+    idSpecies: 'Oak Eropa (Quercus robur)',
+    image: '/assets/image/BERLIN ASHEN OAK.webp',
+    cutMethod: 'Quarter-cut, smoked and limed',
+    idCutMethod: 'Potongan quarter, diasapi dan dikapur',
+    bestFor: 'Wardrobe fronts, wall panelling, contemporary residential interiors',
+    idBestFor: 'Pintu lemari, panel dinding, interior residensial kontemporer',
+    finish: 'Matte',
+    idFinish: 'Matte',
+    longDesc: "Berlin Ashen Oak draws a close, quarter-cut stripe through a smoked grey-brown ground, the limed pores lifting pale against it. The figure stays even across the leaf, giving a quiet, ash-toned surface that reads as texture rather than pattern.",
+    idLongDesc: "Berlin Ashen Oak menghadirkan oak potongan quarter dari Oak Eropa (Quercus robur) dengan serat rapat bernuansa abu kecokelatan. Hasil akhir matte menjaga tampilannya tetap tenang dan konsisten, cocok untuk pintu lemari, panel dinding, interior residensial kontemporer."
+  },
+  {
     id: 'berlin-austrian-oak',
     name: 'Berlin Austrian Oak',
     collection: 'berlin',
