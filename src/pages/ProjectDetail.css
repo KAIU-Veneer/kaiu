@@ -2,10 +2,11 @@
 .project-detail h1 { margin: var(--space-xs) 0 0; font-size: clamp(28px, 4.2vw, 38px); font-weight: 300; }
 .project-detail-desc { margin-top: var(--space-md); color: var(--kaiu-brown-deep); font-size: 16px; line-height: 1.75; }
 .project-detail .detail-info-grid { margin-top: var(--space-md); align-content: start; }
-.project-detail .detail-info-cell a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+/* A veneer name never breaks across lines; a list too long for the cell wraps
+   after one of the commas instead. */
+.project-detail .detail-info-cell a { color: inherit; text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; }
 /* An odd number of facts would otherwise leave a blank cell. */
 .project-detail .detail-info-cell:last-child:nth-child(odd) { grid-column: 1 / -1; }
-.project-detail .detail-info-cell-wide { grid-column: 1 / -1; }
 
 /* The lead is a fixed card that fades through every photograph of the
    project. The gallery below keeps each photograph's own shape, since they

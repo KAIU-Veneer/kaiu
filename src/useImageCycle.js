@@ -1,41 +1,24 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 /**
  * Steps through `count` images on a timer, so a card shows the whole project
- * instead of one photo of it. The timer only runs while the element is on
- * screen, and never starts for visitors who prefer reduced motion.
+ * instead of one photo of it. The timer runs whether or not the card is on
+ * screen, so every project is at the same point in its cycle and none of them
+ * restarts from the first photograph when it is scrolled to. It never starts
+ * for visitors who prefer reduced motion.
  *
- * Returns [ref to attach to the card, index of the image to show].
+ * Returns the index of the image to show.
  */
 export default function useImageCycle(count, delay = 4200) {
-  const ref = useRef(null);
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    const el = ref.current;
-    if (!el || count < 2) return;
-    if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) return;
+    if (count < 2) return undefined;
+    if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) return undefined;
 
-    let timer = null;
-    const start = () => {
-      if (!timer) timer = setInterval(() => setIndex((i) => (i + 1) % count), delay);
-    };
-    const stop = () => {
-      clearInterval(timer);
-      timer = null;
-    };
-
-    if (!('IntersectionObserver' in window)) {
-      start();
-      return stop;
-    }
-    const io = new IntersectionObserver(([entry]) => (entry.isIntersecting ? start() : stop()), { threshold: 0.25 });
-    io.observe(el);
-    return () => {
-      io.disconnect();
-      stop();
-    };
+    const timer = setInterval(() => setIndex((i) => (i + 1) % count), delay);
+    return () => clearInterval(timer);
   }, [count, delay]);
 
-  return [ref, index % count];
+  return index % count;
 }
