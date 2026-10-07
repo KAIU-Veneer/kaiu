@@ -4196,9 +4196,7 @@ export const PROJECTS = [
     idDesigner: 'Mimic Concept',
     room: 'Private Residence',
     idRoom: 'Hunian Pribadi',
-    productId: 'zurich-foresta',
-    veneerUsed: 'Foresta',
-    idVeneerUsed: 'Foresta',
+    veneers: ['zurich-foresta'],
     // First image leads the project page; the card fades through them all.
     // Sizes are the file's own, so the browser can hold the space before the
     // photograph arrives.
@@ -4222,9 +4220,7 @@ export const PROJECTS = [
     idDesigner: 'LAWWW Design Bureau',
     room: 'Tea Shop',
     idRoom: 'Kedai Teh',
-    productId: 'zurich-sapphire',
-    veneerUsed: 'Sapphire',
-    idVeneerUsed: 'Sapphire',
+    veneers: ['zurich-sapphire'],
     images: [
       { src: '/assets/projects/teazzi/1.webp', w: 1448, h: 1086 },
       { src: '/assets/projects/teazzi/2.webp', w: 1086, h: 1448 },
@@ -4245,9 +4241,13 @@ export const PROJECTS = [
     idDesigner: 'LAWWW Design Bureau',
     room: 'Tea Shop',
     idRoom: 'Kedai Teh',
-    productId: 'zurich-sapphire',
-    veneerUsed: 'Sapphire',
-    idVeneerUsed: 'Sapphire',
+    veneers: [
+      'zurich-sapphire',
+      'cairo-pale-tiger-eye',
+      'berlin-slate-oak',
+      'cannes-golden-walnut',
+      'cannes-butter-walnut',
+    ],
     images: [
       { src: '/assets/projects/teazzi-bandung/1.webp', w: 1121, h: 1403 },
       { src: '/assets/projects/teazzi-bandung/2.webp', w: 1122, h: 1402 },
@@ -4260,8 +4260,8 @@ export const PROJECTS = [
       { src: '/assets/projects/teazzi-bandung/9.webp', w: 1121, h: 1403 },
       { src: '/assets/projects/teazzi-bandung/10.webp', w: 1121, h: 1403 },
     ],
-    longDesc: "Teazzi's Bandung store takes the brand's blue out of the signage and into the architecture. Sapphire is cut into the blocked wall running the length of the seating bay, set among oak, pale cream and black panels in a loose Mondrian grid, and it returns as the projecting ledge along the ordering counter and as the field behind the illuminated cup. Close up its figure reads as fine contour lines drawn across the surface, and that movement is what keeps so saturated a blue from going flat under the warm strip lighting.",
-    idLongDesc: "Gerai Teazzi di Bandung membawa warna biru merek ini keluar dari papan nama dan masuk ke dalam arsitekturnya. Sapphire mengisi dinding berblok yang memanjang di sepanjang area duduk, berpadu dengan panel oak, krem pucat, dan hitam dalam susunan menyerupai grid Mondrian, lalu hadir kembali sebagai bilah menonjol pada meja pemesanan dan sebagai bidang di belakang logo gelas yang menyala. Dilihat dari dekat, seratnya terbaca seperti garis kontur halus yang tergambar di permukaan, dan gerak itulah yang menjaga biru sepekat ini tetap hidup di bawah pencahayaan hangat gerai."
+    longDesc: "Teazzi's Bandung store takes the brand's blue out of the signage and into the architecture. Sapphire is cut into the blocked wall running the length of the seating bay, where it sits in a loose Mondrian grid beside Pale Tiger Eye, Slate Oak, Golden Walnut and Butter Walnut, and it returns as the projecting ledge along the ordering counter and as the field behind the illuminated cup. Close up its figure reads as fine contour lines drawn across the surface, and that movement is what keeps so saturated a blue from going flat against the four quieter woods.",
+    idLongDesc: "Gerai Teazzi di Bandung membawa warna biru merek ini keluar dari papan nama dan masuk ke dalam arsitekturnya. Sapphire mengisi dinding berblok yang memanjang di sepanjang area duduk, berdampingan dengan Pale Tiger Eye, Slate Oak, Golden Walnut, dan Butter Walnut dalam susunan menyerupai grid Mondrian, lalu hadir kembali sebagai bilah menonjol pada meja pemesanan dan sebagai bidang di belakang logo gelas yang menyala. Dilihat dari dekat, seratnya terbaca seperti garis kontur halus yang tergambar di permukaan, dan gerak itulah yang menjaga biru sepekat ini tetap hidup di antara empat kayu yang lebih tenang."
   },
   {
     id: 'pesta-kebun',
@@ -4272,9 +4272,7 @@ export const PROJECTS = [
     idDesigner: 'KAMANATA',
     room: 'Restaurant',
     idRoom: 'Restoran',
-    productId: 'zurich-foresta',
-    veneerUsed: 'Foresta',
-    idVeneerUsed: 'Foresta',
+    veneers: ['zurich-foresta'],
     images: [
       { src: '/assets/projects/pesta-kebun/1.webp', w: 1500, h: 2000 },
       { src: '/assets/projects/pesta-kebun/2.webp', w: 1500, h: 2000 },

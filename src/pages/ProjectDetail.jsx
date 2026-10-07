@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { PhotoCycle, pillClass } from '../components/Shared.jsx';
-import { PROJECTS } from '../data.js';
+import { PRODUCTS, PROJECTS } from '../data.js';
 import { projectPhoto, IMAGE_SIZES } from '../imageSrc.js';
-import { clampDescription, projectTitle } from '../siteMeta.js';
+import { clampDescription, projectTitle, shortProductName } from '../siteMeta.js';
 import useDocumentMeta from '../useDocumentMeta.js';
 import { useLanguage } from '../LanguageContext.jsx';
 import './ProjectDetail.css';
@@ -34,15 +34,25 @@ export default function ProjectDetail() {
   // Indonesian copy lives on the same record under an `id`-prefixed key.
   const text = (key) => (lang === 'id' ? project[`id${key[0].toUpperCase()}${key.slice(1)}`] : project[key]);
   const room = text('room');
-  const veneer = text('veneerUsed');
+
+  // A project can be finished in several veneers; each one links to its page.
+  const veneers = (project.veneers || [])
+    .map((productId) => PRODUCTS.find((product) => product.id === productId))
+    .filter(Boolean);
 
   // Cells without a value are left out rather than shown empty.
   const rows = [
     [t.projectDetail.client, text('client')],
     [t.projectDetail.location, text('location')],
     [
-      t.projectDetail.veneerUsed,
-      project.productId ? <Link to={`/products/${project.productId}`}>{veneer}</Link> : veneer,
+      veneers.length > 1 ? t.projectDetail.veneersUsed : t.projectDetail.veneerUsed,
+      veneers.length ? (
+        <span className="veneer-links">
+          {veneers.map((product) => (
+            <Link key={product.id} to={`/products/${product.id}`}>{shortProductName(product)}</Link>
+          ))}
+        </span>
+      ) : null,
     ],
     [t.projectDetail.designer, text('designer')],
   ].filter(([, value]) => value);

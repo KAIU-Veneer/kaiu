@@ -5,6 +5,9 @@
 .project-detail .detail-info-cell a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
 /* An odd number of facts would otherwise leave a blank cell. */
 .project-detail .detail-info-cell:last-child:nth-child(odd) { grid-column: 1 / -1; }
+/* A project finished in several veneers lists them one per line, so each
+   stays its own tap target in a cell too narrow to read them in a row. */
+.project-detail .veneer-links { display: flex; flex-direction: column; gap: 4px; align-items: start; }
 
 /* The lead is a fixed card that fades through every photograph of the
    project. The gallery below keeps each photograph's own shape, since they

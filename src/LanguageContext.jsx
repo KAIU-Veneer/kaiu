@@ -77,7 +77,8 @@ const TRANSLATIONS = {
     },
     projects: { eyebrow: 'Projects', title: 'Selected Work' },
     projectDetail: {
-      back: '← Back to Projects', client: 'Client', location: 'Location', veneerUsed: 'Veneer Used',
+      back: '← Back to Projects', client: 'Client', location: 'Location',
+      veneerUsed: 'Veneer Used', veneersUsed: 'Veneers Used',
       designer: 'Interior Designer', photo: 'photo', notFound: 'Project not found.',
     },
     services: { eyebrow: 'What we offer', title: 'From veneer to finished surface' },
@@ -179,7 +180,8 @@ const TRANSLATIONS = {
     },
     projects: { eyebrow: 'Proyek', title: 'Karya Pilihan' },
     projectDetail: {
-      back: '← Kembali ke Proyek', client: 'Klien', location: 'Lokasi', veneerUsed: 'Veneer Digunakan',
+      back: '← Kembali ke Proyek', client: 'Klien', location: 'Lokasi',
+      veneerUsed: 'Veneer Digunakan', veneersUsed: 'Veneer Digunakan',
       designer: 'Desainer Interior', photo: 'foto', notFound: 'Proyek tidak ditemukan.',
     },
     services: { eyebrow: 'Apa yang kami tawarkan', title: 'Dari veneer hingga permukaan akhir' },
