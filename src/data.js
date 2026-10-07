@@ -4237,6 +4237,33 @@ export const PROJECTS = [
     idLongDesc: "Berlokasi di Mall Ciputra Jakarta, Teazzi menghadirkan interpretasi kontemporer dari ruang teh modern, dengan detail material dan ruang yang bekerja bersama menciptakan pengalaman pelanggan yang khas. Sapphire mengisi bagian depan gerai, plafon area layanan, dan pot tanaman yang membatasi area duduk, dengan seratnya yang terbaca seperti garis kontur biru halus pada setiap panel. Berpadu dengan keramik hitam dan tanaman hijau, warna biru inilah yang membuat gerai ini mudah dikenali dari kejauhan."
   },
   {
+    id: 'teazzi-bandung',
+    title: 'Teazzi - Bandung',
+    location: 'Bandung, West Java',
+    idLocation: 'Bandung, Jawa Barat',
+    designer: 'LAWWW Design Bureau',
+    idDesigner: 'LAWWW Design Bureau',
+    room: 'Tea Shop',
+    idRoom: 'Kedai Teh',
+    productId: 'zurich-sapphire',
+    veneerUsed: 'Sapphire',
+    idVeneerUsed: 'Sapphire',
+    images: [
+      { src: '/assets/projects/teazzi-bandung/1.webp', w: 1121, h: 1403 },
+      { src: '/assets/projects/teazzi-bandung/2.webp', w: 1122, h: 1402 },
+      { src: '/assets/projects/teazzi-bandung/3.webp', w: 1122, h: 1402 },
+      { src: '/assets/projects/teazzi-bandung/4.webp', w: 1121, h: 1403 },
+      { src: '/assets/projects/teazzi-bandung/5.webp', w: 1121, h: 1403 },
+      { src: '/assets/projects/teazzi-bandung/6.webp', w: 1121, h: 1403 },
+      { src: '/assets/projects/teazzi-bandung/7.webp', w: 1121, h: 1403 },
+      { src: '/assets/projects/teazzi-bandung/8.webp', w: 1121, h: 1403 },
+      { src: '/assets/projects/teazzi-bandung/9.webp', w: 1121, h: 1403 },
+      { src: '/assets/projects/teazzi-bandung/10.webp', w: 1121, h: 1403 },
+    ],
+    longDesc: "Teazzi's Bandung store takes the brand's blue out of the signage and into the architecture. Sapphire is cut into the blocked wall running the length of the seating bay, set among oak, pale cream and black panels in a loose Mondrian grid, and it returns as the projecting ledge along the ordering counter and as the field behind the illuminated cup. Close up its figure reads as fine contour lines drawn across the surface, and that movement is what keeps so saturated a blue from going flat under the warm strip lighting.",
+    idLongDesc: "Gerai Teazzi di Bandung membawa warna biru merek ini keluar dari papan nama dan masuk ke dalam arsitekturnya. Sapphire mengisi dinding berblok yang memanjang di sepanjang area duduk, berpadu dengan panel oak, krem pucat, dan hitam dalam susunan menyerupai grid Mondrian, lalu hadir kembali sebagai bilah menonjol pada meja pemesanan dan sebagai bidang di belakang logo gelas yang menyala. Dilihat dari dekat, seratnya terbaca seperti garis kontur halus yang tergambar di permukaan, dan gerak itulah yang menjaga biru sepekat ini tetap hidup di bawah pencahayaan hangat gerai."
+  },
+  {
     id: 'pesta-kebun',
     title: 'Pesta Kebun - Blok M',
     location: 'Blok M, South Jakarta',
