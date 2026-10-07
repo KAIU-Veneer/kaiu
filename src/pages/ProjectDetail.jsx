@@ -40,19 +40,23 @@ export default function ProjectDetail() {
     .map((productId) => PRODUCTS.find((product) => product.id === productId))
     .filter(Boolean);
 
-  // Cells without a value are left out rather than shown empty.
+  // Cells without a value are left out rather than shown empty. The third
+  // item asks for a cell the full width of the grid, which a list of veneers
+  // needs to read as one line rather than wrapping once per name.
   const rows = [
     [t.projectDetail.client, text('client')],
     [t.projectDetail.location, text('location')],
     [
       veneers.length > 1 ? t.projectDetail.veneersUsed : t.projectDetail.veneerUsed,
-      veneers.length ? (
-        <span className="veneer-links">
-          {veneers.map((product) => (
-            <Link key={product.id} to={`/products/${product.id}`}>{shortProductName(product)}</Link>
-          ))}
-        </span>
-      ) : null,
+      veneers.length
+        ? veneers.map((product, i) => (
+            <React.Fragment key={product.id}>
+              {i > 0 && ', '}
+              <Link to={`/products/${product.id}`}>{shortProductName(product)}</Link>
+            </React.Fragment>
+          ))
+        : null,
+      veneers.length > 1,
     ],
     [t.projectDetail.designer, text('designer')],
   ].filter(([, value]) => value);
@@ -67,8 +71,8 @@ export default function ProjectDetail() {
           <h1>{project.title}</h1>
           <p className="project-detail-desc">{text('longDesc')}</p>
           <div className="detail-info-grid">
-            {rows.map(([label, value]) => (
-              <div key={label} className="detail-info-cell">
+            {rows.map(([label, value, wide]) => (
+              <div key={label} className={`detail-info-cell${wide ? ' detail-info-cell-wide' : ''}`}>
                 <span className="label">{label}</span>
                 <span className="value">{value}</span>
               </div>
