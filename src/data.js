@@ -2864,6 +2864,7 @@ export const PRODUCTS = [
     species: 'American Black Walnut (Juglans nigra)',
     idSpecies: 'Walnut Hitam Amerika (Juglans nigra)',
     image: '/assets/image/CANNES WARM WALNUT.webp',
+    hiResImage: '/assets/hires/CANNES WARM WALNUT.png',
     cutMethod: 'Quarter-cut, tinted',
     idCutMethod: 'Potongan quarter, diberi rona',
     bestFor: 'Executive environments, luxury residential millwork, bespoke furniture',
