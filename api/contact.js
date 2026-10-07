@@ -157,7 +157,7 @@ export default async function handler(req, res) {
   const message = clean(body.message, LIMITS.message);
 
   const invalid = [];
-  if (name.length < 2) invalid.push('name');
+  if (name.length < 3) invalid.push('name');
   if (!isEmail(email)) invalid.push('email');
   if (message.length < 2) invalid.push('message');
   if (phone && !/^[\d\s+()-]{6,}$/.test(phone)) invalid.push('phone');
