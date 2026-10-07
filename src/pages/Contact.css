@@ -135,3 +135,7 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* A field the server sent back as rejected, so the visitor can see which. */
+.contact-form-field input[aria-invalid='true'],
+.contact-form-field textarea[aria-invalid='true'] { border-color: #a4332b; }

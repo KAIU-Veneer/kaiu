@@ -159,7 +159,7 @@ export default async function handler(req, res) {
   const invalid = [];
   if (name.length < 2) invalid.push('name');
   if (!isEmail(email)) invalid.push('email');
-  if (message.length < 5) invalid.push('message');
+  if (message.length < 2) invalid.push('message');
   if (phone && !/^[\d\s+()-]{6,}$/.test(phone)) invalid.push('phone');
   if (invalid.length) {
     return res.status(400).json({ ok: false, error: 'validation_failed', fields: invalid });
