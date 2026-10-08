@@ -802,6 +802,7 @@ export const PRODUCTS = [
     species: 'American Black Walnut (Juglans nigra)',
     idSpecies: 'Walnut Hitam Amerika (Juglans nigra)',
     image: '/assets/image/ATHENS TAN WALNUT.webp',
+    hiResImage: '/assets/hires/ATHENS TAN WALNUT.png',
     cutMethod: 'Quarter-cut, lightened',
     idCutMethod: 'Potongan quarter, dicerahkan',
     bestFor: 'Modern residential casework, acoustic panels, light and airy interiors',
