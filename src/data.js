@@ -1636,6 +1636,7 @@ export const PRODUCTS = [
     species: 'Elm or Ash',
     idSpecies: 'Elm atau Ash',
     image: '/assets/image/BERLIN RIVERBED STONE.webp',
+    hiResImage: '/assets/hires/BERLIN RIVERBED STONE.png',
     cutMethod: 'Flat-cut, cerused and aged',
     idCutMethod: 'Potongan flat, di-ceruskan dan efek tua',
     bestFor: 'Dramatic feature walls, organic modern interiors, artistic focal points',
