@@ -17,6 +17,62 @@
 <link rel="icon" type="image/png" href="/icon-192.png" sizes="192x192">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="description" content="KAIU designs and supplies premium natural wood veneers for architects, designers, manufacturers and homeowners.">
+<link rel="canonical" href="https://www.kaiuveneer.co.id/">
+
+<!-- Social preview. Per-page titles are set by React; these are the defaults
+     a scraper reads, since most of them do not run JavaScript. -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="KAIU">
+<meta property="og:title" content="KAIU - Natural Wood Veneer">
+<meta property="og:description" content="KAIU designs and supplies premium natural wood veneers for architects, designers, manufacturers and homeowners.">
+<meta property="og:url" content="https://www.kaiuveneer.co.id/">
+<meta property="og:image" content="https://www.kaiuveneer.co.id/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="id_ID">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Who this site belongs to, stated in the HTML itself rather than left for
+     a crawler to infer from rendered React. "KAIU Veneer" is how people search
+     for the company, so it is recorded as another name for it. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.kaiuveneer.co.id/#organization",
+      "name": "KAIU",
+      "alternateName": ["KAIU Veneer", "KAIU Natural Wood Veneer"],
+      "url": "https://www.kaiuveneer.co.id/",
+      "logo": "https://www.kaiuveneer.co.id/assets/logo/kaiu-logo-cropped.png",
+      "image": "https://www.kaiuveneer.co.id/og-image.jpg",
+      "description": "KAIU designs and supplies premium natural wood veneers for architects, designers, manufacturers and homeowners.",
+      "email": "kaiuveneer@gmail.com",
+      "telephone": "+62-813-1205-377",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jalan Pluit Karang Sari Blok B7T, 64 RT 001 / RW 12",
+        "addressLocality": "Jakarta Utara",
+        "addressRegion": "DKI Jakarta",
+        "postalCode": "14450",
+        "addressCountry": "ID"
+      },
+      "sameAs": ["https://www.instagram.com/kaiuveneer/"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.kaiuveneer.co.id/#website",
+      "name": "KAIU",
+      "alternateName": "KAIU Veneer",
+      "url": "https://www.kaiuveneer.co.id/",
+      "inLanguage": ["en", "id"],
+      "publisher": { "@id": "https://www.kaiuveneer.co.id/#organization" }
+    }
+  ]
+}
+</script>
 <!-- The top row of the hero grid. React only asks for these once it has
      parsed and run, so they are claimed here instead and are on their way
      while that happens. Keep in step with HERO_IMAGES in src/pages/Home.jsx. -->
@@ -33,6 +89,26 @@
 </head>
 <body>
 <div id="root"></div>
+<!-- React replaces nothing here: this is outside the mount point and only
+     ever reaches a visitor with JavaScript off, or a crawler on its first
+     pass before it renders the page. It says the same things the rendered
+     site says, and links to the same pages. -->
+<noscript>
+  <h1>KAIU - Natural Wood Veneer</h1>
+  <p>KAIU designs and supplies premium natural wood veneer for architects, designers,
+     manufacturers and homeowners. Six collections, cut to reveal the character already
+     living inside the timber, from pale Scandinavian oak to deep, smoke-dark walnut.</p>
+  <p>Studio: Jalan Pluit Karang Sari Blok B7T, 64 RT 001 / RW 12, Jakarta Utara 14450, Indonesia.
+     Email <a href="mailto:kaiuveneer@gmail.com">kaiuveneer@gmail.com</a>,
+     telephone <a href="tel:+628131205377">+62 813 1205 377</a>.</p>
+  <ul>
+    <li><a href="/products">Veneer collections: Athens, Berlin, Cairo, Cannes, Oslo and Zurich</a></li>
+    <li><a href="/projects">Projects finished in KAIU veneer</a></li>
+    <li><a href="/services">Services: veneer, panel fabrication and finishing</a></li>
+    <li><a href="/about">About KAIU</a></li>
+    <li><a href="/contact">Contact KAIU</a></li>
+  </ul>
+</noscript>
 <script type="module" src="/src/main.jsx"></script>
 </body>
 </html>
