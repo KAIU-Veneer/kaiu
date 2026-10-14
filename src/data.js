@@ -3772,6 +3772,7 @@ export const PRODUCTS = [
     species: 'Engineered Wood',
     idSpecies: 'Kayu Rekayasa',
     image: '/assets/image/ZURICH CHASING WAVES.webp',
+    hiResImage: '/assets/hires/ZURICH CHASING WAVES.png',
     cutMethod: 'Reconstituted, patterned',
     idCutMethod: 'Reconstituted, patterned',
     bestFor: 'Avant-garde feature walls, dramatic focal points, luxury retail fixtures',
