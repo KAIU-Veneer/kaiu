@@ -1,5 +1,5 @@
 {
-  "version": "muzceyg3",
+  "version": "mv7xp8vv",
   "size": [
     1080,
     1350
@@ -54,6 +54,7 @@
     "CANNES CARAMEL WALNUT": 3,
     "CANNES COPPER WALNUT": 3,
     "CANNES ECLIPSE": 2,
+    "CANNES GOLDEN TEAK": 3,
     "CANNES GOLDEN WALNUT": 2,
     "CANNES IVORY PINE": 3,
     "CANNES NATURAL TEAK": 3,
@@ -77,6 +78,7 @@
     "OSLO SILVER WALNUT": 3,
     "OSLO STARLIGHT": 3,
     "OSLO WAVEMIST OAK": 3,
+    "ZURICH COLOR POP": 3,
     "ZURICH FORESTA": 3,
     "ZURICH MIDNIGHT": 3,
     "ZURICH MONOCHROME TILES": 3,
@@ -84,6 +86,8 @@
     "ZURICH PARCHMENT": 3,
     "ZURICH RUSTIC CEDAR BURL": 3,
     "ZURICH SAPPHIRE": 2,
-    "ZURICH STRIPES": 3
+    "ZURICH STONE FLOWER": 3,
+    "ZURICH STRIPES": 3,
+    "ZURICH TERRAZO": 3
   }
 }
