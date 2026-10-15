@@ -4150,6 +4150,7 @@ export const PRODUCTS = [
     species: 'Dyed Engineered Wood',
     idSpecies: 'Kayu Rekayasa Diwarnai',
     image: '/assets/image/ZURICH VIBRANT JADE.webp',
+    hiResImage: '/assets/hires/ZURICH VIBRANT JADE.png',
     cutMethod: 'Layered, dyed, carved',
     idCutMethod: 'Layered, dyed, carved',
     bestFor: 'Artistic installations, eclectic retail, vibrant bespoke furniture',
