@@ -372,6 +372,7 @@ export const PRODUCTS = [
     species: 'Olive Ash Burl (Fraxinus excelsior)',
     idSpecies: 'Burl Ash Zaitun (Fraxinus excelsior)',
     image: '/assets/image/ATHENS DESERT.webp',
+    hiResImage: '/assets/hires/ATHENS DESERT.png',
     cutMethod: 'Rotary-cut burl',
     idCutMethod: 'Burl potongan rotary',
     bestFor: 'Dashboard accents, luxury inlays, statement art pieces',
