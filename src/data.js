@@ -2569,6 +2569,7 @@ export const PRODUCTS = [
     species: 'American Black Walnut (Juglans nigra)',
     idSpecies: 'Walnut Hitam Amerika (Juglans nigra)',
     image: '/assets/image/CANNES CONTOUR WALNUT.webp',
+    hiResImage: '/assets/hires/ATHENS DESERT.png',
     cutMethod: 'Highly figured',
     idCutMethod: 'Highly figured',
     bestFor: 'Statement art panels, boutique hospitality, dramatic focal points',
