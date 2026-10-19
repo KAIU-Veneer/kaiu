@@ -1375,8 +1375,8 @@ export const PRODUCTS = [
   //   idLongDesc: "Dengan cedar potongan flat dari Cedar (Cedrus), Berlin Graphite Cedar Tree menampilkan serat kayu yang autentik. Dilengkapi lilin satin, material ini direkomendasikan untuk dramatic dinding aksen, desain hospitality custom, statement pintu."
   // },
   {
-    id: 'berlin-graphite-chedar-tree',
-    name: 'Berlin Graphite Chedar Tree',
+    id: 'berlin-graphite-cedar-tree',
+    name: 'Berlin Graphite Cedar Tree',
     collection: 'berlin',
     collectionLabel: 'Berlin',
     dimension: '2500 x 640 x 0.4mm',
@@ -1384,15 +1384,15 @@ export const PRODUCTS = [
     idCut: 'Cedar potongan flat',
     species: 'Cedar (Cedrus)',
     idSpecies: 'Cedar (Cedrus)',
-    image: '/assets/image/BERLIN GRAPHITE CHEDAR TREE.webp',
+    image: '/assets/image/BERLIN GRAPHITE CEDAR TREE.webp',
     cutMethod: 'Flat-cut, stained',
     idCutMethod: 'Potongan flat, diwarnai',
     bestFor: 'Luxury retail environments, architectural paneling, accent furniture',
     idBestFor: 'lingkungan ritel mewah, panel arsitekturaling, furnitur aksene',
     finish: 'Hand-rubbed oil',
     idFinish: 'Minyak gosok tangan',
-    longDesc: "Similar to its cedar counterpart, Berlin Graphite Chedar Tree highlights prominent, swirling cathedral grain patterns in a smoky, medium-dark graphite tone. The natural movement of the wood provides an artistic, organic contrast to strict, modern geometries.",
-    idLongDesc: "Berlin Graphite Chedar Tree menghadirkan cedar potongan flat dari Cedar (Cedrus), dengan hasil akhir minyak gosok tangan yang menonjolkan karakter alami kayunya. Veneer ini cocok digunakan untuk lingkungan ritel mewah, panel arsitekturaling, furnitur aksene."
+    longDesc: "Berlin Graphite Cedar Tree highlights prominent, swirling cathedral grain patterns in a smoky, medium-dark graphite tone. The natural movement of the wood provides an artistic, organic contrast to strict, modern geometries.",
+    idLongDesc: "Berlin Graphite Cedar Tree menghadirkan cedar potongan flat dari Cedar (Cedrus), dengan hasil akhir minyak gosok tangan yang menonjolkan karakter alami kayunya. Veneer ini cocok digunakan untuk lingkungan ritel mewah, panel arsitekturaling, furnitur aksene."
   },
   {
     id: 'berlin-hawaii-nutwood',
