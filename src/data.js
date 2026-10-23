@@ -1012,6 +1012,7 @@ export const PRODUCTS = [
     species: 'Oak (Quercus)',
     idSpecies: 'Oak (Quercus)',
     image: '/assets/image/BERLIN BLACK OAKWOOD.webp',
+    hiResImage: '/assets/hires/BERLIN BLACK OAKWOOD.png',
     cutMethod: 'Rift-cut, stained',
     idCutMethod: 'Potongan rift, diwarnai',
     bestFor: 'Corporate environments, sleek cabinetry, modern doors',
