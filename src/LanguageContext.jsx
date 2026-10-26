@@ -37,7 +37,7 @@ const TRANSLATIONS = {
       whatsapp: 'Chat with KAIU on WhatsApp',
       prevProject: 'Previous project', nextProject: 'Next project', slide: 'Project {n} of {total}',
       prevProjects: 'Previous projects', nextProjects: 'Next projects', projectControls: 'Featured project controls',
-      pauseSlides: 'Pause slideshow', playSlides: 'Play slideshow', skip: 'Skip to content',
+      skip: 'Skip to content',
     },
     footer: {
       tagline: 'Premium recon veneer for modern living. From veneer to finished surface, we bring ideas to life.',
@@ -173,7 +173,7 @@ const TRANSLATIONS = {
       whatsapp: 'Chat dengan KAIU via WhatsApp',
       prevProject: 'Proyek sebelumnya', nextProject: 'Proyek berikutnya', slide: 'Proyek {n} dari {total}',
       prevProjects: 'Proyek sebelumnya', nextProjects: 'Proyek berikutnya', projectControls: 'Kontrol proyek pilihan',
-      pauseSlides: 'Jeda tayangan', playSlides: 'Putar tayangan', skip: 'Langsung ke konten',
+      skip: 'Langsung ke konten',
     },
     footer: {
       tagline: 'Veneer rekon premium untuk hunian modern. Dari veneer hingga permukaan jadi, kami wujudkan ide Anda.',

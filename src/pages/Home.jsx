@@ -47,9 +47,6 @@ export default function Home() {
   const heroProjects = PROJECTS;
   const [slide, setSlide] = useState(0);
   const [heroPaused, setHeroPaused] = useState(false);
-  // Hover and focus pause the slides for a moment; this button stops them
-  // until the visitor plays them again, which is the only option on a phone.
-  const [heroStopped, setHeroStopped] = useState(false);
   const current = heroProjects[slide];
   const go = (step) => setSlide((i) => (i + step + heroProjects.length) % heroProjects.length);
 
@@ -64,7 +61,7 @@ export default function Home() {
     };
     const start = () => {
       stop();
-      if (!heroPaused && !heroStopped && !document.hidden && !reducedMotion.matches) {
+      if (!heroPaused && !document.hidden && !reducedMotion.matches) {
         timer = window.setInterval(() => {
           setSlide((index) => (index + 1) % heroProjects.length);
         }, 6500);
@@ -81,7 +78,7 @@ export default function Home() {
       document.removeEventListener('visibilitychange', onVisibilityChange);
       reducedMotion.removeEventListener?.('change', onMotionChange);
     };
-  }, [heroProjects.length, heroPaused, heroStopped, slide]);
+  }, [heroProjects.length, heroPaused, slide]);
 
   const materialRef = useReveal();
   const processRef = useReveal();
@@ -149,16 +146,6 @@ export default function Home() {
             <span className="sr-only">
               {t.a11y.slide.replace('{n}', slide + 1).replace('{total}', heroProjects.length)}
             </span>
-            <button
-              type="button"
-              className="hero-play"
-              aria-label={heroStopped ? t.a11y.playSlides : t.a11y.pauseSlides}
-              onClick={() => setHeroStopped((stopped) => !stopped)}
-            >
-              {heroStopped
-                ? <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5L8 5.5Z" /></svg>
-                : <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6v12M15 6v12" /></svg>}
-            </button>
             <button type="button" aria-label={t.a11y.prevProject} onClick={() => go(-1)}>
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5m0 0 6 6m-6-6 6-6" /></svg>
             </button>
