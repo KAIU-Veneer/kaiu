@@ -51,18 +51,22 @@
   color: var(--kaiu-muted-light);
 }
 .tone-filter select {
+  /* Drawn like the collection chips beside it: same border, type and height,
+     with our own chevron instead of the browser's, set in from the edge. */
+  appearance: none;
+  -webkit-appearance: none;
   min-height: 44px;
-  min-width: 136px;
-  padding: 0 34px 0 14px;
-  border: 1px solid rgba(51,40,36,.18);
+  padding: 0 42px 0 18px;
+  border: 1px solid rgba(51,40,36,.22);
   border-radius: var(--radius-pill);
-  background-color: transparent;
+  background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23332824' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 16px center / 14px 14px;
   color: var(--kaiu-ink);
   font-family: var(--font-label);
   font-size: 12px;
-  letter-spacing: .02em;
+  font-weight: 500;
+  letter-spacing: .1em;
   cursor: pointer;
-  transition: border-color .2s ease, background-color .2s ease;
+  transition: border-color .25s ease;
 }
 .tone-filter select:hover { border-color: var(--kaiu-green); }
 .tone-filter select:focus-visible { outline: 2px solid var(--kaiu-green); outline-offset: 2px; }
