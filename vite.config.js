@@ -12,7 +12,6 @@ function apiRoutes() {
     configureServer(server) {
       server.middlewares.use(async (req, res, next) => {
         if (!req.url?.startsWith('/api/')) return next();
-
         const route = req.url.split('?')[0].replace(/^\/api\//, '').replace(/\/$/, '');
         if (!/^[a-z0-9-]+$/.test(route)) return next();
 

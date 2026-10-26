@@ -4385,6 +4385,3 @@ export const FILTER_OPTIONS = [
   { id:'oslo', label:'Oslo', idLabel:'Oslo' },
   { id:'zurich', label:'Zurich', idLabel:'Zurich' },
 ];
-
-export const PAGE_SIZE = 4;
-export const PAGE_SIZE_MORE = 16;

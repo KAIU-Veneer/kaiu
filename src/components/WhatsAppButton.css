@@ -1,0 +1,45 @@
+.whatsapp-float {
+  position: fixed;
+  z-index: 1000;
+  right: max(24px, calc(env(safe-area-inset-right) + 16px));
+  bottom: max(24px, calc(env(safe-area-inset-bottom) + 16px));
+  display: block;
+  width: 56px;
+  height: 56px;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, .25);
+  opacity: 1;
+  transition: opacity .25s ease;
+}
+
+.whatsapp-float img {
+  display: block;
+  width: 135%;
+  height: 135%;
+  margin: -17.5%;
+  object-fit: cover;
+}
+
+.whatsapp-float.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.whatsapp-float:focus-visible {
+  outline: 2px solid var(--kaiu-cream);
+  outline-offset: 4px;
+}
+
+@media (max-width: 640px) {
+  .whatsapp-float {
+    right: max(16px, calc(env(safe-area-inset-right) + 12px));
+    bottom: max(16px, calc(env(safe-area-inset-bottom) + 12px));
+    width: 52px;
+    height: 52px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .whatsapp-float { transition: none; }
+}

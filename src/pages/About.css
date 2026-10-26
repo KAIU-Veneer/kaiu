@@ -1,8 +1,8 @@
 .about-intro {
   display: grid; grid-template-columns: 1.15fr .85fr; gap: var(--gap-split); align-items: center;
 }
-.about-intro h1 { margin-top: var(--space-xs); font-size: clamp(28px, 4.6vw, 42px); font-weight: 300; }
-.about-intro p { color: var(--kaiu-brown-deep); margin-top: var(--space-sm); max-width: 480px; font-size: 15px; }
+.about-intro h1 { margin-top: var(--space-xs); font-size: clamp(38px, 4.6vw, 62px); }
+.about-intro p { color: var(--kaiu-muted); margin-top: var(--space-sm); max-width: 480px; font-size: 15px; }
 .about-swatch-tall { aspect-ratio: 4/4.6; border-radius: 2px; }
 .about-wide { margin-top: var(--stack); aspect-ratio: 16/7.2; border-radius: 2px; }
 
@@ -10,16 +10,16 @@
   margin-top: var(--stack); display: grid; grid-template-columns: .85fr 1.15fr; gap: var(--gap-split); align-items: center;
 }
 .about-mission .swatch { aspect-ratio: 4/3.1; border-radius: 2px; }
-.about-mission h3 { font-size: 26px; font-weight: 300; margin: 14px 0; }
-.about-mission p { color: var(--kaiu-brown-deep); font-size: 15px; }
+.about-mission h3 { font-size: 32px; font-weight: 275; margin: 14px 0; }
+.about-mission p { color: var(--kaiu-muted); font-size: 15px; }
 
 .about-stats {
   margin: var(--stack) 0; display: grid; grid-template-columns: repeat(3,1fr); gap: 1px;
-  background: var(--kaiu-ink); border: 1px solid var(--kaiu-ink);
+  background: var(--hairline); border: 1px solid var(--hairline);
 }
 .about-stat { background: var(--kaiu-cream); padding: var(--space-md); }
-.about-stat b { display: block; font-size: 34px; font-weight: 400; }
-.about-stat span { font-size: 12.5px; color: var(--kaiu-brown-deep); }
+.about-stat b { display: block; font-size: 40px; font-weight: 275; }
+.about-stat span { font-size: 12.5px; color: var(--kaiu-muted); }
 
 /* Padding and gaps come from the tokens in index.css; only the layout
    changes per breakpoint. */

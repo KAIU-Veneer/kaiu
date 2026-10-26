@@ -2,18 +2,28 @@
    KAIU design tokens (from the KAIU Design System)
    ============================================================ */
 :root {
-  --kaiu-cream: #FFFFFF;
-  --kaiu-cream-deep: #EFE7D8;
-  --kaiu-tan: #C08552;
-  --kaiu-brown-mid: #8C5A3C;
-  --kaiu-brown-deep: #4B2E2B;
-  --kaiu-ink: #332824;
+  --kaiu-cream: #FFF8F0;       /* warm ivory page ground */
+  --kaiu-cream-deep: #F3E8DC;  /* alternating bands */
+  --kaiu-paper: #FFFCF8;       /* cards lifted from the ivory */
+  --kaiu-green: #332824;       /* legacy token: exact logo brown */
+  --kaiu-green-deep: #241C19;  /* legacy token: deeper espresso */
+  --kaiu-tan: #C08552;         /* camel accent */
+  --kaiu-gold-text: #8C5A3C;   /* readable medium brown accent */
+  --kaiu-ink: #332824;         /* espresso body copy */
+  --kaiu-muted: #71594E;       /* secondary copy */
+  --kaiu-muted-light: #6C5145; /* small labels on ivory */
+  --kaiu-on-dark: #FFF8F0;     /* body copy on brown */
+  --kaiu-on-dark-dim: #E2C7B3; /* labels on brown */
   --kaiu-white: #FFFFFF;
 
-  --surface-footer: var(--kaiu-ink);
+  /* Kept so older rules that still name them keep resolving. */
+  --kaiu-brown-mid: #8C5A3C;
+  --kaiu-brown-deep: #332824;
+
+  --surface-footer: var(--kaiu-green-deep);
   --text-primary: var(--kaiu-ink);
-  --action-fill: var(--kaiu-ink);
-  --action-fill-hover: var(--kaiu-brown-mid);
+  --action-fill: var(--kaiu-green);
+  --action-fill-hover: var(--kaiu-green-deep);
   --link-default: var(--kaiu-ink);
   --link-hover: var(--kaiu-brown-mid);
 
@@ -23,11 +33,12 @@
   --weight-hero: 275;
   --weight-semibold: 600;
 
-  --radius-pill: 28.5px;
+  --radius-pill: 999px;
   --shadow-header: 0px 2px 17.5px 0px rgba(0,0,0,0.25);
 
-  --section-bg-alt: #EFE7D8;
-  --hairline: rgba(51,40,36,.14);
+  --section-bg-alt: var(--kaiu-cream-deep);
+  --hairline: rgba(51,40,36,.16);
+  --hairline-on-dark: rgba(255,248,240,.22);
 
   /* ----------------------------------------------------------
      Spacing scale. Every page pulls its padding and gaps from
@@ -95,25 +106,43 @@ body {
   margin: 0;
   font-family: var(--font-display);
   color: var(--text-primary);
-  background: var(--kaiu-cream);
+  background: var(--kaiu-green);
   -webkit-font-smoothing: antialiased;
 }
 a { color: var(--link-default); text-decoration: none; }
 a:hover { color: var(--link-hover); }
 button { font-family: var(--font-display); cursor: pointer; }
-::selection { background: var(--kaiu-brown-mid); color: var(--kaiu-white); }
+::selection { background: var(--kaiu-green); color: var(--kaiu-cream); }
+
+.brand-mark { display: inline-flex; flex-direction: column; align-items: flex-start; line-height: 1; }
+.brand-mark-window { position: relative; display: block; width: 88px; height: 29px; overflow: hidden; }
+.brand-mark-window img {
+  position: absolute;
+  left: 50%; top: 50%;
+  width: 144px; height: 144px; max-width: none;
+  transform: translate(-50%, -50%);
+  object-fit: contain;
+}
 
 /* ============================================================
    Shared, reused across pages
    ============================================================ */
 .eyebrow {
+  display: block;
   font-family: var(--font-label);
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: .2em;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: .24em;
   text-transform: uppercase;
-  color: var(--kaiu-tan);
+  color: var(--kaiu-muted-light);
 }
+/* The same label sitting on one of the green bands. */
+.on-dark .eyebrow { color: var(--kaiu-on-dark-dim); }
+
+/* Headings are the brand grotesk held light and large, so the cream
+   pages read editorial without reaching for a second typeface. */
+h1, h2 { font-weight: var(--weight-hero); letter-spacing: -.01em; line-height: 1.08; }
+h3, h4 { font-weight: 600; letter-spacing: 0; }
 
 .swatch {
   position: relative;
@@ -128,26 +157,36 @@ button { font-family: var(--font-display); cursor: pointer; }
 .swatch:hover .swatch-grain { transform: scale(1.06); }
 
 .pill-btn {
-  display: inline-block;
-  padding: 14px 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 50px;
+  padding: 0 32px;
   border-radius: var(--radius-pill);
-  font-size: 12.5px;
-  font-weight: 600;
-  letter-spacing: .14em;
+  font-family: var(--font-label);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: .18em;
   text-transform: uppercase;
-  border: none;
+  border: 1px solid var(--action-fill);
   background: var(--action-fill);
-  color: var(--kaiu-white);
+  color: var(--kaiu-cream);
   cursor: pointer;
   transition: transform .35s cubic-bezier(.22,1,.36,1), background .35s ease, color .35s ease, border-color .35s ease;
 }
-.pill-btn:hover { transform: translateY(-2px); background: var(--action-fill-hover); color:var(--kaiu-white); }
+.pill-btn:hover { transform: translateY(-2px); background: var(--action-fill-hover); border-color: var(--action-fill-hover); color: var(--kaiu-cream); }
 .pill-btn-outline {
   background: transparent;
   color: var(--text-primary);
-  border: 1px solid var(--kaiu-brown-mid);
+  border: 1px solid rgba(51,40,36,.28);
 }
-.pill-btn-outline:hover { background: var(--kaiu-ink); border-color: var(--kaiu-ink); color: var(--kaiu-white); }
+.pill-btn-outline:hover { background: var(--kaiu-green); border-color: var(--kaiu-green); color: var(--kaiu-cream); }
+/* On a green band the pair inverts: cream fill, cream outline. */
+.on-dark .pill-btn { background: var(--kaiu-cream); border-color: var(--kaiu-cream); color: var(--kaiu-green); }
+.on-dark .pill-btn:hover { background: var(--kaiu-white); border-color: var(--kaiu-white); color: var(--kaiu-green); }
+.on-dark .pill-btn-outline { background: transparent; color: var(--kaiu-cream); border-color: rgba(255,248,240,.45); }
+.on-dark .pill-btn-outline:hover { background: var(--kaiu-cream); border-color: var(--kaiu-cream); color: var(--kaiu-green); }
 
 
 .app-shell {
@@ -174,7 +213,43 @@ button { font-family: var(--font-display); cursor: pointer; }
   padding: var(--section-y) var(--page-x);
   text-align: center;
 }
-.section-alt h2 { margin: 14px auto 0; font-size: 32px; font-weight: 300; }
+.section-alt h2 { margin: 14px auto 0; font-size: 42px; }
+
+/* ------------------------------------------------------------
+   The dark band. Several sections across the site sit on brown
+   with the type inverted; `on-dark` flips the shared pieces
+   (eyebrow, buttons, rules) in one place.
+   ------------------------------------------------------------ */
+.on-dark {
+  background: var(--kaiu-green);
+  color: var(--kaiu-cream);
+}
+.on-dark h1, .on-dark h2, .on-dark h3, .on-dark h4 { color: var(--kaiu-cream); }
+.on-dark p { color: var(--kaiu-on-dark); }
+.on-dark a { color: var(--kaiu-cream); }
+.on-dark hr, .on-dark .hairline { border-color: var(--hairline-on-dark); }
+
+/* Section heading pair used on every inner page. */
+.page-head { display: flex; flex-wrap: wrap; gap: var(--gap-split); align-items: flex-end; }
+.page-head > :first-child { flex: 999 1 460px; min-width: 0; }
+.page-head h1 { margin: 18px 0 0; font-size: clamp(38px, 4.4vw, 62px); }
+.page-head h2 { margin: 18px 0 0; font-size: clamp(30px, 3.2vw, 44px); }
+.page-head p { flex: 1 1 320px; min-width: 0; max-width: 400px; margin: 0; font-size: 15px; line-height: 1.8; color: var(--kaiu-muted); }
+
+/* A label/value row, the shape the spec tables use. */
+.spec-table { width: 100%; border-collapse: collapse; font-size: 15px; }
+.spec-table th {
+  text-align: left; font-weight: 400; width: 260px;
+  font-family: var(--font-label); font-size: 11px; letter-spacing: .16em;
+  text-transform: uppercase; color: var(--kaiu-muted-light);
+}
+.spec-table th, .spec-table td { padding: 20px 0; border-top: 1px solid var(--hairline); }
+.spec-table tr:last-child th, .spec-table tr:last-child td { border-bottom: 1px solid var(--hairline); }
+@media (max-width: 640px) {
+  .spec-table, .spec-table tbody, .spec-table tr, .spec-table th, .spec-table td { display: block; width: auto; }
+  .spec-table td { padding-top: 6px; border-top: none; }
+  .spec-table th { padding-bottom: 0; }
+}
 
 .detail-info-grid {
   display: grid;
@@ -261,7 +336,7 @@ button { font-family: var(--font-display); cursor: pointer; }
   color: #fff;
 }
 .project-card-tag .name { font-size: 13px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
-.project-card-tag .room { font-size: 11px; color: rgba(255,255,255,.75); }
+.project-card-tag .room { font-size: 11px; color: rgba(255,248,240,.82); }
 .project-card-expand {
   width: 30px; height: 30px; border-radius: 50%;
   background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.35);

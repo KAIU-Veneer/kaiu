@@ -1,8 +1,7 @@
 .contact-body h1 {
   margin: 10px 0 var(--space-lg);
-  font-size: clamp(28px, 4.4vw, 40px);
-  font-weight: 300;
-  max-width: 600px;
+  font-size: clamp(38px, 4.4vw, 62px);
+  max-width: 680px;
 }
 .contact-grid {
   display: grid;
@@ -17,7 +16,7 @@
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--kaiu-tan);
+  color: var(--kaiu-muted-light);
   margin-top: var(--space-md);
 }
 .contact-info dt:first-child {
@@ -55,7 +54,7 @@
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--kaiu-brown-deep);
+  color: var(--kaiu-muted);
   margin-bottom: 8px;
 }
 .contact-form-field input,

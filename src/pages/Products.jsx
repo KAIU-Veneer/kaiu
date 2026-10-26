@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation, useNavigationType } from 'react-router-dom';
-import { Swatch, pillClass } from '../components/Shared.jsx';
-import { PRODUCTS, FILTER_OPTIONS, COLLECTION_INFO, PAGE_SIZE, PAGE_SIZE_MORE } from '../data.js';
+import { PRODUCTS, FILTER_OPTIONS, COLLECTION_INFO, DEFAULT_DIMENSION } from '../data.js';
 import { cardSwatch, IMAGE_SIZES } from '../imageSrc.js';
 import { useLanguage } from '../LanguageContext.jsx';
-import useReveal from '../useReveal.js';
 import useDocumentMeta from '../useDocumentMeta.js';
 import './Products.css';
 
@@ -19,14 +17,29 @@ function displayName(name, collectionLabel) {
   return name.startsWith(prefix) ? name.slice(prefix.length) : name;
 }
 
+const TONE_OPTIONS = ['light', 'warm', 'cool', 'dark', 'colorful'];
+const TONE_TERMS = {
+  light: /\b(light|pale|paler|ivory|white|cream|blonde|bleached|alabaster|snow|sand|linen|chalk|pearl|champagne|natural white|wheat|beige)\b/i,
+  warm: /\b(warm|brown|walnut|honey|amber|caramel|russet|cinnamon|mocha|latte|cocoa|espresso|coffee|golden|gold|chestnut|cognac|terracotta|clay|copper|tawny|tan|sienna|oak burl)\b/i,
+  cool: /\b(cool|grey|gray|silver|ash|slate|blue|indigo|cobalt|mist|steel|smoke|graphite|cement|pewter|frost|ice|jade|teal)\b/i,
+  dark: /\b(dark|deep|black|ebony|charcoal|midnight|noir|raven|burnt|smoked|carbon|shadow|onyx|espresso)\b/i,
+  colorful: /\b(colorful|multi.colou?r|vibrant|color pop|mosaic|crimson|sangria|amethyst|domino|cloisonne|terraz?zo|starry|jade|flower|chenille|weave|stripes|tiles|contour|pattern)\b/i,
+};
+
+function productTones(product) {
+  const text = `${product.name} ${product.longDesc || ''}`;
+  const matches = TONE_OPTIONS.filter((tone) => TONE_TERMS[tone].test(text));
+  // Wood designs without a strong color cue read as warm, natural tones.
+  return matches.length ? matches : ['warm'];
+}
+
 /**
  * What the visitor had on screen the last time they were here. Opening a
- * veneer and coming back unmounts this page, and without it they would return
- * to an unfiltered list of four — too short to hold the place they had
- * scrolled to. A step back in history resumes it, as does the back link on a
+ * veneer and coming back unmounts this page. A step back in history resumes
+ * the visitor's collection, tone and search choices, as does the back link on a
  * veneer's own page; arriving from the menu or a fresh link starts clean.
  */
-const lastView = { filter: 'all', query: '', visibleCount: PAGE_SIZE };
+const lastView = { filter: 'all', tone: 'all', query: '' };
 
 export default function Products() {
   const { t, lang } = useLanguage();
@@ -34,16 +47,17 @@ export default function Products() {
   const { state } = useLocation();
   const resuming = useNavigationType() === 'POP' || Boolean(state && state.resume);
   const [filter, setFilter] = useState(resuming ? lastView.filter : 'all');
+  const [tone, setTone] = useState(resuming ? lastView.tone : 'all');
   const [query, setQuery] = useState(resuming ? lastView.query : '');
-  const [searchOpen, setSearchOpen] = useState(resuming ? Boolean(lastView.query) : false);
-  const [visibleCount, setVisibleCount] = useState(resuming ? lastView.visibleCount : PAGE_SIZE);
 
   useEffect(() => {
-    Object.assign(lastView, { filter, query, visibleCount });
-  }, [filter, query, visibleCount]);
+    Object.assign(lastView, { filter, tone, query });
+  }, [filter, tone, query]);
 
-  const ctaRef = useReveal();
-  const byCollection = filter === 'all' ? PRODUCTS : PRODUCTS.filter((p) => p.collection === filter);
+  const byCollection = PRODUCTS.filter((p) =>
+    (filter === 'all' || p.collection === filter) &&
+    (tone === 'all' || productTones(p).includes(tone))
+  );
   const q = query.trim().toLowerCase();
   const filtered = q
     ? byCollection.filter((p) =>
@@ -52,8 +66,6 @@ export default function Products() {
           .some((field) => field.toLowerCase().includes(q))
       )
     : byCollection;
-  const visible = filtered.slice(0, visibleCount);
-  const hasMore = filtered.length > visibleCount;
   const activeInfo = filter !== 'all' ? COLLECTION_INFO[filter] : null;
 
   return (
@@ -67,35 +79,41 @@ export default function Products() {
               <button
                 key={f.id}
                 className={filter === f.id ? 'active' : ''}
-                onClick={() => { setFilter(f.id); setVisibleCount(PAGE_SIZE); }}
+                onClick={() => setFilter(f.id)}
               >
                 {lang === 'id' ? f.idLabel : f.label}
               </button>
             ))}
           </div>
-          <div className={`product-search${searchOpen || query ? ' open' : ''}`}>
-            <button
-              type="button"
-              className="product-search-toggle"
-              onClick={() => setSearchOpen((o) => !o)}
-              aria-label={lang === 'id' ? 'Cari veneer' : 'Search veneer'}
-            >
-              <svg className="product-search-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+          <div className="tone-filter">
+            <label className="tone-filter-label" htmlFor="tone-filter">{t.products.toneLabel}</label>
+            <select id="tone-filter" value={tone} onChange={(event) => setTone(event.target.value)}>
+              {['all', ...TONE_OPTIONS].map((option) => (
+                <option key={option} value={option}>{t.products.tones[option]}</option>
+              ))}
+            </select>
+          </div>
+          {/* The field is always open: hiding search behind a toggle costs a
+              click on the one page where people arrive knowing what they want. */}
+          <div className="product-search">
+            <label className="product-search-label" htmlFor="product-search">{t.products.searchLabel}</label>
+            <div className="product-search-field">
+              <svg className="product-search-icon" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true">
                 <circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" strokeWidth="1.6" />
                 <line x1="15.4" y1="15.4" x2="20.5" y2="20.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
               </svg>
-            </button>
-            <input
-              type="search"
-              value={query}
-              onChange={(e) => { setQuery(e.target.value); setVisibleCount(PAGE_SIZE); }}
-              onBlur={() => { if (!query) setSearchOpen(false); }}
-              placeholder={lang === 'id' ? 'Cari veneer…' : 'Search veneer…'}
-              aria-label={lang === 'id' ? 'Cari veneer' : 'Search veneer'}
-              autoFocus={searchOpen}
-              tabIndex={searchOpen || query ? 0 : -1}
-            />
+              <input
+                id="product-search"
+                type="search"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                placeholder={t.products.searchPlaceholder}
+              />
+            </div>
           </div>
+          <span className="product-count" aria-live="polite">
+            {filtered.length} {filtered.length === 1 ? t.products.resultOne : t.products.resultMany}
+          </span>
         </div>
       </div>
 
@@ -109,12 +127,12 @@ export default function Products() {
 
       <div className="products-body page-section-body">
         <div className="product-grid">
-          {visible.map((p) => (
+          {filtered.map((p) => (
             <Link key={p.id} to={`/products/${p.id}`} className="product-card">
               <img {...cardSwatch(p.image)} sizes={IMAGE_SIZES.cardSwatch}
                    className="swatch" alt={p.name} loading="lazy" decoding="async" />
               <h4>{displayName(p.name, p.collectionLabel)}</h4>
-              <span className="product-collection-label">{t.productDetail.collection}: {p.collectionLabel.toUpperCase()}</span>
+              <span className="product-collection-label">{p.collectionLabel.toUpperCase()} · {(p.dimension || DEFAULT_DIMENSION).split(' x ').slice(0, 2).join(' × ')}</span>
               <span className="product-short-desc">{shortDesc(lang === 'id' ? p.idLongDesc : p.longDesc)}</span>
             </Link>
           ))}
@@ -125,11 +143,6 @@ export default function Products() {
               ? 'Tidak ada veneer yang cocok dengan pencarian Anda.'
               : 'No veneer matches your search.'}
           </p>
-        )}
-        {hasMore && (
-          <div className="show-more">
-            <button className={pillClass('outline')} onClick={() => setVisibleCount((c) => c + PAGE_SIZE_MORE)}>{t.products.showMore}</button>
-          </div>
         )}
       </div>
 

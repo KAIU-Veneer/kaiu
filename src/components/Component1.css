@@ -1,10 +1,12 @@
+/* Header nav link. It only ever sits on the green bar, so the colours
+   are the on-dark pair and the underline is the tan rule. */
 .nav-link {
-  font-family: var(--font-display);
+  font-family: var(--font-label);
   font-weight: 500;
-  font-size: 14px;
-  letter-spacing: .2em;
+  font-size: 11px;
+  letter-spacing: .18em;
   text-transform: uppercase;
-  color: var(--link-default);
+  color: var(--kaiu-on-dark);
   white-space: nowrap;
   position: relative;
   padding-bottom: 6px;
@@ -13,17 +15,17 @@
 .nav-link::after {
   content: '';
   position: absolute; left: 0; right: 100%; bottom: 0;
-  height: 1px; background: var(--kaiu-brown-mid);
+  height: 1px; background: var(--kaiu-tan);
   transition: right .35s cubic-bezier(.22,1,.36,1);
 }
 .nav-link:hover,
-.nav-link.active { color: var(--link-hover); }
+.nav-link.active { color: var(--kaiu-cream); }
 .nav-link:hover::after,
 .nav-link.active::after { right: 0; }
 
-@media (max-width: 900px) {
-  .nav-link { font-size: 13px; letter-spacing: .08em; padding-bottom: 3px; }
+@media (max-width: 1024px) {
+  .nav-link { letter-spacing: .12em; }
 }
-@media (max-width: 420px) {
-  .nav-link { font-size: 11px; letter-spacing: .06em; }
+@media (max-width: 900px) {
+  .nav-link { font-size: 14px; letter-spacing: .16em; padding-bottom: 4px; }
 }

@@ -1,4 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
+import './WhatsAppButton.css';
 
 export default function WhatsAppButton() {
   const phone = '628131205377';
@@ -15,33 +17,16 @@ export default function WhatsAppButton() {
     return () => observer.disconnect();
   }, []);
 
-  return (
+  return createPortal(
     <a
       href={`https://wa.me/${phone}`}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat on WhatsApp"
-      style={{
-        position: 'fixed',
-        right: 24,
-        bottom: 24,
-        width: 56,
-        height: 56,
-        borderRadius: '50%',
-        overflow: 'hidden',
-        boxShadow: '0 4px 16px rgba(0,0,0,0.25)',
-        zIndex: 1000,
-        display: 'block',
-        opacity: visible ? 1 : 0,
-        pointerEvents: visible ? 'auto' : 'none',
-        transition: 'opacity 0.3s ease',
-      }}
+      className={`whatsapp-float${visible ? '' : ' is-hidden'}`}
     >
-      <img
-        src="/assets/icons/whatsapp.png"
-        alt=""
-        style={{ width: '135%', height: '135%', display: 'block', objectFit: 'cover', marginLeft: '-17.5%', marginTop: '-17.5%' }}
-      />
-    </a>
+      <img src="/assets/icons/whatsapp.png" alt="" />
+    </a>,
+    document.body
   );
 }
