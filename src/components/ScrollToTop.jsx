@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { useLocation, useNavigationType } from 'react-router-dom';
 
 /**
@@ -29,6 +29,19 @@ export default function ScrollToTop() {
   const { key, pathname, state } = useLocation();
   const navigationType = useNavigationType();
   const resuming = Boolean(state && state.resume);
+  const firstPage = useRef(true);
+
+  // A new page replaces the old one in place, so a screen reader hears
+  // nothing. Moving focus to the main region announces it and starts the
+  // next Tab from the page itself rather than from the link just clicked.
+  // Not on the first page: the visitor has not asked for anything yet.
+  useEffect(() => {
+    if (firstPage.current) {
+      firstPage.current = false;
+      return;
+    }
+    document.getElementById('main')?.focus({ preventScroll: true });
+  }, [key]);
 
   // Recorded as it happens rather than on the way out: by the time this page
   // is being left the next one is already in the document, and a shorter one

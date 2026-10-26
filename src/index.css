@@ -113,6 +113,34 @@ a { color: var(--link-default); text-decoration: none; }
 a:hover { color: var(--link-hover); }
 button { font-family: var(--font-display); cursor: pointer; }
 ::selection { background: var(--kaiu-green); color: var(--kaiu-cream); }
+
+/* One keyboard focus ring for the whole site: espresso-brown on the ivory
+   pages, ivory on the dark header, footer, hero and brown bands. */
+:focus-visible { outline: 2px solid var(--kaiu-gold-text); outline-offset: 3px; }
+.site-header :focus-visible,
+.site-footer :focus-visible,
+.hero :focus-visible,
+.on-dark :focus-visible { outline-color: var(--kaiu-cream); }
+/* Main takes focus only from code, on a page change; it needs no ring. */
+.app-main:focus { outline: none; }
+
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 2000;
+  padding: 12px 20px;
+  border-radius: var(--radius-pill);
+  background: var(--kaiu-cream);
+  color: var(--kaiu-green);
+  font-family: var(--font-label);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  transform: translateY(-160%);
+}
+.skip-link:focus-visible { transform: none; outline-color: var(--kaiu-green); }
 /* The off-canvas menu sits past the right edge; clip it so the page never scrolls sideways. */
 html, body { overflow-x: clip; }
 

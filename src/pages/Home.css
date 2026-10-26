@@ -114,6 +114,10 @@
 }
 .hero-nav button:hover { background: var(--kaiu-cream); color: var(--kaiu-green); }
 .hero-nav svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+/* Pause/play is a quieter control than the arrows: no ring until hovered. */
+.hero-nav .hero-play { border-color: transparent; }
+.hero-nav .hero-play:hover { border-color: var(--kaiu-cream); }
+.hero-play svg { width: 16px; height: 16px; }
 
 /* ============================================================
    OUR MATERIAL

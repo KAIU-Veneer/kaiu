@@ -7,6 +7,7 @@ import ScrollToTop from './components/ScrollToTop.jsx';
 import WoodgrainFilter from './components/Shared.jsx';
 import WhatsAppButton from './components/WhatsAppButton.jsx';
 import Home from './pages/Home.jsx';
+import { useLanguage } from './LanguageContext.jsx';
 
 /**
  * The home page is part of the first download, since it is what most visitors
@@ -24,12 +25,14 @@ const Contact = lazy(() => import('./pages/Contact.jsx'));
 const NotFound = lazy(() => import('./pages/NotFound.jsx'));
 
 export default function App() {
+  const { t } = useLanguage();
   return (
     <div className="app-shell">
+      <a href="#main" className="skip-link">{t.a11y.skip}</a>
       <WoodgrainFilter />
       <Header />
       <ScrollToTop />
-      <main className="app-main">
+      <main className="app-main" id="main" tabIndex={-1}>
         {/* Blank rather than a spinner: on a warm connection the page arrives
             in a few milliseconds and a flashing message reads as a fault. */}
         <Suspense fallback={<div className="route-pending" />}>
