@@ -81,7 +81,6 @@ export default function Home() {
   }, [heroProjects.length, heroPaused, slide]);
 
   const materialRef = useReveal();
-  const whyRef = useReveal();
   const processRef = useReveal();
   const worksRef = useReveal();
 
@@ -139,13 +138,20 @@ export default function Home() {
             <span className="hero-caption-place">{lang === 'id' ? current.idLocation : current.location}</span>
           </div>
           <div className="hero-nav">
-            <span className="hero-count">
+            <span className="hero-count" aria-hidden="true">
               {String(slide + 1).padStart(2, '0')}
               <span className="hero-rule" />
               {String(heroProjects.length).padStart(2, '0')}
             </span>
-            <button type="button" aria-label="Previous project" onClick={() => go(-1)}>←</button>
-            <button type="button" aria-label="Next project" onClick={() => go(1)}>→</button>
+            <span className="sr-only">
+              {t.a11y.slide.replace('{n}', slide + 1).replace('{total}', heroProjects.length)}
+            </span>
+            <button type="button" aria-label={t.a11y.prevProject} onClick={() => go(-1)}>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5m0 0 6 6m-6-6 6-6" /></svg>
+            </button>
+            <button type="button" aria-label={t.a11y.nextProject} onClick={() => go(1)}>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m0 0-6-6m6 6-6 6" /></svg>
+            </button>
           </div>
         </div>
       </section>
@@ -171,26 +177,6 @@ export default function Home() {
         </div>
         <div className="material-media" aria-hidden="true">
           <img src="/assets/image/our-material.webp" alt="" loading="lazy" decoding="async" />
-        </div>
-      </section>
-
-      {/* ---------------- WHY KAIU ---------------- */}
-      <section className="why on-dark reveal" data-header-surface="colored" ref={whyRef}>
-        <div className="why-head">
-          <div>
-            <span className="eyebrow">{t.home.whyEyebrow}</span>
-            <h2>{t.home.whyTitle}</h2>
-          </div>
-          <p>{t.home.whyDesc}</p>
-        </div>
-        <div className="why-grid">
-          {[['w1t','w1d'], ['w2t','w2d'], ['w3t','w3d'], ['w4t','w4d']].map(([title, desc]) => (
-            <div key={title} className="why-item">
-              <span className="why-mark" aria-hidden="true" />
-              <h3>{t.home[title]}</h3>
-              <p>{t.home[desc]}</p>
-            </div>
-          ))}
         </div>
       </section>
 
@@ -229,11 +215,11 @@ export default function Home() {
           </div>
           <div className="works-actions">
             <Link to="/projects" className="text-cta">{t.home.viewAllProjects} <span aria-hidden="true">→</span></Link>
-            <div className="works-controls" aria-label="Featured project controls">
-              <button type="button" aria-label="Previous projects" onClick={() => slideWorks(-1)}>
+            <div className="works-controls" aria-label={t.a11y.projectControls}>
+              <button type="button" aria-label={t.a11y.prevProjects} onClick={() => slideWorks(-1)}>
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5m0 0 6 6m-6-6 6-6" /></svg>
               </button>
-              <button type="button" aria-label="Next projects" onClick={() => slideWorks(1)}>
+              <button type="button" aria-label={t.a11y.nextProjects} onClick={() => slideWorks(1)}>
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m0 0-6-6m6 6-6 6" /></svg>
               </button>
             </div>

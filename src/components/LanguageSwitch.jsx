@@ -4,9 +4,9 @@ import './LanguageSwitch.css';
 
 /** EN/ID language pill: click to toggle site language. */
 export default function LanguageSwitch() {
-  const { lang, toggle } = useLanguage();
+  const { lang, toggle, t } = useLanguage();
   return (
-    <button type="button" className="lang-switch" onClick={toggle} aria-label="Toggle language">
+    <button type="button" className="lang-switch" onClick={toggle} aria-label={t.a11y.switchLanguage}>
       <span>{lang.toUpperCase()}</span>
     </button>
   );

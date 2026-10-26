@@ -19,7 +19,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-col">
-          <h5>{t.footer.explore}</h5>
+          <h2 className="footer-heading">{t.footer.explore}</h2>
           <Link to="/">{t.nav.home}</Link>
           <Link to="/products">{t.nav.products}</Link>
           <Link to="/projects">{t.nav.projects}</Link>
@@ -28,14 +28,14 @@ export default function Footer() {
         </div>
 
         <div className="footer-col">
-          <h5>{t.footer.services}</h5>
+          <h2 className="footer-heading">{t.footer.services}</h2>
           <Link to="/services">{t.footer.serviceVeneer}</Link>
           <Link to="/services">{t.footer.servicePanel}</Link>
           <Link to="/services">{t.footer.serviceFinishing}</Link>
         </div>
 
         <div className="footer-col">
-          <h5>{t.footer.studio}</h5>
+          <h2 className="footer-heading">{t.footer.studio}</h2>
           <p>
             Jalan Pluit Karang Sari Blok B7T<br />
             64 RT 001 / RW 12<br />

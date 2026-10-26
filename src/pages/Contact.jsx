@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../LanguageContext.jsx';
-import useReveal from '../useReveal.js';
 import useDocumentMeta from '../useDocumentMeta.js';
 import './Contact.css';
 
@@ -24,8 +23,6 @@ export default function Contact() {
   const [errorKey, setErrorKey] = useState('error');
   // Which fields the server rejected, so the message can name them.
   const [badFields, setBadFields] = useState([]);
-  const infoRef = useReveal();
-  const formRef = useReveal();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -78,7 +75,7 @@ export default function Contact() {
       <span className="eyebrow">{t.contact.eyebrow}</span>
       <h1>{t.contact.title}</h1>
       <div className="contact-grid">
-        <div className="contact-info reveal" ref={infoRef}>
+        <div className="contact-info">
           <dl>
             <dt>{t.contact.studio}</dt>
             <dd>Jalan Pluit Karang Sari Blok B7T, 64<br/>RT 001 / RW 12<br/>Jakarta Utara 14450, Indonesia</dd>
@@ -100,7 +97,7 @@ export default function Contact() {
             <p>{t.contact.success}</p>
           </div>
         ) : (
-          <form className="reveal" ref={formRef} onSubmit={handleSubmit} noValidate={false}>
+          <form onSubmit={handleSubmit} noValidate={false}>
             <div className="contact-form-field">
               <label htmlFor="contact-name">{t.contact.fullName}</label>
               <input id="contact-name" type="text" name="name" required maxLength={100} autoComplete="name" placeholder={t.contact.fullNamePh} aria-invalid={rejected('name')} />

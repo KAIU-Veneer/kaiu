@@ -13,7 +13,13 @@
   overflow: hidden;
 }
 
-.hero-media { position: absolute; inset: 0; background: var(--kaiu-green); }
+.hero-media {
+  position: absolute;
+  inset: 0;
+  /* Shown only if the project photographs fail to load: a walnut sheet
+     the Process section already loads, so it costs nothing extra. */
+  background: var(--kaiu-green) url('/assets/image/w800/CANNES GOLDEN WALNUT.webp') center / cover no-repeat;
+}
 .hero-img {
   position: absolute;
   inset: 0;
@@ -95,6 +101,9 @@
 }
 .hero-rule { display: block; width: 48px; height: 1px; background: rgba(255,248,240,.45); }
 .hero-nav button {
+  display: grid;
+  place-items: center;
+  padding: 0;
   width: 44px; height: 44px;
   border-radius: var(--radius-pill);
   border: 1px solid rgba(255,248,240,.45);
@@ -104,6 +113,7 @@
   transition: background .25s ease, color .25s ease;
 }
 .hero-nav button:hover { background: var(--kaiu-cream); color: var(--kaiu-green); }
+.hero-nav svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
 
 /* ============================================================
    OUR MATERIAL
@@ -182,40 +192,6 @@
 }
 .text-cta:hover { color: var(--kaiu-brown-mid); border-color: var(--kaiu-gold-text); }
 .on-dark .text-cta { color: var(--kaiu-cream); border-color: var(--hairline-on-dark); }
-
-/* ============================================================
-   WHY KAIU — the green band
-   ============================================================ */
-.why { padding: var(--section-y) var(--page-x); }
-.why-head { display: flex; flex-wrap: wrap; gap: var(--gap-split); align-items: flex-start; }
-.why-head > div { flex: 1 1 360px; min-width: 0; max-width: 460px; }
-.why-head h2 { margin: 20px 0 0; font-size: clamp(32px, 3.6vw, 50px); }
-.why-head > p { flex: 999 1 400px; min-width: 0; max-width: 520px; margin: 0; font-size: 15px; line-height: 1.85; }
-
-.why-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: var(--gap-grid);
-  margin-top: var(--space-xl);
-}
-.why-mark {
-  display: block;
-  width: 40px; height: 40px;
-  border-radius: var(--radius-pill);
-  border: 1px solid rgba(255,248,240,.4);
-  position: relative;
-  margin-bottom: 20px;
-}
-.why-mark::after {
-  content: '';
-  position: absolute;
-  inset: 0; margin: auto;
-  width: 8px; height: 8px;
-  border-radius: var(--radius-pill);
-  background: var(--kaiu-tan);
-}
-.why-item h3 { margin: 0 0 8px; font-size: 16px; font-weight: 600; }
-.why-item p { margin: 0; font-size: 14px; line-height: 1.75; }
 
 /* ============================================================
    THE PROCESS
@@ -351,10 +327,6 @@
 /* ============================================================
    Breakpoints
    ============================================================ */
-@media (max-width: 1100px) {
-  .why-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-lg); }
-}
-
 @media (max-width: 900px) {
   .hero {
     padding-bottom: 120px;
@@ -380,11 +352,12 @@
 @media (max-width: 640px) {
   .hero-actions .pill-btn { flex: 1 1 100%; }
   .hero-count { display: none; }
+  /* Keep the slide arrows clear of the floating WhatsApp button. */
+  .hero-caption { right: calc(var(--page-x) + 64px); }
   .works-head { align-items: flex-end; }
   .works-actions { gap: 14px; }
-  .works-head .text-cta { font-size: 9px; letter-spacing: .12em; }
+  .works-head .text-cta { font-size: 11px; letter-spacing: .12em; }
   .works-controls { gap: 6px; }
-  .works-controls button { width: 38px; height: 38px; }
   .work-card { flex-basis: 88%; }
   .work-card-arrow { opacity: 1; transform: none; width: 36px; height: 36px; }
 }

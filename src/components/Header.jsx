@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useState } from 'react';
+import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Component1 from './Component1.jsx';
 import LanguageSwitch from './LanguageSwitch.jsx';
@@ -14,6 +14,46 @@ export default function Header() {
   const isHome = pathname === '/';
   const isActive = (prefix) => pathname === prefix || pathname.startsWith(prefix + '/');
   const close = () => setOpen(false);
+  const navRef = useRef(null);
+  const toggleRef = useRef(null);
+
+  // While the drawer is open, Escape closes it, Tab stays inside it and the
+  // page behind it stops scrolling. Focus goes back to the toggle on close.
+  useEffect(() => {
+    if (!open) return undefined;
+    const nav = navRef.current;
+    const toggle = toggleRef.current;
+    const focusables = () => [...nav.querySelectorAll('a, button')];
+    const { overflow } = document.body.style;
+    document.body.style.overflow = 'hidden';
+    document.body.classList.add('nav-is-open');
+    focusables()[0]?.focus();
+
+    const onKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        setOpen(false);
+        return;
+      }
+      if (event.key !== 'Tab') return;
+      const items = focusables();
+      const first = items[0];
+      const last = items[items.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    };
+    document.addEventListener('keydown', onKeyDown);
+    return () => {
+      document.removeEventListener('keydown', onKeyDown);
+      document.body.style.overflow = overflow;
+      document.body.classList.remove('nav-is-open');
+      toggle?.focus();
+    };
+  }, [open]);
 
   useLayoutEffect(() => {
     const header = document.querySelector('.site-header');
@@ -82,23 +122,28 @@ export default function Header() {
       <Link to="/" className="logo-link" onClick={close}>
         <BrandLogo />
       </Link>
-      <nav className={open ? 'nav-open' : ''}>
-        <button type="button" className="nav-close" aria-label="Close menu" onClick={close}>×</button>
+      <nav className={open ? 'nav-open' : ''} ref={navRef} id="site-nav">
+        <button type="button" className="nav-close" aria-label={t.a11y.closeMenu} onClick={close}>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" /></svg>
+        </button>
         <Component1 to="/" active={pathname === '/'} onClick={close}>{t.nav.home.toUpperCase()}</Component1>
         <Component1 to="/products" active={isActive('/products')} onClick={close}>{t.nav.products.toUpperCase()}</Component1>
         <Component1 to="/projects" active={isActive('/projects')} onClick={close}>{t.nav.projects.toUpperCase()}</Component1>
         <Component1 to="/about" active={isActive('/about')} onClick={close}>{t.nav.about.toUpperCase()}</Component1>
         <Component1 to="/services" active={isActive('/services')} onClick={close}>{t.nav.services.toUpperCase()}</Component1>
         <Component1 to="/contact" active={isActive('/contact')} onClick={close}>{t.nav.contact.toUpperCase()}</Component1>
+        <Link to="/contact" className="nav-drawer-cta" onClick={close}>{t.nav.inquire}</Link>
       </nav>
       <div className="header-actions">
         <LanguageSwitch />
         <Link to="/contact" className="header-cta" onClick={close}>{t.nav.inquire}</Link>
         <button
           type="button"
+          ref={toggleRef}
           className={`nav-toggle${open ? ' is-open' : ''}`}
-          aria-label="Toggle menu"
+          aria-label={open ? t.a11y.closeMenu : t.a11y.openMenu}
           aria-expanded={open}
+          aria-controls="site-nav"
           onClick={() => setOpen((o) => !o)}
         >
           <span /><span /><span />

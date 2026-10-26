@@ -32,6 +32,12 @@ const TRANSLATIONS = {
       notFound: { title: 'Page Not Found', description: '' },
     },
     nav: { home: 'Home', about: 'About', products: 'Products', projects: 'Projects', services: 'Services', contact: 'Contact', inquire: 'Inquire now' },
+    a11y: {
+      openMenu: 'Open menu', closeMenu: 'Close menu', switchLanguage: 'Ganti ke Bahasa Indonesia',
+      whatsapp: 'Chat with KAIU on WhatsApp',
+      prevProject: 'Previous project', nextProject: 'Next project', slide: 'Project {n} of {total}',
+      prevProjects: 'Previous projects', nextProjects: 'Next projects', projectControls: 'Featured project controls',
+    },
     footer: {
       tagline: 'Premium recon veneer for modern living. From veneer to finished surface, we bring ideas to life.',
       explore: 'Explore', studio: 'Studio', rights: 'All rights reserved.',
@@ -49,19 +55,13 @@ const TRANSLATIONS = {
 
       materialEyebrow: 'Our material',
       materialTitle1: 'Recon Veneer,', materialTitle2: 'Endless Possibilities',
-      materialDesc: 'Engineered from real wood, recon veneer delivers the authentic look and feel of natural timber with consistent quality, wider options and greater stability for modern design needs.',
+      materialDesc: 'Recon (reconstituted) veneer is real timber, sliced, dyed and re-pressed so the grain repeats sheet after sheet. You get the look and feel of natural wood, with the consistency and stability that one-off logs cannot promise.',
       m1t: 'Authentic wood aesthetics', m1d: 'Real wood, beautifully engineered',
       m2t: 'Consistent quality', m2d: 'Uniform grain and colour',
       m3t: 'Wide design options', m3d: 'A diverse range of textures and tones',
       m4t: 'Durable and stable', m4d: 'Ideal for modern living spaces',
       exploreCollection: 'Explore our collection',
 
-      whyEyebrow: 'Why KAIU', whyTitle: 'More Than a Surface',
-      whyDesc: 'We combine craftsmanship, technology and design to deliver recon veneer that meets the needs of designers, architects and modern living.',
-      w1t: 'Curated selection', w1d: 'Wide range of modern wood designs',
-      w2t: 'Reliable supply', w2d: 'Consistent quality for any scale',
-      w3t: 'Trusted by professionals', w3d: 'Used in residential, commercial and hospitality projects',
-      w4t: 'End-to-end support', w4d: 'From material selection to application guidance',
 
       processEyebrow: 'The process',
       processTitle1: 'From Veneer', processTitle2: 'to Finished Surface',
@@ -93,6 +93,7 @@ const TRANSLATIONS = {
       tones: { all: 'All tones', light: 'Light', warm: 'Warm', cool: 'Cool', dark: 'Dark', colorful: 'Colorful' },
       searchLabel: 'Search', searchPlaceholder: 'oak, burl, sapphire…',
       resultOne: 'result', resultMany: 'results',
+      empty: 'No veneer matches these filters.', reset: 'Clear filters', showMore: 'Show more veneers',
     },
     productDetail: {
       back: '← Back to Collections', collection: 'Collection', requestSample: 'Request a Sample',
@@ -166,6 +167,12 @@ const TRANSLATIONS = {
       notFound: { title: 'Halaman Tidak Ditemukan', description: '' },
     },
     nav: { home: 'Beranda', about: 'Tentang', products: 'Produk', projects: 'Proyek', services: 'Layanan', contact: 'Kontak', inquire: 'Hubungi kami' },
+    a11y: {
+      openMenu: 'Buka menu', closeMenu: 'Tutup menu', switchLanguage: 'Switch to English',
+      whatsapp: 'Chat dengan KAIU via WhatsApp',
+      prevProject: 'Proyek sebelumnya', nextProject: 'Proyek berikutnya', slide: 'Proyek {n} dari {total}',
+      prevProjects: 'Proyek sebelumnya', nextProjects: 'Proyek berikutnya', projectControls: 'Kontrol proyek pilihan',
+    },
     footer: {
       tagline: 'Veneer rekon premium untuk hunian modern. Dari veneer hingga permukaan jadi, kami wujudkan ide Anda.',
       explore: 'Jelajahi', studio: 'Studio', rights: 'Hak cipta dilindungi.',
@@ -183,19 +190,13 @@ const TRANSLATIONS = {
 
       materialEyebrow: 'Material kami',
       materialTitle1: 'Veneer Rekon,', materialTitle2: 'Kemungkinan Tanpa Batas',
-      materialDesc: 'Direkayasa dari kayu asli, veneer rekon menghadirkan tampilan dan rasa kayu alami dengan kualitas yang konsisten, pilihan yang lebih luas, dan kestabilan yang lebih baik untuk kebutuhan desain modern.',
+      materialDesc: 'Veneer rekon (rekonstitusi) adalah kayu asli yang diiris, diwarnai, lalu dipres ulang sehingga seratnya berulang dari lembar ke lembar. Anda mendapat tampilan dan rasa kayu alami, dengan konsistensi dan kestabilan yang tidak bisa dijanjikan satu batang kayu.',
       m1t: 'Estetika kayu autentik', m1d: 'Kayu asli, direkayasa dengan indah',
       m2t: 'Kualitas konsisten', m2d: 'Serat dan warna yang seragam',
       m3t: 'Pilihan desain luas', m3d: 'Beragam tekstur dan nuansa warna',
       m4t: 'Awet dan stabil', m4d: 'Ideal untuk ruang hunian modern',
       exploreCollection: 'Lihat koleksi kami',
 
-      whyEyebrow: 'Mengapa KAIU', whyTitle: 'Lebih dari Sekadar Permukaan',
-      whyDesc: 'Kami memadukan keahlian, teknologi, dan desain untuk menghadirkan veneer rekon yang menjawab kebutuhan desainer, arsitek, dan hunian modern.',
-      w1t: 'Pilihan terkurasi', w1d: 'Beragam desain kayu modern',
-      w2t: 'Pasokan andal', w2d: 'Kualitas konsisten untuk skala apa pun',
-      w3t: 'Dipercaya profesional', w3d: 'Digunakan pada proyek residensial, komersial, dan hospitality',
-      w4t: 'Dukungan menyeluruh', w4d: 'Dari pemilihan material hingga panduan aplikasi',
 
       processEyebrow: 'Prosesnya',
       processTitle1: 'Dari Veneer', processTitle2: 'ke Permukaan Jadi',
@@ -227,6 +228,7 @@ const TRANSLATIONS = {
       tones: { all: 'Semua nuansa', light: 'Terang', warm: 'Hangat', cool: 'Sejuk', dark: 'Gelap', colorful: 'Berwarna' },
       searchLabel: 'Cari', searchPlaceholder: 'oak, burl, sapphire…',
       resultOne: 'hasil', resultMany: 'hasil',
+      empty: 'Tidak ada veneer yang cocok dengan filter ini.', reset: 'Hapus filter', showMore: 'Tampilkan lebih banyak',
     },
     productDetail: {
       back: '← Kembali ke Koleksi', collection: 'Koleksi', requestSample: 'Minta Sampel',

@@ -39,7 +39,10 @@ function productTones(product) {
  * the visitor's collection, tone and search choices, as does the back link on a
  * veneer's own page; arriving from the menu or a fresh link starts clean.
  */
-const lastView = { filter: 'all', tone: 'all', query: '' };
+const lastView = { filter: 'all', tone: 'all', query: '', shown: 0 };
+
+// Cards render in batches so the first view stays light; the rest follow on request.
+const BATCH = 40;
 
 export default function Products() {
   const { t, lang } = useLanguage();
@@ -49,10 +52,23 @@ export default function Products() {
   const [filter, setFilter] = useState(resuming ? lastView.filter : 'all');
   const [tone, setTone] = useState(resuming ? lastView.tone : 'all');
   const [query, setQuery] = useState(resuming ? lastView.query : '');
+  const [shown, setShown] = useState(resuming ? Math.max(lastView.shown, BATCH) : BATCH);
 
   useEffect(() => {
-    Object.assign(lastView, { filter, tone, query });
-  }, [filter, tone, query]);
+    Object.assign(lastView, { filter, tone, query, shown });
+  }, [filter, tone, query, shown]);
+
+  // A new filter or search starts again from the first batch.
+  const choose = (setter) => (value) => {
+    setter(value);
+    setShown(BATCH);
+  };
+  const resetFilters = () => {
+    setFilter('all');
+    setTone('all');
+    setQuery('');
+    setShown(BATCH);
+  };
 
   const byCollection = PRODUCTS.filter((p) =>
     (filter === 'all' || p.collection === filter) &&
@@ -79,7 +95,7 @@ export default function Products() {
               <button
                 key={f.id}
                 className={filter === f.id ? 'active' : ''}
-                onClick={() => setFilter(f.id)}
+                onClick={() => choose(setFilter)(f.id)}
               >
                 {lang === 'id' ? f.idLabel : f.label}
               </button>
@@ -87,7 +103,7 @@ export default function Products() {
           </div>
           <div className="tone-filter">
             <label className="tone-filter-label" htmlFor="tone-filter">{t.products.toneLabel}</label>
-            <select id="tone-filter" value={tone} onChange={(event) => setTone(event.target.value)}>
+            <select id="tone-filter" value={tone} onChange={(event) => choose(setTone)(event.target.value)}>
               {['all', ...TONE_OPTIONS].map((option) => (
                 <option key={option} value={option}>{t.products.tones[option]}</option>
               ))}
@@ -106,7 +122,7 @@ export default function Products() {
                 id="product-search"
                 type="search"
                 value={query}
-                onChange={(e) => setQuery(e.target.value)}
+                onChange={(e) => choose(setQuery)(e.target.value)}
                 placeholder={t.products.searchPlaceholder}
               />
             </div>
@@ -127,22 +143,29 @@ export default function Products() {
 
       <div className="products-body page-section-body">
         <div className="product-grid">
-          {filtered.map((p) => (
+          {filtered.slice(0, shown).map((p) => (
             <Link key={p.id} to={`/products/${p.id}`} className="product-card">
               <img {...cardSwatch(p.image)} sizes={IMAGE_SIZES.cardSwatch}
                    className="swatch" alt={p.name} loading="lazy" decoding="async" />
-              <h4>{displayName(p.name, p.collectionLabel)}</h4>
+              <h2 className="product-card-name">{displayName(p.name, p.collectionLabel)}</h2>
               <span className="product-collection-label">{p.collectionLabel.toUpperCase()} · {(p.dimension || DEFAULT_DIMENSION).split(' x ').slice(0, 2).join(' × ')}</span>
               <span className="product-short-desc">{shortDesc(lang === 'id' ? p.idLongDesc : p.longDesc)}</span>
             </Link>
           ))}
         </div>
+        {filtered.length > shown && (
+          <div className="products-more">
+            <button type="button" className="pill-btn pill-btn-outline" onClick={() => setShown((n) => n + BATCH)}>
+              {t.products.showMore}
+            </button>
+            <span>{shown} / {filtered.length}</span>
+          </div>
+        )}
         {filtered.length === 0 && (
-          <p className="products-empty">
-            {lang === 'id'
-              ? 'Tidak ada veneer yang cocok dengan pencarian Anda.'
-              : 'No veneer matches your search.'}
-          </p>
+          <div className="products-empty">
+            <p>{t.products.empty}</p>
+            <button type="button" className="pill-btn pill-btn-outline" onClick={resetFilters}>{t.products.reset}</button>
+          </div>
         )}
       </div>
 

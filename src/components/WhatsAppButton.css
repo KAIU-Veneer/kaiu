@@ -21,7 +21,8 @@
   object-fit: cover;
 }
 
-.whatsapp-float.is-hidden {
+.whatsapp-float.is-hidden,
+.nav-is-open .whatsapp-float {
   opacity: 0;
   pointer-events: none;
 }
