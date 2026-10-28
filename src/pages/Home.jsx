@@ -17,7 +17,7 @@ const WORKSHOP_VIDEO_ID = 'bKxNFn6eYJk';
 // Seven real sheets from the range, light to dark, standing edge to edge.
 // One is open at a time so its grain reads; the rest show as narrow strips.
 const SHEET_IDS = [
-  'cairo-blanc-oak',
+  'cairo-light-pine',
   'cairo-vanilla-oak',
   'oslo-cement-grey-oak',
   'cannes-oak-burl',
