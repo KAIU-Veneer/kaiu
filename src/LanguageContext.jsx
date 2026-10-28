@@ -127,7 +127,7 @@ const TRANSLATIONS = {
       designer: 'Interior Designer', photo: 'photo', notFound: 'Project not found.',
     },
     services: {
-      title: 'From veneer to finished surface',
+      title: 'What we do with veneer',
       intro: 'Veneer supply, matching, pressing and finishing. What KAIU can take on between choosing a sheet and installing the surface.',
     },
     contact: {
@@ -278,7 +278,7 @@ const TRANSLATIONS = {
       designer: 'Desainer Interior', photo: 'foto', notFound: 'Proyek tidak ditemukan.',
     },
     services: {
-      title: 'Dari veneer hingga permukaan akhir',
+      title: 'Apa yang kami kerjakan dengan veneer',
       intro: 'Penyediaan veneer, pencocokan, pengepresan, dan finishing. Apa yang dapat KAIU kerjakan antara memilih lembaran dan memasang permukaannya.',
     },
     contact: {
