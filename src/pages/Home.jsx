@@ -73,7 +73,7 @@ export default function Home() {
           // Hold still while the mobile menu covers the page.
           if (document.body.classList.contains('nav-is-open')) return;
           setSlide((index) => (index + 1) % heroProjects.length);
-        }, 6500);
+        }, 5000);
       }
     };
     const onVisibilityChange = () => (document.hidden ? stop() : start());
