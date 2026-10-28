@@ -15,12 +15,10 @@ export default function Services() {
   return (
     <div>
       <div className="services-body page-section">
-        <span className="eyebrow">{t.services.eyebrow}</span>
         <h1>{t.services.title}</h1>
         <div className="service-list reveal" ref={listRef}>
           {SERVICES.map((s) => (
-            <div key={s.num} className="service-row">
-              <div className="num">{s.num}</div>
+            <div key={s.title} className="service-row">
               <h3>{lang === 'id' ? s.idTitle : s.title}</h3>
               <p>{lang === 'id' ? s.idDesc : s.desc}</p>
             </div>
@@ -29,7 +27,6 @@ export default function Services() {
         </div>
       </div>
       {/* <section className="section-alt reveal" ref={ctaRef}>
-        <span className="eyebrow">Ready to begin?</span>
         <h2>Tell us about your project.</h2>
         <Link to="/contact" className={pillClass()} style={{ marginTop: 26 }}>Contact Us</Link>
       </section> */}

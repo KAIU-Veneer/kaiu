@@ -1,4 +1,4 @@
-.products-header h1 { margin: 16px 0 0; font-size: clamp(38px, 4.4vw, 62px); }
+.products-header h1 { margin: 0; font-size: clamp(38px, 4.4vw, 62px); }
 .collection-tagline { margin: var(--space-sm) 0 0; font-size: 16px; color: var(--kaiu-muted); }
 
 /* ---- filter row: pills on the cream ground ---------------- */

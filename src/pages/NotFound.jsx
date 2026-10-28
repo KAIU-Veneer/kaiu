@@ -24,7 +24,6 @@ export default function NotFound() {
     <div className="notfound page-section">
       <div className="notfound-inner reveal" ref={copyRef}>
         <span className="notfound-code" aria-hidden="true">404</span>
-        <span className="eyebrow">{t.notFound.eyebrow}</span>
         <h1>{t.notFound.title}</h1>
         <p>{t.notFound.desc}</p>
 

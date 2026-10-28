@@ -72,7 +72,6 @@ export default function Contact() {
 
   return (
     <div className="contact-body page-section">
-      <span className="eyebrow">{t.contact.eyebrow}</span>
       <h1>{t.contact.title}</h1>
       <div className="contact-grid">
         <div className="contact-info">

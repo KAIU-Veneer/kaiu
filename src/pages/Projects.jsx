@@ -14,7 +14,6 @@ export default function Projects() {
   return (
     <div>
       <div className="projects-header page-section-head">
-        <span className="eyebrow">{t.projects.eyebrow}</span>
         <h1>{t.projects.title}</h1>
       </div>
       <div className="projects-body page-section-body">
@@ -25,7 +24,6 @@ export default function Projects() {
         </div>
       </div>
       {/* <section className="section-alt reveal" ref={ctaRef}>
-        <span className="eyebrow">Have a space in mind?</span>
         <h2>Let's bring your project the same warmth.</h2>
         <Link to="/contact" className={pillClass()} style={{ marginTop: 26 }}>Start a Conversation</Link>
       </section> */}

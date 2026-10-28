@@ -16,9 +16,9 @@
 .hero-media {
   position: absolute;
   inset: 0;
-  /* Shown only if the project photographs fail to load: a walnut sheet
+  /* Shown only if the project photographs fail to load: the oak sheet
      the Process section already loads, so it costs nothing extra. */
-  background: var(--kaiu-green) url('/assets/image/w800/CANNES GOLDEN WALNUT.webp') center / cover no-repeat;
+  background: var(--kaiu-green) url('/assets/image/w800/OSLO CEMENT GREY OAK.webp?v=2') center / cover no-repeat;
 }
 .hero-img {
   position: absolute;
@@ -42,9 +42,8 @@
 }
 
 .hero-copy { position: relative; max-width: 640px; color: var(--kaiu-cream); }
-.hero-copy .eyebrow { color: var(--kaiu-on-dark-dim); }
 .hero-copy h1 {
-  margin: 22px 0 0;
+  margin: 0;
   font-size: clamp(44px, 5.6vw, 82px);
   line-height: 1.02;
   color: var(--kaiu-cream);
@@ -142,26 +141,28 @@
     rgba(255,248,240,0) 78%);
 }
 .material-copy { position: relative; z-index: 1; width: min(100%, 540px); min-width: 0; }
-.material-copy h2 { margin: 20px 0 0; font-size: clamp(32px, 3.6vw, 50px); }
+.material-copy h2 { margin: 0; font-size: clamp(32px, 3.6vw, 50px); }
 .material-copy > p { margin: 22px 0 0; font-size: 15px; line-height: 1.85; color: var(--kaiu-muted); }
 
 .material-list { list-style: none; margin: 34px 0 0; padding: 0; }
 .material-list li { display: flex; align-items: center; gap: 18px; padding: 10px 0; }
+/* No tinted disc behind the icon: a bare line drawing in the accent brown,
+   with a hairline ring so the four still line up as a column. */
 .material-icon {
   flex: 0 0 auto;
   display: grid;
   place-items: center;
-  width: 56px; height: 56px;
+  width: 52px; height: 52px;
   border-radius: var(--radius-pill);
-  background: rgba(192,133,82,.18);
-  color: var(--kaiu-green);
+  border: 1px solid var(--hairline);
+  color: var(--kaiu-gold-text);
 }
 .material-icon svg {
-  width: 25px;
-  height: 25px;
+  width: 26px;
+  height: 26px;
   fill: none;
   stroke: currentColor;
-  stroke-width: 1.45;
+  stroke-width: 1.5;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
@@ -203,11 +204,14 @@
 .process { padding: var(--section-y) var(--page-x); background: var(--section-bg-alt); }
 .process-head { display: flex; flex-wrap: wrap; gap: var(--gap-split); align-items: flex-end; }
 .process-head > div { flex: 999 1 420px; min-width: 0; }
-.process-head h2 { margin: 20px 0 0; font-size: clamp(32px, 3.6vw, 50px); }
+.process-head h2 { margin: 0; font-size: clamp(32px, 3.6vw, 50px); }
 .process-head > p { flex: 1 1 320px; min-width: 0; max-width: 360px; margin: 0; font-size: 15px; line-height: 1.8; color: var(--kaiu-muted); }
 
 .process-grid {
   display: grid;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--gap-split);
   margin-top: var(--space-xl);
@@ -215,13 +219,6 @@
 .process-step { position: relative; }
 .process-step > img { width: 100%; height: 210px; object-fit: cover; display: block; }
 .process-text { display: flex; gap: 20px; align-items: baseline; margin-top: 24px; }
-.process-num {
-  font-family: var(--font-display);
-  font-size: 34px;
-  font-weight: 300;
-  color: var(--kaiu-gold-text);
-  line-height: 1;
-}
 .process-text h3 { margin: 0; font-size: 17px; font-weight: 600; }
 .process-text p { margin: 7px 0 0; font-size: 14px; line-height: 1.7; color: var(--kaiu-muted); }
 .process-arrow {
@@ -238,7 +235,7 @@
 .works { padding: var(--section-y) var(--page-x); }
 .works-head { display: flex; flex-wrap: wrap; gap: var(--space-md); align-items: flex-end; }
 .works-head > div:first-child { flex: 999 1 420px; min-width: 0; }
-.works-head h2 { margin: 20px 0 0; font-size: clamp(32px, 3.6vw, 50px); }
+.works-head h2 { margin: 0; font-size: clamp(32px, 3.6vw, 50px); }
 .works-actions { display: flex; flex: 0 0 auto; align-items: center; gap: clamp(22px, 4vw, 52px); margin-left: auto; }
 .works-head .text-cta { margin-top: 0; white-space: nowrap; }
 .works-controls { display: flex; gap: 9px; }
@@ -325,7 +322,7 @@
 .home-cta { padding: var(--section-y) var(--page-x); }
 .home-cta-inner { display: flex; flex-wrap: wrap; gap: var(--gap-split); align-items: center; }
 .home-cta-inner > div { flex: 999 1 460px; min-width: 0; }
-.home-cta h2 { margin: 18px 0 14px; font-size: clamp(32px, 3.6vw, 50px); }
+.home-cta h2 { margin: 0 0 14px; font-size: clamp(32px, 3.6vw, 50px); }
 .home-cta p { margin: 0; max-width: 520px; font-size: 15px; line-height: 1.8; }
 
 /* ============================================================
@@ -348,8 +345,16 @@
   }
   .material-media img { object-position: center bottom; }
 
-  .process-grid { grid-template-columns: 1fr; gap: var(--space-lg); }
-  .process-arrow { display: none; }
+  .process-grid { grid-template-columns: 1fr; gap: var(--space-md); }
+  /* Stacked, the arrow turns to point down at the next step. */
+  .process-arrow {
+    position: static;
+    display: block;
+    width: max-content;
+    margin: var(--space-md) 0 0 4px;
+    font-size: 18px;
+    transform: rotate(90deg);
+  }
   .work-card { flex-basis: 78%; }
 }
 

@@ -42,6 +42,7 @@ export default function ProjectDetail() {
 
   // Cells without a value are left out rather than shown empty.
   const rows = [
+    [t.projectDetail.space, room],
     [t.projectDetail.client, text('client')],
     [t.projectDetail.location, text('location')],
     [
@@ -64,7 +65,6 @@ export default function ProjectDetail() {
       <div className="project-detail-grid">
         <PhotoCycle images={project.images} alt={`${project.title}, ${room}`} className="project-detail-lead" sizes={IMAGE_SIZES.projectLead} />
         <div>
-          <span className="eyebrow">{room}</span>
           <h1>{project.title}</h1>
           <p className="project-detail-desc">{text('longDesc')}</p>
           <div className="detail-info-grid">

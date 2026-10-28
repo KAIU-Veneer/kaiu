@@ -1,15 +1,13 @@
-.services-body h1 { margin: 16px 0 var(--space-lg); font-size: clamp(38px, 4.4vw, 62px); }
+.services-body h1 { margin: 0 0 var(--space-lg); font-size: clamp(38px, 4.4vw, 62px); }
 .service-list { display: flex; flex-direction: column; }
 .service-row {
-  display: grid; grid-template-columns: 70px 1fr 1.2fr; gap: var(--space-md);
+  display: grid; grid-template-columns: 1fr 1.2fr; gap: var(--space-md);
   align-items: start; padding: var(--space-lg) 0; border-top: 1px solid var(--hairline);
 }
-.service-row .num { font-size: 15px; color: var(--kaiu-gold-text); padding-top: 4px; }
 .service-row h3 { font-size: 24px; font-weight: 600; margin: 0; }
 .service-row p { color: var(--kaiu-muted); margin: 0; font-size: 15px; max-width: 480px; }
 .service-list-end { border-bottom: 1px solid var(--hairline); }
 
 @media (max-width: 640px) {
   .service-row { grid-template-columns: 1fr; gap: 6px; }
-  .service-row .num { padding-top: 0; }
-}
+  }

@@ -8,16 +8,23 @@ import useDocumentMeta from '../useDocumentMeta.js';
 import "./Home.css";
 
 const PROCESS = [
-  { n: '01', t: 'p1t', d: 'p1d', img: '/assets/image/w800/OSLO SILK GRAIN OAK.webp' },
-  { n: '02', t: 'p2t', d: 'p2d', img: '/assets/image/w800/CANNES GOLDEN WALNUT.webp' },
-  { n: '03', t: 'p3t', d: 'p3d', img: '/assets/image/w800/OSLO CEMENT GREY OAK.webp?v=2' },
+  { t: 'p1t', d: 'p1d', img: '/assets/image/process/veneer-samples.webp?v=3' },
+  { t: 'p2t', d: 'p2d', img: '/assets/image/process/hot-press.webp?v=3', position: 'center 52%' },
+  { t: 'p3t', d: 'p3d', img: '/assets/image/w800/OSLO CEMENT GREY OAK.webp?v=2' },
 ];
 
+// Drawn for this list rather than taken from a stock set, so each one shows
+// something about veneer itself: a log end, stacked sheets, a swatch fan and
+// a finished panel. Same 1.5 stroke as the arrows.
 const MATERIAL_ICONS = [
-  <svg key="wood" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3Z M4.5 7.8 12 12l7.5-4.2M12 12v8.5" /></svg>,
-  <svg key="quality" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5 14.6 5l3-.1.9 2.8 2.2 2-1.1 2.8.5 2.9-2.6 1.4-1.5 2.6-3-.5-2.8 1-2-2.2-2.9-.8.1-3-1.5-2.6 1.6-2.5.2-3 2.9-.7L9.1 5l2.9.6Z M8.5 12.2l2.3 2.3 4.8-5" /></svg>,
-  <svg key="options" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5c2.5 2.3 3.3 4.2 0 8.5-3.3-4.3-2.5-6.2 0-8.5Zm8.5 8.5c-2.3 2.5-4.2 3.3-8.5 0 4.3-3.3 6.2-2.5 8.5 0ZM12 20.5c-2.5-2.3-3.3-4.2 0-8.5 3.3 4.3 2.5 6.2 0 8.5ZM3.5 12c2.3-2.5 4.2-3.3 8.5 0-4.3 3.3-6.2 2.5-8.5 0Z" /></svg>,
-  <svg key="durable" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5c0 4.6-2.8 8-7 10-4.2-2-7-5.4-7-10V6l7-3Z M8.7 12.1l2.2 2.2 4.6-4.7" /></svg>,
+  // Real wood: the end of a log, uneven growth rings and a drying check.
+  <svg key="log" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.3 3.6c4.7.2 8.3 3.9 8.1 8.6-.2 4.8-4 8.4-8.8 8.2-4.6-.2-8.2-4-8-8.7.2-4.8 4-8.3 8.7-8.1Z" /><path d="M12.6 7.4c2.6.3 4.4 2.5 4.1 5.1-.3 2.5-2.6 4.2-5.1 3.9-2.4-.3-4.1-2.5-3.8-4.9.3-2.6 2.5-4.4 4.8-4.1Z" /><path d="M12.2 11.2c.6 0 1 .5 1 1.1s-.5 1-1.1 1" /><path d="M12.4 3.7 13 8.2M13.4 9.6l.3 1.4" /></svg>,
+  // Matches across sheets: three sheets stacked, the same grain line on each.
+  <svg key="sheets" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 15.5 12 19.5l8-4" /><path d="M4 12 12 16l8-4" /><path d="M12 4.5 20 8.5l-8 4-8-4 8-4Z" /><path d="M9 7.2l5 2.5" /></svg>,
+  // Wide range: veneer strips fanned out from one pin, like a sample book.
+  <svg key="fan" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 20.5 3.6 6.2a1 1 0 0 1 .8-1.1l2.3-.4a1 1 0 0 1 1.1.8L10 19.6" /><path d="M7.4 19.4 9.8 6.6a1 1 0 0 1 1.2-.8l2.3.4a1 1 0 0 1 .8 1.2l-2.4 12.4" /><path d="M9.5 19.6 16.8 9a1 1 0 0 1 1.4-.2l1.9 1.3a1 1 0 0 1 .3 1.4l-7.2 10.4" /><circle cx="7" cy="19.2" r=".9" /></svg>,
+  // Durable and stable: a finished wall panel with its grain running through.
+  <svg key="panel" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="3.5" width="12" height="17" rx="1" /><path d="M9.2 3.5c-.9 3.4 1.4 5.2.4 8.6-.8 2.9.6 5.3.2 8.4" /><path d="M13.3 3.5c.8 2.8-.7 5 .1 7.8.9 3.1-.4 6 .3 9.2" /></svg>,
 ];
 
 export default function Home() {
@@ -125,7 +132,6 @@ export default function Home() {
         </div>
 
         <div className="hero-copy">
-          <span className="eyebrow">{t.home.eyebrow}</span>
           <h1>{t.home.heroTitle1}<br />{t.home.heroTitle2}</h1>
           <p>{t.home.heroDesc}</p>
           <div className="hero-actions">
@@ -161,7 +167,6 @@ export default function Home() {
       {/* ---------------- OUR MATERIAL ---------------- */}
       <section className="material reveal" data-header-surface="light" ref={materialRef}>
         <div className="material-copy">
-          <span className="eyebrow">{t.home.materialEyebrow}</span>
           <h2>{t.home.materialTitle1}<br />{t.home.materialTitle2}</h2>
           <p>{t.home.materialDesc}</p>
           <ul className="material-list">
@@ -186,33 +191,32 @@ export default function Home() {
       <section className="process reveal" data-header-surface="light" ref={processRef}>
         <div className="process-head">
           <div>
-            <span className="eyebrow">{t.home.processEyebrow}</span>
             <h2>{t.home.processTitle1}<br />{t.home.processTitle2}</h2>
           </div>
           <p>{t.home.processDesc}</p>
         </div>
-        <div className="process-grid">
+        {/* An ordered list, so the order is announced without visible numbers;
+            the titles and the arrows carry it on screen. */}
+        <ol className="process-grid">
           {PROCESS.map((step, i) => (
-            <div key={step.n} className="process-step">
-              <img src={step.img} alt="" aria-hidden="true" loading="lazy" decoding="async" />
+            <li key={step.t} className="process-step">
+              <img src={step.img} alt="" aria-hidden="true" loading="lazy" decoding="async" style={step.position ? { objectPosition: step.position } : undefined} />
               <div className="process-text">
-                <span className="process-num">{step.n}</span>
                 <div>
                   <h3>{t.home[step.t]}</h3>
                   <p>{t.home[step.d]}</p>
                 </div>
               </div>
               {i < PROCESS.length - 1 && <span className="process-arrow" aria-hidden="true">→</span>}
-            </div>
+            </li>
           ))}
-        </div>
+        </ol>
       </section>
 
       {/* ---------------- FEATURED PROJECTS ---------------- */}
       <section className="works reveal" data-header-surface="light" ref={worksRef}>
         <div className="works-head">
           <div>
-            <span className="eyebrow">{t.home.worksEyebrow}</span>
             <h2>{t.home.worksTitle1}<br />{t.home.worksTitle2}</h2>
           </div>
           <div className="works-actions">
@@ -227,7 +231,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="works-track" ref={worksTrackRef} role="region" aria-roledescription="carousel" aria-label={t.home.worksEyebrow}>
+        <div className="works-track" ref={worksTrackRef} role="region" aria-roledescription="carousel" aria-label={`${t.home.worksTitle1} ${t.home.worksTitle2}`}>
           {PROJECTS.map((project) => (
             <Link key={project.id} to={`/projects/${project.id}`} className="work-card">
               <div className="work-card-image">
@@ -258,7 +262,6 @@ export default function Home() {
       <section className="home-cta on-dark" data-header-surface="colored">
         <div className="home-cta-inner">
           <div>
-            <span className="eyebrow">{t.home.ctaEyebrow}</span>
             <h2>{t.home.ctaTitle}</h2>
             <p>{t.home.ctaDesc}</p>
           </div>

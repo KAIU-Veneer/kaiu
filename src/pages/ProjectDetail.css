@@ -1,5 +1,5 @@
 .project-detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gap-split); margin-top: var(--space-md); align-items: start; }
-.project-detail h1 { margin: var(--space-xs) 0 0; font-size: clamp(34px, 4.2vw, 54px); }
+.project-detail h1 { margin: 0; font-size: clamp(34px, 4.2vw, 54px); }
 .project-detail-desc { margin-top: var(--space-md); color: var(--kaiu-muted); font-size: 16px; line-height: 1.75; }
 .project-detail .detail-info-grid { margin-top: var(--space-md); align-content: start; }
 /* A veneer name never breaks across lines; a list too long for the cell wraps

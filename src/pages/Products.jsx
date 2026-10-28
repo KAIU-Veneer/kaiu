@@ -218,7 +218,6 @@ export default function Products() {
   return (
     <div>
       <div className="products-header page-section-head">
-        <span className="eyebrow">{t.products.eyebrow}</span>
         <h1>{t.products.title}</h1>
         <div className="filter-row">
           <div className="filters">
@@ -302,7 +301,6 @@ export default function Products() {
       </div>
 
       {/* <section className="section-alt reveal" ref={ctaRef}>
-        <span className="eyebrow">Need a custom match?</span>
         <h2>We can source and cut veneer to your exact specification.</h2>
         <Link to="/contact" className={pillClass()} style={{ marginTop: 26 }}>Request a Sample</Link>
       </section> */}

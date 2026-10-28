@@ -70,9 +70,8 @@ export default function ProductDetail() {
           )}
         </div>
         <div>
-          <span className="eyebrow">{t.productDetail.collectionOf.replace('{name}', product.collectionLabel)}</span>
           <h1>{shortName}</h1>
-          <span className="product-detail-cut">{lang === 'id' ? product.idCut : product.cut}</span>
+          <span className="product-detail-cut">{t.productDetail.collectionOf.replace('{name}', product.collectionLabel)} · {lang === 'id' ? product.idCut : product.cut}</span>
           <p className="product-detail-desc">{(lang === 'id' ? product.idLongDesc : product.longDesc).split(product.name).join(shortName)}</p>
           <button className={`${pillClass()} product-detail-cta`} onClick={() => navigate('/contact')}>{t.productDetail.requestSample}</button>
         </div>

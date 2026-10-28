@@ -20,7 +20,6 @@ export default function About() {
       <div className="about-hero page-section">
         <div className="about-intro reveal" ref={introRef}>
           <div>
-            <span className="eyebrow">{t.about.eyebrow}</span>
             <h1>{t.about.title1}<br />{t.about.title2}</h1>
             <p>{t.about.p1}</p>
             <p>{t.about.p2}</p>
@@ -35,14 +34,12 @@ export default function About() {
         <div className="about-mission reveal" ref={missionRef}>
           <img src="/assets/stock images/about-mission.webp" className="swatch" style={{ objectFit: 'cover', width: '100%', display: 'block' }} alt="" />
           <div>
-            <span className="eyebrow">{t.about.missionEyebrow}</span>
             <h3>{t.about.missionTitle}</h3>
             <p>{t.about.missionDesc}</p>
           </div>
         </div>
       </div>
       {/* <section className="section-alt reveal" ref={ctaRef}>
-        <span className="eyebrow">Work With Us</span>
         <h2>Let's talk about your next space.</h2>
         <Link to="/contact" className={pillClass()} style={{ marginTop: 26 }}>Get in Touch</Link>
       </section> */}
