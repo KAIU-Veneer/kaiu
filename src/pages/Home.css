@@ -76,8 +76,8 @@
 .hero-caption-room {
   display: block;
   font-family: var(--font-label);
-  font-size: 11px;
-  letter-spacing: .2em;
+  font-size: 13px;
+  letter-spacing: .1em;
   text-transform: uppercase;
   color: var(--kaiu-cream);
 }
@@ -93,7 +93,7 @@
   align-items: center;
   gap: 10px;
   font-family: var(--font-label);
-  font-size: 11px;
+  font-size: 13px;
   letter-spacing: .14em;
   color: var(--kaiu-on-dark-dim);
   margin-right: 6px;
@@ -327,8 +327,8 @@
 .work-card-room {
   color: var(--kaiu-muted-light);
   font-family: var(--font-label);
-  font-size: 11px;
-  letter-spacing: .17em;
+  font-size: 13px;
+  letter-spacing: .1em;
   line-height: 1.5;
   text-transform: uppercase;
 }
@@ -383,7 +383,7 @@
   .hero-caption { right: calc(var(--page-x) + 64px); }
   .works-head { align-items: flex-end; }
   .works-actions { gap: 14px; }
-  .works-head .text-cta { font-size: 11px; letter-spacing: .12em; }
+  .works-head .text-cta { font-size: 13px; letter-spacing: .12em; }
   .works-controls { gap: 6px; }
   .work-card { flex-basis: 88%; }
   .work-card-arrow { opacity: 1; transform: none; width: 36px; height: 36px; }

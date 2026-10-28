@@ -134,7 +134,7 @@ button { font-family: var(--font-display); cursor: pointer; }
   background: var(--kaiu-cream);
   color: var(--kaiu-green);
   font-family: var(--font-label);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 500;
   letter-spacing: .14em;
   text-transform: uppercase;
@@ -193,9 +193,9 @@ h3, h4 { font-weight: 600; letter-spacing: 0; }
   padding: 0 32px;
   border-radius: var(--radius-pill);
   font-family: var(--font-label);
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 500;
-  letter-spacing: .18em;
+  letter-spacing: .1em;
   text-transform: uppercase;
   border: 1px solid var(--action-fill);
   background: var(--action-fill);
@@ -262,9 +262,9 @@ h3, h4 { font-weight: 600; letter-spacing: 0; }
   display: inline-block;
   margin-top: 30px;
   font-family: var(--font-label);
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 500;
-  letter-spacing: .18em;
+  letter-spacing: .1em;
   text-transform: uppercase;
   color: var(--kaiu-ink);
   border-bottom: 1px solid var(--hairline);
@@ -289,7 +289,7 @@ h3, h4 { font-weight: 600; letter-spacing: 0; }
 .spec-table { width: 100%; border-collapse: collapse; font-size: 15px; }
 .spec-table th {
   text-align: left; font-weight: 400; width: 260px;
-  font-family: var(--font-label); font-size: 11px; letter-spacing: .16em;
+  font-family: var(--font-label); font-size: 13px; letter-spacing: .1em;
   text-transform: uppercase; color: var(--kaiu-muted-light);
 }
 .spec-table th, .spec-table td { padding: 20px 0; border-top: 1px solid var(--hairline); }
@@ -313,7 +313,7 @@ h3, h4 { font-weight: 600; letter-spacing: 0; }
 }
 .detail-info-cell .label {
   display: block;
-  font-size: 11px;
+  font-size: 13px;
   letter-spacing: .1em;
   text-transform: uppercase;
   color: var(--kaiu-brown-deep);
@@ -323,11 +323,14 @@ h3, h4 { font-weight: 600; letter-spacing: 0; }
   margin-top: 6px;
   font-size: 15px;
 }
+/* A 44px tap area for links in a value (a project's veneers) without
+   moving the text. */
+.detail-info-cell .value a { display: inline-block; padding-block: 14px; margin-block: -14px; }
 
 .back-link {
   display: inline-block;
-  padding-block: 14px;
-  margin-block: -14px; /* a 44px tap area without moving anything */
+  padding-block: 15px;
+  margin-block: -15px; /* a 44px tap area without moving anything */
   font-family: var(--font-label);
   font-size: 13px;
   letter-spacing: .08em;
@@ -388,7 +391,7 @@ h3, h4 { font-weight: 600; letter-spacing: 0; }
   color: #fff;
 }
 .project-card-tag .name { font-size: 13px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
-.project-card-tag .room { font-size: 11px; color: rgba(255,248,240,.82); }
+.project-card-tag .room { font-size: 13px; color: rgba(255,248,240,.82); }
 .project-card-expand {
   width: 30px; height: 30px; border-radius: 50%;
   background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.35);

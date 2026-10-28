@@ -6,7 +6,7 @@
   display: inline-flex; align-items: center; gap: 8px;
   padding: 10px 16px; border: none; border-radius: var(--radius-pill);
   background: rgba(51,40,36,.82); backdrop-filter: blur(6px); color: #fff;
-  font-family: var(--font-label); font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase;
+  font-family: var(--font-label); font-size: 13px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase;
   box-shadow: 0 6px 18px rgba(51,40,36,.25);
   transition: background .25s ease, transform .35s cubic-bezier(.22,1,.36,1);
 }

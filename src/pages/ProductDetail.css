@@ -12,7 +12,7 @@
   color: var(--kaiu-muted);
 }
 .pd-crumbs li + li::before { content: "/"; margin: 0 10px; color: var(--kaiu-muted-light); opacity: .6; }
-.pd-crumbs a { display: inline-block; padding-block: 12px; margin-block: -12px; color: var(--kaiu-muted); }
+.pd-crumbs a { display: inline-block; padding-block: 15px; margin-block: -15px; color: var(--kaiu-muted); }
 .pd-crumbs a:hover { color: var(--kaiu-ink); }
 .pd-crumbs [aria-current] { color: var(--kaiu-ink); }
 
@@ -84,8 +84,8 @@
 .pd-eyebrow {
   display: block;
   font-family: var(--font-label);
-  font-size: 11px;
-  letter-spacing: .2em;
+  font-size: 13px;
+  letter-spacing: .1em;
   text-transform: uppercase;
   color: var(--kaiu-gold-text);
 }
@@ -128,7 +128,7 @@
 .pd-sheet h2,
 .pd-related h2 { margin: 0; font-size: clamp(24px, 2.4vw, 32px); font-weight: 400; }
 .pd-sheet-head p { margin: 10px 0 0; max-width: 520px; font-size: 14px; line-height: 1.75; color: var(--kaiu-muted); }
-.download-hires-link { display: inline-block; padding-block: 12px; margin-block: -12px; font-size: 14px; font-weight: 500; color: var(--kaiu-ink); text-decoration: underline; text-underline-offset: 4px; }
+.download-hires-link { display: inline-block; padding-block: 15px; margin-block: -15px; font-size: 14px; font-weight: 500; color: var(--kaiu-ink); text-decoration: underline; text-underline-offset: 4px; }
 .download-hires-link:hover { color: var(--kaiu-brown-mid); }
 .pd-sheet-img { display: block; width: 100%; height: auto; border-radius: 2px; background: var(--kaiu-cream-deep); }
 

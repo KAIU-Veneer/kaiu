@@ -22,7 +22,7 @@
   border: 1px solid rgba(51,40,36,.22);
   background: transparent;
   font-family: var(--font-label);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 500;
   letter-spacing: .1em;
   color: var(--kaiu-ink);
@@ -44,9 +44,9 @@
 }
 .tone-filter-label {
   font-family: var(--font-label);
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 500;
-  letter-spacing: .2em;
+  letter-spacing: .1em;
   text-transform: uppercase;
   color: var(--kaiu-muted-light);
 }
@@ -111,7 +111,7 @@
 .tone-select-option.is-active { background: var(--kaiu-cream-deep); color: var(--kaiu-ink); }
 .tone-select-option.is-selected { color: var(--kaiu-gold-text); font-weight: 600; }
 .tone-select-option.is-selected.is-active { background: #EAD8C7; color: var(--kaiu-ink); }
-.tone-select-option > span { color: var(--kaiu-gold-text); font-size: 12px; }
+.tone-select-option > span { color: var(--kaiu-gold-text); font-size: 13px; }
 @keyframes tone-menu-in {
   from { opacity: 0; transform: translateY(-4px) scale(.985); }
   to { opacity: 1; transform: translateY(0) scale(1); }
@@ -129,9 +129,9 @@
 .product-search-label {
   flex: 0 0 auto;
   font-family: var(--font-label);
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 500;
-  letter-spacing: .2em;
+  letter-spacing: .1em;
   text-transform: uppercase;
   color: var(--kaiu-muted-light);
 }
@@ -168,8 +168,8 @@
 .product-count {
   flex: 0 0 auto;
   font-family: var(--font-label);
-  font-size: 11px;
-  letter-spacing: .16em;
+  font-size: 13px;
+  letter-spacing: .1em;
   text-transform: uppercase;
   color: var(--kaiu-muted-light);
 }
@@ -197,7 +197,7 @@
 .product-card .product-collection-label {
   display: block;
   font-family: var(--font-label);
-  font-size: 11px;
+  font-size: 13px;
   letter-spacing: .14em;
   text-transform: uppercase;
   color: var(--kaiu-muted-light);
@@ -213,8 +213,8 @@
   gap: var(--space-xs);
   margin-top: var(--space-xl);
   font-family: var(--font-label);
-  font-size: 11px;
-  letter-spacing: .16em;
+  font-size: 13px;
+  letter-spacing: .1em;
   color: var(--kaiu-muted-light);
 }
 
