@@ -1,9 +1,9 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { PROJECTS } from "../data.js";
+import { PRODUCTS, PROJECTS } from "../data.js";
 import { useLanguage } from "../LanguageContext.jsx";
 import useReveal from "../useReveal.js";
-import { projectPhoto, IMAGE_SIZES } from "../imageSrc.js";
+import { cardSwatch, projectPhoto, IMAGE_SIZES } from "../imageSrc.js";
 import useDocumentMeta from '../useDocumentMeta.js';
 import "./Home.css";
 
@@ -13,19 +13,18 @@ const PROCESS = [
   { t: 'p3t', d: 'p3d', img: '/assets/image/w800/OSLO CEMENT GREY OAK.webp?v=2' },
 ];
 
-// Drawn for this list rather than taken from a stock set, so each one shows
-// something about veneer itself: a log end, stacked sheets, a swatch fan and
-// a finished panel. Same 1.5 stroke as the arrows.
-const MATERIAL_ICONS = [
-  // Real wood: the end of a log, uneven growth rings and a drying check.
-  <svg key="log" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.3 3.6c4.7.2 8.3 3.9 8.1 8.6-.2 4.8-4 8.4-8.8 8.2-4.6-.2-8.2-4-8-8.7.2-4.8 4-8.3 8.7-8.1Z" /><path d="M12.6 7.4c2.6.3 4.4 2.5 4.1 5.1-.3 2.5-2.6 4.2-5.1 3.9-2.4-.3-4.1-2.5-3.8-4.9.3-2.6 2.5-4.4 4.8-4.1Z" /><path d="M12.2 11.2c.6 0 1 .5 1 1.1s-.5 1-1.1 1" /><path d="M12.4 3.7 13 8.2M13.4 9.6l.3 1.4" /></svg>,
-  // Matches across sheets: three sheets stacked, the same grain line on each.
-  <svg key="sheets" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 15.5 12 19.5l8-4" /><path d="M4 12 12 16l8-4" /><path d="M12 4.5 20 8.5l-8 4-8-4 8-4Z" /><path d="M9 7.2l5 2.5" /></svg>,
-  // Wide range: veneer strips fanned out from one pin, like a sample book.
-  <svg key="fan" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 20.5 3.6 6.2a1 1 0 0 1 .8-1.1l2.3-.4a1 1 0 0 1 1.1.8L10 19.6" /><path d="M7.4 19.4 9.8 6.6a1 1 0 0 1 1.2-.8l2.3.4a1 1 0 0 1 .8 1.2l-2.4 12.4" /><path d="M9.5 19.6 16.8 9a1 1 0 0 1 1.4-.2l1.9 1.3a1 1 0 0 1 .3 1.4l-7.2 10.4" /><circle cx="7" cy="19.2" r=".9" /></svg>,
-  // Durable and stable: a finished wall panel with its grain running through.
-  <svg key="panel" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="3.5" width="12" height="17" rx="1" /><path d="M9.2 3.5c-.9 3.4 1.4 5.2.4 8.6-.8 2.9.6 5.3.2 8.4" /><path d="M13.3 3.5c.8 2.8-.7 5 .1 7.8.9 3.1-.4 6 .3 9.2" /></svg>,
+// Seven real sheets from the range, light to dark, standing edge to edge.
+// One is open at a time so its grain reads; the rest show as narrow strips.
+const SHEET_IDS = [
+  'cannes-blonde-oak',
+  'cannes-golden-teak',
+  'oslo-cement-grey-oak',
+  'cannes-oak-burl',
+  'athens-brown-walnut',
+  'athens-macassar-ebony',
+  'berlin-black-oakwood',
 ];
+const SHEETS = SHEET_IDS.map((id) => PRODUCTS.find((p) => p.id === id));
 
 export default function Home() {
   const { t, lang } = useLanguage();
@@ -90,6 +89,8 @@ export default function Home() {
   }, [heroProjects.length, heroPaused, slide]);
 
   const materialRef = useReveal();
+  const [openSheet, setOpenSheet] = useState(3);
+  const sheet = SHEETS[openSheet];
   const processRef = useReveal();
   const worksRef = useReveal();
 
@@ -169,21 +170,47 @@ export default function Home() {
         <div className="material-copy">
           <h2>{t.home.materialTitle1}<br />{t.home.materialTitle2}</h2>
           <p>{t.home.materialDesc}</p>
+        </div>
+
+        <figure className="material-sheets">
+          <div className="sheet-row" role="group" aria-label={t.home.sheetsLabel}>
+            {SHEETS.map((item, index) => (
+              <button
+                key={item.id}
+                type="button"
+                className={`sheet${index === openSheet ? ' is-open' : ''}`}
+                aria-pressed={index === openSheet}
+                aria-label={item.name}
+                onClick={() => setOpenSheet(index)}
+                onMouseEnter={() => setOpenSheet(index)}
+                onFocus={() => setOpenSheet(index)}
+              >
+                <img
+                  {...cardSwatch(item.image)}
+                  sizes="(max-width: 900px) 45vw, 26vw"
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                />
+              </button>
+            ))}
+          </div>
+          <figcaption className="sheet-caption" aria-live="polite">
+            <Link to={`/products/${sheet.id}`}>{sheet.name} <span aria-hidden="true">→</span></Link>
+            <span>{(lang === 'id' && sheet.idSpecies) || sheet.species}</span>
+          </figcaption>
+        </figure>
+
+        <div className="material-points">
           <ul className="material-list">
-            {[['m1t','m1d'], ['m2t','m2d'], ['m3t','m3d'], ['m4t','m4d']].map(([title, desc], index) => (
+            {[['m1t','m1d'], ['m2t','m2d'], ['m3t','m3d'], ['m4t','m4d']].map(([title, desc]) => (
               <li key={title}>
-                <span className="material-icon">{MATERIAL_ICONS[index]}</span>
-                <span>
-                  <strong>{t.home[title]}</strong>
-                  <span>{t.home[desc]}</span>
-                </span>
+                <strong>{t.home[title]}</strong>
+                <span>{t.home[desc]}</span>
               </li>
             ))}
           </ul>
           <Link to="/products" className="text-cta">{t.home.exploreCollection} <span aria-hidden="true">→</span></Link>
-        </div>
-        <div className="material-media" aria-hidden="true">
-          <img src="/assets/image/our-material.webp" alt="" loading="lazy" decoding="async" />
         </div>
       </section>
 

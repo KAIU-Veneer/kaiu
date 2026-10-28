@@ -117,65 +117,89 @@
 /* ============================================================
    OUR MATERIAL
    ============================================================ */
+/* Copy, then the sheets, then the four points. On wide screens the sheets
+   take the right-hand column at full height and the text sits either side
+   of it vertically. No photograph of a styled room here: the veneers
+   themselves are the picture. */
 .material {
-  position: relative;
-  display: flex;
-  align-items: center;
-  min-height: 100vh;
-  min-height: 100dvh;
-  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: "copy" "sheets" "points";
+  row-gap: clamp(36px, 8vw, 56px);
   padding: var(--section-y) var(--page-x);
   background: var(--kaiu-cream);
 }
-.material::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  background: linear-gradient(90deg,
-    var(--kaiu-cream) 0%,
-    rgba(255,248,240,.98) 29%,
-    rgba(255,248,240,.86) 42%,
-    rgba(255,248,240,.3) 61%,
-    rgba(255,248,240,0) 78%);
-}
-.material-copy { position: relative; z-index: 1; width: min(100%, 540px); min-width: 0; }
+.material-copy { grid-area: copy; max-width: 540px; }
 .material-copy h2 { margin: 0; font-size: clamp(32px, 3.6vw, 50px); }
 .material-copy > p { margin: 22px 0 0; font-size: 15px; line-height: 1.85; color: var(--kaiu-muted); }
 
-.material-list { list-style: none; margin: 34px 0 0; padding: 0; }
-.material-list li { display: flex; align-items: center; gap: 18px; padding: 10px 0; }
-/* No tinted disc behind the icon: a bare line drawing in the accent brown,
-   with a hairline ring so the four still line up as a column. */
-.material-icon {
-  flex: 0 0 auto;
-  display: grid;
-  place-items: center;
-  width: 52px; height: 52px;
-  border-radius: var(--radius-pill);
-  border: 1px solid var(--hairline);
-  color: var(--kaiu-gold-text);
+.material-sheets { grid-area: sheets; margin: 0; min-width: 0; }
+.sheet-row {
+  display: flex;
+  gap: 4px;
+  height: clamp(340px, 100vw, 440px);
 }
-.material-icon svg {
-  width: 26px;
-  height: 26px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+.sheet {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 2px;
+  background: var(--kaiu-cream-deep);
+  overflow: hidden;
+  cursor: pointer;
+  transition: flex-grow .7s cubic-bezier(.16, 1, .3, 1);
 }
-.material-list strong { display: block; font-size: 16px; font-weight: 600; }
-.material-list strong + span { display: block; margin-top: 4px; font-size: 14px; color: var(--kaiu-muted); }
+.sheet.is-open { flex-grow: 6; cursor: default; }
+.sheet img { display: block; width: 100%; height: 100%; object-fit: cover; }
 
-.material-media { position: absolute; inset: 0; z-index: 0; background: var(--kaiu-cream); }
-.material-media img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: right center;
-  display: block;
+.sheet-caption {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 4px 16px;
+  margin-top: 16px;
+}
+.sheet-caption a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--kaiu-ink);
+  text-decoration: none;
+}
+.sheet-caption a:hover { color: var(--link-hover); }
+.sheet-caption span { font-size: 14px; color: var(--kaiu-muted); }
+
+.material-points { grid-area: points; max-width: 540px; }
+.material-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 26px 24px;
+  margin: 0 0 30px;
+  padding: 0;
+}
+.material-list strong { display: block; font-size: 16px; font-weight: 600; line-height: 1.35; }
+.material-list span { display: block; margin-top: 6px; font-size: 14px; line-height: 1.6; color: var(--kaiu-muted); }
+
+@media (min-width: 901px) {
+  .material {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    grid-template-areas: "copy sheets" "points sheets";
+    column-gap: clamp(48px, 6vw, 112px);
+    row-gap: 48px;
+  }
+  .material-copy { align-self: start; }
+  .material-points { align-self: end; }
+  .sheet-row { height: clamp(520px, 64vh, 680px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sheet { transition: none; }
 }
 
 .text-cta {
@@ -335,15 +359,6 @@
   .hero-caption { left: var(--page-x); right: var(--page-x); justify-content: space-between; bottom: 28px; }
   .hero-caption-text { text-align: left; }
 
-  .material { min-height: 100vh; min-height: 100dvh; align-items: flex-start; }
-  .material::after {
-    background: linear-gradient(180deg,
-      rgba(255,248,240,.98) 0%,
-      rgba(255,248,240,.94) 42%,
-      rgba(255,248,240,.6) 72%,
-      rgba(255,248,240,.22) 100%);
-  }
-  .material-media img { object-position: center bottom; }
 
   .process-grid { grid-template-columns: 1fr; gap: var(--space-md); }
   /* Stacked, the arrow turns to point down at the next step. */
