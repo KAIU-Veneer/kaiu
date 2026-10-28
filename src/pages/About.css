@@ -1,37 +1,250 @@
-.about-intro {
-  display: grid; grid-template-columns: 1.15fr .85fr; gap: var(--gap-split); align-items: center;
+/* ============================================================
+   HERO — a project photograph behind the page title, the same
+   treatment the home hero uses so the two read as one site.
+   ============================================================ */
+.about-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: clamp(320px, 42vw, 460px);
+  padding: var(--section-y) var(--page-x);
+  overflow: hidden;
+  background: var(--kaiu-green);
 }
-.about-intro h1 { margin-top: 0; font-size: clamp(38px, 4.6vw, 62px); }
-.about-intro p { color: var(--kaiu-muted); margin-top: var(--space-sm); max-width: 480px; font-size: 15px; }
-.about-swatch-tall { aspect-ratio: 4/4.6; border-radius: 2px; }
-.about-wide { margin-top: var(--stack); aspect-ratio: 16/7.2; border-radius: 2px; }
-
-.about-mission {
-  margin-top: var(--stack); display: grid; grid-template-columns: .85fr 1.15fr; gap: var(--gap-split); align-items: center;
+.about-hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-.about-mission .swatch { aspect-ratio: 4/3.1; border-radius: 2px; }
-.about-mission h3 { font-size: 32px; font-weight: 275; margin: 0 0 14px; }
-.about-mission p { color: var(--kaiu-muted); font-size: 15px; }
-
-.about-stats {
-  margin: var(--stack) 0; display: grid; grid-template-columns: repeat(3,1fr); gap: 1px;
-  background: var(--hairline); border: 1px solid var(--hairline);
+.about-hero-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(18,26,20,.9) 0%, rgba(18,26,20,.6) 52%, rgba(18,26,20,.28) 100%);
 }
-.about-stat { background: var(--kaiu-cream); padding: var(--space-md); }
-.about-stat b { display: block; font-size: 40px; font-weight: 275; }
-.about-stat span { font-size: 12.5px; color: var(--kaiu-muted); }
+.about-hero-copy { position: relative; max-width: 640px; color: var(--kaiu-cream); }
+.about-hero-copy h1 {
+  margin: 0;
+  font-size: clamp(38px, 4.8vw, 62px);
+  color: var(--kaiu-cream);
+}
+.about-hero-copy p {
+  margin: 20px 0 0;
+  max-width: 560px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--kaiu-on-dark);
+}
 
-/* Padding and gaps come from the tokens in index.css; only the layout
-   changes per breakpoint. */
+/* ============================================================
+   OUR MATERIAL — a pinned scene: while it scrolls past, the
+   headline fills in word by word and the veneer panels rise out
+   of the ivory ground. About.jsx writes the progress into --p.
+   ============================================================ */
+.material-scene {
+  --p: 0;
+  position: relative;
+  height: 240vh;
+  background: var(--kaiu-cream);
+}
+.material-stage {
+  /* The panels finish rising at 70% and hold for the rest of the pin. */
+  --rise: clamp(0, calc(var(--p) / .7), 1);
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100svh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: calc(var(--section-y) + 64px) var(--page-x) 0;
+  text-align: center;
+}
+.material-title {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  font-size: clamp(40px, 6.2vw, 92px);
+  font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: -.02em;
+  transform: translateY(calc(var(--rise) * -3vh));
+}
+.material-title-line { display: block; }
+/* Words start as a pale ghost and fill to ink in reading order. */
+.material-word {
+  opacity: clamp(.16, calc(var(--p) * var(--n) * 2.6 - var(--i)), 1);
+}
+/* The photograph's own ground is ivory, so its top dissolves into the page;
+   the bottom edge fades out too, handing over to the points below. */
+.material-panels {
+  position: absolute;
+  inset: auto 0 -16%;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: 50% 100%;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 34%, #000 80%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, #000 34%, #000 80%, transparent 100%);
+  opacity: calc(.2 + var(--rise) * .8);
+  transform: translateY(calc((1 - var(--rise)) * 55%)) scale(calc(1.14 - var(--rise) * .14));
+  transform-origin: 50% 100%;
+  will-change: transform;
+}
+@media (prefers-reduced-motion: reduce) {
+  .material-scene { height: auto; }
+  .material-stage { position: relative; height: auto; min-height: 100svh; }
+}
+
+/* The statement and the four points follow straight on from the scene. */
+.about-material {
+  padding: var(--space-xl) var(--page-x) var(--section-y);
+  background: var(--kaiu-cream);
+}
+/* A display-size statement in two tones, echoing the headline above it. */
+.about-material-note {
+  max-width: 22em;
+  margin: 0 0 var(--space-xl);
+  padding-bottom: var(--space-xl);
+  border-bottom: 1px solid var(--hairline);
+  font-size: clamp(26px, 3vw, 42px);
+  font-weight: 400;
+  line-height: 1.22;
+  letter-spacing: -.015em;
+  /* Lightest the second tone can go and still read as large text on ivory. */
+  color: color-mix(in srgb, var(--kaiu-ink) 58%, var(--kaiu-cream));
+}
+.about-material-note span { color: var(--kaiu-ink); }
+
+.about-points {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-lg) var(--gap-grid);
+}
+.about-point-num {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: .1em;
+  color: var(--kaiu-gold-text);
+}
+.about-points h3 { margin: 14px 0 8px; font-size: 17px; font-weight: 600; }
+.about-points p { margin: 0; font-size: 14px; line-height: 1.75; color: var(--kaiu-muted); }
+
+/* ============================================================
+   WHY KAIU — the green band
+   ============================================================ */
+.about-why { padding: var(--section-y) var(--page-x); }
+.about-why-head { max-width: 460px; }
+.about-why-head h2 { margin: 0; font-size: clamp(30px, 3.4vw, 46px); }
+.about-why-grid {
+  margin-top: var(--space-xl);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-lg) var(--gap-split);
+}
+.about-why-item h3 { margin: 0 0 9px; font-size: 17px; font-weight: 600; }
+.about-why-item p { margin: 0; font-size: 14px; line-height: 1.75; }
+
+/* ============================================================
+   SPECIFICATION
+   ============================================================ */
+.about-spec { padding: var(--section-y) var(--page-x); background: var(--section-bg-alt); }
+.about-spec h2 { margin: 0 0 var(--space-lg); font-size: clamp(30px, 3.4vw, 46px); }
+/* Capped so the value column stays a readable measure on wide screens. */
+.about-spec-scroll { max-width: 900px; }
+/* Above the stacking breakpoint the table keeps its two columns; below it the
+   shared .spec-table rules turn each row into a stacked label/value pair. */
+@media (min-width: 641px) {
+  .about-spec-scroll { overflow-x: auto; }
+  .about-spec .spec-table { min-width: 560px; }
+}
+.about-spec .spec-table caption {
+  text-align: left;
+  font-family: var(--font-label);
+  font-size: 10px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--kaiu-muted-light);
+  padding-bottom: var(--space-sm);
+}
+
+/* ============================================================
+   CLOSING CTA — photograph band
+   ============================================================ */
+.about-cta {
+  position: relative;
+  overflow: hidden;
+  margin: var(--section-y) var(--page-x);
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  background: var(--kaiu-green);
+}
+.about-cta-media { position: absolute; inset: 0; }
+.about-cta-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity .9s ease;
+}
+.about-cta-img.is-active { opacity: 1; }
+@media (prefers-reduced-motion: reduce) {
+  .about-cta-img { transition: none; }
+}
+.about-cta-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(18,26,20,.92) 0%, rgba(18,26,20,.62) 55%, rgba(18,26,20,.3) 100%);
+}
+.about-cta-copy {
+  position: relative;
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-md) var(--gap-split);
+  padding: var(--space-xl) var(--space-lg);
+  color: var(--kaiu-cream);
+}
+.about-cta-copy > div { flex: 999 1 420px; min-width: 0; }
+.about-cta h2 { margin: 0 0 12px; font-size: clamp(28px, 3.2vw, 42px); color: var(--kaiu-cream); }
+.about-cta p { margin: 0; max-width: 460px; font-size: 15px; line-height: 1.8; color: var(--kaiu-on-dark); }
+/* The band is dark, so the button takes the inverted pair. */
+.about-cta .pill-btn {
+  flex: 0 0 auto;
+  background: var(--kaiu-cream);
+  border-color: var(--kaiu-cream);
+  color: var(--kaiu-green);
+}
+.about-cta .pill-btn:hover { background: var(--kaiu-white); border-color: var(--kaiu-white); color: var(--kaiu-green); }
+
+/* ============================================================
+   Breakpoints
+   ============================================================ */
 @media (max-width: 900px) {
-  .about-intro { grid-template-columns: 1fr; }
-  .about-swatch-tall { aspect-ratio: 16/9; }
-  .about-mission { grid-template-columns: 1fr; }
-  .about-mission .swatch { order: 2; }
-  .about-mission > div:last-child { order: 1; }
-  .about-wide { aspect-ratio: 16/9; }
-  .about-stats { grid-template-columns: repeat(2,1fr); }
+  .about-points { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-lg); }
+  .about-why-grid { gap: var(--space-lg); }
+  .material-scene { height: 200vh; }
+  /* On tall, narrow screens the full-width photo would be a sliver, so it
+     fills the lower half and crops in on the centre panels instead. */
+  .material-panels { bottom: 0; height: 52%; }
 }
+
 @media (max-width: 640px) {
-  .about-stats { grid-template-columns: 1fr; }
+  .material-stage { padding-top: calc(var(--section-y) + 56px); }
+  .about-points,
+  .about-why-grid { grid-template-columns: 1fr; }
+  .about-cta-copy { padding: var(--space-lg) var(--space-md); }
 }

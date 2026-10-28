@@ -10,7 +10,7 @@ const TRANSLATIONS = {
         description: 'KAIU supplies premium wood veneer to architects, designers, manufacturers and homeowners in Jakarta. Six collections, consistent sheet after sheet.',
       },
       about: {
-        title: 'About KAIU - Crafted by Nature, Refined by Design',
+        title: 'About KAIU - More Than a Surface',
         description: 'How KAIU selects veneer logs, slices them and pairs each face, for people who want the character of real timber without compromise.',
       },
       products: {
@@ -85,12 +85,38 @@ const TRANSLATIONS = {
       ctaButton: 'Inquire now',
     },
     about: {
-      title1: 'Crafted by nature.', title2: 'Refined by design.',
-      p1: 'At KAIU, we believe exceptional interiors begin with exceptional materials. Inspired by the natural beauty of wood, we curate premium veneer solutions that bring warmth, character and timeless elegance to every space.',
-      p2: "Every veneer tells a unique story through its grain, texture and colour. Rather than concealing nature's imperfections, we celebrate them, preserving the authenticity that makes each piece truly one of a kind.",
-      missionTitle: 'Elegance, performance and authenticity. For the long term.',
-      missionDesc: 'We provide architects, designers, manufacturers and homeowners with premium wood veneer that combines elegance, performance and consistency, with a distinctive grain that repeats sheet after sheet.',
-      stats: [['200+', 'Veneer Collections'], ['30+', 'Projects Delivered'], ['100%', 'Natural Material']],
+      title: 'More than a surface.',
+      lede: 'We supply veneer to architects, designers, manufacturers and homeowners across Indonesia, and finish it ourselves when a project needs it.',
+
+      materialTitle1: 'What our veneer', materialTitle2: 'actually is.',
+      materialP1: 'Fast-growing timber is sliced, dyed all the way through, re-stacked into a block and sliced again. What comes out is real wood, with the variance engineered out.',
+      materialP2: 'It is not a print and not a laminate. Sand it, rout it, mitre it: the colour and the grain run right through the leaf.',
+      points: [
+        ['01', 'Authentic wood aesthetics', 'Real timber, beautifully engineered, not a photographic reproduction.'],
+        ['02', 'Consistent quality', 'Uniform grain and colour, sheet after sheet, order after order.'],
+        ['03', 'Wide design options', '218 surfaces across six collections, including colours wood cannot grow.'],
+        ['04', 'Durable and stable', 'No knots or splits to work around, so your joiner stops cutting around faults.'],
+      ],
+
+      whyTitle1: 'Craft, stock and', whyTitle2: 'follow-through.',
+      why: [
+        ['Curated selection', 'Six collections, each with a point of view, from pale Scandinavian oak to engineered pattern work.'],
+        ['Reliable supply', 'Held in Jakarta, consistent at any scale, repeatable when you re-order years later.'],
+        ['Trusted by professionals', 'Specified in residential, commercial and hospitality projects by design studios across Indonesia.'],
+        ['End-to-end support', 'From material selection through fabrication to application guidance on site.'],
+      ],
+
+      specTitle: 'Written for the spec sheet',
+      specCaption: 'Standard sheet, all collections',
+      spec: [
+        ['Length × width', '2500 × 640 mm · 2500 × 620 mm'],
+        ['Thickness', '0.40 mm'],
+        ['Services', 'Veneer supply · panel fabrication on HMR or plywood · natural finishing'],
+      ],
+
+      ctaTitle: 'Bring your vision to life.',
+      ctaDesc: "Tell us the project and we'll send the sheets worth looking at.",
+      ctaButton: 'Inquire now',
     },
     products: {
       title: 'Collections',
@@ -165,7 +191,7 @@ const TRANSLATIONS = {
         description: 'KAIU memasok veneer kayu alami premium untuk arsitek, desainer, produsen, dan pemilik rumah di Jakarta. Enam koleksi, dipotong dan dipasangkan sesuai pesanan.',
       },
       about: {
-        title: 'Tentang KAIU - Diciptakan Alam, Disempurnakan Desain',
+        title: 'Tentang KAIU - Lebih dari Sekadar Permukaan',
         description: 'Bagaimana KAIU memilih log veneer, mengirisnya, dan memasangkan setiap permukaan, untuk mereka yang menginginkan karakter kayu asli tanpa kompromi.',
       },
       products: {
@@ -240,12 +266,38 @@ const TRANSLATIONS = {
       ctaButton: 'Hubungi kami',
     },
     about: {
-      title1: 'Diciptakan oleh alam.', title2: 'Disempurnakan oleh desain.',
-      p1: 'Di KAIU, kami percaya interior yang luar biasa dimulai dari material yang luar biasa. Terinspirasi oleh keindahan alami kayu, kami mengkurasi solusi veneer premium yang menghadirkan kehangatan, karakter, dan keanggunan abadi ke setiap ruang.',
-      p2: 'Setiap veneer menceritakan kisah unik melalui serat, tekstur, dan warnanya. Alih-alih menyembunyikan ketidaksempurnaan alami, kami merayakannya, menjaga keaslian yang membuat setiap potongan benar-benar unik.',
-      missionTitle: 'Keanggunan, performa, dan keaslian. Untuk jangka panjang.',
-      missionDesc: 'Kami menyediakan arsitek, desainer, produsen, dan pemilik rumah dengan veneer kayu alami premium yang memadukan keanggunan, performa, dan keaslian, sambil menjaga keindahan alam untuk generasi mendatang.',
-      stats: [['200+', 'Koleksi Veneer'], ['30+', 'Proyek Selesai'], ['100%', 'Material Alami']],
+      title: 'Lebih dari sekadar permukaan.',
+      lede: 'Kami memasok veneer untuk arsitek, desainer, produsen, dan pemilik rumah di seluruh Indonesia, dan menyelesaikannya sendiri bila proyek membutuhkannya.',
+
+      materialTitle1: 'Apa itu veneer kami', materialTitle2: 'sebenarnya.',
+      materialP1: 'Kayu cepat tumbuh diiris, diwarnai hingga ke dalam, disusun kembali menjadi blok, lalu diiris lagi. Hasilnya kayu asli, dengan variasi alaminya direkayasa hilang.',
+      materialP2: 'Ini bukan cetakan dan bukan laminasi. Diamplas, dirouter, atau dipotong miring: warna dan seratnya tetap menembus seluruh lembar.',
+      points: [
+        ['01', 'Estetika kayu autentik', 'Kayu asli yang direkayasa dengan indah, bukan reproduksi foto.'],
+        ['02', 'Kualitas konsisten', 'Serat dan warna seragam, lembar demi lembar, pesanan demi pesanan.'],
+        ['03', 'Pilihan desain luas', '218 permukaan dalam enam koleksi, termasuk warna yang tak bisa tumbuh di kayu.'],
+        ['04', 'Awet dan stabil', 'Tanpa mata kayu atau retak, sehingga tukang Anda tak perlu menghindari cacat.'],
+      ],
+
+      whyTitle1: 'Keahlian, stok, dan', whyTitle2: 'tindak lanjut.',
+      why: [
+        ['Pilihan terkurasi', 'Enam koleksi, masing-masing dengan karakternya, dari oak Skandinavia pucat hingga pola rekayasa.'],
+        ['Pasokan andal', 'Tersedia di Jakarta, konsisten pada skala apa pun, dapat diulang saat Anda memesan lagi bertahun kemudian.'],
+        ['Dipercaya profesional', 'Digunakan pada proyek residensial, komersial, dan hospitality oleh studio desain di seluruh Indonesia.'],
+        ['Dukungan menyeluruh', 'Dari pemilihan material, fabrikasi, hingga panduan aplikasi di lokasi.'],
+      ],
+
+      specTitle: 'Ditulis untuk lembar spesifikasi',
+      specCaption: 'Lembar standar, semua koleksi',
+      spec: [
+        ['Panjang × lebar', '2500 × 640 mm · 2500 × 620 mm'],
+        ['Ketebalan', '0,40 mm'],
+        ['Layanan', 'Pasokan veneer · fabrikasi panel pada HMR atau plywood · finishing alami'],
+      ],
+
+      ctaTitle: 'Wujudkan visi Anda.',
+      ctaDesc: 'Ceritakan proyek Anda dan kami kirimkan lembar yang layak dilihat.',
+      ctaButton: 'Hubungi kami',
     },
     products: {
       title: 'Koleksi',
