@@ -1,13 +1,43 @@
-.services-body h1 { margin: 0 0 var(--space-lg); font-size: clamp(38px, 4.4vw, 62px); }
-.service-list { display: flex; flex-direction: column; }
-.service-row {
-  display: grid; grid-template-columns: 1fr 1.2fr; gap: var(--space-md);
-  align-items: start; padding: var(--space-lg) 0; border-top: 1px solid var(--hairline);
-}
-.service-row h3 { font-size: 24px; font-weight: 600; margin: 0; }
-.service-row p { color: var(--kaiu-muted); margin: 0; font-size: 15px; max-width: 480px; }
-.service-list-end { border-bottom: 1px solid var(--hairline); }
+/* Phone: heading, the sample photograph, then the three services.
+   Wide screens: heading and services in one text column on the left,
+   the photograph beside them on the right. Space does the separating;
+   no rules or numbers. */
+.services-intro { padding: var(--page-top) var(--page-x) var(--section-y); }
+.services-head h1 { margin: 0; max-width: 14ch; font-size: clamp(38px, 4.4vw, 62px); }
+.services-head p { margin: 18px 0 0; max-width: 48ch; font-size: 16px; line-height: 1.8; color: var(--kaiu-muted); }
 
-@media (max-width: 640px) {
-  .service-row { grid-template-columns: 1fr; gap: 6px; }
+/* The sheets were shot on white; multiply drops the white into the page's
+   ivory so they sit on the page rather than in a box. */
+.services-photo { margin-top: 40px; }
+.services-photo img { display: block; width: 100%; height: auto; mix-blend-mode: multiply; }
+
+.services-list { list-style: none; display: grid; gap: 36px; margin: 48px 0 0; padding: 0; }
+.services-list h2 { margin: 0; font-size: clamp(22px, 2vw, 26px); font-weight: 500; line-height: 1.25; }
+.services-list p { margin: 10px 0 0; max-width: 44ch; font-size: 15px; line-height: 1.8; color: var(--kaiu-muted); }
+.services-list .text-cta { margin-top: 18px; }
+
+.services-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--gap-split);
+  padding: var(--section-y) var(--page-x);
+  background: var(--kaiu-cream-deep);
+}
+.services-cta > div { flex: 999 1 460px; min-width: 0; }
+.services-cta h2 { margin: 0 0 14px; font-size: clamp(32px, 3.6vw, 50px); }
+.services-cta p { margin: 0; max-width: 520px; font-size: 15px; line-height: 1.8; color: var(--kaiu-muted); }
+
+@media (min-width: 901px) {
+  /* The photograph is 1448px wide, so it is held to 720px: sharp on
+     high-density screens. */
+  .services-intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 720px);
+    grid-template-rows: auto 1fr;
+    column-gap: clamp(48px, 6vw, 112px);
   }
+  .services-head { grid-column: 1; grid-row: 1; }
+  .services-list { grid-column: 1; grid-row: 2; align-self: start; gap: 40px; margin-top: 64px; }
+  .services-photo { grid-column: 2; grid-row: 1 / 3; align-self: center; margin-top: 0; }
+}

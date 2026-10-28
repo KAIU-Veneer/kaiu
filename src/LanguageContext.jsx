@@ -126,7 +126,10 @@ const TRANSLATIONS = {
       veneerUsed: 'Veneer Used', veneersUsed: 'Veneers Used',
       designer: 'Interior Designer', photo: 'photo', notFound: 'Project not found.',
     },
-    services: { title: 'From veneer to finished surface' },
+    services: {
+      title: 'From veneer to finished surface',
+      intro: 'Veneer supply, matching, pressing and finishing. What KAIU can take on between choosing a sheet and installing the surface.',
+    },
     contact: {
       title: "Let's talk about your next surface",
       studio: 'Studio', email: 'Email', phone: 'Phone / WhatsApp', hours: 'Studio Hours',
@@ -274,7 +277,10 @@ const TRANSLATIONS = {
       veneerUsed: 'Veneer Digunakan', veneersUsed: 'Veneer Digunakan',
       designer: 'Desainer Interior', photo: 'foto', notFound: 'Proyek tidak ditemukan.',
     },
-    services: { title: 'Dari veneer hingga permukaan akhir' },
+    services: {
+      title: 'Dari veneer hingga permukaan akhir',
+      intro: 'Penyediaan veneer, pencocokan, pengepresan, dan finishing. Apa yang dapat KAIU kerjakan antara memilih lembaran dan memasang permukaannya.',
+    },
     contact: {
       title: 'Mari bicarakan permukaan berikutnya',
       studio: 'Studio', email: 'Email', phone: 'Telepon / WhatsApp', hours: 'Jam Operasional',
