@@ -22,7 +22,9 @@
 }
 .site-header.home-header.menu-open { background: var(--kaiu-green); }
 
-.logo-link { flex: 0 0 auto; line-height: 1; color: var(--kaiu-cream); }
+.logo-link { position: relative; flex: 0 0 auto; line-height: 1; color: var(--kaiu-cream); }
+/* The wordmark is 33px tall; a band around it makes a 44px tap area. */
+.logo-link::before { content: ''; position: absolute; inset: -6px 0; }
 .logo-link:hover { color: var(--kaiu-cream); }
 .site-header nav {
   margin: 0 auto;
@@ -32,9 +34,9 @@
 }
 .site-header nav a {
   font-family: var(--font-label);
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 500;
-  letter-spacing: .18em;
+  letter-spacing: .1em;
   color: var(--kaiu-on-dark);
   padding-bottom: 4px;
   border-bottom: 1px solid transparent;
@@ -54,9 +56,9 @@
   background: var(--kaiu-cream);
   color: var(--kaiu-green);
   font-family: var(--font-label);
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 500;
-  letter-spacing: .16em;
+  letter-spacing: .1em;
   text-transform: uppercase;
   white-space: nowrap;
   transition: background .25s ease, transform .35s cubic-bezier(.22,1,.36,1);
@@ -101,7 +103,7 @@
   }
   /* Hidden, not just off-canvas, so closed links stay out of the tab order. */
   .site-header nav.nav-open { transform: translateX(0); visibility: visible; transition-delay: 0s; }
-  .site-header nav a { font-size: 14px; letter-spacing: .16em; }
+  .site-header nav a { font-size: 14px; letter-spacing: .1em; }
 
   .nav-close {
     display: grid;
@@ -124,7 +126,7 @@
     border-radius: var(--radius-pill);
     background: var(--kaiu-cream);
     color: var(--kaiu-green);
-    letter-spacing: .16em;
+    letter-spacing: .1em;
     text-transform: uppercase;
   }
   .nav-backdrop {
