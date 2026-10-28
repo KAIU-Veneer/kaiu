@@ -229,9 +229,9 @@ export default function Home() {
         <div className="works-head">
           <div>
             <h2>{t.home.worksTitle1}<br />{t.home.worksTitle2}</h2>
+            <Link to="/projects" className="text-cta">{t.home.viewAllProjects} <span aria-hidden="true">→</span></Link>
           </div>
           <div className="works-actions">
-            <Link to="/projects" className="text-cta">{t.home.viewAllProjects} <span aria-hidden="true">→</span></Link>
             <div className="works-controls" aria-label={t.a11y.projectControls}>
               <button type="button" aria-label={t.a11y.prevProjects} onClick={() => slideWorks(-1)}>
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5m0 0 6 6m-6-6 6-6" /></svg>
