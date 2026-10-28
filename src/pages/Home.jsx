@@ -8,12 +8,6 @@ import useDocumentMeta from '../useDocumentMeta.js';
 import WorkshopVideo from "../components/WorkshopVideo.jsx";
 import "./Home.css";
 
-const PROCESS = [
-  { t: 'p1t', d: 'p1d', img: '/assets/image/process/veneer-samples.webp?v=3' },
-  { t: 'p2t', d: 'p2d', img: '/assets/image/process/hot-press.webp?v=3', position: 'center 52%' },
-  { t: 'p3t', d: 'p3d', img: '/assets/image/w800/OSLO CEMENT GREY OAK.webp?v=2' },
-];
-
 // Seven real sheets from the range, light to dark, standing edge to edge.
 // One is open at a time so its grain reads; the rest show as narrow strips.
 const SHEET_IDS = [
@@ -216,29 +210,16 @@ export default function Home() {
       </section>
 
       {/* ---------------- THE PROCESS ---------------- */}
+      {/* A short pointer to the Services page, which covers the three
+          stages in full. */}
       <section className="process reveal" data-header-surface="light" ref={processRef}>
-        <div className="process-head">
-          <div>
-            <h2>{t.home.processTitle1}<br />{t.home.processTitle2}</h2>
-          </div>
+        <img className="process-photo" src="/assets/image/process/veneer-samples.webp?v=3" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+        <div className="process-wash" aria-hidden="true" />
+        <div className="process-copy">
+          <h2>{t.home.processTitle1}<br />{t.home.processTitle2}</h2>
           <p>{t.home.processDesc}</p>
+          <Link to="/services" className="text-cta">{t.home.processLink} <span aria-hidden="true">→</span></Link>
         </div>
-        {/* An ordered list, so the order is announced without visible numbers;
-            the titles and the arrows carry it on screen. */}
-        <ol className="process-grid">
-          {PROCESS.map((step, i) => (
-            <li key={step.t} className="process-step">
-              <img src={step.img} alt="" aria-hidden="true" loading="lazy" decoding="async" style={step.position ? { objectPosition: step.position } : undefined} />
-              <div className="process-text">
-                <div>
-                  <h3>{t.home[step.t]}</h3>
-                  <p>{t.home[step.d]}</p>
-                </div>
-              </div>
-              {i < PROCESS.length - 1 && <span className="process-arrow" aria-hidden="true">→</span>}
-            </li>
-          ))}
-        </ol>
       </section>
 
       <WorkshopVideo />
@@ -248,9 +229,9 @@ export default function Home() {
         <div className="works-head">
           <div>
             <h2>{t.home.worksTitle1}<br />{t.home.worksTitle2}</h2>
+            <Link to="/projects" className="text-cta">{t.home.viewAllProjects} <span aria-hidden="true">→</span></Link>
           </div>
           <div className="works-actions">
-            <Link to="/projects" className="text-cta">{t.home.viewAllProjects} <span aria-hidden="true">→</span></Link>
             <div className="works-controls" aria-label={t.a11y.projectControls}>
               <button type="button" aria-label={t.a11y.prevProjects} onClick={() => slideWorks(-1)}>
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5m0 0 6 6m-6-6 6-6" /></svg>

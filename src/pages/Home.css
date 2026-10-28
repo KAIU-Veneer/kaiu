@@ -199,32 +199,71 @@
 /* ============================================================
    THE PROCESS
    ============================================================ */
-.process { padding: var(--section-y) var(--page-x); background: var(--section-bg-alt); }
-.process-head { display: flex; flex-wrap: wrap; gap: var(--gap-split); align-items: flex-end; }
-.process-head > div { flex: 999 1 420px; min-width: 0; }
-.process-head h2 { margin: 0; font-size: clamp(32px, 3.6vw, 50px); }
-.process-head > p { flex: 1 1 320px; min-width: 0; max-width: 360px; margin: 0; font-size: 15px; line-height: 1.8; color: var(--kaiu-muted); }
-
-.process-grid {
-  display: grid;
-  list-style: none;
-  padding: 0;
-  margin-bottom: 0;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: var(--gap-split);
-  margin-top: var(--space-xl);
+/* The sample sheets sit in the section itself, like the Projects hero:
+   multiply drops the photograph's white into the section's tone, and a wash
+   of that same tone glows out from behind the words and fades towards the
+   sheets. */
+.process {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: flex-start;
+  min-height: 640px;
+  padding: var(--section-y) var(--page-x);
+  overflow: hidden;
+  background: var(--section-bg-alt);
 }
-.process-step { position: relative; }
-.process-step > img { width: 100%; height: 210px; object-fit: cover; display: block; }
-.process-text { display: flex; gap: 20px; align-items: baseline; margin-top: 24px; }
-.process-text h3 { margin: 0; font-size: 17px; font-weight: 600; }
-.process-text p { margin: 7px 0 0; font-size: 14px; line-height: 1.7; color: var(--kaiu-muted); }
-.process-arrow {
+.process-photo {
   position: absolute;
-  top: 95px;
-  right: calc(var(--gap-split) / -2 - 7px);
-  color: var(--kaiu-muted-light);
-  font-size: 16px;
+  z-index: -2;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 58%;
+  object-fit: cover;
+  object-position: 40% center;
+  mix-blend-mode: multiply;
+  /* Fade the photograph's own edge so no seam shows where it starts. */
+  -webkit-mask-image: linear-gradient(180deg, transparent, #000 30%);
+  mask-image: linear-gradient(180deg, transparent, #000 30%);
+}
+.process-wash {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(180deg,
+    rgb(243 232 220) 0%,
+    rgb(243 232 220 / .96) 40%,
+    rgb(243 232 220 / .55) 56%,
+    rgb(243 232 220 / 0) 74%);
+}
+.process-copy { position: relative; max-width: 560px; }
+.process-copy h2 { margin: 0; font-size: clamp(32px, 3.6vw, 50px); }
+.process-copy p { margin: 18px 0 0; max-width: 44ch; font-size: 16px; line-height: 1.8; color: var(--kaiu-muted); }
+.process-copy .text-cta { margin-top: 24px; }
+
+@media (min-width: 901px) {
+  /* Words on the left, the sheets filling the right; the glow runs
+     sideways instead of downwards. */
+  .process { align-items: center; min-height: clamp(480px, 42vw, 620px); }
+  .process-photo {
+    left: auto;
+    top: 0;
+    width: 64%;
+    height: 100%;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 30%);
+    mask-image: linear-gradient(90deg, transparent, #000 30%);
+  }
+  .process-wash {
+    background: linear-gradient(90deg,
+      rgb(243 232 220) 0%,
+      rgb(243 232 220 / .97) 34%,
+      rgb(243 232 220 / .7) 46%,
+      rgb(243 232 220 / .15) 60%,
+      rgb(243 232 220 / 0) 70%);
+  }
+  .process-copy { width: min(44%, 560px); }
 }
 
 /* ============================================================
@@ -235,7 +274,7 @@
 .works-head > div:first-child { flex: 999 1 420px; min-width: 0; }
 .works-head h2 { margin: 0; font-size: clamp(32px, 3.6vw, 50px); }
 .works-actions { display: flex; flex: 0 0 auto; align-items: center; gap: clamp(22px, 4vw, 52px); margin-left: auto; }
-.works-head .text-cta { margin-top: 0; white-space: nowrap; }
+.works-head .text-cta { margin-top: 24px; white-space: nowrap; }
 .works-controls { display: flex; gap: 9px; }
 .works-controls button {
   display: grid;
@@ -334,16 +373,6 @@
   .hero-caption-text { text-align: left; }
 
 
-  .process-grid { grid-template-columns: 1fr; gap: var(--space-md); }
-  /* Stacked, the arrow turns to point down at the next step. */
-  .process-arrow {
-    position: static;
-    display: block;
-    width: max-content;
-    margin: var(--space-md) 0 0 4px;
-    font-size: 18px;
-    transform: rotate(90deg);
-  }
   .work-card { flex-basis: 78%; }
 }
 

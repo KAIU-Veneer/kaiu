@@ -69,11 +69,12 @@ const TRANSLATIONS = {
       w4t: 'End to end support', w4d: 'Guidance from material selection through application',
 
 
-            processTitle1: 'From Veneer', processTitle2: 'to Finished Surface',
+            processTitle1: 'What we do', processTitle2: 'with veneer',
       processDesc: 'High-quality materials, expert fabrication and natural finishing for a surface that lasts.',
       p1t: 'Veneer selection', p1d: 'Choose from our curated veneer collection.',
       p2t: 'Panel fabrication', p2d: 'Veneer applied onto HMR or plywood with precision.',
       p3t: 'Natural finishing', p3d: 'Finished with water-based, food-grade hard oil wax.',
+      processLink: 'See our services',
       videoTitleTop: 'A conversation', videoTitleBottom: 'from the workshop',
       videoDesc: 'A member of our workshop team shares a closer look at the craft behind KAIU veneer.',
 
@@ -153,7 +154,7 @@ const TRANSLATIONS = {
       designer: 'Interior Designer', photo: 'photo', notFound: 'Project not found.',
     },
     services: {
-      title: 'What we do with veneer',
+      title: 'From veneer to finished surface',
       intro: 'Veneer supply, matching, pressing and finishing. What KAIU can take on between choosing a sheet and installing the surface.',
     },
     contact: {
@@ -250,11 +251,12 @@ const TRANSLATIONS = {
       w4t: 'Dukungan menyeluruh', w4d: 'Panduan dari pemilihan material hingga penerapan',
 
 
-            processTitle1: 'Dari Veneer', processTitle2: 'ke Permukaan Jadi',
+            processTitle1: 'Apa yang kami kerjakan', processTitle2: 'dengan veneer',
       processDesc: 'Material berkualitas, fabrikasi ahli, dan finishing alami untuk permukaan yang tahan lama.',
       p1t: 'Pemilihan veneer', p1d: 'Pilih dari koleksi veneer pilihan kami.',
       p2t: 'Fabrikasi panel', p2d: 'Veneer diaplikasikan pada HMR atau plywood dengan presisi.',
       p3t: 'Finishing alami', p3d: 'Diselesaikan dengan hard oil wax berbahan air, food-grade.',
+      processLink: 'Lihat layanan kami',
       videoTitleTop: 'Percakapan', videoTitleBottom: 'dari workshop',
       videoDesc: 'Anggota tim workshop kami berbagi cerita tentang keterampilan di balik veneer KAIU.',
 
@@ -334,7 +336,7 @@ const TRANSLATIONS = {
       designer: 'Desainer Interior', photo: 'foto', notFound: 'Proyek tidak ditemukan.',
     },
     services: {
-      title: 'Apa yang kami kerjakan dengan veneer',
+      title: 'Dari veneer ke permukaan jadi',
       intro: 'Penyediaan veneer, pencocokan, pengepresan, dan finishing. Apa yang dapat KAIU kerjakan antara memilih lembaran dan memasang permukaannya.',
     },
     contact: {
