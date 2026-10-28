@@ -289,8 +289,8 @@ h3, h4 { font-weight: 600; letter-spacing: 0; }
 .spec-table { width: 100%; border-collapse: collapse; font-size: 15px; }
 .spec-table th {
   text-align: left; font-weight: 400; width: 260px;
-  font-family: var(--font-label); font-size: 13px; letter-spacing: .1em;
-  text-transform: uppercase; color: var(--kaiu-muted-light);
+  font-family: var(--font-label); font-size: 15px; letter-spacing: 0;
+  color: var(--kaiu-muted-light);
 }
 .spec-table th, .spec-table td { padding: 20px 0; border-top: 1px solid var(--hairline); }
 .spec-table tr:last-child th, .spec-table tr:last-child td { border-bottom: 1px solid var(--hairline); }
@@ -298,6 +298,10 @@ h3, h4 { font-weight: 600; letter-spacing: 0; }
   .spec-table, .spec-table tbody, .spec-table tr, .spec-table th, .spec-table td { display: block; width: auto; }
   .spec-table td { padding-top: 6px; border-top: none; }
   .spec-table th { padding-bottom: 0; }
+  /* Stacked, the last label and its value share one row, so only the value
+     closes it off. */
+  .spec-table tr:last-child th { border-bottom: none; }
+  .spec-table caption { display: block; }
 }
 
 .detail-info-grid {

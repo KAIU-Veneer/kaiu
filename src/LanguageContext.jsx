@@ -110,9 +110,9 @@ const TRANSLATIONS = {
       specTitle: 'Written for the spec sheet',
       specCaption: 'Standard sheet, all collections',
       spec: [
-        ['Length × width', '2500 × 640 mm · 2500 × 620 mm'],
+        ['Length × width', '2500 × 640 mm or 2500 × 620 mm'],
         ['Thickness', '0.40 mm'],
-        ['Services', 'Veneer supply · panel fabrication on HMR or plywood · natural finishing'],
+        ['Services', 'Veneer supply, panel fabrication on HMR or plywood, and natural finishing'],
       ],
 
       ctaTitle: 'Bring your vision to life.',
@@ -298,9 +298,9 @@ const TRANSLATIONS = {
       specTitle: 'Ditulis untuk lembar spesifikasi',
       specCaption: 'Lembar standar, semua koleksi',
       spec: [
-        ['Panjang × lebar', '2500 × 640 mm · 2500 × 620 mm'],
+        ['Panjang × lebar', '2500 × 640 mm atau 2500 × 620 mm'],
         ['Ketebalan', '0,40 mm'],
-        ['Layanan', 'Pasokan veneer · fabrikasi panel pada HMR atau plywood · finishing alami'],
+        ['Layanan', 'Pasokan veneer, fabrikasi panel pada HMR atau plywood, dan finishing alami'],
       ],
 
       ctaTitle: 'Wujudkan visi Anda.',

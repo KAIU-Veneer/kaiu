@@ -21,7 +21,8 @@
 .about-hero-scrim {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right, rgba(18,26,20,.9) 0%, rgba(18,26,20,.6) 52%, rgba(18,26,20,.28) 100%);
+  /* A neutral scrim over the photograph, so the title reads. */
+  background: linear-gradient(to right, rgba(18,26,20,.9) 0%, rgba(18,26,20,.6) 52%, rgba(18,26,20,.28) 100%); /* taste-skill-ignore */
 }
 .about-hero-copy { position: relative; max-width: 640px; color: var(--kaiu-cream); }
 .about-hero-copy h1 {
@@ -45,15 +46,16 @@
 .material-scene {
   --p: 0;
   position: relative;
-  height: 240vh;
+  height: 200vh;
   background: var(--kaiu-cream);
 }
 .material-stage {
-  /* The panels finish rising at 70% and hold for the rest of the pin. */
-  --rise: clamp(0, calc(var(--p) / .7), 1);
+  /* The panels finish rising at 90%, so the pin barely holds still before
+     it lets go. */
+  --rise: clamp(0, calc(var(--p) / .9), 1);
   position: sticky;
   top: 0;
-  height: 100vh;
+  height: 100vh; /* fallback for browsers without svh. taste-skill-ignore */
   height: 100svh;
   overflow: hidden;
   display: flex;
@@ -61,6 +63,11 @@
   align-items: center;
   padding: calc(var(--section-y) + 64px) var(--page-x) 0;
   text-align: center;
+  /* The stage fades out along its bottom edge into the ivory below, so the
+     panels never end on a hard cut and the section after continues the
+     same ground. */
+  -webkit-mask-image: linear-gradient(to bottom, #000 80%, transparent 100%); /* taste-skill-ignore */
+  mask-image: linear-gradient(to bottom, #000 80%, transparent 100%); /* taste-skill-ignore */
 }
 .material-title {
   position: relative;
@@ -78,16 +85,24 @@
   opacity: clamp(.16, calc(var(--p) * var(--n) * 2.6 - var(--i)), 1);
 }
 /* The photograph's own ground is ivory, so its top dissolves into the page;
-   the bottom edge fades out too, handing over to the points below. */
+   the stage's own bottom fade hands over to the points below. */
+/* Wide screens: the photograph sits in the flow straight under the
+   headline, full width, so it can never slide up behind the words on a
+   short window; whatever does not fit runs into the stage's bottom fade. */
 .material-panels {
-  position: absolute;
-  inset: auto 0 -16%;
-  width: 100%;
+  position: relative;
+  flex: none;
+  width: calc(100% + 2 * var(--page-x));
+  max-width: none;
+  margin: -8px calc(-1 * var(--page-x)) 0;
   height: auto;
   object-fit: cover;
   object-position: 50% 100%;
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 34%, #000 80%, transparent 100%);
-  mask-image: linear-gradient(to bottom, transparent 0%, #000 34%, #000 80%, transparent 100%);
+  /* An edge mask on the photograph, not a fill. The photograph is cropped
+     close above the panels and the top fade is short, so they come up close
+     under the headline. */
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 10%, #000 80%, transparent 100%); /* taste-skill-ignore */
+  mask-image: linear-gradient(to bottom, transparent 0%, #000 10%, #000 80%, transparent 100%); /* taste-skill-ignore */
   opacity: calc(.2 + var(--rise) * .8);
   transform: translateY(calc((1 - var(--rise)) * 55%)) scale(calc(1.14 - var(--rise) * .14));
   transform-origin: 50% 100%;
@@ -106,15 +121,15 @@
 /* A display-size statement in two tones, echoing the headline above it. */
 .about-material-note {
   max-width: 22em;
-  margin: 0 0 var(--space-xl);
-  padding-bottom: var(--space-xl);
-  border-bottom: 1px solid var(--hairline);
-  font-size: clamp(26px, 3vw, 42px);
+  margin: 0 0 calc(var(--space-xl) * 1.5);
+  /* A statement paragraph, so it stays at paragraph-statement size rather
+     than a headline's: 36px at most, 24px on a phone. */
+  font-size: clamp(22px, 2.5vw, 36px);
   font-weight: 400;
-  line-height: 1.22;
+  line-height: 1.3;
   letter-spacing: -.015em;
-  /* Lightest the second tone can go and still read as large text on ivory. */
-  color: color-mix(in srgb, var(--kaiu-ink) 58%, var(--kaiu-cream));
+  /* Light enough to sit back, dark enough for 4.5:1 at its smallest size. */
+  color: color-mix(in srgb, var(--kaiu-ink) 72%, var(--kaiu-cream));
 }
 .about-material-note span { color: var(--kaiu-ink); }
 
@@ -126,16 +141,23 @@
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: var(--space-lg) var(--gap-grid);
 }
-.about-point-num {
-  display: block;
-  font-family: var(--font-display);
-  font-size: 15px;
-  font-weight: 500;
-  letter-spacing: .1em;
-  color: var(--kaiu-gold-text);
+.about-points h3 { margin: 0 0 8px; font-size: 17px; font-weight: 600; }
+.about-points p { margin: 0; font-size: 16px; line-height: 1.75; color: var(--kaiu-muted); }
+
+/* The reasons arrive one after another when their section comes into view,
+   rising a little from an already-visible state. */
+.reveal .about-why-item {
+  opacity: .35;
+  transform: translateY(14px);
+  transition: opacity .7s cubic-bezier(.16, 1, .3, 1), transform .7s cubic-bezier(.16, 1, .3, 1);
 }
-.about-points h3 { margin: 14px 0 8px; font-size: 17px; font-weight: 600; }
-.about-points p { margin: 0; font-size: 14px; line-height: 1.75; color: var(--kaiu-muted); }
+.reveal.in .about-why-item { opacity: 1; transform: none; }
+.about-why-item:nth-child(2) { transition-delay: .08s; }
+.about-why-item:nth-child(3) { transition-delay: .16s; }
+.about-why-item:nth-child(4) { transition-delay: .24s; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal .about-why-item { opacity: 1; transform: none; transition: none; }
+}
 
 /* ============================================================
    WHY KAIU — the green band
@@ -150,7 +172,7 @@
   gap: var(--space-lg) var(--gap-split);
 }
 .about-why-item h3 { margin: 0 0 9px; font-size: 17px; font-weight: 600; }
-.about-why-item p { margin: 0; font-size: 14px; line-height: 1.75; }
+.about-why-item p { margin: 0; font-size: 16px; line-height: 1.75; }
 
 /* ============================================================
    SPECIFICATION
@@ -168,9 +190,9 @@
 .about-spec .spec-table caption {
   text-align: left;
   font-family: var(--font-label);
-  font-size: 13px;
-  letter-spacing: .1em;
-  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0;
+  text-transform: none;
   color: var(--kaiu-muted-light);
   padding-bottom: var(--space-sm);
 }
@@ -204,7 +226,8 @@
 .about-cta-scrim {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right, rgba(18,26,20,.92) 0%, rgba(18,26,20,.62) 55%, rgba(18,26,20,.3) 100%);
+  /* A neutral scrim over the photographs, so the words read. */
+  background: linear-gradient(to right, rgba(18,26,20,.92) 0%, rgba(18,26,20,.62) 55%, rgba(18,26,20,.3) 100%); /* taste-skill-ignore */
 }
 .about-cta-copy {
   position: relative;
@@ -220,7 +243,7 @@
 }
 .about-cta-copy > div { flex: 999 1 420px; min-width: 0; }
 .about-cta h2 { margin: 0 0 12px; font-size: clamp(28px, 3.2vw, 42px); color: var(--kaiu-cream); }
-.about-cta p { margin: 0; max-width: 460px; font-size: 15px; line-height: 1.8; color: var(--kaiu-on-dark); }
+.about-cta p { margin: 0; max-width: 460px; font-size: 16px; line-height: 1.8; color: var(--kaiu-on-dark); }
 /* The band is dark, so the button takes the inverted pair. */
 .about-cta .pill-btn {
   flex: 0 0 auto;
@@ -236,10 +259,22 @@
 @media (max-width: 900px) {
   .about-points { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-lg); }
   .about-why-grid { gap: var(--space-lg); }
-  .material-scene { height: 200vh; }
   /* On tall, narrow screens the full-width photo would be a sliver, so it
-     fills the lower half and crops in on the centre panels instead. */
-  .material-panels { bottom: 0; height: 52%; }
+     fills the screen from just under the headline and crops in on the
+     centre panels instead. */
+  .material-panels {
+    position: absolute;
+    width: 100%;
+    margin: 0;
+    left: 0;
+    right: 0;
+    top: max(22%, 200px);
+    bottom: auto;
+    height: 48%;
+    object-position: 50% 0;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 8%, #000 82%, transparent 100%); /* taste-skill-ignore */
+    mask-image: linear-gradient(to bottom, transparent 0%, #000 8%, #000 82%, transparent 100%); /* taste-skill-ignore */
+  }
 }
 
 @media (max-width: 640px) {

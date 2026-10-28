@@ -27,9 +27,11 @@ export default function About() {
   const { t } = useLanguage();
   useDocumentMeta(t.meta.about);
   const [ctaSlide, setCtaSlide] = useState(0);
+  const [ctaPaused, setCtaPaused] = useState(false);
 
   // The closing band steps through the projects on its own, on the same
-  // three-second beat as the home and projects heroes.
+  // three-second beat as the home and projects heroes, and holds still while
+  // the pointer or keyboard focus is on it.
   useEffect(() => {
     if (CTA_SHOTS.length < 2) return undefined;
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -40,7 +42,7 @@ export default function About() {
     };
     const start = () => {
       stop();
-      if (!document.hidden && !reducedMotion.matches) {
+      if (!ctaPaused && !document.hidden && !reducedMotion.matches) {
         timer = window.setInterval(() => {
           if (document.body.classList.contains('nav-is-open')) return;
           setCtaSlide((index) => (index + 1) % CTA_SHOTS.length);
@@ -57,7 +59,7 @@ export default function About() {
       document.removeEventListener('visibilitychange', onVisibilityChange);
       reducedMotion.removeEventListener?.('change', onMotionChange);
     };
-  }, []);
+  }, [ctaPaused]);
 
   // The material scene is pinned while it scrolls past; its progress (0 → 1)
   // goes into --p, and the CSS turns that into the headline filling in and
@@ -101,7 +103,6 @@ export default function About() {
   // The statement's first sentence is set in ink, the rest in the muted tone.
   const [noteLead, ...noteRest] = t.about.materialP2.split(/(?<=\.)\s+/);
 
-  const materialRef = useReveal();
   const whyRef = useReveal();
   const specRef = useReveal();
 
@@ -136,9 +137,9 @@ export default function About() {
             ))}
           </h2>
           <img
-            src="/assets/image/about/veneer-panels.webp"
+            src="/assets/image/about/veneer-panels-tight.webp"
             width="1672"
-            height="941"
+            height="641"
             className="material-panels"
             alt=""
             aria-hidden="true"
@@ -147,14 +148,13 @@ export default function About() {
         </div>
       </section>
 
-      <section className="about-material reveal" ref={materialRef}>
+      <section className="about-material">
         <p className="about-material-note">
           <span>{noteLead}</span> {noteRest.join(' ')}
         </p>
         <ul className="about-points">
-          {t.about.points.map(([num, title, desc]) => (
-            <li key={num}>
-              <span className="about-point-num">{num}</span>
+          {t.about.points.map(([, title, desc]) => (
+            <li key={title}>
               <h3>{title}</h3>
               <p>{desc}</p>
             </li>
@@ -196,7 +196,16 @@ export default function About() {
       </section>
 
       {/* ---------------- CTA ---------------- */}
-      <section className="about-cta" data-header-surface="colored">
+      <section
+        className="about-cta"
+        data-header-surface="colored"
+        onMouseEnter={() => setCtaPaused(true)}
+        onMouseLeave={() => setCtaPaused(false)}
+        onFocusCapture={() => setCtaPaused(true)}
+        onBlurCapture={(event) => {
+          if (!event.currentTarget.contains(event.relatedTarget)) setCtaPaused(false);
+        }}
+      >
         <div className="about-cta-media" aria-hidden="true">
           {CTA_SHOTS.map((shot, index) => (
             <img
