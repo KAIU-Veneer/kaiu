@@ -4,7 +4,8 @@ import { PROJECTS } from '../data.js';
 import { useLanguage } from '../LanguageContext.jsx';
 import useReveal from '../useReveal.js';
 import useDocumentMeta from '../useDocumentMeta.js';
-import { projectPhoto, IMAGE_SIZES } from '../imageSrc.js';
+import { PRODUCTS } from '../data.js';
+import { cardSwatch, projectPhoto } from '../imageSrc.js';
 import './About.css';
 
 /* Both bands use real project photography rather than stock: the hero holds on
@@ -22,16 +23,25 @@ const CTA_SHOTS = [
 ]
   .map((src) => ALL_PROJECT_IMAGES.find((image) => image.src === src))
   .filter(Boolean);
+/* One real sheet for each of the four points, in their order: a figured
+   burl for the look of real wood, a straight-grained oak for consistency, a
+   colour no tree grows for range, and a dark smoked oak for stability. */
+const POINT_SHEETS = ['cannes-oak-burl', 'oslo-cement-grey-oak', 'zurich-sapphire', 'athens-java-smoked-oak']
+  .map((id) => PRODUCTS.find((product) => product.id === id));
+/* The reasons sit beside a finished green wall from the Jalan Denpasar
+   residence. */
+const WHY_SHOT = '/assets/projects/jln-denpasar-kuningan/5.webp';
 
 export default function About() {
   const { t } = useLanguage();
   useDocumentMeta(t.meta.about);
   const [ctaSlide, setCtaSlide] = useState(0);
   const [ctaPaused, setCtaPaused] = useState(false);
+  const [ctaDone, setCtaDone] = useState(false);
 
-  // The closing band steps through the projects on its own, on the same
-  // three-second beat as the home and projects heroes, and holds still while
-  // the pointer or keyboard focus is on it.
+  // The closing band steps once through the projects on the same three-second
+  // beat as the home and projects heroes, holds still while the pointer or
+  // keyboard focus is on it, and comes to rest on the first photograph.
   useEffect(() => {
     if (CTA_SHOTS.length < 2) return undefined;
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -42,10 +52,18 @@ export default function About() {
     };
     const start = () => {
       stop();
-      if (!ctaPaused && !document.hidden && !reducedMotion.matches) {
+      if (!ctaDone && !ctaPaused && !document.hidden && !reducedMotion.matches) {
         timer = window.setInterval(() => {
           if (document.body.classList.contains('nav-is-open')) return;
-          setCtaSlide((index) => (index + 1) % CTA_SHOTS.length);
+          // One pass through the projects, then rest on the first one, so
+          // nothing keeps moving beside the words indefinitely.
+          setCtaSlide((index) => {
+            if (index + 1 >= CTA_SHOTS.length) {
+              setCtaDone(true);
+              return 0;
+            }
+            return index + 1;
+          });
         }, 3000);
       }
     };
@@ -59,7 +77,7 @@ export default function About() {
       document.removeEventListener('visibilitychange', onVisibilityChange);
       reducedMotion.removeEventListener?.('change', onMotionChange);
     };
-  }, [ctaPaused]);
+  }, [ctaPaused, ctaDone]);
 
   // The material scene is pinned while it scrolls past; its progress (0 → 1)
   // goes into --p, and the CSS turns that into the headline filling in and
@@ -107,17 +125,21 @@ export default function About() {
   const specRef = useReveal();
 
   return (
-    <div>
-      {/* ---------------- HERO ---------------- */}
-      <section className="about-hero" data-header-surface="colored">
+    <div className="about-page">
+      {/* ---------------- HERO ----------------
+          The words sit on the page's own ivory and the photograph fills the
+          right side, washed into the ivory behind the words, the same glow
+          the Projects hero uses. */}
+      <section className="about-hero" data-header-surface="light">
         <img
           {...projectPhoto(heroShot.images[1] ? heroShot.images[1].src : heroShot.images[0].src)}
-          sizes="100vw"
+          sizes="(max-width: 900px) 100vw, 64vw"
           className="about-hero-img"
           alt=""
           aria-hidden="true"
+          fetchPriority="high"
         />
-        <div className="about-hero-scrim" aria-hidden="true" />
+        <div className="about-hero-wash" aria-hidden="true" />
         <div className="about-hero-copy">
           <h1>{t.about.title}</h1>
           <p>{t.about.lede}</p>
@@ -148,32 +170,56 @@ export default function About() {
         </div>
       </section>
 
+      {/* Straight on from the scene: the statement, centred under the
+          centred headline, then the four points, each shown on a real sheet
+          from the range, as if the panels above had been picked up. */}
       <section className="about-material">
         <p className="about-material-note">
           <span>{noteLead}</span> {noteRest.join(' ')}
         </p>
         <ul className="about-points">
-          {t.about.points.map(([, title, desc]) => (
-            <li key={title}>
-              <h3>{title}</h3>
-              <p>{desc}</p>
-            </li>
-          ))}
+          {t.about.points.map(([, title, desc], i) => {
+            const sheet = POINT_SHEETS[i];
+            const swatch = sheet && cardSwatch(sheet.image);
+            return (
+              <li key={title}>
+                {sheet && (
+                  <Link to={`/products/${sheet.id}`} className="about-point-sheet" aria-label={sheet.name}>
+                    <img src={swatch.src} srcSet={swatch.srcSet} sizes="(max-width: 640px) 44vw, (max-width: 900px) 30vw, 22vw" alt="" loading="lazy" decoding="async" />
+                  </Link>
+                )}
+                <h3>{title}</h3>
+                <p>{desc}</p>
+                {sheet && <span className="about-point-name">{sheet.name}</span>}
+              </li>
+            );
+          })}
         </ul>
       </section>
 
-      {/* ---------------- WHY KAIU ---------------- */}
+      {/* ---------------- WHY KAIU ----------------
+          A finished wall from a KAIU project beside the reasons. */}
       <section className="about-why on-dark reveal" ref={whyRef}>
-        <div className="about-why-head">
-          <h2>{t.about.whyTitle1}<br />{t.about.whyTitle2}</h2>
+        <div className="about-why-photo">
+          <img
+            {...projectPhoto(WHY_SHOT)}
+            sizes="(max-width: 900px) 100vw, 40vw"
+            alt=""
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
-        <div className="about-why-grid">
-          {t.about.why.map(([title, desc]) => (
-            <div key={title} className="about-why-item">
-              <h3>{title}</h3>
-              <p>{desc}</p>
-            </div>
-          ))}
+        <div className="about-why-copy">
+          <h2>{t.about.whyTitle1}<br />{t.about.whyTitle2}</h2>
+          <ul className="about-why-list">
+            {t.about.why.map(([title, desc]) => (
+              <li key={title} className="about-why-item">
+                <h3>{title}</h3>
+                <p>{desc}</p>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
@@ -197,7 +243,7 @@ export default function About() {
 
       {/* ---------------- CTA ---------------- */}
       <section
-        className="about-cta"
+        className="about-cta on-dark"
         data-header-surface="colored"
         onMouseEnter={() => setCtaPaused(true)}
         onMouseLeave={() => setCtaPaused(false)}
@@ -211,11 +257,11 @@ export default function About() {
             <img
               key={shot.src}
               {...projectPhoto(shot.src)}
-              sizes={IMAGE_SIZES.projectLead}
+              sizes="100vw"
               className={`about-cta-img${index === ctaSlide ? ' is-active' : ''}`}
               alt=""
+              loading="lazy"
               decoding="async"
-              fetchpriority="low"
             />
           ))}
         </div>
