@@ -21,13 +21,15 @@ const FIELD_LABELS = {
 function ProjectTypeSelect({ label, placeholder, options, value, onChange, invalid }) {
   const triggerRef = useRef(null);
   const menuRef = useRef(null);
+  const typeaheadRef = useRef('');
+  const typeaheadTimerRef = useRef(null);
   const [open, setOpen] = useState(false);
   const [position, setPosition] = useState(null);
   const selectedIndex = Math.max(0, options.findIndex(([key]) => key === value));
   const [activeIndex, setActiveIndex] = useState(selectedIndex);
   const menuId = 'contact-project-type-options';
 
-  const showMenu = () => {
+  const showMenu = (index = selectedIndex) => {
     const rect = triggerRef.current?.getBoundingClientRect();
     if (!rect) return;
     const width = Math.min(Math.max(rect.width, 180), window.innerWidth - 24);
@@ -36,7 +38,7 @@ function ProjectTypeSelect({ label, placeholder, options, value, onChange, inval
       ? rect.bottom + 8
       : Math.max(12, rect.top - height - 8);
     setPosition({ top, left: Math.max(12, Math.min(rect.left, window.innerWidth - width - 12)), width });
-    setActiveIndex(selectedIndex);
+    setActiveIndex(index);
     setOpen(true);
   };
 
@@ -55,12 +57,19 @@ function ProjectTypeSelect({ label, placeholder, options, value, onChange, inval
       window.removeEventListener('resize', closeOnScroll);
     };
   }, [open]);
+  useEffect(() => () => window.clearTimeout(typeaheadTimerRef.current), []);
 
   const onKeyDown = (event) => {
     if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
       event.preventDefault();
       if (!open) showMenu();
       else setActiveIndex((index) => (index + (event.key === 'ArrowDown' ? 1 : -1) + options.length) % options.length);
+    } else if (event.key === 'Home' && open) {
+      event.preventDefault();
+      setActiveIndex(0);
+    } else if (event.key === 'End' && open) {
+      event.preventDefault();
+      setActiveIndex(options.length - 1);
     } else if ((event.key === 'Enter' || event.key === ' ') && open) {
       event.preventDefault();
       onChange(options[activeIndex][0]);
@@ -68,6 +77,15 @@ function ProjectTypeSelect({ label, placeholder, options, value, onChange, inval
     } else if (event.key === 'Escape' && open) {
       event.preventDefault();
       setOpen(false);
+    } else if (event.key.length === 1 && !event.ctrlKey && !event.metaKey && !event.altKey) {
+      typeaheadRef.current += event.key.toLowerCase();
+      window.clearTimeout(typeaheadTimerRef.current);
+      typeaheadTimerRef.current = window.setTimeout(() => { typeaheadRef.current = ''; }, 700);
+      const match = options.findIndex(([, text]) => text.toLowerCase().startsWith(typeaheadRef.current));
+      if (match >= 0) {
+        if (!open) showMenu(match);
+        else setActiveIndex(match);
+      }
     }
   };
 
@@ -85,6 +103,7 @@ function ProjectTypeSelect({ label, placeholder, options, value, onChange, inval
         aria-expanded={open}
         aria-controls={menuId}
         aria-invalid={invalid || undefined}
+        aria-required="true"
         aria-valuetext={value ? options[selectedIndex][1] : placeholder}
         aria-activedescendant={open ? `${menuId}-${options[activeIndex][0]}` : undefined}
         onClick={() => (open ? setOpen(false) : showMenu())}
@@ -180,7 +199,7 @@ export default function Contact() {
     .join(', ');
 
   return (
-    <div className="contact-body page-section">
+    <div className="contact-body page-section" data-header-surface="light">
       <div className="contact-heading">
         <h1>{t.contact.title}</h1>
         <p>{t.contact.intro}</p>
