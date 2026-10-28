@@ -97,7 +97,7 @@ const TRANSLATIONS = {
       empty: 'No veneer matches these filters.', reset: 'Clear filters', showMore: 'Show more veneers',
     },
     productDetail: {
-      back: '← Back to Collections', collection: 'Collection', requestSample: 'Request a Sample',
+      back: '← Back to Collections', collection: 'Collection', collectionOf: '{name} Collection', requestSample: 'Request a Sample',
       notFound: 'Product not found.', dimension: 'Dimension', downloadHiRes: 'Download Hi-Res',
     },
     viewer: {
@@ -120,7 +120,7 @@ const TRANSLATIONS = {
       hoursValue: 'Monday to Friday, 09:00 to 18:00',
       fullName: 'Full Name', fullNamePh: 'Your name',
       emailField: 'Email', emailPh: 'you@company.com',
-      enquiryType: 'Phone Number', enquiryPh: '+62 8xx xxxx xxxx',
+      phoneField: 'Phone Number', phonePh: '+62 8xx xxxx xxxx', optional: 'optional',
       message: 'Message', messagePh: 'Tell us about your project',
       send: 'Send Message', sending: 'Sending…',
       success: "Thank you. We'll be in touch shortly.",
@@ -233,7 +233,7 @@ const TRANSLATIONS = {
       empty: 'Tidak ada veneer yang cocok dengan filter ini.', reset: 'Hapus filter', showMore: 'Tampilkan lebih banyak',
     },
     productDetail: {
-      back: '← Kembali ke Koleksi', collection: 'Koleksi', requestSample: 'Minta Sampel',
+      back: '← Kembali ke Koleksi', collection: 'Koleksi', collectionOf: 'Koleksi {name}', requestSample: 'Minta Sampel',
       notFound: 'Produk tidak ditemukan.', dimension: 'Dimensi', downloadHiRes: 'Unduh Resolusi Tinggi',
     },
     viewer: {
@@ -256,7 +256,7 @@ const TRANSLATIONS = {
       hoursValue: 'Senin sampai Jumat, 09:00 sampai 18:00',
       fullName: 'Nama Lengkap', fullNamePh: 'Nama Anda',
       emailField: 'Email', emailPh: 'anda@perusahaan.com',
-      enquiryType: 'Nomor Telepon', enquiryPh: '+62 8xx xxxx xxxx',
+      phoneField: 'Nomor Telepon', phonePh: '+62 8xx xxxx xxxx', optional: 'opsional',
       message: 'Pesan', messagePh: 'Ceritakan tentang proyek Anda',
       send: 'Kirim Pesan', sending: 'Mengirim…',
       success: 'Terima kasih. Kami akan segera menghubungi Anda.',

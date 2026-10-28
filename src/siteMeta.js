@@ -35,9 +35,12 @@ export const shortProductName = (product) =>
     ? product.name.slice(product.collectionLabel.length + 1)
     : product.name;
 
-/** The title bar for one veneer, e.g. "Cement Grey Veneer - Oslo - KAIU". */
-export const productTitle = (product) =>
-  `${shortProductName(product)} Veneer - ${product.collectionLabel} - ${TITLE_SUFFIX}`;
+/** The title bar for one veneer, e.g. "Cement Grey Veneer - Oslo - KAIU",
+    or "Veneer Cement Grey - Oslo - KAIU" in Indonesian word order. */
+export const productTitle = (product, lang = 'en') =>
+  lang === 'id'
+    ? `Veneer ${shortProductName(product)} - ${product.collectionLabel} - ${TITLE_SUFFIX}`
+    : `${shortProductName(product)} Veneer - ${product.collectionLabel} - ${TITLE_SUFFIX}`;
 
 /** The title bar for one project, e.g. "Teazzi - Blok M - KAIU". */
 export const projectTitle = (project) => `${project.title} - ${TITLE_SUFFIX}`;

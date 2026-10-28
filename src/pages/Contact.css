@@ -26,14 +26,16 @@
   margin: 8px 0 0;
   font-size: 16px;
 }
+/* A 44px tap area for the email and phone links without moving the text. */
+.contact-info dd a { display: inline-block; padding-block: 14px; margin-block: -14px; }
 .contact-socials {
   display: flex;
   gap: var(--space-xs);
   margin-top: var(--space-md);
 }
 .contact-socials a {
-  width: 38px;
-  height: 38px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   border: 1px solid var(--hairline);
   display: flex;
@@ -70,6 +72,11 @@
   box-sizing: border-box;
   transition: border-color 0.3s ease;
 }
+/* The browser's default placeholder grey falls just short of 4.5:1 on ivory. */
+.contact-form-field input::placeholder,
+.contact-form-field textarea::placeholder { color: var(--kaiu-muted-light); opacity: 1; }
+.contact-form-field input { min-height: 44px; }
+.contact-optional { font-weight: 400; letter-spacing: .04em; text-transform: none; }
 .contact-form-field input:focus,
 .contact-form-field textarea:focus {
   outline: 0;
@@ -90,6 +97,7 @@
 }
 
 .contact-submit {
+  min-height: 44px;
   margin-top: var(--space-xs);
   padding: 14px 30px;
   border-radius: var(--radius-pill);

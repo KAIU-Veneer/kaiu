@@ -63,6 +63,8 @@ export default function Home() {
       stop();
       if (!heroPaused && !document.hidden && !reducedMotion.matches) {
         timer = window.setInterval(() => {
+          // Hold still while the mobile menu covers the page.
+          if (document.body.classList.contains('nav-is-open')) return;
           setSlide((index) => (index + 1) % heroProjects.length);
         }, 6500);
       }

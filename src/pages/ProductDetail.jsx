@@ -20,7 +20,7 @@ export default function ProductDetail() {
   useDocumentMeta(
     product
       ? {
-          title: productTitle(product),
+          title: productTitle(product, lang),
           description: clampDescription(lang === 'id' ? product.idLongDesc : product.longDesc),
         }
       : { title: t.productDetail.notFound, noindex: true }
@@ -70,7 +70,7 @@ export default function ProductDetail() {
           )}
         </div>
         <div>
-          <span className="eyebrow">{product.collectionLabel} {t.productDetail.collection}</span>
+          <span className="eyebrow">{t.productDetail.collectionOf.replace('{name}', product.collectionLabel)}</span>
           <h1>{shortName}</h1>
           <span className="product-detail-cut">{lang === 'id' ? product.idCut : product.cut}</span>
           <p className="product-detail-desc">{(lang === 'id' ? product.idLongDesc : product.longDesc).split(product.name).join(shortName)}</p>

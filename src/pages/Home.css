@@ -191,6 +191,10 @@
   transition: color .25s ease, border-color .25s ease;
 }
 .text-cta:hover { color: var(--kaiu-brown-mid); border-color: var(--kaiu-gold-text); }
+/* The underlined label is only ~17px tall; an invisible band around it
+   gives a 44px tap area without changing the layout. */
+.text-cta { position: relative; }
+.text-cta::before { content: ''; position: absolute; inset: -16px -4px -9px; }
 .on-dark .text-cta { color: var(--kaiu-cream); border-color: var(--hairline-on-dark); }
 
 /* ============================================================

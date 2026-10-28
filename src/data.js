@@ -66,7 +66,7 @@ export const PRODUCTS = [
     finish: 'Hard oil wax',
     idFinish: 'Hard oil wax',
     longDesc: "Athens Ash Oak combines the familiar straight, tight grain of rift-cut oak with a muted, grey-brown ash wash. This subtle coloration cools down the natural warmth of the wood, presenting a highly contemporary aesthetic perfect for minimalist and Scandinavian-inspired designs.",
-    idLongDesc: "Athens Ash Oak adalah veneer oak potongan rift bersumber dari Oak Putih (Quercus alba). Finishing finishing satin memberikan tampilan yang tahan lama dan elegan, cocok untuk interior minimalis, mebel modern, lantai."
+    idLongDesc: "Athens Ash Oak adalah veneer oak potongan rift bersumber dari Oak Putih (Quercus alba). Finishing satin memberikan tampilan yang tahan lama dan elegan, cocok untuk interior minimalis, mebel modern, lantai."
   },
   {
     id: 'athens-bark-walnut',
