@@ -59,43 +59,52 @@ export default function Header() {
     const header = document.querySelector('.site-header');
     if (!header) return undefined;
 
-    const update = () => {
-      const y = Math.min(window.innerHeight - 1, Math.ceil(header.getBoundingClientRect().bottom + 1));
-      const point = document.elementFromPoint(Math.floor(window.innerWidth / 2), y);
+    // Whether the page at height y, behind the header, is a dark or coloured
+    // surface that cream header text can sit on.
+    const isColoredAt = (y) => {
+      const point = document
+        .elementsFromPoint(Math.floor(window.innerWidth / 2), y)
+        .find((el) => !header.contains(el));
+      // The footer is dense with links; a clear header over it lets the two
+      // sets of text run into each other, so the bar stays solid there.
+      if (point?.closest('.site-footer')) return false;
       const section = point?.closest('[data-header-surface], section, .page-section, .page-section-head, .page-section-body, .site-footer');
-      let shouldBeTransparent = false;
 
       if (section?.dataset.headerSurface) {
-        shouldBeTransparent = section.dataset.headerSurface === 'colored';
-      } else {
-        // Judge the section container and its ancestors only. Images and cards
-        // inside a light section must not change the header treatment.
-        let surface = section;
-        while (surface && surface !== document.body) {
-          if (surface.classList.contains('on-dark')) {
-            shouldBeTransparent = true;
-            break;
-          }
-
-          const style = window.getComputedStyle(surface);
-          if (style.backgroundImage !== 'none') {
-            shouldBeTransparent = true;
-            break;
-          }
-
-          const channels = style.backgroundColor.match(/[\d.]+/g)?.map(Number);
-          if (channels && channels.length >= 3 && (channels[3] ?? 1) > 0.08) {
-            const [red, green, blue] = channels;
-            const brightness = red * 0.2126 + green * 0.7152 + blue * 0.0722;
-            const neutral = Math.max(red, green, blue) - Math.min(red, green, blue) < 28;
-            shouldBeTransparent = !(neutral && brightness >= 205);
-            break;
-          }
-          surface = surface.parentElement;
-        }
+        return section.dataset.headerSurface === 'colored';
       }
+      // Judge the section container and its ancestors only. Images and cards
+      // inside a light section must not change the header treatment.
+      let surface = section;
+      while (surface && surface !== document.body) {
+        if (surface.classList.contains('on-dark')) return true;
 
-      setTransparent(shouldBeTransparent);
+        const style = window.getComputedStyle(surface);
+        if (style.backgroundImage !== 'none') return true;
+
+        const channels = style.backgroundColor.match(/[\d.]+/g)?.map(Number);
+        if (channels && channels.length >= 3 && (channels[3] ?? 1) > 0.08) {
+          const [red, green, blue] = channels;
+          const brightness = red * 0.2126 + green * 0.7152 + blue * 0.0722;
+          const neutral = Math.max(red, green, blue) - Math.min(red, green, blue) < 28;
+          return !(neutral && brightness >= 205);
+        }
+        surface = surface.parentElement;
+      }
+      return false;
+    };
+
+    // The header only goes clear when the page is dark along its whole
+    // height. Checking a single point below it let a light section show
+    // through behind the cream logo and links when a dark section's top edge
+    // sat just under the header.
+    const update = () => {
+      const rect = header.getBoundingClientRect();
+      // A quarter of the way down, so a hero tucked a few pixels under the
+      // header's top edge still counts.
+      const top = Math.max(0, Math.floor(rect.top + rect.height / 4));
+      const bottom = Math.min(window.innerHeight - 1, Math.ceil(rect.bottom) - 1);
+      setTransparent(isColoredAt(top) && isColoredAt(bottom));
     };
 
     let frame = 0;
@@ -110,7 +119,12 @@ export default function Header() {
     update();
     window.addEventListener('scroll', scheduleUpdate, { passive: true });
     window.addEventListener('resize', scheduleUpdate);
+    // Pages load lazily, and a page's stylesheet can arrive after this first
+    // check and move its hero under the header; look again when it does.
+    const observer = 'ResizeObserver' in window ? new ResizeObserver(scheduleUpdate) : null;
+    observer?.observe(document.body);
     return () => {
+      observer?.disconnect();
       window.cancelAnimationFrame(frame);
       window.removeEventListener('scroll', scheduleUpdate);
       window.removeEventListener('resize', scheduleUpdate);
