@@ -18,8 +18,10 @@ const LIMITS = {
   name: 100,
   email: 254,
   phone: 40,
+  projectType: 40,
   message: 4000,
 };
+const PROJECT_TYPES = new Set(['residential', 'commercial', 'hospitality', 'office', 'other']);
 
 // Best-effort throttle. Serverless instances are recycled and requests can be
 // spread across several of them, so this thins out floods rather than
@@ -154,6 +156,7 @@ export default async function handler(req, res) {
   const name = clean(body.name, LIMITS.name);
   const email = clean(body.email, LIMITS.email);
   const phone = clean(body.phone, LIMITS.phone);
+  const projectType = clean(body.projectType, LIMITS.projectType).toLowerCase();
   const message = clean(body.message, LIMITS.message);
 
   const invalid = [];
@@ -161,6 +164,7 @@ export default async function handler(req, res) {
   if (!isEmail(email)) invalid.push('email');
   if (message.length < 2) invalid.push('message');
   if (phone && !/^[\d\s+()-]{6,}$/.test(phone)) invalid.push('phone');
+  if (!PROJECT_TYPES.has(projectType)) invalid.push('projectType');
   if (invalid.length) {
     return res.status(400).json({ ok: false, error: 'validation_failed', fields: invalid });
   }
@@ -173,7 +177,7 @@ export default async function handler(req, res) {
       headers: { 'Content-Type': 'text/plain;charset=utf-8' },
       // Same field names the Apps Script already receives, so the sheet
       // keeps working untouched.
-      body: JSON.stringify({ name, email, phone, message }),
+      body: JSON.stringify({ name, email, phone, projectType, message }),
       signal: controller.signal,
       redirect: 'follow',
     });
