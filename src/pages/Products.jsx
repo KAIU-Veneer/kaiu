@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { Link, useLocation, useNavigationType } from 'react-router-dom';
 import { PRODUCTS, FILTER_OPTIONS, COLLECTION_INFO, DEFAULT_DIMENSION } from '../data.js';
 import { cardSwatch, IMAGE_SIZES } from '../imageSrc.js';
@@ -31,6 +32,136 @@ function productTones(product) {
   const matches = TONE_OPTIONS.filter((tone) => TONE_TERMS[tone].test(text));
   // Wood designs without a strong color cue read as warm, natural tones.
   return matches.length ? matches : ['warm'];
+}
+
+function ToneSelect({ options, value, onChange, label }) {
+  const triggerRef = useRef(null);
+  const menuRef = useRef(null);
+  const typeaheadRef = useRef('');
+  const typeaheadTimerRef = useRef(null);
+  const [open, setOpen] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(() => options.findIndex(([key]) => key === value));
+  const [position, setPosition] = useState(null);
+  const selectedIndex = Math.max(0, options.findIndex(([key]) => key === value));
+  const menuId = 'tone-filter-options';
+
+  const showMenu = (index = selectedIndex) => {
+    const rect = triggerRef.current?.getBoundingClientRect();
+    if (!rect) return;
+    const width = Math.min(Math.max(rect.width, 176), window.innerWidth - 24);
+    const height = Math.min(options.length * 40 + 12, 280);
+    const spaceBelow = window.innerHeight - rect.bottom;
+    const top = spaceBelow >= height + 12
+      ? rect.bottom + 8
+      : Math.max(12, rect.top - height - 8);
+    const left = Math.max(12, Math.min(rect.left, window.innerWidth - width - 12));
+    setPosition({ top, left, width });
+    setActiveIndex(index);
+    setOpen(true);
+  };
+
+  useEffect(() => {
+    if (!open) return undefined;
+    const closeOnOutside = (event) => {
+      if (!triggerRef.current?.contains(event.target) && !menuRef.current?.contains(event.target)) {
+        setOpen(false);
+      }
+    };
+    const closeOnScroll = () => setOpen(false);
+    document.addEventListener('pointerdown', closeOnOutside);
+    window.addEventListener('scroll', closeOnScroll, true);
+    window.addEventListener('resize', closeOnScroll);
+    return () => {
+      document.removeEventListener('pointerdown', closeOnOutside);
+      window.removeEventListener('scroll', closeOnScroll, true);
+      window.removeEventListener('resize', closeOnScroll);
+    };
+  }, [open]);
+
+  useEffect(() => () => window.clearTimeout(typeaheadTimerRef.current), []);
+
+  const onTriggerKeyDown = (event) => {
+    if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+      event.preventDefault();
+      if (!open) showMenu(selectedIndex);
+      else setActiveIndex((index) => (index + (event.key === 'ArrowDown' ? 1 : -1) + options.length) % options.length);
+    } else if (event.key === 'Home' && open) {
+      event.preventDefault();
+      setActiveIndex(0);
+    } else if (event.key === 'End' && open) {
+      event.preventDefault();
+      setActiveIndex(options.length - 1);
+    } else if ((event.key === 'Enter' || event.key === ' ') && open) {
+      event.preventDefault();
+      onChange(options[activeIndex][0]);
+      setOpen(false);
+    } else if (event.key === 'Escape' && open) {
+      event.preventDefault();
+      setOpen(false);
+    } else if (event.key.length === 1 && !event.ctrlKey && !event.metaKey && !event.altKey) {
+      typeaheadRef.current += event.key.toLowerCase();
+      window.clearTimeout(typeaheadTimerRef.current);
+      typeaheadTimerRef.current = window.setTimeout(() => { typeaheadRef.current = ''; }, 700);
+      const match = options.findIndex(([, text]) => text.toLowerCase().startsWith(typeaheadRef.current));
+      if (match >= 0) {
+        if (!open) showMenu(match);
+        else setActiveIndex(match);
+      }
+    }
+  };
+
+  return (
+    <>
+      <button
+        ref={triggerRef}
+        id="tone-filter"
+        type="button"
+        className={`tone-select-trigger${open ? ' is-open' : ''}`}
+        role="combobox"
+        aria-label={label}
+        aria-haspopup="listbox"
+        aria-expanded={open}
+        aria-controls={menuId}
+        aria-valuetext={options[selectedIndex][1]}
+        aria-activedescendant={open ? `${menuId}-${options[activeIndex][0]}` : undefined}
+        onClick={() => (open ? setOpen(false) : showMenu())}
+        onKeyDown={onTriggerKeyDown}
+      >
+        <span>{options[selectedIndex][1]}</span>
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="m3.5 6 4.5 4 4.5-4" /></svg>
+      </button>
+      {open && position && createPortal(
+        <div
+          ref={menuRef}
+          id={menuId}
+          className="tone-select-menu"
+          role="listbox"
+          aria-label={label}
+          style={position}
+        >
+          {options.map(([key, text], index) => (
+            <div
+              key={key}
+              id={`${menuId}-${key}`}
+              className={`tone-select-option${key === value ? ' is-selected' : ''}${index === activeIndex ? ' is-active' : ''}`}
+              role="option"
+              aria-selected={key === value}
+              onMouseEnter={() => setActiveIndex(index)}
+              onClick={() => {
+                onChange(key);
+                setOpen(false);
+                triggerRef.current?.focus();
+              }}
+            >
+              {text}
+              {key === value && <span aria-hidden="true">✓</span>}
+            </div>
+          ))}
+        </div>,
+        document.body
+      )}
+    </>
+  );
 }
 
 /**
@@ -103,11 +234,12 @@ export default function Products() {
           </div>
           <div className="tone-filter">
             <label className="tone-filter-label" htmlFor="tone-filter">{t.products.toneLabel}</label>
-            <select id="tone-filter" value={tone} onChange={(event) => choose(setTone)(event.target.value)}>
-              {['all', ...TONE_OPTIONS].map((option) => (
-                <option key={option} value={option}>{t.products.tones[option]}</option>
-              ))}
-            </select>
+            <ToneSelect
+              options={['all', ...TONE_OPTIONS].map((option) => [option, t.products.tones[option]])}
+              value={tone}
+              onChange={choose(setTone)}
+              label={t.products.toneLabel}
+            />
           </div>
           {/* The field is always open: hiding search behind a toggle costs a
               click on the one page where people arrive knowing what they want. */}
