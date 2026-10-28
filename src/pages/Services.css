@@ -6,10 +6,27 @@
 .services-head h1 { margin: 0; max-width: 14ch; font-size: clamp(38px, 4.4vw, 62px); }
 .services-head p { margin: 18px 0 0; max-width: 48ch; font-size: 16px; line-height: 1.8; color: var(--kaiu-muted); }
 
-/* The sheets were shot on white; multiply drops the white into the page's
-   ivory so they sit on the page rather than in a box. */
-.services-photo { margin-top: 40px; }
-.services-photo img { display: block; width: 100%; height: auto; mix-blend-mode: multiply; }
+/* The sheets were shot on white. Each one is its own crop of the photograph
+   and multiply drops any white left at its edges into the page's ivory, so
+   they sit on the page rather than in a box. */
+.services-photo { position: relative; margin-top: 40px; aspect-ratio: 1448 / 1086; }
+.services-sample {
+  position: absolute;
+  background-repeat: no-repeat;
+  mix-blend-mode: multiply;
+  transition: transform .35s cubic-bezier(.16, 1, .3, 1), box-shadow .35s cubic-bezier(.16, 1, .3, 1);
+}
+/* Only the sheet under the pointer rises, a few pixels, with a soft shadow
+   beneath it. Touch screens have no hover, so they keep the still photo. */
+@media (hover: hover) {
+  .services-sample:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 22px -12px rgba(51, 40, 36, .45);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .services-sample { transition: none; }
+}
 
 .services-list { list-style: none; display: grid; gap: 36px; margin: 48px 0 0; padding: 0; }
 .services-list h2 { margin: 0; font-size: clamp(22px, 2vw, 26px); font-weight: 500; line-height: 1.25; }
