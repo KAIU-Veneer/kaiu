@@ -45,7 +45,7 @@ const TRANSLATIONS = {
       services: 'Services', serviceVeneer: 'Recon veneer', servicePanel: 'Panel fabrication', serviceFinishing: 'Natural finishing',
     },
     home: {
-      eyebrow: 'Recon veneer for modern living',
+      eyebrow: 'Recon wood veneer, Jakarta',
       heroTitle1: 'From Vision', heroTitle2: 'to Real Spaces',
       heroDesc: 'Premium recon veneer that brings natural beauty, consistency and durability to every surface.',
       exploreProducts: 'Explore products', viewProjects: 'View projects',
@@ -75,8 +75,8 @@ const TRANSLATIONS = {
       worksTitle1: 'Real Spaces,', worksTitle2: 'Real Stories',
       viewAllProjects: 'View all projects',
 
-      ctaEyebrow: "Let's build together",
-      ctaTitle: 'Bring Your Vision to Life',
+      ctaEyebrow: 'Start a project',
+      ctaTitle: 'Tell us about the space',
       ctaDesc: "Whether it's a residential, commercial or hospitality project, we're here to help you find the perfect veneer solution.",
       ctaButton: 'Inquire now',
     },
@@ -181,7 +181,7 @@ const TRANSLATIONS = {
       services: 'Layanan', serviceVeneer: 'Veneer rekon', servicePanel: 'Fabrikasi panel', serviceFinishing: 'Finishing alami',
     },
     home: {
-      eyebrow: 'Veneer rekon untuk hunian modern',
+      eyebrow: 'Veneer kayu rekon, Jakarta',
       heroTitle1: 'Dari Visi', heroTitle2: 'ke Ruang Nyata',
       heroDesc: 'Veneer rekon premium yang menghadirkan keindahan alami, konsistensi, dan ketahanan pada setiap permukaan.',
       exploreProducts: 'Lihat produk', viewProjects: 'Lihat proyek',
@@ -211,8 +211,8 @@ const TRANSLATIONS = {
       worksTitle1: 'Ruang Nyata,', worksTitle2: 'Cerita Nyata',
       viewAllProjects: 'Lihat semua proyek',
 
-      ctaEyebrow: 'Mari bangun bersama',
-      ctaTitle: 'Wujudkan Visi Anda',
+      ctaEyebrow: 'Mulai proyek',
+      ctaTitle: 'Ceritakan ruangan Anda',
       ctaDesc: 'Baik proyek residensial, komersial, maupun hospitality, kami siap membantu Anda menemukan solusi veneer yang tepat.',
       ctaButton: 'Hubungi kami',
     },
