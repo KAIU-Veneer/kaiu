@@ -62,6 +62,12 @@ const TRANSLATIONS = {
       m3t: 'Wide design options', m3d: 'A diverse range of textures and tones',
       m4t: 'Durable and stable', m4d: 'Ideal for modern living spaces',
       exploreCollection: 'Explore our collection',
+      whyEyebrow: 'Why KAIU', whyTitle: 'More Than a Surface',
+      whyDesc: 'We combine craftsmanship, technology and design to create recon veneer for considered interiors and everyday living.',
+      w1t: 'Curated selection', w1d: 'A wide range of modern wood designs',
+      w2t: 'Reliable supply', w2d: 'Consistent quality at every scale',
+      w3t: 'Trusted by professionals', w3d: 'Chosen for residential, commercial and hospitality spaces',
+      w4t: 'End to end support', w4d: 'Guidance from material selection through application',
 
 
       processEyebrow: 'The process',
@@ -198,6 +204,12 @@ const TRANSLATIONS = {
       m3t: 'Pilihan desain luas', m3d: 'Beragam tekstur dan nuansa warna',
       m4t: 'Awet dan stabil', m4d: 'Ideal untuk ruang hunian modern',
       exploreCollection: 'Lihat koleksi kami',
+      whyEyebrow: 'Mengapa KAIU', whyTitle: 'Lebih dari Sekadar Permukaan',
+      whyDesc: 'Kami memadukan keterampilan, teknologi, dan desain untuk menghadirkan recon veneer bagi interior yang dirancang dengan cermat dan kebutuhan sehari hari.',
+      w1t: 'Pilihan terkurasi', w1d: 'Beragam desain kayu modern',
+      w2t: 'Pasokan andal', w2d: 'Kualitas konsisten untuk berbagai skala',
+      w3t: 'Dipercaya para profesional', w3d: 'Untuk hunian, ruang komersial, dan hospitality',
+      w4t: 'Dukungan menyeluruh', w4d: 'Panduan dari pemilihan material hingga penerapan',
 
 
       processEyebrow: 'Prosesnya',
