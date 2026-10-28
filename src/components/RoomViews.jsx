@@ -22,6 +22,12 @@ const veneerKey = (product) => {
 /** Whether a product has rendered room images. */
 export const hasRoomViews = (product) => Boolean(veneerKey(product));
 
+/** A product's room images in camera order; empty if it has none. */
+export const roomViewUrls = (product) => {
+  const name = veneerKey(product);
+  return Array.from({ length: viewCount(name) }, (_, i) => roomViewUrl(name, i + 1, manifest.version));
+};
+
 const ExpandIcon = () => (
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" /></svg>
 );

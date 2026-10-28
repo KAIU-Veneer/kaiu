@@ -130,6 +130,12 @@ const TRANSLATIONS = {
     productDetail: {
       back: '← Back to Collections', collection: 'Collection', collectionOf: '{name} Collection', requestSample: 'Request a Sample',
       notFound: 'Product not found.', dimension: 'Dimension', downloadHiRes: 'Download Hi-Res',
+      home: 'Home', collections: 'Collections',
+      specCollection: 'Collection', specSize: 'Sheet size',
+      specFinish: 'Finish', specBestFor: 'Best for',
+      gallery: 'Product images', swatchThumb: 'Veneer sheet', roomThumb: 'Room view {n}',
+      fullSheetTitle: 'The full sheet', fullSheetNote: 'One complete leaf at {size}, as it arrives. Download the original to use in your renders.',
+      relatedTitle: 'More from {name}',
     },
     viewer: {
       open: 'View in Room', title: 'Room view', loading: 'Loading the room',
@@ -312,6 +318,12 @@ const TRANSLATIONS = {
     productDetail: {
       back: '← Kembali ke Koleksi', collection: 'Koleksi', collectionOf: 'Koleksi {name}', requestSample: 'Minta Sampel',
       notFound: 'Produk tidak ditemukan.', dimension: 'Dimensi', downloadHiRes: 'Unduh Resolusi Tinggi',
+      home: 'Beranda', collections: 'Koleksi',
+      specCollection: 'Koleksi', specSize: 'Ukuran lembar',
+      specFinish: 'Finishing', specBestFor: 'Cocok untuk',
+      gallery: 'Gambar produk', swatchThumb: 'Lembar veneer', roomThumb: 'Tampilan ruangan {n}',
+      fullSheetTitle: 'Lembar utuh', fullSheetNote: 'Satu lembar utuh berukuran {size}, apa adanya. Unduh file aslinya untuk render Anda.',
+      relatedTitle: 'Lainnya dari {name}',
     },
     viewer: {
       open: 'Lihat di Ruangan', title: 'Tampilan ruangan', loading: 'Memuat ruangan',
