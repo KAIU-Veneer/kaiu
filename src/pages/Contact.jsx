@@ -105,7 +105,7 @@ function ProjectTypeSelect({ label, placeholder, options, value, onChange, inval
               onMouseEnter={() => setActiveIndex(index)}
               onClick={() => { onChange(key); setOpen(false); triggerRef.current?.focus(); }}
             >
-              {text}{key === value && <span aria-hidden="true">✓</span>}
+              {text}{key === value && <svg viewBox="0 0 16 16" aria-hidden="true"><path d="m3.5 8.5 3 3 6-7" /></svg>}
             </div>
           ))}
         </div>,
@@ -123,6 +123,12 @@ export default function Contact() {
   // Which fields the server rejected, so the message can name them.
   const [badFields, setBadFields] = useState([]);
   const [projectType, setProjectType] = useState('');
+  // The form is replaced by the thank-you note on success; move focus there
+  // so keyboard and screen reader users land on it instead of nowhere.
+  const successRef = useRef(null);
+  useEffect(() => {
+    if (status === 'sent') successRef.current?.focus();
+  }, [status]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -187,7 +193,7 @@ export default function Contact() {
       </div>
       <div className="contact-grid">
         {status === 'sent' ? (
-          <div className="contact-form contact-success">
+          <div className="contact-form contact-success" role="status" tabIndex={-1} ref={successRef}>
             <p>{t.contact.success}</p>
           </div>
         ) : (
@@ -244,7 +250,7 @@ export default function Contact() {
           <h2>{t.contact.studio}</h2>
           <dl>
             <dt>{t.contact.visit}</dt>
-            <dd>Jalan Pluit Karang Sari Blok B7T, 64<br/>RT 001 / RW 12<br/>Jakarta Utara 14450, Indonesia</dd>
+            <dd>Jalan Pluit Karang Sari Blok B7T 64<br/>RT 001 / RW 12<br/>Jakarta Utara 14450, Indonesia</dd>
             <dt>{t.contact.email}</dt>
             <dd><a href="mailto:kaiuveneer@gmail.com">kaiuveneer@gmail.com</a></dd>
             <dt>{t.contact.phone}</dt>
