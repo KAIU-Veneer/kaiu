@@ -153,26 +153,19 @@
 .sheet.is-open { flex-grow: 6; cursor: default; }
 .sheet img { display: block; width: 100%; height: 100%; object-fit: cover; }
 
-.sheet-caption {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 4px 16px;
-  margin-top: 16px;
-}
+.sheet-caption { margin-top: 16px; }
+.sheet-collection { display: block; font-size: 14px; color: var(--kaiu-muted); }
 .sheet-caption a {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   min-height: 44px;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 500;
   color: var(--kaiu-ink);
   text-decoration: none;
 }
 .sheet-caption a:hover { color: var(--link-hover); }
-.sheet-caption span { font-size: 14px; color: var(--kaiu-muted); }
 
 .material-points { grid-area: points; max-width: 540px; }
 .material-list {

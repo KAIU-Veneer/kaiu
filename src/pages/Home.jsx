@@ -17,12 +17,12 @@ const WORKSHOP_VIDEO_ID = 'bKxNFn6eYJk';
 // Seven real sheets from the range, light to dark, standing edge to edge.
 // One is open at a time so its grain reads; the rest show as narrow strips.
 const SHEET_IDS = [
-  'cannes-blonde-oak',
-  'cannes-golden-teak',
+  'cairo-blanc-oak',
+  'cairo-vanilla-oak',
   'oslo-cement-grey-oak',
   'cannes-oak-burl',
   'athens-brown-walnut',
-  'athens-macassar-ebony',
+  'athens-java-smoked-oak',
   'berlin-black-oakwood',
 ];
 const SHEETS = SHEET_IDS.map((id) => PRODUCTS.find((p) => p.id === id));
@@ -217,8 +217,8 @@ export default function Home() {
             ))}
           </div>
           <figcaption className="sheet-caption" aria-live="polite">
-            <Link to={`/products/${sheet.id}`}>{sheet.name} <span aria-hidden="true">→</span></Link>
-            <span>{(lang === 'id' && sheet.idSpecies) || sheet.species}</span>
+            <span className="sheet-collection">{t.productDetail.collectionOf.replace('{name}', sheet.collectionLabel)}</span>
+            <Link to={`/products/${sheet.id}`}>{sheet.name.replace(`${sheet.collectionLabel} `, '')} <span aria-hidden="true">→</span></Link>
           </figcaption>
         </figure>
 
