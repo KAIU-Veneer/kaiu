@@ -1,0 +1,30 @@
+/* ============================================================
+   WORKSHOP VIDEO (Home and Services)
+   ============================================================ */
+.workshop-video {
+  display: grid;
+  grid-template-columns: minmax(0, .72fr) minmax(0, 1.28fr);
+  align-items: center;
+  gap: clamp(48px, 8vw, 128px);
+  padding: var(--section-y) var(--page-x);
+}
+.workshop-video-copy { max-width: 560px; }
+.workshop-video-copy h2 { margin: 0; font-size: clamp(32px, 4vw, 50px); line-height: 1.06; }
+.workshop-video-copy h2 span { display: block; white-space: nowrap; }
+.workshop-video-copy p { max-width: 40ch; margin: 20px 0 0; font-size: 15px; line-height: 1.8; color: var(--kaiu-on-dark-dim); }
+.workshop-player {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #332824;
+  box-shadow: 0 24px 56px -36px rgba(0,0,0,.72);
+}
+.workshop-player > img,
+.workshop-player > iframe { position: absolute; inset: 0; display: block; width: 100%; height: 100%; border: 0; }
+.workshop-player > img { object-fit: cover; }
+
+@media (max-width: 900px) {
+  .workshop-video { grid-template-columns: 1fr; gap: 32px; }
+  .workshop-video-copy { max-width: 620px; }
+}

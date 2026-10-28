@@ -5,6 +5,7 @@ import { useLanguage } from "../LanguageContext.jsx";
 import useReveal from "../useReveal.js";
 import { cardSwatch, projectPhoto, IMAGE_SIZES } from "../imageSrc.js";
 import useDocumentMeta from '../useDocumentMeta.js';
+import WorkshopVideo from "../components/WorkshopVideo.jsx";
 import "./Home.css";
 
 const PROCESS = [
@@ -12,17 +13,16 @@ const PROCESS = [
   { t: 'p2t', d: 'p2d', img: '/assets/image/process/hot-press.webp?v=3', position: 'center 52%' },
   { t: 'p3t', d: 'p3d', img: '/assets/image/w800/OSLO CEMENT GREY OAK.webp?v=2' },
 ];
-const WORKSHOP_VIDEO_ID = 'bKxNFn6eYJk';
 
 // Seven real sheets from the range, light to dark, standing edge to edge.
 // One is open at a time so its grain reads; the rest show as narrow strips.
 const SHEET_IDS = [
-  'cannes-blonde-oak',
-  'cannes-golden-teak',
+  'cairo-buff-oak',
+  'cairo-vanilla-oak',
   'oslo-cement-grey-oak',
   'cannes-oak-burl',
   'athens-brown-walnut',
-  'athens-macassar-ebony',
+  'athens-java-smoked-oak',
   'berlin-black-oakwood',
 ];
 const SHEETS = SHEET_IDS.map((id) => PRODUCTS.find((p) => p.id === id));
@@ -54,8 +54,6 @@ export default function Home() {
   const heroProjects = PROJECTS;
   const [slide, setSlide] = useState(0);
   const [heroPaused, setHeroPaused] = useState(false);
-  const workshopRef = useRef(null);
-  const [workshopStarted, setWorkshopStarted] = useState(false);
   const current = heroProjects[slide];
   const go = (step) => setSlide((i) => (i + step + heroProjects.length) % heroProjects.length);
 
@@ -90,24 +88,6 @@ export default function Home() {
       reducedMotion.removeEventListener?.('change', onMotionChange);
     };
   }, [heroProjects.length, heroPaused, slide]);
-
-  useEffect(() => {
-    const section = workshopRef.current;
-    if (!section) return undefined;
-    if (!('IntersectionObserver' in window)) {
-      setWorkshopStarted(true);
-      return undefined;
-    }
-
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        setWorkshopStarted(true);
-        observer.disconnect();
-      }
-    }, { rootMargin: '200px 0px' });
-    observer.observe(section);
-    return () => observer.disconnect();
-  }, []);
 
   const materialRef = useReveal();
   const [openSheet, setOpenSheet] = useState(3);
@@ -217,8 +197,8 @@ export default function Home() {
             ))}
           </div>
           <figcaption className="sheet-caption" aria-live="polite">
-            <Link to={`/products/${sheet.id}`}>{sheet.name} <span aria-hidden="true">→</span></Link>
-            <span>{(lang === 'id' && sheet.idSpecies) || sheet.species}</span>
+            <span className="sheet-collection">{t.productDetail.collectionOf.replace('{name}', sheet.collectionLabel)}</span>
+            <Link to={`/products/${sheet.id}`}>{sheet.name.replace(`${sheet.collectionLabel} `, '')} <span aria-hidden="true">→</span></Link>
           </figcaption>
         </figure>
 
@@ -261,31 +241,7 @@ export default function Home() {
         </ol>
       </section>
 
-      {/* ---------------- WORKSHOP VIDEO ---------------- */}
-      <section ref={workshopRef} className="workshop-video on-dark" data-header-surface="colored">
-        <div className="workshop-video-copy">
-          <h2><span>{t.home.videoTitleTop}</span><span>{t.home.videoTitleBottom}</span></h2>
-          <p>{t.home.videoDesc}</p>
-        </div>
-        <div className="workshop-player">
-          <img
-            src={`https://i.ytimg.com/vi/${WORKSHOP_VIDEO_ID}/hqdefault.jpg`}
-            alt=""
-            loading="lazy"
-            decoding="async"
-          />
-          {workshopStarted && (
-            <iframe
-              src={`https://www.youtube-nocookie.com/embed/${WORKSHOP_VIDEO_ID}?autoplay=1&mute=1&playsinline=1&controls=1&rel=0&loop=1&playlist=${WORKSHOP_VIDEO_ID}`}
-              title={`${t.home.videoTitleTop} ${t.home.videoTitleBottom}`}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              loading="lazy"
-              allowFullScreen
-            />
-          )}
-        </div>
-      </section>
+      <WorkshopVideo />
 
       {/* ---------------- FEATURED PROJECTS ---------------- */}
       <section className="works reveal" data-header-surface="light" ref={worksRef}>
