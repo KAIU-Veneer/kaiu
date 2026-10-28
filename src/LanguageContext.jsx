@@ -6,8 +6,8 @@ const TRANSLATIONS = {
     // project; those two take their wording from the catalogue itself.
     meta: {
       home: {
-        title: 'KAIU - Recon Wood Veneer',
-        description: 'KAIU supplies premium recon wood veneer to architects, designers, manufacturers and homeowners in Jakarta. Six collections, consistent sheet after sheet.',
+        title: 'KAIU - Wood Veneer',
+        description: 'KAIU supplies premium wood veneer to architects, designers, manufacturers and homeowners in Jakarta. Six collections, consistent sheet after sheet.',
       },
       about: {
         title: 'About KAIU - Crafted by Nature, Refined by Design',
@@ -40,21 +40,21 @@ const TRANSLATIONS = {
       skip: 'Skip to content',
     },
     footer: {
-      tagline: 'Premium recon veneer for modern living. From veneer to finished surface, we bring ideas to life.',
+      tagline: 'Premium wood veneer for modern living. From veneer to finished surface, we bring ideas to life.',
       explore: 'Explore', studio: 'Studio', rights: 'All rights reserved.',
-      services: 'Services', serviceVeneer: 'Recon veneer', servicePanel: 'Panel fabrication', serviceFinishing: 'Natural finishing',
+      services: 'Services', serviceVeneer: 'Wood veneer', servicePanel: 'Panel fabrication', serviceFinishing: 'Natural finishing',
     },
     home: {
             heroTitle1: 'From Vision', heroTitle2: 'to Real Spaces',
-      heroDesc: 'Premium recon veneer that brings natural beauty, consistency and durability to every surface.',
+      heroDesc: 'Premium wood veneer that brings natural beauty, consistency and durability to every surface.',
       exploreProducts: 'Explore products', viewProjects: 'View projects',
 
       sectorResidential: 'Residential', sectorCommercial: 'Commercial',
       sectorHospitality: 'Hospitality', sectorOffice: 'Office',
       sectorLink: 'View projects',
 
-            materialTitle1: 'Recon Veneer,', materialTitle2: 'Endless Possibilities',
-      materialDesc: 'Recon (reconstituted) veneer is real timber, sliced, dyed and re-pressed so the grain repeats sheet after sheet. You get the look and feel of natural wood, with the consistency and stability that one-off logs cannot promise.',
+            materialTitle1: 'Veneer,', materialTitle2: 'Endless Possibilities',
+      materialDesc: 'Made from real timber, each veneer is sliced, dyed and re-pressed so the grain repeats sheet after sheet. Enjoy the look and feel of natural wood with consistent colour and pattern.',
       m1t: 'Authentic wood aesthetics', m1d: 'Real wood, beautifully engineered',
       m2t: 'Consistent quality', m2d: 'Uniform grain and colour',
       m3t: 'Wide design options', m3d: 'A diverse range of textures and tones',
@@ -62,7 +62,7 @@ const TRANSLATIONS = {
       exploreCollection: 'Explore our collection',
       sheetsLabel: 'Seven of our veneers, light to dark',
       whyEyebrow: 'Why KAIU', whyTitle: 'More Than a Surface',
-      whyDesc: 'We combine craftsmanship, technology and design to create recon veneer for considered interiors and everyday living.',
+      whyDesc: 'We combine craftsmanship, technology and design to create veneer for considered interiors and everyday living.',
       w1t: 'Curated selection', w1d: 'A wide range of modern wood designs',
       w2t: 'Reliable supply', w2d: 'Consistent quality at every scale',
       w3t: 'Trusted by professionals', w3d: 'Chosen for residential, commercial and hospitality spaces',
@@ -71,9 +71,11 @@ const TRANSLATIONS = {
 
             processTitle1: 'From Veneer', processTitle2: 'to Finished Surface',
       processDesc: 'High-quality materials, expert fabrication and natural finishing for a surface that lasts.',
-      p1t: 'Veneer selection', p1d: 'Choose from our curated recon veneer collection.',
+      p1t: 'Veneer selection', p1d: 'Choose from our curated veneer collection.',
       p2t: 'Panel fabrication', p2d: 'Veneer applied onto HMR or plywood with precision.',
       p3t: 'Natural finishing', p3d: 'Finished with water-based, food-grade hard oil wax.',
+      videoTitleTop: 'A conversation', videoTitleBottom: 'from the workshop',
+      videoDesc: 'A member of our workshop team shares a closer look at the craft behind KAIU veneer.',
 
             worksTitle1: 'Real Spaces,', worksTitle2: 'Real Stories',
       viewAllProjects: 'View all projects',
@@ -87,7 +89,7 @@ const TRANSLATIONS = {
       p1: 'At KAIU, we believe exceptional interiors begin with exceptional materials. Inspired by the natural beauty of wood, we curate premium veneer solutions that bring warmth, character and timeless elegance to every space.',
       p2: "Every veneer tells a unique story through its grain, texture and colour. Rather than concealing nature's imperfections, we celebrate them, preserving the authenticity that makes each piece truly one of a kind.",
       missionTitle: 'Elegance, performance and authenticity. For the long term.',
-      missionDesc: 'We provide architects, designers, manufacturers and homeowners with premium recon wood veneer that combines elegance, performance and consistency — real timber, engineered so the grain repeats sheet after sheet.',
+      missionDesc: 'We provide architects, designers, manufacturers and homeowners with premium wood veneer that combines elegance, performance and consistency, with a distinctive grain that repeats sheet after sheet.',
       stats: [['200+', 'Veneer Collections'], ['30+', 'Projects Delivered'], ['100%', 'Natural Material']],
     },
     products: {
@@ -111,10 +113,10 @@ const TRANSLATIONS = {
     },
     projects: {
       eyebrow: 'Our projects', title: 'Selected Work', title1: 'Real Spaces,', title2: 'Real Stories',
-      intro: 'From private residences to cafés and restaurants, explore spaces shaped by thoughtful design and recon veneer chosen for each setting.',
+      intro: 'Explore spaces shaped by thoughtful design and veneer chosen to suit each setting.',
       explore: 'Explore projects', featured: 'Featured project', collectionEyebrow: 'Selected work',
       collectionTitle: 'Spaces made personal', filterLabel: 'Filter projects by type', all: 'All',
-      collectionIntro: 'Explore completed spaces shaped by considered design and KAIU recon veneer. Each project brings texture, tone and material together with its own character.',
+      collectionIntro: 'Explore completed spaces shaped by considered design and KAIU veneer. Each project brings texture, tone and material together with its own character.',
       projectCount: 'projects',
       types: { residential: 'Residential', commercial: 'Commercial', hospitality: 'Hospitality' },
       ctaEyebrow: 'Have a project in mind?', ctaTitle: "Let’s create it together", ctaButton: 'Contact our team',
@@ -152,7 +154,7 @@ const TRANSLATIONS = {
   id: {
     meta: {
       home: {
-        title: 'KAIU - Veneer Kayu Rekon',
+        title: 'KAIU - Veneer Kayu',
         description: 'KAIU memasok veneer kayu alami premium untuk arsitek, desainer, produsen, dan pemilik rumah di Jakarta. Enam koleksi, dipotong dan dipasangkan sesuai pesanan.',
       },
       about: {
@@ -186,21 +188,21 @@ const TRANSLATIONS = {
       skip: 'Langsung ke konten',
     },
     footer: {
-      tagline: 'Veneer rekon premium untuk hunian modern. Dari veneer hingga permukaan jadi, kami wujudkan ide Anda.',
+      tagline: 'Veneer premium untuk hunian modern. Dari pemilihan hingga permukaan jadi, kami wujudkan ide Anda.',
       explore: 'Jelajahi', studio: 'Studio', rights: 'Hak cipta dilindungi.',
-      services: 'Layanan', serviceVeneer: 'Veneer rekon', servicePanel: 'Fabrikasi panel', serviceFinishing: 'Finishing alami',
+      services: 'Layanan', serviceVeneer: 'Veneer kayu', servicePanel: 'Fabrikasi panel', serviceFinishing: 'Finishing alami',
     },
     home: {
             heroTitle1: 'Dari Visi', heroTitle2: 'ke Ruang Nyata',
-      heroDesc: 'Veneer rekon premium yang menghadirkan keindahan alami, konsistensi, dan ketahanan pada setiap permukaan.',
+      heroDesc: 'Veneer kayu premium yang menghadirkan keindahan alami, konsistensi, dan ketahanan pada setiap permukaan.',
       exploreProducts: 'Lihat produk', viewProjects: 'Lihat proyek',
 
       sectorResidential: 'Residensial', sectorCommercial: 'Komersial',
       sectorHospitality: 'Hospitality', sectorOffice: 'Perkantoran',
       sectorLink: 'Lihat proyek',
 
-            materialTitle1: 'Veneer Rekon,', materialTitle2: 'Kemungkinan Tanpa Batas',
-      materialDesc: 'Veneer rekon (rekonstitusi) adalah kayu asli yang diiris, diwarnai, lalu dipres ulang sehingga seratnya berulang dari lembar ke lembar. Anda mendapat tampilan dan rasa kayu alami, dengan konsistensi dan kestabilan yang tidak bisa dijanjikan satu batang kayu.',
+            materialTitle1: 'Veneer Kayu,', materialTitle2: 'Kemungkinan Tanpa Batas',
+      materialDesc: 'Terbuat dari kayu asli, setiap veneer diiris, diberi warna, lalu dipres ulang agar pola seratnya konsisten di setiap lembar. Nikmati tampilan dan nuansa kayu alami dengan warna dan pola yang seragam.',
       m1t: 'Estetika kayu autentik', m1d: 'Kayu asli, direkayasa dengan indah',
       m2t: 'Kualitas konsisten', m2d: 'Serat dan warna yang seragam',
       m3t: 'Pilihan desain luas', m3d: 'Beragam tekstur dan nuansa warna',
@@ -208,7 +210,7 @@ const TRANSLATIONS = {
       exploreCollection: 'Lihat koleksi kami',
       sheetsLabel: 'Tujuh veneer kami, dari terang ke gelap',
       whyEyebrow: 'Mengapa KAIU', whyTitle: 'Lebih dari Sekadar Permukaan',
-      whyDesc: 'Kami memadukan keterampilan, teknologi, dan desain untuk menghadirkan recon veneer bagi interior yang dirancang dengan cermat dan kebutuhan sehari hari.',
+      whyDesc: 'Kami memadukan keterampilan, teknologi, dan desain untuk menghadirkan veneer bagi interior yang dirancang dengan cermat dan kebutuhan sehari hari.',
       w1t: 'Pilihan terkurasi', w1d: 'Beragam desain kayu modern',
       w2t: 'Pasokan andal', w2d: 'Kualitas konsisten untuk berbagai skala',
       w3t: 'Dipercaya para profesional', w3d: 'Untuk hunian, ruang komersial, dan hospitality',
@@ -217,9 +219,11 @@ const TRANSLATIONS = {
 
             processTitle1: 'Dari Veneer', processTitle2: 'ke Permukaan Jadi',
       processDesc: 'Material berkualitas, fabrikasi ahli, dan finishing alami untuk permukaan yang tahan lama.',
-      p1t: 'Pemilihan veneer', p1d: 'Pilih dari koleksi veneer rekon kami yang terkurasi.',
+      p1t: 'Pemilihan veneer', p1d: 'Pilih dari koleksi veneer pilihan kami.',
       p2t: 'Fabrikasi panel', p2d: 'Veneer diaplikasikan pada HMR atau plywood dengan presisi.',
       p3t: 'Finishing alami', p3d: 'Diselesaikan dengan hard oil wax berbahan air, food-grade.',
+      videoTitleTop: 'Percakapan', videoTitleBottom: 'dari workshop',
+      videoDesc: 'Anggota tim workshop kami berbagi cerita tentang keterampilan di balik veneer KAIU.',
 
             worksTitle1: 'Ruang Nyata,', worksTitle2: 'Cerita Nyata',
       viewAllProjects: 'Lihat semua proyek',
@@ -257,10 +261,10 @@ const TRANSLATIONS = {
     },
     projects: {
       eyebrow: 'Proyek kami', title: 'Karya Pilihan', title1: 'Ruang Nyata,', title2: 'Cerita Nyata',
-      intro: 'Dari hunian pribadi hingga kafe dan restoran, jelajahi ruang yang dibentuk oleh desain cermat dan veneer rekon pilihan untuk setiap kebutuhan.',
+      intro: 'Jelajahi ruang yang dibentuk oleh desain cermat dan veneer pilihan untuk setiap kebutuhan.',
       explore: 'Jelajahi proyek', featured: 'Proyek pilihan', collectionEyebrow: 'Karya pilihan',
       collectionTitle: 'Ruang yang terasa personal', filterLabel: 'Filter proyek berdasarkan jenis', all: 'Semua',
-      collectionIntro: 'Jelajahi ruang yang ditata dengan desain cermat dan recon veneer KAIU. Setiap proyek memadukan tekstur, warna, dan material dengan karakter tersendiri.',
+      collectionIntro: 'Jelajahi ruang yang ditata dengan desain cermat dan veneer KAIU. Setiap proyek memadukan tekstur, warna, dan material dengan karakter tersendiri.',
       projectCount: 'proyek',
       types: { residential: 'Hunian', commercial: 'Komersial', hospitality: 'Hospitality' },
       ctaEyebrow: 'Punya proyek yang sedang direncanakan?', ctaTitle: 'Mari wujudkan bersama', ctaButton: 'Hubungi tim kami',
