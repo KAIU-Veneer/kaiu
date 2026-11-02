@@ -90,6 +90,32 @@ export default function Home() {
   const worksRef = useReveal();
 
   const worksTrackRef = useRef(null);
+  // Whether the track is already against one of its ends, so the arrow that
+  // would do nothing can say so. Both are true when every card already fits.
+  const [worksEnds, setWorksEnds] = useState({ start: true, end: true });
+
+  useEffect(() => {
+    const track = worksTrackRef.current;
+    if (!track) return undefined;
+    const readEnds = () => {
+      // Sub-pixel widths mean the scroll never lands exactly on the far end.
+      const slack = 2;
+      const furthest = track.scrollWidth - track.clientWidth;
+      setWorksEnds({
+        start: track.scrollLeft <= slack,
+        end: furthest <= slack || track.scrollLeft >= furthest - slack,
+      });
+    };
+    readEnds();
+    track.addEventListener('scroll', readEnds, { passive: true });
+    const observer = new ResizeObserver(readEnds);
+    observer.observe(track);
+    return () => {
+      track.removeEventListener('scroll', readEnds);
+      observer.disconnect();
+    };
+  }, []);
+
   const slideWorks = (direction) => {
     const track = worksTrackRef.current;
     const card = track?.querySelector('.work-card');
@@ -231,10 +257,10 @@ export default function Home() {
           </div>
           <div className="works-actions">
             <div className="works-controls" aria-label={t.a11y.projectControls}>
-              <button type="button" aria-label={t.a11y.prevProjects} onClick={() => slideWorks(-1)}>
+              <button type="button" aria-label={t.a11y.prevProjects} onClick={() => slideWorks(-1)} disabled={worksEnds.start}>
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5m0 0 6 6m-6-6 6-6" /></svg>
               </button>
-              <button type="button" aria-label={t.a11y.nextProjects} onClick={() => slideWorks(1)}>
+              <button type="button" aria-label={t.a11y.nextProjects} onClick={() => slideWorks(1)} disabled={worksEnds.end}>
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m0 0-6-6m6 6-6 6" /></svg>
               </button>
             </div>

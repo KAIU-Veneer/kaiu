@@ -289,7 +289,10 @@
   cursor: pointer;
   transition: color .2s ease, background-color .2s ease, border-color .2s ease;
 }
-.works-controls button:hover { background: var(--kaiu-green); border-color: var(--kaiu-green); color: var(--kaiu-cream); }
+.works-controls button:hover:not(:disabled) { background: var(--kaiu-green); border-color: var(--kaiu-green); color: var(--kaiu-cream); }
+/* At either end of the track the arrow that would do nothing is dimmed and
+   stops taking the pointer, so it reads as unavailable rather than broken. */
+.works-controls button:disabled { opacity: .35; cursor: default; }
 .works-controls button:focus-visible, .work-card:focus-visible { outline: 2px solid var(--kaiu-gold-text); outline-offset: 4px; }
 .works-controls svg, .work-card-arrow svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
 
