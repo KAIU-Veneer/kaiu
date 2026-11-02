@@ -115,7 +115,7 @@ const TRANSLATIONS = {
         ['Services', 'Veneer supply, panel fabrication on HMR or plywood, and natural finishing'],
       ],
 
-      ctaTitle: 'Bring your vision to life.',
+      ctaTitle: 'Begin with a sample.',
       ctaDesc: "Tell us the project and we'll send the sheets worth looking at.",
       ctaButton: 'Inquire now',
     },
@@ -146,13 +146,13 @@ const TRANSLATIONS = {
     },
     projects: {
       title: 'Selected Work', title1: 'Real Spaces,', title2: 'Real Stories',
-      intro: 'Explore spaces shaped by thoughtful design and veneer chosen to suit each setting.',
+      intro: 'Residences, retail and hospitality interiors, finished in KAIU veneer.',
       explore: 'Explore projects', featured: 'Featured project',
       collectionTitle: 'Spaces made personal', filterLabel: 'Filter projects by type', all: 'All',
-      collectionIntro: 'Explore completed spaces shaped by considered design and KAIU veneer. Each project brings texture, tone and material together with its own character.',
+      collectionIntro: 'Filter by type, or open a project to see the veneers it used.',
       projectCount: 'projects',
       types: { residential: 'Residential', commercial: 'Commercial', hospitality: 'Hospitality' },
-      ctaEyebrow: 'Have a project in mind?', ctaTitle: "Let’s create it together", ctaButton: 'Contact our team',
+      ctaEyebrow: 'Have a project in mind?', ctaTitle: 'Begin a project', ctaButton: 'Contact our team',
     },
     projectDetail: {
       back: '← Back to Projects', space: 'Space', client: 'Client', location: 'Location',
@@ -174,7 +174,7 @@ const TRANSLATIONS = {
     },
     contact: {
       title: "Let's talk about your next surface",
-      intro: 'Tell us about your project and the veneer you have in mind. Our team will be happy to help.',
+      intro: 'Tell us about your project and the veneer you have in mind.',
       studio: 'Studio', email: 'Email', phone: 'Phone / WhatsApp', hours: 'Studio Hours',
       visit: 'Visit',
       hoursValue: 'Monday to Friday, 09:00 to 18:00',
@@ -312,7 +312,7 @@ const TRANSLATIONS = {
         ['Layanan', 'Pasokan veneer, fabrikasi panel pada HMR atau plywood, dan finishing alami'],
       ],
 
-      ctaTitle: 'Wujudkan visi Anda.',
+      ctaTitle: 'Mulai dari sampel.',
       ctaDesc: 'Ceritakan proyek Anda dan kami kirimkan lembar yang layak dilihat.',
       ctaButton: 'Hubungi kami',
     },
@@ -343,13 +343,13 @@ const TRANSLATIONS = {
     },
     projects: {
       title: 'Karya Pilihan', title1: 'Ruang Nyata,', title2: 'Cerita Nyata',
-      intro: 'Jelajahi ruang yang dibentuk oleh desain cermat dan veneer pilihan untuk setiap kebutuhan.',
+      intro: 'Hunian, ruang ritel, dan interior hospitality yang dikerjakan dengan veneer KAIU.',
       explore: 'Jelajahi proyek', featured: 'Proyek pilihan',
       collectionTitle: 'Ruang yang terasa personal', filterLabel: 'Filter proyek berdasarkan jenis', all: 'Semua',
-      collectionIntro: 'Jelajahi ruang yang ditata dengan desain cermat dan veneer KAIU. Setiap proyek memadukan tekstur, warna, dan material dengan karakter tersendiri.',
+      collectionIntro: 'Saring berdasarkan jenis, atau buka proyek untuk melihat veneer yang digunakan.',
       projectCount: 'proyek',
       types: { residential: 'Hunian', commercial: 'Komersial', hospitality: 'Hospitality' },
-      ctaEyebrow: 'Punya proyek yang sedang direncanakan?', ctaTitle: 'Mari wujudkan bersama', ctaButton: 'Hubungi tim kami',
+      ctaEyebrow: 'Punya proyek yang sedang direncanakan?', ctaTitle: 'Mulai sebuah proyek', ctaButton: 'Hubungi tim kami',
     },
     projectDetail: {
       back: '← Kembali ke Proyek', space: 'Ruang', client: 'Klien', location: 'Lokasi',
@@ -371,7 +371,7 @@ const TRANSLATIONS = {
     },
     contact: {
       title: 'Mari bicarakan permukaan berikutnya',
-      intro: 'Ceritakan proyek dan veneer yang Anda cari. Tim kami siap membantu.',
+      intro: 'Ceritakan proyek dan veneer yang Anda cari.',
       studio: 'Studio', email: 'Email', phone: 'Telepon / WhatsApp', hours: 'Jam Operasional',
       visit: 'Kunjungi',
       hoursValue: 'Senin sampai Jumat, 09:00 sampai 18:00',
