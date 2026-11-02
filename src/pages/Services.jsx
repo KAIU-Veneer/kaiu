@@ -37,6 +37,17 @@ const sampleStyle = ([l, t, r, b]) => {
   };
 };
 
+// Touch has no hover, so a tap lifts the sheet briefly and lets it settle.
+// Restarting the animation lets a second tap lift it again mid-way.
+const liftOnTap = (event) => {
+  if (event.pointerType === 'mouse') return;
+  const sheet = event.currentTarget;
+  sheet.classList.remove('is-tapped');
+  void sheet.offsetWidth;
+  sheet.classList.add('is-tapped');
+};
+const settle = (event) => event.currentTarget.classList.remove('is-tapped');
+
 export default function Services() {
   const { t, lang } = useLanguage();
   useDocumentMeta(t.meta.services);
@@ -50,7 +61,8 @@ export default function Services() {
         </header>
         <div className="services-photo" aria-hidden="true">
           {SAMPLES.map((box) => (
-            <span key={box.join()} className="services-sample" style={sampleStyle(box)} />
+            <span key={box.join()} className="services-sample" style={sampleStyle(box)}
+                  onPointerDown={liftOnTap} onAnimationEnd={settle} />
           ))}
         </div>
         <ol className="services-list">

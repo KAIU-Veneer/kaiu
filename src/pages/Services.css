@@ -17,15 +17,25 @@
   transition: transform .35s cubic-bezier(.16, 1, .3, 1), box-shadow .35s cubic-bezier(.16, 1, .3, 1);
 }
 /* Only the sheet under the pointer rises, a few pixels, with a soft shadow
-   beneath it. Touch screens have no hover, so they keep the still photo. */
+   beneath it. Touch screens have no hover, so a tap lifts the sheet the
+   same way, holds it a moment, then lets it settle back. */
 @media (hover: hover) {
   .services-sample:hover {
     transform: translateY(-6px);
     box-shadow: 0 14px 22px -12px rgba(51, 40, 36, .45);
   }
 }
+.services-sample.is-tapped { animation: services-sample-tap 1.1s cubic-bezier(.16, 1, .3, 1); }
+@keyframes services-sample-tap {
+  0%, 100% { transform: none; box-shadow: none; }
+  25%, 55% {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 22px -12px rgba(51, 40, 36, .45);
+  }
+}
 @media (prefers-reduced-motion: reduce) {
   .services-sample { transition: none; }
+  .services-sample.is-tapped { animation: none; }
 }
 
 .services-list { list-style: none; display: grid; gap: 36px; margin: 48px 0 0; padding: 0; }
