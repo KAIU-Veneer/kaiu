@@ -1,38 +1,268 @@
-.project-detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gap-split); margin-top: var(--space-md); align-items: start; }
-.project-detail h1 { margin: 0; font-size: clamp(34px, 4.2vw, 54px); }
-.project-detail-desc { margin-top: var(--space-md); color: var(--kaiu-muted); font-size: 16px; line-height: 1.75; }
-.project-detail .detail-info-grid { margin-top: var(--space-md); align-content: start; }
+/* ============================================================
+   HERO — the project's lead photograph, title sitting on it, the
+   same treatment the home and projects heroes use.
+   ============================================================ */
+.project-hero {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: flex-end;
+  min-height: clamp(420px, 62svh, 660px);
+  padding: var(--section-y) var(--page-x) calc(var(--section-y) * .75);
+  overflow: hidden;
+  background: var(--kaiu-green);
+}
+.project-hero-img {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.project-hero-scrim {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(to top, rgba(27,20,16,.93) 0%, rgba(27,20,16,.44) 48%, rgba(27,20,16,.08) 100%); /* taste-skill-ignore */
+}
+.project-hero-copy {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-md) var(--gap-split);
+  width: 100%;
+  color: var(--kaiu-cream);
+}
+.project-hero-head { flex: 999 1 420px; min-width: 0; }
+.project-hero-meta {
+  margin: 0;
+  font-family: var(--font-label);
+  font-size: 11px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--kaiu-on-dark);
+}
+.project-hero-copy h1 {
+  margin: 16px 0 0;
+  font-size: clamp(38px, 5.4vw, 76px);
+  line-height: 1;
+  letter-spacing: -.03em;
+  color: var(--kaiu-cream);
+}
+.project-hero-designer { flex: 0 1 280px; min-width: 0; margin: 0; }
+.project-hero-designer span {
+  display: block;
+  font-family: var(--font-label);
+  font-size: 10px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--kaiu-on-dark);
+}
+.project-hero-designer strong { display: block; margin-top: 8px; font-size: 17px; font-weight: 500; }
+
+/* ============================================================
+   THE BRIEF — the project's own words beside its facts.
+   ============================================================ */
+.project-brief {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-split);
+  align-items: flex-start;
+  padding: var(--section-y) var(--page-x);
+}
+.project-brief-copy { flex: 999 1 460px; min-width: 0; }
+.project-brief-copy .back-link { margin-bottom: var(--space-md); }
+.project-brief-copy p {
+  margin: 0;
+  max-width: 62ch;
+  font-size: 17px;
+  line-height: 1.85;
+  color: var(--kaiu-muted);
+}
+
+.project-file { flex: 1 1 320px; min-width: 0; max-width: 380px; }
+.project-file-table { margin: 0; font-size: 15px; }
+.project-file-row {
+  display: grid;
+  grid-template-columns: 118px minmax(0, 1fr);
+  gap: var(--space-sm);
+  padding: 15px 0;
+  border-top: 1px solid var(--hairline);
+}
+.project-file-row:last-child { border-bottom: 1px solid var(--hairline); }
+.project-file-row dt {
+  font-family: var(--font-label);
+  font-size: 10px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--kaiu-muted-light);
+}
+.project-file-row dd { margin: 0; }
 /* A veneer name never breaks across lines; a list too long for the cell wraps
    after one of the commas instead. */
-.project-detail .detail-info-cell a { color: inherit; text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; }
-/* An odd number of facts would otherwise leave a blank cell. */
-.project-detail .detail-info-cell:last-child:nth-child(odd) { grid-column: 1 / -1; }
-
-/* The lead is a fixed card that fades through every photograph of the
-   project. The gallery below keeps each photograph's own shape, since they
-   arrive in both orientations, and flows them down two columns. */
-.project-detail-lead {
-  aspect-ratio: 4/5;
-  width: 100%;
-  border-radius: 2px;
-  background: var(--section-bg-alt);
+.project-file-row dd a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  white-space: nowrap;
 }
+.project-file .pill-btn { margin-top: var(--space-md); }
+
+/* ============================================================
+   AS BUILT — the remaining photographs keep their own shape,
+   since they arrive in both orientations, and flow down two
+   columns.
+   ============================================================ */
+.project-gallery-section { padding: 0 var(--page-x) var(--section-y); }
+.project-gallery-section h2 { margin: 0 0 var(--space-lg); font-size: clamp(28px, 3.2vw, 42px); }
+.project-detail-gallery { columns: 2; column-gap: var(--gap-grid); }
 .project-detail-gallery img {
   width: 100%;
   height: auto;
   display: block;
+  margin-bottom: var(--gap-grid);
+  break-inside: avoid;
   border-radius: 2px;
   background: var(--section-bg-alt);
 }
-.project-detail-gallery { columns: 2; column-gap: var(--gap-grid); margin-top: var(--gap-grid); }
-.project-detail-gallery img { margin-bottom: var(--gap-grid); break-inside: avoid; }
 
-/* Padding and gaps come from the tokens in index.css; only the layout
-   changes per breakpoint. */
+/* ============================================================
+   THE PALETTE — the green band that turns the room back into
+   sheets you can order.
+   ============================================================ */
+.project-palette { padding: var(--section-y) var(--page-x); }
+.project-palette-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+.project-palette-head h2 { margin: 0; font-size: clamp(28px, 3.2vw, 44px); }
+.project-palette-head .text-cta { margin-top: 0; }
+.project-palette-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: var(--gap-grid);
+  /* auto-fit collapses the tracks it does not need, so one veneer would
+     otherwise stretch its swatch across the whole row. Hold the grid to the
+     width those cards actually want: ProjectDetail.jsx writes the count. */
+  max-width: calc(var(--palette-count, 5) * 260px + (var(--palette-count, 5) - 1) * var(--gap-grid));
+}
+.project-palette-grid a { display: block; color: var(--kaiu-cream); }
+.project-palette-swatch {
+  display: block;
+  aspect-ratio: 4/5;
+  overflow: hidden;
+  border-radius: 2px;
+  background: var(--kaiu-green-deep);
+}
+.project-palette-swatch img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .5s ease;
+}
+.project-palette-grid a:hover .project-palette-swatch img { transform: scale(1.04); }
+.project-palette-name { display: block; margin-top: 14px; font-size: 17px; font-weight: 500; }
+.project-palette-collection {
+  display: block;
+  margin-top: 5px;
+  font-family: var(--font-label);
+  font-size: 10px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--kaiu-on-dark-dim);
+}
+.project-palette-note {
+  margin: var(--space-lg) 0 0;
+  max-width: 62ch;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* ============================================================
+   MORE PROJECTS
+   ============================================================ */
+.project-more { padding: var(--section-y) var(--page-x); }
+.project-more-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+.project-more-head h2 { margin: 0; font-size: clamp(28px, 3.2vw, 42px); }
+.project-more-head .text-cta { margin-top: 0; }
+.project-more-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--gap-grid);
+}
+.project-more-image {
+  display: block;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  border-radius: 2px;
+  background: var(--section-bg-alt);
+}
+.project-more-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .6s ease;
+}
+.project-more-card:hover .project-more-image img { transform: scale(1.04); }
+.project-more-meta {
+  display: block;
+  margin-top: 16px;
+  font-family: var(--font-label);
+  font-size: 10px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--kaiu-muted-light);
+}
+.project-more-title { display: block; margin-top: 8px; font-size: 21px; }
+
+/* ============================================================
+   CTA
+   ============================================================ */
+.project-detail-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md) var(--gap-split);
+  padding: var(--section-y) var(--page-x);
+}
+.project-detail-cta > div { flex: 999 1 420px; min-width: 0; }
+.project-detail-cta h2 { margin: 0 0 12px; font-size: clamp(28px, 3.4vw, 46px); }
+.project-detail-cta p { margin: 0; max-width: 52ch; font-size: 16px; line-height: 1.8; }
+.project-detail-cta .pill-btn { flex: 0 0 auto; }
+
+/* ============================================================
+   Breakpoints
+   ============================================================ */
 @media (max-width: 900px) {
-  .project-detail-grid { grid-template-columns: 1fr; }
-  .project-detail-lead { aspect-ratio: 4/3; }
+  .project-hero-designer { flex-basis: 100%; }
 }
 @media (max-width: 640px) {
   .project-detail-gallery { columns: 1; }
+  .project-file-row { grid-template-columns: 1fr; gap: 6px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-palette-swatch img,
+  .project-more-image img { transition: none; }
+  .project-palette-grid a:hover .project-palette-swatch img,
+  .project-more-card:hover .project-more-image img { transform: none; }
 }
