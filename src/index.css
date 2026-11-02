@@ -33,6 +33,10 @@
   --weight-hero: 275;
   --weight-semibold: 600;
 
+  /* The sticky header's height: 18px padding each side of a 44px row. The
+     Projects hero pulls itself up by exactly this to sit under the header,
+     so the two must not drift apart. */
+  --header-height: 80px;
   --radius-pill: 999px;
   --shadow-header: 0px 2px 17.5px 0px rgba(0,0,0,0.25);
 
