@@ -1,12 +1,12 @@
 export const DEFAULT_DIMENSION = '2500 x 620 x 0.4mm';
 
 export const COLLECTION_INFO = {
-  athens: { tagline: 'Ebony and walnut, cut on the quarter', idTagline: 'Eboni dan walnut, potongan quarter' },
-  berlin: { tagline: 'Rift oak and ash, straight and exact', idTagline: 'Oak dan ash rift, lurus dan presisi' },
-  cairo: { tagline: 'Light oak and pine, with a calm grain', idTagline: 'Oak dan pinus terang, berserat tenang' },
-  cannes: { tagline: 'Walnut, teak and burl in warm tones', idTagline: 'Walnut, jati, dan burl bernuansa hangat' },
-  oslo: { tagline: 'Pale and grey oaks, Nordic in tone', idTagline: 'Oak pucat dan abu-abu, bernuansa Nordik' },
-  zurich: { tagline: 'Sculpted, geometric and end-grain surfaces', idTagline: 'Permukaan pahat, geometris, dan end-grain' },
+  athens: { tagline: 'Defined lines, natural sophistication', idTagline: 'Garis yang tegas, kecanggihan yang alami' },
+  berlin: { tagline: 'Crafted with absolute precision', idTagline: 'Dikerjakan dengan presisi mutlak' },
+  cairo: { tagline: 'Design in its purest form', idTagline: 'Desain dalam bentuknya yang paling murni' },
+  cannes: { tagline: 'Stillness, shaped in detail', idTagline: 'Ketenangan, dibentuk dalam detail' },
+  oslo: { tagline: 'Soft light, Nordic calm', idTagline: 'Cahaya lembut, ketenangan Nordik' },
+  zurich: { tagline: 'Traces of silence within the grain', idTagline: 'Jejak keheningan di dalam serat' },
 };
 
 export const PRODUCTS = [
