@@ -18,7 +18,10 @@
   height: 100%;
   object-fit: cover;
   object-position: center 48%;
+  opacity: 0;
+  transition: opacity 1s ease;
 }
+.projects-hero-backdrop.is-active { opacity: 1; }
 .projects-hero-wash {
   position: absolute;
   z-index: -1;
@@ -239,6 +242,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .projects-hero-backdrop,
   .projects-hero-arrow,
   .projects-filters button,
   .projects-tile-image img,

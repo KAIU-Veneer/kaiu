@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { PhotoCycle, pillClass } from '../components/Shared.jsx';
 import { PROJECTS } from '../data.js';
@@ -51,12 +51,44 @@ export default function Projects() {
   useDocumentMeta(t.meta.projects);
   const [activeType, setActiveType] = useState('all');
   const ctaRef = useReveal();
-  const featured = PROJECTS.find((project) => project.id === 'teazzi') || PROJECTS[0];
+  const initialFeaturedIndex = Math.max(0, PROJECTS.findIndex((project) => project.id === 'teazzi'));
+  const [featuredIndex, setFeaturedIndex] = useState(initialFeaturedIndex);
+  const [heroPaused, setHeroPaused] = useState(false);
+  const featured = PROJECTS[featuredIndex] || PROJECTS[0];
   const availableTypes = PROJECT_TYPES.filter((type) => PROJECTS.some((project) => projectType(project) === type));
   const types = ['all', ...availableTypes];
   const visibleProjects = PROJECTS.filter((project) => activeType === 'all' || projectType(project) === activeType);
   const projectLabel = (type) => t.projects.types[type];
   const featuredLocation = lang === 'id' ? featured.idLocation : featured.location;
+
+  useEffect(() => {
+    if (PROJECTS.length < 2 || heroPaused) return undefined;
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let timer;
+    const stop = () => {
+      window.clearInterval(timer);
+      timer = undefined;
+    };
+    const start = () => {
+      stop();
+      if (!document.hidden && !reducedMotion.matches) {
+        timer = window.setInterval(() => {
+          if (document.body.classList.contains('nav-is-open')) return;
+          setFeaturedIndex((index) => (index + 1) % PROJECTS.length);
+        }, 3000);
+      }
+    };
+    const onVisibilityChange = () => (document.hidden ? stop() : start());
+    const onMotionChange = (event) => (event.matches ? stop() : start());
+    start();
+    document.addEventListener('visibilitychange', onVisibilityChange);
+    reducedMotion.addEventListener?.('change', onMotionChange);
+    return () => {
+      stop();
+      document.removeEventListener('visibilitychange', onVisibilityChange);
+      reducedMotion.removeEventListener?.('change', onMotionChange);
+    };
+  }, [featuredIndex, heroPaused]);
 
   const scrollToProjects = (event) => {
     event.preventDefault();
@@ -71,20 +103,34 @@ export default function Projects() {
 
   return (
     <div className="projects-page">
-      <section className="projects-hero" data-header-surface="colored">
-        <img
-          className="projects-hero-backdrop"
-          {...projectPhoto(featured.images[0].src)}
-          sizes="100vw"
-          width={featured.images[0].w}
-          height={featured.images[0].h}
-          alt=""
-          fetchPriority="high"
-          aria-hidden="true"
-        />
+      <section
+        className="projects-hero"
+        data-header-surface="colored"
+        onFocusCapture={() => setHeroPaused(true)}
+        onBlurCapture={(event) => {
+          if (!event.currentTarget.contains(event.relatedTarget)) setHeroPaused(false);
+        }}
+      >
+        {PROJECTS.map((project, index) => {
+          const isActive = index === featuredIndex;
+          const isNext = index === (featuredIndex + 1) % PROJECTS.length;
+          if (!isActive && !isNext) return null;
+          return (
+            <img
+              key={project.id}
+              className={`projects-hero-backdrop${isActive ? ' is-active' : ''}`}
+              {...projectPhoto(project.images[0].src)}
+              sizes="100vw"
+              width={project.images[0].w}
+              height={project.images[0].h}
+              alt=""
+              fetchpriority={index === initialFeaturedIndex ? 'high' : 'low'}
+              aria-hidden="true"
+            />
+          );
+        })}
         <div className="projects-hero-wash" aria-hidden="true" />
         <div className="projects-hero-copy">
-          <span className="eyebrow">{t.projects.eyebrow}</span>
           <h1>{t.projects.title1}<br />{t.projects.title2}</h1>
           <p>{t.projects.intro}</p>
           <a href="#project-collection" onClick={scrollToProjects} className="text-cta">
@@ -105,7 +151,6 @@ export default function Projects() {
         <div className="projects-listing-head">
           <div className="projects-listing-intro">
             <div>
-              <span className="eyebrow">{t.projects.collectionEyebrow}</span>
               <h2 id="projects-list-title">{t.projects.collectionTitle}</h2>
             </div>
             <p>{t.projects.collectionIntro}</p>

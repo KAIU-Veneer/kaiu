@@ -67,7 +67,7 @@ export default function Home() {
           // Hold still while the mobile menu covers the page.
           if (document.body.classList.contains('nav-is-open')) return;
           setSlide((index) => (index + 1) % heroProjects.length);
-        }, 5000);
+        }, 3000);
       }
     };
     const onVisibilityChange = () => (document.hidden ? stop() : start());
@@ -105,8 +105,6 @@ export default function Home() {
       <section
         className="hero"
         data-header-surface="colored"
-        onMouseEnter={() => setHeroPaused(true)}
-        onMouseLeave={() => setHeroPaused(false)}
         onFocusCapture={() => setHeroPaused(true)}
         onBlurCapture={(event) => {
           if (!event.currentTarget.contains(event.relatedTarget)) setHeroPaused(false);
