@@ -19,19 +19,10 @@ function displayName(name, collectionLabel) {
 }
 
 const TONE_OPTIONS = ['light', 'warm', 'cool', 'dark', 'colorful'];
-const TONE_TERMS = {
-  light: /\b(light|pale|paler|ivory|white|cream|blonde|bleached|alabaster|snow|sand|linen|chalk|pearl|champagne|natural white|wheat|beige)\b/i,
-  warm: /\b(warm|brown|walnut|honey|amber|caramel|russet|cinnamon|mocha|latte|cocoa|espresso|coffee|golden|gold|chestnut|cognac|terracotta|clay|copper|tawny|tan|sienna|oak burl)\b/i,
-  cool: /\b(cool|grey|gray|silver|ash|slate|blue|indigo|cobalt|mist|steel|smoke|graphite|cement|pewter|frost|ice|jade|teal)\b/i,
-  dark: /\b(dark|deep|black|ebony|charcoal|midnight|noir|raven|burnt|smoked|carbon|shadow|onyx|espresso)\b/i,
-  colorful: /\b(colorful|multi.colou?r|vibrant|color pop|mosaic|crimson|sangria|amethyst|domino|cloisonne|terraz?zo|starry|jade|flower|chenille|weave|stripes|tiles|contour|pattern)\b/i,
-};
-
+// Each veneer carries its tones in data.js, read from the colour of its
+// swatch, so rewording a description never moves it between filters.
 function productTones(product) {
-  const text = `${product.name} ${product.longDesc || ''}`;
-  const matches = TONE_OPTIONS.filter((tone) => TONE_TERMS[tone].test(text));
-  // Wood designs without a strong color cue read as warm, natural tones.
-  return matches.length ? matches : ['warm'];
+  return product.tones || ['warm'];
 }
 
 function ToneSelect({ options, value, onChange, label }) {
