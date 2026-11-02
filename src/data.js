@@ -1,12 +1,12 @@
 export const DEFAULT_DIMENSION = '2500 x 620 x 0.4mm';
 
 export const COLLECTION_INFO = {
-  athens: { tagline: 'Defined lines, natural sophistication', idTagline: 'Garis tegas, kecanggihan alami' },
-  berlin: { tagline: 'Crafted with absolute precision', idTagline: 'Dibuat dengan presisi mutlak' },
-  cairo: { tagline: 'Design in its purest form', idTagline: 'Desain dalam bentuk paling murni' },
-  cannes: { tagline: 'Stillness, shaped in detail', idTagline: 'Keheningan yang terbentuk dari detail' },
-  oslo: { tagline: 'Soft light, Nordic calm', idTagline: 'Cahaya lembut, ketenangan Nordik' },
-  zurich: { tagline: 'Traces of silence within the grain', idTagline: 'Jejak keheningan dalam serat kayu' },
+  athens: { tagline: 'Ebony and walnut, cut on the quarter', idTagline: 'Eboni dan walnut, potongan quarter' },
+  berlin: { tagline: 'Rift oak and ash, straight and exact', idTagline: 'Oak dan ash rift, lurus dan presisi' },
+  cairo: { tagline: 'Light oak and pine, with a calm grain', idTagline: 'Oak dan pinus terang, berserat tenang' },
+  cannes: { tagline: 'Walnut, teak and burl in warm tones', idTagline: 'Walnut, jati, dan burl bernuansa hangat' },
+  oslo: { tagline: 'Pale and grey oaks, Nordic in tone', idTagline: 'Oak pucat dan abu-abu, bernuansa Nordik' },
+  zurich: { tagline: 'Sculpted, geometric and end-grain surfaces', idTagline: 'Permukaan pahat, geometris, dan end-grain' },
 };
 
 export const PRODUCTS = [
@@ -26,8 +26,8 @@ export const PRODUCTS = [
     idBestFor: 'kabinet, panel dinding, furnitur rumah tangga',
     finish: 'Hard oil wax',
     idFinish: 'Hard oil wax',
-    longDesc: "Athens Almond Oak features a clean, straight rift-cut grain with a soft, warm almond undertone. Its linear texture brings a modern, understated elegance to interior spaces, while the durable oak base ensures longevity and timeless appeal without visual clutter.",
-    idLongDesc: "Athens Almond Oak menampilkan serat potongan rift yang bersih dan lurus dengan nuansa almond yang lembut dan hangat. Teksturnya yang linear menghadirkan keanggunan modern yang bersahaja pada ruang interior, sementara dasar oak yang kuat menjamin daya tahan dan pesona abadi tanpa kesan ramai."
+    longDesc: "Athens Almond Oak has a clean, straight rift-cut grain over a soft, warm almond undertone. The linear texture gives a room a quiet, modern finish, and the oak beneath it wears well for years without looking busy.",
+    idLongDesc: "Athens Almond Oak memiliki serat potongan rift yang bersih dan lurus di atas nuansa almond yang lembut dan hangat. Teksturnya yang linear memberi ruangan kesan modern yang tenang, dan oak di bawahnya tetap awet bertahun-tahun tanpa terlihat ramai."
   },
   {
     id: 'athens-americano',
@@ -46,8 +46,8 @@ export const PRODUCTS = [
     idBestFor: 'dasbor mewah, furnitur statement, panel aksen',
     finish: 'Hard oil wax',
     idFinish: 'Hard oil wax',
-    longDesc: "Athens Americano is characterized by its swirling, highly figured burl grain and rich, espresso-dark tones. This complex, organic pattern creates a mesmerizing visual depth, making it an ideal choice for high-end statement pieces and luxurious, focal-point accents.",
-    idLongDesc: "Athens Americano dicirikan oleh serat burl yang berpusar dengan figur yang kaya serta nuansa gelap sepekat espresso. Pola organik yang kompleks ini menciptakan kedalaman visual yang memukau, menjadikannya pilihan ideal untuk karya statement kelas atas dan aksen mewah yang menjadi titik fokus."
+    longDesc: "Athens Americano is a burl walnut with swirling, heavily figured grain in deep espresso tones. The pattern has real depth to it, so it works best on a single statement piece or a focal accent.",
+    idLongDesc: "Athens Americano adalah walnut burl dengan serat berpusar yang kaya figur, dalam nuansa espresso yang pekat. Polanya punya kedalaman yang nyata, sehingga paling cocok untuk satu karya statement atau aksen yang menjadi titik fokus."
   },
   {
     id: 'athens-ash-oak',
@@ -65,8 +65,8 @@ export const PRODUCTS = [
     idBestFor: 'interior minimalis, mebel modern, lantai',
     finish: 'Hard oil wax',
     idFinish: 'Hard oil wax',
-    longDesc: "Athens Ash Oak combines the familiar straight, tight grain of rift-cut oak with a muted, grey-brown ash wash. This subtle coloration cools down the natural warmth of the wood, presenting a highly contemporary aesthetic perfect for minimalist and Scandinavian-inspired designs.",
-    idLongDesc: "Athens Ash Oak memadukan serat oak potongan rift yang lurus dan rapat dengan sapuan warna ash abu-abu kecokelatan yang lembut. Pewarnaan halus ini meredam kehangatan alami kayu, menghadirkan estetika yang sangat kontemporer dan sempurna untuk desain minimalis bernuansa Skandinavia."
+    longDesc: "Athens Ash Oak keeps the straight, tight grain of rift-cut oak and washes it in a muted grey-brown. The colour cools the wood's natural warmth, which suits minimalist and Scandinavian interiors.",
+    idLongDesc: "Athens Ash Oak mempertahankan serat oak potongan rift yang lurus dan rapat, dengan sapuan warna abu-abu kecokelatan yang redup. Warnanya mendinginkan kehangatan alami kayu, cocok untuk interior minimalis dan bernuansa Skandinavia."
   },
   {
     id: 'athens-bark-walnut',
@@ -86,8 +86,8 @@ export const PRODUCTS = [
     idBestFor: 'Meja kerja, arsitektural pintu, premium kabinet',
     finish: 'Clear oil finish',
     idFinish: 'Finishing minyak bening',
-    longDesc: "Athens Bark Walnut displays a sweeping cathedral grain that highlights the natural beauty and organic flow of the tree's growth rings. Its rich, medium-dark brown palette brings warmth and sophistication, celebrating the classic, unadulterated appeal of traditional flat-cut walnut.",
-    idLongDesc: "Athens Bark Walnut menampilkan serat katedral yang melengkung luas, menonjolkan keindahan alami dan aliran organik lingkar tahun pohon. Palet cokelat sedang hingga gelapnya yang kaya menghadirkan kehangatan dan kecanggihan, merayakan pesona klasik walnut potongan flat tradisional yang apa adanya."
+    longDesc: "Athens Bark Walnut has the broad cathedral grain of flat-cut walnut, following the tree's growth rings across the sheet. The medium-to-dark brown is warm and unfussy: classic walnut, left close to how it grows.",
+    idLongDesc: "Athens Bark Walnut memiliki serat katedral lebar khas walnut potongan flat, mengikuti lingkar tahun pohon di sepanjang lembaran. Cokelat sedang hingga gelapnya hangat dan apa adanya: walnut klasik yang dibiarkan dekat dengan bentuk aslinya."
   },
   {
     id: 'athens-bronze-ebony',
@@ -106,8 +106,8 @@ export const PRODUCTS = [
     idBestFor: 'Suite eksekutif, perlengkapan ritel mewah, kotak cerutu (humidor)',
     finish: 'Polished lacquer',
     idFinish: 'Pelapis dipoles',
-    longDesc: "Athens Bronze Ebony is a striking veneer known for its dramatic, high-contrast striping. Featuring deep black lines set against a warm, metallic bronze-brown background, its precise quarter-cut grain creates an opulent, linear rhythm suited for the most luxurious commercial and residential environments.",
-    idLongDesc: "Athens Bronze Ebony adalah veneer mencolok yang dikenal dengan garis-garisnya yang dramatis dan berkontras tinggi. Dengan garis hitam pekat di atas latar cokelat perunggu metalik yang hangat, serat potongan quarter yang presisi menciptakan ritme linear yang mewah, cocok untuk lingkungan komersial dan hunian paling mewah."
+    longDesc: "Athens Bronze Ebony is defined by its high-contrast striping: deep black lines on a warm, bronze-brown ground. The quarter-cut grain runs straight and even, giving a strong linear rhythm to upscale commercial and residential interiors.",
+    idLongDesc: "Athens Bronze Ebony dikenali dari garis-garisnya yang berkontras tinggi: garis hitam pekat di atas latar cokelat perunggu yang hangat. Serat potongan quarter-nya lurus dan rata, memberi ritme linear yang tegas pada interior komersial dan hunian kelas atas."
   },
   {
     id: 'athens-bronze-oak',
@@ -125,8 +125,8 @@ export const PRODUCTS = [
     idBestFor: 'Panel komersial, interior hospitality, perabot tanam',
     finish: 'Matte urethane',
     idFinish: 'Uretan Matte',
-    longDesc: "Athens Bronze Oak offers a refined, tightly woven rift-cut texture enhanced by a specialized fuming process that imbues the wood with a rich, metallic bronze-like sheen. This even, consistent coloration provides a sophisticated and warm backdrop for modern interior spaces.",
-    idLongDesc: "Athens Bronze Oak menawarkan tekstur potongan rift yang halus dan rapat, diperkaya proses fuming khusus yang memberi kayu kilau menyerupai perunggu metalik yang kaya. Pewarnaan yang rata dan konsisten ini menjadi latar yang canggih dan hangat untuk ruang interior modern."
+    longDesc: "Athens Bronze Oak is a fine, tight rift-cut oak, fumed to give it a deep, bronze-like sheen. The colour is even across the sheet, making it a warm, composed backdrop for modern interiors.",
+    idLongDesc: "Athens Bronze Oak adalah oak potongan rift yang halus dan rapat, melalui proses fuming untuk memberi kilau seperti perunggu. Warnanya rata di seluruh lembaran, menjadikannya latar yang hangat dan tenang untuk interior modern."
   },
   {
     id: 'athens-bronze-walnut',
@@ -145,8 +145,8 @@ export const PRODUCTS = [
     idBestFor: 'Furnitur moderne, panel akustiking, residensial pintu',
     finish: 'Satin wax',
     idFinish: 'Lilin Satin',
-    longDesc: "Athens Bronze Walnut features the straight, distinct lines of a quarter-cut log, paired with a warm, coppery-brown hue. The highly structured grain pattern minimizes visual noise, offering a sleek, contemporary take on classic walnut that works beautifully in expansive applications.",
-    idLongDesc: "Athens Bronze Walnut menampilkan garis lurus yang tegas dari kayu potongan quarter, dipadukan dengan rona cokelat tembaga yang hangat. Pola seratnya yang sangat terstruktur meminimalkan keramaian visual, menawarkan tafsir walnut klasik yang ramping dan kontemporer, indah untuk aplikasi berbidang luas."
+    longDesc: "Athens Bronze Walnut has the straight, distinct lines of quarter-cut walnut in a warm, coppery brown. The grain is orderly and quiet, a cleaner take on classic walnut that holds up well over large surfaces.",
+    idLongDesc: "Athens Bronze Walnut memiliki garis lurus yang tegas khas walnut potongan quarter, dalam warna cokelat tembaga yang hangat. Seratnya teratur dan tenang, versi walnut klasik yang lebih bersih dan tetap rapi di bidang yang luas."
   },
   {
     id: 'athens-brown-pearwood',
@@ -164,8 +164,8 @@ export const PRODUCTS = [
     idBestFor: 'Marquetry halus, interior butiks',
     finish: 'Hand-rubbed oil',
     idFinish: 'Minyak gosok tangan',
-    longDesc: "Athens Brown Pearwood is highly prized for its incredibly fine, uniform texture and lack of conspicuous grain lines. Through a careful steaming process, the wood achieves a warm, rosy-brown hue that brings a soft, velvety elegance to intricate woodworking and delicate interior details.",
-    idLongDesc: "Athens Brown Pearwood sangat dihargai karena teksturnya yang sangat halus dan seragam tanpa garis serat yang mencolok. Melalui proses pengukusan yang cermat, kayu ini memperoleh rona cokelat kemerahan yang hangat, menghadirkan keanggunan lembut seperti beludru pada pengerjaan kayu yang rumit dan detail interior yang halus."
+    longDesc: "Athens Brown Pearwood is valued for its very fine, even texture with almost no visible grain lines. Steaming gives it a warm, rosy brown and a soft, velvety look, well suited to detailed joinery and small interior pieces.",
+    idLongDesc: "Athens Brown Pearwood dihargai karena teksturnya yang sangat halus dan rata, hampir tanpa garis serat yang terlihat. Proses pengukusan memberinya warna cokelat kemerahan yang hangat dan tampilan lembut seperti beludru, cocok untuk pengerjaan kayu yang detail dan elemen interior kecil."
   },
   {
     id: 'athens-brown-walnut',
@@ -183,8 +183,8 @@ export const PRODUCTS = [
     idBestFor: 'Pertukangan kayu kelas atas, ruang rapat korporat, kabinet',
     finish: 'Matte varnish',
     idFinish: 'Pernis Matte',
-    longDesc: "Athens Brown Walnut delivers the quintessential dark, chocolatey tones expected from premium black walnut, accented by dark, linear pores resulting from the quarter-cutting process. It provides a highly structured, refined look that effortlessly anchors both corporate and residential designs.",
-    idLongDesc: "Athens Brown Walnut menghadirkan nuansa gelap cokelat pekat khas black walnut premium, diperkuat pori-pori gelap yang linear hasil proses potongan quarter. Veneer ini memberikan tampilan yang sangat terstruktur dan halus, dengan mudah menjadi jangkar bagi desain korporat maupun hunian."
+    longDesc: "Athens Brown Walnut has the dark chocolate tone of good black walnut, with fine dark pores running in lines from the quarter cut. It looks ordered and refined, and sits as comfortably in an office as in a home.",
+    idLongDesc: "Athens Brown Walnut memiliki warna cokelat pekat khas black walnut berkualitas, dengan pori-pori gelap halus yang tersusun memanjang dari potongan quarter. Tampilannya teratur dan rapi, sama pasnya di kantor maupun di rumah."
   },
   {
     id: 'athens-burnt-ebony',
@@ -203,8 +203,8 @@ export const PRODUCTS = [
     idBestFor: 'Dinding aksen, furnitur mewah custome',
     finish: 'High-gloss polyurethane',
     idFinish: 'Poliuretan glossy tinggi',
-    longDesc: "Athens Burnt Ebony takes the dramatic striping of natural ebony and pushes it toward the absolute darkest end of the spectrum. The intense, near-black primary tones are broken only by razor-thin, subtle lines of deep brown, creating an incredibly moody and powerful visual statement.",
-    idLongDesc: "Athens Burnt Ebony membawa garis-garis dramatis ebony alami ke ujung spektrum yang paling gelap. Nuansa utama yang pekat hampir hitam hanya disela garis cokelat tua yang setipis silet, menciptakan pernyataan visual yang sangat muram dan kuat."
+    longDesc: "Athens Burnt Ebony takes ebony's striping as dark as it will go. The near-black ground is broken only by very thin lines of deep brown, for a moody, heavy surface.",
+    idLongDesc: "Athens Burnt Ebony membawa garis-garis ebony ke warna paling gelap. Latarnya yang nyaris hitam hanya disela garis cokelat tua yang sangat tipis, menghasilkan permukaan yang muram dan berbobot."
   },
   {
     id: 'athens-cider-oak',
@@ -223,8 +223,8 @@ export const PRODUCTS = [
     idBestFor: 'panel arsitektural, mebel modern, furnitur rumah tangga',
     finish: 'Satin urethane',
     idFinish: 'Uretan Satin',
-    longDesc: "Athens Cider Oak features a clean, linear rift-cut grain that minimizes the cathedral patterns of traditional oak. Its warm, golden-brown cider tones bring a bright and inviting atmosphere to any interior, making it a versatile choice for contemporary applications.",
-    idLongDesc: "Athens Cider Oak menampilkan serat potongan rift yang bersih dan linear, yang meminimalkan pola katedral oak tradisional. Nuansa cider cokelat keemasan yang hangat menghadirkan suasana cerah dan mengundang pada interior apa pun, menjadikannya pilihan serbaguna untuk aplikasi kontemporer."
+    longDesc: "Athens Cider Oak is a rift-cut oak, so the grain runs straight with little of the cathedral pattern found in flat-cut oak. Its golden-brown cider tone brightens a room and works across most contemporary uses.",
+    idLongDesc: "Athens Cider Oak adalah oak potongan rift, sehingga seratnya lurus dengan sedikit pola katedral seperti pada oak potongan flat. Nuansa cider cokelat keemasannya mencerahkan ruangan dan cocok untuk sebagian besar aplikasi kontemporer."
   },
   {
     id: 'athens-cinnamon-walnut',
@@ -243,8 +243,8 @@ export const PRODUCTS = [
     idBestFor: 'premium kabinet, meja eksekutif, pelapis dinding',
     finish: 'Clear oil finish',
     idFinish: 'Finishing minyak bening',
-    longDesc: "Infused with deep, reddish-brown warmth, Athens Cinnamon Walnut highlights the structured, straight lines characteristic of quarter-cut logs. This elegant veneer provides a rich, spicy depth that elevates traditional and transitional spaces alike.",
-    idLongDesc: "Dengan kehangatan cokelat kemerahan yang dalam, Athens Cinnamon Walnut menonjolkan garis lurus terstruktur yang khas dari kayu potongan quarter. Veneer elegan ini memberikan kedalaman yang kaya dan hangat seperti rempah, mengangkat ruang tradisional maupun transisional."
+    longDesc: "Athens Cinnamon Walnut is a quarter-cut walnut with straight, regular lines and a deep reddish-brown colour. The warm, spiced tone suits traditional rooms as well as transitional ones.",
+    idLongDesc: "Athens Cinnamon Walnut adalah walnut potongan quarter dengan garis lurus yang teratur dan warna cokelat kemerahan yang dalam. Nuansanya yang hangat seperti rempah cocok untuk ruang tradisional maupun transisional."
   },
   {
     id: 'athens-clay-walnut',
@@ -262,8 +262,8 @@ export const PRODUCTS = [
     idBestFor: 'interior minimalis, panel-panel akustik, perabot tanam custom',
     finish: 'Matte lacquer',
     idFinish: 'Pelapis Matte',
-    longDesc: "Athens Clay Walnut offers a sophisticated, earthy aesthetic with its muted, grey-brown undertones. The tight, straight rift-cut grain creates a uniform texture that serves as a beautifully subtle, neutral backdrop for modern, minimalist designs.",
-    idLongDesc: "Athens Clay Walnut menawarkan estetika bersahaja yang canggih dengan nuansa abu-abu kecokelatan yang lembut. Serat potongan rift yang rapat dan lurus menciptakan tekstur seragam yang menjadi latar netral yang indah dan halus untuk desain modern dan minimalis."
+    longDesc: "Athens Clay Walnut is an earthy walnut with muted grey-brown undertones. The tight, straight rift-cut grain gives an even texture, a soft and neutral backdrop for modern, minimal rooms.",
+    idLongDesc: "Athens Clay Walnut adalah walnut bernuansa tanah dengan warna dasar abu-abu kecokelatan yang redup. Serat potongan rift yang rapat dan lurus memberi tekstur yang rata, latar netral yang lembut untuk ruang modern dan minimalis."
   },
   {
     id: 'athens-cocoa-elm',
@@ -282,8 +282,8 @@ export const PRODUCTS = [
     idBestFor: 'perlengkapan ritel butik, residensial pintu, furnitur haluse',
     finish: 'Satin finish',
     idFinish: 'Finishing Satin',
-    longDesc: "Characterized by its smooth, consistent grain and rich, medium-brown chocolate hues, Athens Cocoa Elm delivers a refined and luxurious appearance. The quarter-cut processing ensures a clean linear pattern that is highly sought after in bespoke woodworking.",
-    idLongDesc: "Dicirikan oleh seratnya yang halus dan konsisten serta rona cokelat sedang yang kaya, Athens Cocoa Elm menghadirkan tampilan yang halus dan mewah. Proses potongan quarter menghasilkan pola linear yang bersih, yang sangat dicari dalam pengerjaan kayu custom."
+    longDesc: "Athens Cocoa Elm has a smooth, consistent grain in a medium chocolate brown. Quarter cutting keeps the pattern clean and linear, which is why it is often chosen for bespoke joinery.",
+    idLongDesc: "Athens Cocoa Elm memiliki serat yang halus dan konsisten dalam warna cokelat sedang. Potongan quarter menjaga polanya tetap bersih dan linear, karena itu veneer ini sering dipilih untuk pengerjaan kayu custom."
   },
   {
     id: 'athens-coffee-walnut',
@@ -301,8 +301,8 @@ export const PRODUCTS = [
     idBestFor: 'furnitur statement, pertukangan kayu arsitektural, interior mewah',
     finish: 'Hand-rubbed oil',
     idFinish: 'Minyak gosok tangan',
-    longDesc: "Athens Coffee Walnut showcases a delicate balance of dark, roasted coffee tones and beautiful natural grain movement. The flat-cut method reveals subtle sweeping patterns, adding an organic, sophisticated charm to high-end interior elements.",
-    idLongDesc: "Athens Coffee Walnut menampilkan keseimbangan halus antara nuansa gelap kopi sangrai dan gerak serat alami yang indah. Metode potongan flat memunculkan pola melengkung yang samar, menambahkan pesona organik dan canggih pada elemen interior kelas atas."
+    longDesc: "Athens Coffee Walnut pairs dark, roasted-coffee tones with natural grain movement. The flat cut brings out gentle sweeping patterns, adding an organic character to high-end furniture and interior details.",
+    idLongDesc: "Athens Coffee Walnut memadukan nuansa gelap kopi sangrai dengan gerak serat alami. Potongan flat memunculkan pola melengkung yang lembut, memberi karakter organik pada furnitur dan detail interior kelas atas."
   },
   {
     id: 'athens-copper-ebony',
@@ -320,8 +320,8 @@ export const PRODUCTS = [
     idBestFor: 'Aksen komersial kelas atas, mewah kabinet',
     finish: 'Polished high-gloss',
     idFinish: 'Glossy tinggi dipoles',
-    longDesc: "Athens Copper Ebony is a visually striking veneer that pairs a deep, dark brown background with vivid, copper-toned longitudinal striping. This highly exotic and dramatic wood creates an instant focal point in any premium luxury environment.",
-    idLongDesc: "Athens Copper Ebony adalah veneer yang mencolok secara visual, memadukan latar cokelat tua yang pekat dengan garis memanjang bernuansa tembaga yang hidup. Kayu yang sangat eksotis dan dramatis ini langsung menjadi titik fokus di lingkungan mewah premium mana pun."
+    longDesc: "Athens Copper Ebony sets bright, copper-toned stripes along the length of a deep, dark brown ground. It is an exotic, dramatic veneer that draws the eye wherever it is used in a high-end interior.",
+    idLongDesc: "Athens Copper Ebony menghadirkan garis-garis bernuansa tembaga yang cerah di sepanjang latar cokelat tua yang pekat. Veneer yang eksotis dan dramatis ini menarik perhatian di mana pun ia dipakai dalam interior kelas atas."
   },
   {
     id: 'athens-coral-walnut',
@@ -339,8 +339,8 @@ export const PRODUCTS = [
     idBestFor: 'dinding aksen, kredenza modern, desain hospitality',
     finish: 'Matte varnish',
     idFinish: 'Pernis Matte',
-    longDesc: "With gentle, warm pinkish-brown undertones, Athens Coral Walnut offers a soft yet distinct variation of classic walnut. The flat-cut cathedral grain is elegant and flowing, bringing a welcoming and organic warmth to interior spaces.",
-    idLongDesc: "Dengan nuansa cokelat kemerahmudaan yang lembut dan hangat, Athens Coral Walnut menawarkan variasi walnut klasik yang lembut namun berbeda. Serat katedral potongan flat yang elegan dan mengalir menghadirkan kehangatan organik yang mengundang pada ruang interior."
+    longDesc: "Athens Coral Walnut has a soft, warm pinkish-brown undertone, a gentler and more distinct variation on classic walnut. Its flat-cut cathedral grain flows across the sheet and gives a room an easy, natural warmth.",
+    idLongDesc: "Athens Coral Walnut memiliki nuansa dasar cokelat kemerahmudaan yang lembut dan hangat, variasi walnut klasik yang lebih lembut dan berbeda. Serat katedral potongan flat-nya mengalir di sepanjang lembaran dan memberi ruangan kehangatan alami yang santai."
   },
   {
     id: 'athens-crown-oak',
@@ -359,8 +359,8 @@ export const PRODUCTS = [
     idBestFor: 'Furnitur tradisionale, panel dinding, residensial kabinet',
     finish: 'Clear urethane',
     idFinish: 'Uretan bening',
-    longDesc: "Athens Crown Oak is defined by its prominent 'crown' or cathedral grain pattern, a classic hallmark of flat-cut logs. Its rich, mid-tone brown color celebrates the natural, robust character of oak, making it a timeless choice for enduring designs.",
-    idLongDesc: "Athens Crown Oak ditandai pola serat 'crown' atau katedral yang menonjol, ciri klasik kayu potongan flat. Warna cokelat menengahnya yang kaya merayakan karakter oak yang alami dan kokoh, menjadikannya pilihan abadi untuk desain yang tahan lama."
+    longDesc: "Athens Crown Oak is named for its pronounced crown, or cathedral, grain, the classic mark of a flat-cut log. The mid-brown colour shows off oak's sturdy natural character and will not date.",
+    idLongDesc: "Athens Crown Oak dinamai dari serat crown, atau katedral, yang menonjol, ciri klasik kayu potongan flat. Warna cokelat menengahnya menonjolkan karakter alami oak yang kokoh dan tidak lekang oleh waktu."
   },
   {
     id: 'athens-desert',
@@ -379,8 +379,8 @@ export const PRODUCTS = [
     idBestFor: 'Aksen dasbor, tatahan mewah, karya seni statement',
     finish: 'High-gloss polish',
     idFinish: 'Poles glossy tinggi',
-    longDesc: "Athens Desert features an intense, highly figured burl pattern with swirling, unpredictable grain lines and sharp contrasts of sand and dark brown tones. This mesmerizing, wild aesthetic evokes the shifting sands of a desert landscape, perfect for luxury accents.",
-    idLongDesc: "Athens Desert menampilkan pola burl yang intens dengan figur kaya, garis serat berpusar yang tak terduga, serta kontras tajam nuansa pasir dan cokelat tua. Estetika liar yang memukau ini mengingatkan pada pasir gurun yang terus bergeser, sempurna untuk aksen mewah."
+    longDesc: "Athens Desert is a heavily figured burl with swirling, unpredictable grain and sharp contrast between sand and dark brown. The wild pattern recalls drifting desert sand and is best kept for luxury accents.",
+    idLongDesc: "Athens Desert adalah burl dengan figur yang kaya, serat berpusar yang tak terduga, dan kontras tajam antara warna pasir dan cokelat tua. Polanya yang liar mengingatkan pada pasir gurun yang bergeser, paling baik untuk aksen mewah."
   },
   {
     id: 'athens-dusty-walnut',
@@ -412,8 +412,8 @@ export const PRODUCTS = [
     idBestFor: 'ruang rapat korporat, interior hotel mewah, mebel ramping',
     finish: 'Satin wax',
     idFinish: 'Lilin Satin',
-    longDesc: "Athens Espresso Walnut delivers an exceptionally dark, near-black brown tone that exudes modern sophistication. The quarter-cut grain keeps the texture linear and restrained, allowing the deep, rich coloration to serve as a powerful architectural anchor.",
-    idLongDesc: "Athens Espresso Walnut menghadirkan nuansa cokelat yang sangat gelap, nyaris hitam, yang memancarkan kecanggihan modern. Serat potongan quarter menjaga teksturnya tetap linear dan terkendali, sehingga warnanya yang dalam dan kaya menjadi jangkar arsitektural yang kuat."
+    longDesc: "Athens Espresso Walnut is a very dark brown, close to black, with a clearly modern feel. The quarter-cut grain keeps the texture linear and restrained, so the depth of the colour can anchor the architecture.",
+    idLongDesc: "Athens Espresso Walnut berwarna cokelat sangat gelap, nyaris hitam, dengan kesan yang jelas modern. Serat potongan quarter menjaga teksturnya tetap linear dan terkendali, sehingga kedalaman warnanya menjadi jangkar bagi arsitektur ruang."
   },
   {
     id: 'athens-fawn-ebony',
@@ -426,8 +426,8 @@ export const PRODUCTS = [
     cutMethod: 'Quarter-cut',
     bestFor: 'Accent walls, custom furniture, retail fixtures',
     finish: 'Matte varnish',
-    longDesc: "Athens Fawn Ebony presents a striking contrast with its soft, fawn-colored background and bold, dark brown vertical striping. The quarter-cut processing ensures a clean, linear pattern that brings a dynamic yet elegant rhythm to contemporary interiors.",
-    idLongDesc: "Athens Fawn Ebony menghadirkan kontras yang mencolok dengan latar berwarna cokelat rusa yang lembut dan garis vertikal cokelat tua yang tegas. Proses potongan quarter menjamin pola linear yang bersih, menghadirkan ritme yang dinamis namun elegan pada interior kontemporer."
+    longDesc: "Athens Fawn Ebony sets bold, dark brown vertical stripes against a soft fawn background. The quarter cut keeps the pattern clean and linear, with a lively but measured rhythm for contemporary interiors.",
+    idLongDesc: "Athens Fawn Ebony menampilkan garis vertikal cokelat tua yang tegas di atas latar warna cokelat rusa yang lembut. Potongan quarter menjaga polanya tetap bersih dan linear, dengan ritme yang hidup namun terukur untuk interior kontemporer."
   },
   {
     id: 'athens-golden-brown',
@@ -441,8 +441,8 @@ export const PRODUCTS = [
     cutMethod: 'Flat-cut, stained',
     bestFor: 'Flooring, traditional cabinetry, wall panels',
     finish: 'Satin urethane',
-    longDesc: "Athens Golden Brown showcases the classic cathedral arches of flat-cut oak, enriched with a deep, golden-brown hue. This finish highlights the natural texture and open pores of the wood, bringing warmth and a timeless, robust character to any space.",
-    idLongDesc: "Athens Golden Brown menampilkan lengkung katedral klasik oak potongan flat, diperkaya rona cokelat keemasan yang dalam. Finishing ini menonjolkan tekstur alami dan pori-pori terbuka kayu, menghadirkan kehangatan serta karakter kokoh yang abadi pada ruang apa pun."
+    longDesc: "Athens Golden Brown has the classic cathedral arches of flat-cut oak in a deep golden brown. The colour brings out the wood's open pores and natural texture, giving a space warmth and a solid, lasting character.",
+    idLongDesc: "Athens Golden Brown memiliki lengkung katedral klasik oak potongan flat dalam warna cokelat keemasan yang dalam. Warnanya menonjolkan pori-pori terbuka dan tekstur alami kayu, memberi ruang kehangatan dan karakter yang kokoh dan bertahan lama."
   },
   {
     id: 'athens-honey-elm',
@@ -456,8 +456,8 @@ export const PRODUCTS = [
     cutMethod: 'Quarter-cut',
     bestFor: 'Modern furniture, decorative panels, doors',
     finish: 'Clear oil',
-    longDesc: "Athens Honey Elm features a beautifully straight, quarter-cut grain with a warm, golden-honey tone. The fine, uniform texture brings a bright, organic elegance to interiors, making it an excellent choice for light, contemporary millwork.",
-    idLongDesc: "Athens Honey Elm menampilkan serat potongan quarter yang lurus dan indah dengan nuansa madu keemasan yang hangat. Teksturnya yang halus dan seragam menghadirkan keanggunan organik yang cerah pada interior, menjadikannya pilihan sangat baik untuk pekerjaan kayu kontemporer bernuansa terang."
+    longDesc: "Athens Honey Elm is a quarter-cut elm with a straight grain and a warm, golden honey tone. Its fine, even texture keeps a room light and natural, and it is a strong choice for pale, contemporary joinery.",
+    idLongDesc: "Athens Honey Elm adalah elm potongan quarter dengan serat lurus dan nuansa madu keemasan yang hangat. Teksturnya yang halus dan rata menjaga ruangan tetap terang dan alami, pilihan yang tepat untuk pengerjaan kayu kontemporer bernuansa terang."
   },
   {
     id: 'athens-imperial-sandalwood',
@@ -470,8 +470,8 @@ export const PRODUCTS = [
     cutMethod: 'Flat-cut',
     bestFor: 'Luxury humidors, premium accents, executive suites',
     finish: 'Polished lacquer',
-    longDesc: "Athens Imperial Sandalwood exhibits a rich, dark base contrasted by striking, golden-yellow grain highlights. Its dynamic, flowing pattern creates an opulent atmosphere suited for high-end luxury applications and focal-point architectural elements.",
-    idLongDesc: "Athens Imperial Sandalwood memperlihatkan dasar gelap yang kaya, dikontraskan dengan sorotan serat kuning keemasan yang mencolok. Polanya yang dinamis dan mengalir menciptakan suasana mewah, cocok untuk aplikasi mewah kelas atas dan elemen arsitektural yang menjadi titik fokus."
+    longDesc: "Athens Imperial Sandalwood has a deep, dark base lit by golden-yellow streaks in the grain. The flowing pattern feels opulent, suited to high-end interiors and architectural features meant to be the focus.",
+    idLongDesc: "Athens Imperial Sandalwood memiliki dasar gelap yang dalam dengan guratan kuning keemasan pada seratnya. Polanya yang mengalir terasa mewah, cocok untuk interior kelas atas dan elemen arsitektural yang menjadi titik fokus."
   },
   {
     id: 'athens-java-smoked-oak',
@@ -485,8 +485,8 @@ export const PRODUCTS = [
     cutMethod: 'Rift-cut, smoked',
     bestFor: 'High-end casework, commercial interiors, minimalist furniture',
     finish: 'Matte lacquer',
-    longDesc: "Athens Java Smoked Oak offers a tight, linear rift-cut grain deepened by a specialized smoking process. This technique yields a consistent, dark espresso-brown tone that penetrates the wood, ensuring a rich, lasting color without obscuring the natural grain.",
-    idLongDesc: "Athens Java Smoked Oak menawarkan serat potongan rift yang rapat dan linear, diperdalam melalui proses pengasapan khusus. Teknik ini menghasilkan nuansa cokelat espresso gelap yang konsisten dan meresap ke dalam kayu, menjamin warna yang kaya dan tahan lama tanpa menutupi serat alaminya."
+    longDesc: "Athens Java Smoked Oak is a tight, linear rift-cut oak darkened by smoking. The process gives an even espresso-brown that goes into the wood itself, so the colour lasts and the grain still shows through.",
+    idLongDesc: "Athens Java Smoked Oak adalah oak potongan rift yang rapat dan linear, digelapkan melalui proses pengasapan. Proses ini memberi warna cokelat espresso yang rata dan meresap ke dalam kayu, sehingga warnanya tahan lama dan seratnya tetap terlihat."
   },
   {
     id: 'athens-latte-oak-01',
@@ -513,8 +513,8 @@ export const PRODUCTS = [
     cutMethod: 'Quarter-cut',
     bestFor: 'Architectural doors, feature walls, custom millwork',
     finish: 'Satin finish',
-    longDesc: "Athens Light Ebony pairs the dramatic, straight-line striping of classic ebony with a surprisingly light, sandy-brown background. This high-contrast quarter-cut veneer delivers a bold, modern graphic impact perfect for statement pieces.",
-    idLongDesc: "Athens Light Ebony memadukan garis lurus dramatis ebony klasik dengan latar cokelat berpasir yang terang secara mengejutkan. Veneer potongan quarter berkontras tinggi ini menghadirkan dampak grafis modern yang berani, sempurna untuk karya statement."
+    longDesc: "Athens Light Ebony keeps the straight, dramatic striping of classic ebony on an unexpectedly light, sandy-brown ground. The high-contrast quarter cut has a bold, graphic quality that suits statement pieces.",
+    idLongDesc: "Athens Light Ebony mempertahankan garis lurus dramatis ebony klasik di atas latar cokelat berpasir yang terang secara tak terduga. Potongan quarter berkontras tinggi ini memiliki kesan grafis yang tegas, cocok untuk karya statement."
   },
   {
     id: 'athens-macassar-burl-ebony',
@@ -528,8 +528,8 @@ export const PRODUCTS = [
     cutMethod: 'Quarter-cut',
     bestFor: 'Luxury retail, statement furniture, musical instruments',
     finish: 'High-gloss polyurethane',
-    longDesc: "Athens Macassar Burl Ebony features an intensely dark, near-black primary tone intersected by delicate, golden-brown vertical stripes. This precise orientation creates a sleek, sophisticated rhythm that exudes modern luxury.",
-    idLongDesc: "Athens Macassar Burl Ebony menampilkan nuansa utama yang sangat gelap, nyaris hitam, yang disela garis vertikal cokelat keemasan yang halus. Orientasi yang presisi ini menciptakan ritme ramping dan canggih yang memancarkan kemewahan modern."
+    longDesc: "Athens Macassar Burl Ebony is almost black, crossed by fine golden-brown vertical stripes. The stripes run with precision, giving the surface a sleek rhythm and a quietly modern sense of luxury.",
+    idLongDesc: "Athens Macassar Burl Ebony berwarna nyaris hitam, disela garis vertikal cokelat keemasan yang halus. Garis-garisnya tersusun presisi, memberi permukaan ritme yang ramping dan kemewahan modern yang tenang."
   },
   {
     id: 'athens-macassar-ebony',
@@ -543,8 +543,8 @@ export const PRODUCTS = [
     cutMethod: 'Quarter-cut',
     bestFor: 'Executive boardrooms, premium cabinetry, accent panels',
     finish: 'Polished lacquer',
-    longDesc: "The quintessential luxury veneer, Athens Macassar Ebony showcases deep, chocolate-black heartwood beautifully streaked with warm, reddish-brown bands, offering a timeless and dramatic linear aesthetic for the most refined spaces.",
-    idLongDesc: "Sebagai veneer mewah yang paling khas, Athens Macassar Ebony menampilkan kayu teras hitam kecokelatan yang pekat, dihiasi indah pita cokelat kemerahan yang hangat, menawarkan estetika linear yang abadi dan dramatis untuk ruang yang paling halus."
+    longDesc: "Athens Macassar Ebony is the classic luxury veneer: deep chocolate-black heartwood streaked with warm reddish-brown bands. Its dramatic, linear look has never gone out of style and suits the most refined rooms.",
+    idLongDesc: "Athens Macassar Ebony adalah veneer mewah klasik: kayu teras hitam kecokelatan yang pekat dengan guratan pita cokelat kemerahan yang hangat. Tampilannya yang linear dan dramatis tidak pernah ketinggalan zaman dan cocok untuk ruang yang paling halus."
   },
   {
     id: 'athens-mauve-walnut',
@@ -557,8 +557,8 @@ export const PRODUCTS = [
     cutMethod: 'Quarter-cut, tinted',
     bestFor: 'Boutique interiors, modern residential casework, acoustic paneling',
     finish: 'Matte urethane',
-    longDesc: "Athens Mauve Walnut presents the structured, straight grain of a quartered log infused with a subtle, sophisticated dusty-purple or mauve undertone. This unique coloration provides a gentle, contemporary twist on classic walnut.",
-    idLongDesc: "Athens Mauve Walnut menghadirkan serat lurus terstruktur dari kayu potongan quarter, diresapi nuansa ungu pudar atau mauve yang samar dan canggih. Pewarnaan unik ini memberikan sentuhan lembut dan kontemporer pada walnut klasik."
+    longDesc: "Athens Mauve Walnut has the straight, ordered grain of quarter-cut walnut with a faint dusty-purple, or mauve, undertone. The unusual colour gives classic walnut a soft, contemporary turn.",
+    idLongDesc: "Athens Mauve Walnut memiliki serat lurus dan teratur khas walnut potongan quarter, dengan nuansa ungu pudar, atau mauve, yang samar. Warnanya yang tidak biasa memberi walnut klasik sentuhan yang lembut dan kontemporer."
   },
   {
     id: 'athens-mink-walnut',
@@ -572,8 +572,8 @@ export const PRODUCTS = [
     cutMethod: 'Rift-cut',
     bestFor: 'Minimalist spaces, custom built-ins, high-end millwork',
     finish: 'Hand-rubbed oil',
-    longDesc: "Athens Mink Walnut features a beautifully consistent, straight rift-cut grain. Its soft, medium-brown mink tones offer a warm, earthy neutrality that seamlessly integrates into modern, understated architectural design schemes.",
-    idLongDesc: "Athens Mink Walnut menampilkan serat potongan rift yang lurus dan sangat konsisten. Nuansa cokelat mink sedangnya yang lembut menawarkan warna netral bersahaja yang hangat, yang menyatu mulus dengan skema desain arsitektural modern yang bersahaja."
+    longDesc: "Athens Mink Walnut has a straight, very consistent rift-cut grain. Its soft, medium-brown mink tone is a warm, earthy neutral that sits easily in modern, understated architecture.",
+    idLongDesc: "Athens Mink Walnut memiliki serat potongan rift yang lurus dan sangat konsisten. Warna cokelat mink sedangnya yang lembut adalah netral hangat bernuansa tanah yang mudah menyatu dengan arsitektur modern yang bersahaja."
   }
   ,
   {
@@ -593,8 +593,8 @@ export const PRODUCTS = [
     idBestFor: 'furnitur rumah tangga, dinding aksen, premium kabinet',
     finish: 'Satin finish',
     idFinish: 'Finishing Satin',
-    longDesc: "Athens Mocha Walnut presents the classic cathedral arches of flat-cut walnut with a rich, inviting mocha-brown tone. Its natural grain variations and warm color profile make it a versatile and timeless choice for bringing organic elegance into interior spaces.",
-    idLongDesc: "Athens Mocha Walnut menampilkan lengkung katedral klasik walnut potongan flat dengan nuansa cokelat mocha yang kaya dan mengundang. Variasi serat alami dan profil warnanya yang hangat menjadikannya pilihan serbaguna dan abadi untuk menghadirkan keanggunan organik ke ruang interior."
+    longDesc: "Athens Mocha Walnut has the classic cathedral arches of flat-cut walnut in a deep mocha brown. Natural variation in the grain and the warm colour make it an easy, lasting choice for bringing real wood into a room.",
+    idLongDesc: "Athens Mocha Walnut memiliki lengkung katedral klasik walnut potongan flat dalam warna cokelat mocha yang dalam. Variasi serat alami dan warnanya yang hangat menjadikannya pilihan yang mudah dan awet untuk menghadirkan kayu asli ke dalam ruangan."
   },
   {
     id: 'athens-natural-ebony',
@@ -612,8 +612,8 @@ export const PRODUCTS = [
     idBestFor: 'Suite eksekutif, perlengkapan ritel mewah, kotak cerutu (humidor)',
     finish: 'Polished lacquer',
     idFinish: 'Pelapis dipoles',
-    longDesc: "Athens Natural Ebony showcases the quintessential high-contrast striping of Macassar ebony. The deep black and rich brown linear grain creates a striking visual rhythm suited for luxurious, high-end applications and architectural focal points.",
-    idLongDesc: "Athens Natural Ebony menampilkan garis berkontras tinggi yang khas dari ebony Makassar. Serat linear hitam pekat dan cokelat yang kaya menciptakan ritme visual yang mencolok, cocok untuk aplikasi mewah kelas atas dan titik fokus arsitektural."
+    longDesc: "Athens Natural Ebony has the high-contrast striping Macassar ebony is known for. Lines of deep black and rich brown run the length of the sheet, suited to high-end interiors and architectural focal points.",
+    idLongDesc: "Athens Natural Ebony memiliki garis berkontras tinggi yang menjadi ciri ebony Makassar. Garis hitam pekat dan cokelat tua membentang di sepanjang lembaran, cocok untuk interior kelas atas dan titik fokus arsitektural."
   },
   {
     id: 'athens-pale-ebony',
@@ -631,8 +631,8 @@ export const PRODUCTS = [
     idBestFor: 'Modern dinding aksen, custom pintu, interior butiks',
     finish: 'Matte urethane',
     idFinish: 'Uretan Matte',
-    longDesc: "Athens Pale Ebony offers a unique twist on traditional ebony, featuring a lighter, pale-toned background that sharply contrasts with dramatic dark brown vertical stripes. It delivers a bold, contemporary graphic impact without darkening a room.",
-    idLongDesc: "Athens Pale Ebony menawarkan sentuhan unik pada ebony tradisional, dengan latar bernuansa pucat yang lebih terang dan berkontras tajam dengan garis vertikal cokelat tua yang dramatis. Veneer ini memberikan dampak grafis yang berani dan kontemporer tanpa membuat ruangan terasa gelap."
+    longDesc: "Athens Pale Ebony is a lighter take on traditional ebony: a pale ground with sharp, dark brown vertical stripes. It gives a strong, contemporary graphic effect without making a room feel dark.",
+    idLongDesc: "Athens Pale Ebony adalah versi ebony tradisional yang lebih terang: latar pucat dengan garis vertikal cokelat tua yang tegas. Veneer ini memberi efek grafis kontemporer yang kuat tanpa membuat ruangan terasa gelap."
   },
   {
     id: 'athens-phantom-line',
@@ -651,8 +651,8 @@ export const PRODUCTS = [
     idBestFor: 'panel arsitektural ramping, minimalis mebel, perlakuan akustik',
     finish: 'Clear matte',
     idFinish: 'Matte bening',
-    longDesc: "Athens Phantom Line features an exceptionally tight, uniform, and continuous linear grain. This highly structured, straight-line pattern minimizes natural imperfections, providing a seamless and minimalist texture perfect for expansive modern surfaces.",
-    idLongDesc: "Athens Phantom Line menampilkan serat linear yang sangat rapat, seragam, dan tak terputus. Pola garis lurus yang sangat terstruktur ini meminimalkan ketidaksempurnaan alami, memberikan tekstur mulus dan minimalis yang sempurna untuk permukaan modern yang luas."
+    longDesc: "Athens Phantom Line has a very tight, even grain that runs unbroken down the sheet. The ordered pattern hides natural irregularities, giving a smooth, minimal texture for large modern surfaces.",
+    idLongDesc: "Athens Phantom Line memiliki serat yang sangat rapat dan rata, membentang tanpa putus di sepanjang lembaran. Polanya yang teratur menyamarkan ketidakteraturan alami, memberi tekstur yang mulus dan minimalis untuk permukaan modern yang luas."
   },
   {
     id: 'athens-raven-ebony',
@@ -671,8 +671,8 @@ export const PRODUCTS = [
     idBestFor: 'ruang rapat korporat, pembuatan alat musik mewah, panel aksen',
     finish: 'High-gloss polyurethane',
     idFinish: 'Poliuretan glossy tinggi',
-    longDesc: "Athens Raven Ebony pushes the ebony aesthetic toward its darkest extreme, with a predominant near-black background accented by subtle, deep reddish-brown stripes. It exudes a moody, sophisticated, and powerful presence.",
-    idLongDesc: "Athens Raven Ebony membawa estetika ebony ke titik tergelapnya, dengan latar dominan yang nyaris hitam dan diberi aksen garis cokelat kemerahan tua yang samar. Veneer ini memancarkan kehadiran yang muram, canggih, dan kuat."
+    longDesc: "Athens Raven Ebony is ebony at its darkest: a near-black ground with faint stripes of deep reddish brown. It has a moody, commanding presence.",
+    idLongDesc: "Athens Raven Ebony adalah ebony pada warna tergelapnya: latar nyaris hitam dengan garis cokelat kemerahan tua yang samar. Kehadirannya muram dan berwibawa."
   },
   {
     id: 'athens-roast-walnut',
@@ -690,8 +690,8 @@ export const PRODUCTS = [
     idBestFor: 'Pertukangan kayu kelas atas, interior hotel mewah, meja statement',
     finish: 'Hand-rubbed oil',
     idFinish: 'Minyak gosok tangan',
-    longDesc: "Athens Roast Walnut features a deep, espresso-like dark brown tone that enhances the natural, sweeping grain of flat-cut walnut. This rich coloration anchors spaces with a strong, grounded elegance while retaining organic movement.",
-    idLongDesc: "Athens Roast Walnut menampilkan nuansa cokelat tua yang pekat seperti espresso, yang menonjolkan serat melengkung alami walnut potongan flat. Warnanya yang kaya menjadi jangkar ruang dengan keanggunan yang kuat dan membumi, sambil tetap mempertahankan gerak organiknya."
+    longDesc: "Athens Roast Walnut is a deep, espresso-dark brown that brings out the sweeping grain of flat-cut walnut. The colour grounds a room while the grain keeps its natural movement.",
+    idLongDesc: "Athens Roast Walnut berwarna cokelat tua sepekat espresso yang menonjolkan serat melengkung walnut potongan flat. Warnanya membuat ruangan terasa membumi, sementara seratnya tetap mempertahankan gerak alaminya."
   },
   {
     id: 'athens-rose-ebony',
@@ -709,8 +709,8 @@ export const PRODUCTS = [
     idBestFor: 'furnitur mewah custome, desain hospitality, aksen residensial',
     finish: 'Satin wax',
     idFinish: 'Lilin Satin',
-    longDesc: "Athens Rose Ebony pairs the straight, dramatic lines of classic ebony with a distinct, warm rosy-brown undertone. This infusion of color brings a softer, more inviting warmth to the typically stark and high-contrast wood.",
-    idLongDesc: "Athens Rose Ebony memadukan garis lurus dramatis ebony klasik dengan nuansa cokelat kemerahan yang hangat dan khas. Sentuhan warna ini menghadirkan kehangatan yang lebih lembut dan mengundang pada kayu yang biasanya tegas dan berkontras tinggi."
+    longDesc: "Athens Rose Ebony has the straight, dramatic lines of classic ebony with a warm, rosy-brown undertone. The colour softens what is usually a stark, high-contrast wood.",
+    idLongDesc: "Athens Rose Ebony memiliki garis lurus dramatis ebony klasik dengan nuansa dasar cokelat kemerahan yang hangat. Warnanya melembutkan kayu yang biasanya tegas dan berkontras tinggi."
   },
   {
     id: 'athens-rose-mahogany',
@@ -729,8 +729,8 @@ export const PRODUCTS = [
     idBestFor: 'Furnitur tradisionale, panel perpustakaaning, fine kabinet',
     finish: 'Polished varnish',
     idFinish: 'Pernis dipoles',
-    longDesc: "Athens Rose Mahogany displays the smooth, elegant grain characteristic of mahogany, enriched with a deep, reddish-rose hue. Its classic cathedral pattern is ideal for adding timeless warmth to traditional and transitional interiors.",
-    idLongDesc: "Athens Rose Mahogany menampilkan serat halus dan elegan yang khas dari mahoni, diperkaya rona merah mawar yang dalam. Pola katedral klasiknya ideal untuk menambahkan kehangatan abadi pada interior tradisional dan transisional."
+    longDesc: "Athens Rose Mahogany has mahogany's smooth, graceful grain in a deep reddish-rose. The classic cathedral pattern adds lasting warmth to traditional and transitional interiors.",
+    idLongDesc: "Athens Rose Mahogany memiliki serat mahoni yang halus dan anggun dalam warna merah mawar yang dalam. Pola katedral klasiknya menambahkan kehangatan yang bertahan lama pada interior tradisional dan transisional."
   },
   {
     id: 'athens-sable-walnut',
@@ -749,8 +749,8 @@ export const PRODUCTS = [
     idBestFor: 'Ruang transisional, perabot tanam custom, residensial pintu',
     finish: 'Clear oil finish',
     idFinish: 'Finishing minyak bening',
-    longDesc: "Athens Sable Walnut offers a beautifully muted, grayish-brown sable tone that tempers the natural warmth of traditional walnut. The sweeping flat-cut grain adds subtle texture to this highly adaptable, sophisticated neutral veneer.",
-    idLongDesc: "Athens Sable Walnut menawarkan nuansa sable abu-abu kecokelatan yang indah dan lembut, yang meredam kehangatan alami walnut tradisional. Serat potongan flat yang melengkung luas menambahkan tekstur halus pada veneer netral yang canggih dan sangat mudah dipadukan ini."
+    longDesc: "Athens Sable Walnut is a muted grey-brown sable that tones down the natural warmth of walnut. Its sweeping flat-cut grain adds gentle texture to a neutral that pairs with almost anything.",
+    idLongDesc: "Athens Sable Walnut berwarna sable abu-abu kecokelatan yang redup, meredam kehangatan alami walnut. Serat potongan flat-nya yang melengkung menambahkan tekstur lembut pada warna netral yang bisa dipadukan dengan hampir apa saja."
   },
   {
     id: 'athens-smoke-walnut',
@@ -769,8 +769,8 @@ export const PRODUCTS = [
     idBestFor: 'interior minimalis, kredenza modern, Panel komersial',
     finish: 'Matte lacquer',
     idFinish: 'Pelapis Matte',
-    longDesc: "Athens Smoke Walnut features a straight, tight rift-cut grain paired with a sophisticated, grey-toned smoky finish. This subdued, linear aesthetic minimizes visual noise, making it perfectly suited for modern, clean-lined architectural designs.",
-    idLongDesc: "Athens Smoke Walnut menampilkan serat potongan rift yang lurus dan rapat, dipadukan dengan finishing berasap bernuansa abu-abu yang canggih. Estetika linear yang kalem ini meminimalkan keramaian visual, sangat cocok untuk desain arsitektural modern dengan garis yang bersih."
+    longDesc: "Athens Smoke Walnut pairs a straight, tight rift-cut grain with a smoky grey tone. The look is subdued and linear, well suited to modern, clean-lined architecture.",
+    idLongDesc: "Athens Smoke Walnut memadukan serat potongan rift yang lurus dan rapat dengan nuansa abu-abu berasap. Tampilannya kalem dan linear, cocok untuk arsitektur modern dengan garis yang bersih."
   },
   {
     id: 'athens-smoked-chesnut-oak',
@@ -789,8 +789,8 @@ export const PRODUCTS = [
     idBestFor: 'dasbor mewah, aksen fitur, perabot statement custom',
     finish: 'Matte lacquer',
     idFinish: 'Pelapis Matte',
-    longDesc: "Athens Smoked Chesnut Oak showcases a mesmerizing burl grain pattern, characterized by its deep, smoky chestnut tones and swirling, organic figure. This highly decorative veneer adds dramatic visual texture and a luxurious, artistic focal point to bespoke interiors.",
-    idLongDesc: "Athens Smoked Chesnut Oak menampilkan pola serat burl yang memukau, dicirikan oleh nuansa chestnut berasap yang dalam dan figur organik yang berpusar. Veneer yang sangat dekoratif ini menambahkan tekstur visual yang dramatis serta titik fokus artistik yang mewah pada interior custom."
+    longDesc: "Athens Smoked Chesnut Oak is a burl with a swirling, organic figure in deep, smoky chestnut tones. It is a highly decorative veneer, best used where a bespoke interior needs one dramatic, textured feature.",
+    idLongDesc: "Athens Smoked Chesnut Oak adalah burl dengan figur organik yang berpusar dalam nuansa chestnut berasap yang dalam. Veneer yang sangat dekoratif ini paling baik dipakai ketika interior custom membutuhkan satu elemen bertekstur yang dramatis."
   },
   {
     id: 'athens-sterling-mist',
@@ -808,8 +808,8 @@ export const PRODUCTS = [
     idBestFor: 'Ruang minimalis, kontemporer kabinet, panel arsitekturaling',
     finish: 'Satin urethane',
     idFinish: 'Uretan Satin',
-    longDesc: "Athens Sterling Mist features a tight, linear rift-cut grain that is elevated by a cool, silvery-grey wash. This understated, elegant finish minimizes visual noise, offering a sleek, contemporary aesthetic that perfectly complements modern and minimalist designs.",
-    idLongDesc: "Athens Sterling Mist menampilkan serat potongan rift yang rapat dan linear, diangkat dengan sapuan warna abu-abu keperakan yang sejuk. Finishing elegan yang bersahaja ini meminimalkan keramaian visual, menawarkan estetika ramping dan kontemporer yang melengkapi desain modern dan minimalis dengan sempurna."
+    longDesc: "Athens Sterling Mist is a tight, linear rift-cut oak under a cool, silvery-grey wash. The finish is understated and calm, made for modern and minimalist rooms.",
+    idLongDesc: "Athens Sterling Mist adalah oak potongan rift yang rapat dan linear dengan sapuan warna abu-abu keperakan yang sejuk. Finishingnya bersahaja dan tenang, dibuat untuk ruang modern dan minimalis."
   },
   {
     id: 'athens-tan-walnut',
@@ -828,8 +828,8 @@ export const PRODUCTS = [
     idBestFor: 'Mebel residensial modern, panel-panel akustik, interior cerah dan lapangs',
     finish: 'Clear oil finish',
     idFinish: 'Finishing minyak bening',
-    longDesc: "Athens Tan Walnut provides the structured, elegant linearity of quarter-cut walnut but in a surprisingly light, warm tan hue. This fresh interpretation of a classic wood brings an inviting, airy quality to interior spaces while maintaining sophisticated grain definition.",
-    idLongDesc: "Athens Tan Walnut menghadirkan linearitas walnut potongan quarter yang terstruktur dan elegan, namun dalam rona tan yang hangat dan terang secara mengejutkan. Tafsir segar atas kayu klasik ini menghadirkan kesan lapang dan mengundang pada ruang interior, sambil tetap mempertahankan definisi serat yang canggih."
+    longDesc: "Athens Tan Walnut has the ordered lines of quarter-cut walnut in an unexpectedly light, warm tan. It is a fresher, airier walnut that still keeps a well-defined grain.",
+    idLongDesc: "Athens Tan Walnut memiliki garis teratur walnut potongan quarter dalam warna tan yang hangat dan terang secara tak terduga. Walnut ini terasa lebih segar dan lapang, namun seratnya tetap tegas."
   },
   {
     id: 'athens-taupe-oak',
@@ -847,8 +847,8 @@ export const PRODUCTS = [
     idBestFor: 'Pertukangan kayu transisional, perabot tanam custom, subtle dinding aksen',
     finish: 'Matte varnish',
     idFinish: 'Pernis Matte',
-    longDesc: "Athens Taupe Oak offers a beautifully consistent rift-cut grain paired with a muted, earthy taupe finish. This highly adaptable, neutral veneer seamlessly bridges the gap between warm and cool tones, making it a versatile foundation for a wide range of design palettes.",
-    idLongDesc: "Athens Taupe Oak menawarkan serat potongan rift yang indah dan konsisten, dipadukan dengan finishing taupe yang lembut dan bersahaja. Veneer netral yang sangat mudah dipadukan ini menjembatani nuansa hangat dan sejuk dengan mulus, menjadikannya dasar serbaguna untuk beragam palet desain."
+    longDesc: "Athens Taupe Oak has a consistent rift-cut grain in a muted, earthy taupe. It sits between warm and cool tones, so it works as a base for a wide range of palettes.",
+    idLongDesc: "Athens Taupe Oak memiliki serat potongan rift yang konsisten dalam warna taupe yang redup dan bernuansa tanah. Warnanya berada di antara nuansa hangat dan sejuk, sehingga bisa menjadi dasar untuk beragam palet."
   },
   {
     id: 'athens-taupe-walnut',
@@ -867,8 +867,8 @@ export const PRODUCTS = [
     idBestFor: 'Interior korporat kelas atass, hospitality mewah, refined furnitur rumah tangga',
     finish: 'Satin wax',
     idFinish: 'Lilin Satin',
-    longDesc: "Athens Taupe Walnut features a soft, greyish-brown taupe coloration that elegantly tempers the natural warmth of traditional walnut. The straight, quarter-cut grain provides a refined, continuous texture that exudes sophisticated, understated luxury.",
-    idLongDesc: "Athens Taupe Walnut menampilkan warna taupe abu-abu kecokelatan yang lembut, yang dengan anggun meredam kehangatan alami walnut tradisional. Serat potongan quarter yang lurus memberikan tekstur halus dan tak terputus yang memancarkan kemewahan yang canggih dan bersahaja."
+    longDesc: "Athens Taupe Walnut is a soft grey-brown taupe that tempers walnut's natural warmth. The straight quarter-cut grain gives a fine, continuous texture with a quiet sense of luxury.",
+    idLongDesc: "Athens Taupe Walnut berwarna taupe abu-abu kecokelatan yang lembut, meredam kehangatan alami walnut. Serat potongan quarter yang lurus memberi tekstur halus dan tak terputus dengan kesan mewah yang tenang."
   },
   {
     id: 'athens-toasted-walnut',
@@ -887,8 +887,8 @@ export const PRODUCTS = [
     idBestFor: 'premium kabinet, sistem dinding akustik, furnitur modern yang canggihe',
     finish: 'Hand-rubbed oil',
     idFinish: 'Minyak gosok tangan',
-    longDesc: "Athens Toasted Walnut showcases a meticulously straight rift-cut grain combined with a rich, medium-dark toasted brown hue. The resulting texture is incredibly uniform and sleek, offering a deeply warm yet perfectly restrained visual for contemporary applications.",
-    idLongDesc: "Athens Toasted Walnut menampilkan serat potongan rift yang sangat lurus, dipadukan dengan rona cokelat panggang sedang hingga gelap yang kaya. Tekstur yang dihasilkan sangat seragam dan ramping, memberikan tampilan yang sangat hangat namun tetap terkendali untuk aplikasi kontemporer."
+    longDesc: "Athens Toasted Walnut has a very straight rift-cut grain in a deep, medium-dark toasted brown. The texture is even and sleek: warm, but restrained enough for contemporary interiors.",
+    idLongDesc: "Athens Toasted Walnut memiliki serat potongan rift yang sangat lurus dalam warna cokelat panggang sedang hingga gelap. Teksturnya rata dan ramping: hangat, namun cukup terkendali untuk interior kontemporer."
   },
   {
     id: 'athens-zebra-ebony',
@@ -907,8 +907,8 @@ export const PRODUCTS = [
     idBestFor: 'statement arsitektural pintu, ritel mewah displays, executive aksen',
     finish: 'High-gloss polish',
     idFinish: 'Poles glossy tinggi',
-    longDesc: "Athens Zebra Ebony delivers an intensely dramatic visual with its sharp, high-contrast alternation of deep espresso and pale, creamy-white vertical stripes. This precise quarter-cut presentation provides an exotic, rhythmic graphic pattern for the boldest interior statements.",
-    idLongDesc: "Athens Zebra Ebony menghadirkan tampilan yang sangat dramatis dengan selang-seling tajam berkontras tinggi antara garis vertikal espresso pekat dan putih krem pucat. Tampilan potongan quarter yang presisi ini memberikan pola grafis eksotis yang berirama untuk pernyataan interior yang paling berani."
+    longDesc: "Athens Zebra Ebony alternates deep espresso and pale, creamy-white stripes in sharp contrast. Cut on the quarter, the stripes run straight and even, an exotic graphic pattern for the boldest interiors.",
+    idLongDesc: "Athens Zebra Ebony menampilkan selang-seling garis espresso pekat dan putih krem pucat dengan kontras yang tajam. Dengan potongan quarter, garis-garisnya lurus dan rata, pola grafis eksotis untuk interior yang paling berani."
   },
   {
     id: 'berlin-amalfi',
@@ -927,8 +927,8 @@ export const PRODUCTS = [
     idBestFor: 'dinding statement, artistic furnitur, panel aksen',
     finish: 'Matte',
     idFinish: 'Matte',
-    longDesc: "Berlin Amalfi is defined by its striking, topographical grain patterns highlighted by a white cerused finish over a deep, ashy brown base. The highly figured, swirling lines create an organic, artistic focal point perfect for bold statement applications.",
-    idLongDesc: "Berlin Amalfi ditandai pola serat topografis yang mencolok, ditonjolkan finishing cerused putih di atas dasar cokelat keabuan yang pekat. Garis berpusar dengan figur yang kaya menciptakan titik fokus organik dan artistik, sempurna untuk aplikasi statement yang berani."
+    longDesc: "Berlin Amalfi has a striking, contour-like grain picked out by a white cerused finish over a deep, ashy brown base. The swirling, heavily figured lines make it a strong choice for a single statement surface.",
+    idLongDesc: "Berlin Amalfi memiliki serat menyerupai garis kontur yang ditonjolkan finishing cerused putih di atas dasar cokelat keabuan yang pekat. Garis-garisnya yang berpusar dan kaya figur menjadikannya pilihan kuat untuk satu permukaan statement."
   },
   {
     id: 'berlin-arrow-slate',
@@ -987,8 +987,8 @@ export const PRODUCTS = [
     idBestFor: 'Transisional furnitur, pelapis dinding, interior rustic modern',
     finish: 'Satin',
     idFinish: 'Satin',
-    longDesc: "Berlin Austrian Oak showcases the classic linear texture of rift-cut oak, finished in a sophisticated, weathered grey-brown. It balances the natural, porous character of European oak with a muted, contemporary color palette.",
-    idLongDesc: "Berlin Austrian Oak menampilkan tekstur linear klasik oak potongan rift, dengan finishing abu-abu kecokelatan lapuk yang canggih. Veneer ini menyeimbangkan karakter oak Eropa yang alami dan berpori dengan palet warna kontemporer yang lembut."
+    longDesc: "Berlin Austrian Oak has the classic linear texture of rift-cut oak in a weathered grey-brown. It keeps the open, natural character of European oak with a muted, contemporary colour.",
+    idLongDesc: "Berlin Austrian Oak memiliki tekstur linear klasik oak potongan rift dalam warna abu-abu kecokelatan yang tampak lapuk. Veneer ini mempertahankan karakter oak Eropa yang alami dan berpori dengan warna kontemporer yang redup."
   },
   {
     id: 'berlin-black-oak-mountain',
@@ -1008,8 +1008,8 @@ export const PRODUCTS = [
     idBestFor: 'ritel mewah, dramatic dinding aksen, Kelas atas residensial',
     finish: 'Matte lacquer',
     idFinish: 'Pelapis Matte',
-    longDesc: "Berlin Black Oak Mountain features the bold, sweeping cathedral arches of flat-cut oak, dramaticized by a stark black stain and a contrasting white cerused grain. This striking interplay of light and dark creates a powerful, textural anchor for any room.",
-    idLongDesc: "Berlin Black Oak Mountain menampilkan lengkung katedral oak potongan flat yang tegas dan melengkung luas, didramatisasi oleh pewarnaan hitam pekat dan serat cerused putih yang kontras. Perpaduan terang dan gelap yang mencolok ini menciptakan jangkar bertekstur yang kuat untuk ruangan mana pun."
+    longDesc: "Berlin Black Oak Mountain has the broad cathedral arches of flat-cut oak, stained black with the grain cerused white. The contrast of light and dark gives a room a strong, textured anchor.",
+    idLongDesc: "Berlin Black Oak Mountain memiliki lengkung katedral lebar oak potongan flat, diwarnai hitam dengan serat yang di-cerused putih. Kontras terang dan gelapnya memberi ruangan jangkar bertekstur yang kuat."
   },
   {
     id: 'berlin-black-oakwood',
@@ -1029,8 +1029,8 @@ export const PRODUCTS = [
     idBestFor: 'Lingkungan korporat, ramping kabinet, modern pintu',
     finish: 'Satin urethane',
     idFinish: 'Uretan Satin',
-    longDesc: "Berlin Black Oakwood offers a refined, linear rift-cut texture deeply stained in an espresso-black tone. The subtle visibility of the wood's natural pores adds depth and organic warmth to this highly sophisticated, dark architectural veneer.",
-    idLongDesc: "Berlin Black Oakwood menawarkan tekstur potongan rift yang halus dan linear, diwarnai pekat dengan nuansa hitam espresso. Pori-pori alami kayu yang samar terlihat menambahkan kedalaman dan kehangatan organik pada veneer arsitektural gelap yang sangat canggih ini."
+    longDesc: "Berlin Black Oakwood is a fine, linear rift-cut oak stained a deep espresso black. The natural pores still show faintly, adding depth and warmth to a dark, architectural veneer.",
+    idLongDesc: "Berlin Black Oakwood adalah oak potongan rift yang halus dan linear, diwarnai hitam espresso yang pekat. Pori-pori alaminya masih samar terlihat, menambahkan kedalaman dan kehangatan pada veneer arsitektural yang gelap."
   },
   {
     id: 'berlin-black-out',
@@ -1049,8 +1049,8 @@ export const PRODUCTS = [
     idBestFor: 'bagian depan bar, dinding aksen dramatis, titik fokus tekstural',
     finish: 'Textured matte',
     idFinish: 'Matte bertekstur',
-    longDesc: "Berlin Black Out breaks from traditional flat veneers with a highly tactile, deeply distressed surface reminiscent of cracked bark or charred wood. The interplay of deep charcoal and ashy grey crevices creates a rugged, dramatic, and unforgettable texture.",
-    idLongDesc: "Berlin Black Out keluar dari veneer datar tradisional dengan permukaan yang sangat bertekstur dan sangat usang, mengingatkan pada kulit kayu yang retak atau kayu yang hangus. Perpaduan celah arang pekat dan abu-abu keabuan menciptakan tekstur yang kasar, dramatis, dan tak terlupakan."
+    longDesc: "Berlin Black Out is not a flat veneer. Its deeply textured, distressed surface recalls cracked bark or charred timber, with deep charcoal ridges and ash-grey crevices. Rugged, dramatic and hard to forget.",
+    idLongDesc: "Berlin Black Out bukan veneer datar. Permukaannya yang sangat bertekstur dan usang mengingatkan pada kulit kayu yang retak atau kayu yang hangus, dengan guratan arang pekat dan celah abu-abu. Kasar, dramatis, dan sulit dilupakan."
   },
   {
     id: 'berlin-brown-ash',
@@ -1068,8 +1068,8 @@ export const PRODUCTS = [
     idBestFor: 'Furnitur kontemporere, pertukangan kayu arsitektural, Ruang minimalis',
     finish: 'Clear matte',
     idFinish: 'Matte bening',
-    longDesc: "Berlin Brown Ash utilizes the naturally distinct, open grain of rift-cut ash and subdues it with a cool, dark brown stain. The result is a beautifully textured yet color-consistent surface that brings understated elegance to modern designs.",
-    idLongDesc: "Berlin Brown Ash memanfaatkan serat terbuka ash potongan rift yang khas secara alami dan meredamnya dengan pewarnaan cokelat tua yang sejuk. Hasilnya adalah permukaan yang indah bertekstur namun warnanya konsisten, menghadirkan keanggunan bersahaja pada desain modern."
+    longDesc: "Berlin Brown Ash takes the open grain of rift-cut ash and quietens it with a cool, dark brown stain. The surface stays textured but even in colour, an understated choice for modern interiors.",
+    idLongDesc: "Berlin Brown Ash mengambil serat terbuka ash potongan rift dan meredamnya dengan pewarnaan cokelat tua yang sejuk. Permukaannya tetap bertekstur namun warnanya rata, pilihan yang bersahaja untuk interior modern."
   },
   // {
   //   id: 'berlin-brown-pearwood',
@@ -1128,8 +1128,8 @@ export const PRODUCTS = [
     idBestFor: 'panel akustiking, kontemporer pintu, custom kabinet',
     finish: 'Matte',
     idFinish: 'Matte',
-    longDesc: "Berlin Brushed Elm features a sleek, quarter-cut linear pattern enhanced by a wire-brushed texture that opens the grain. Finished in a deep, cool charcoal grey, it provides a highly tactile and visually sophisticated surface for contemporary interiors.",
-    idLongDesc: "Berlin Brushed Elm menampilkan pola linear potongan quarter yang ramping, diperkuat tekstur sikat kawat yang membuka serat. Dengan finishing abu-abu arang yang pekat dan sejuk, veneer ini memberikan permukaan yang sangat bertekstur dan canggih secara visual untuk interior kontemporer."
+    longDesc: "Berlin Brushed Elm is a quarter-cut elm, wire-brushed to open the grain and finished in a deep, cool charcoal grey. You can feel the texture as well as see it, which gives contemporary interiors a tactile surface.",
+    idLongDesc: "Berlin Brushed Elm adalah elm potongan quarter yang disikat kawat untuk membuka seratnya, dengan finishing abu-abu arang yang pekat dan sejuk. Teksturnya bisa dirasakan sekaligus dilihat, memberi interior kontemporer permukaan yang taktil."
   },
   {
     id: 'berlin-carbon-ash',
@@ -1148,8 +1148,8 @@ export const PRODUCTS = [
     idBestFor: 'Modern kabinet, panel dinding statement, residensial mewah',
     finish: 'Matte lacquer',
     idFinish: 'Pelapis Matte',
-    longDesc: "Berlin Carbon Ash beautifully pairs the sweeping cathedral grain of flat-cut ash with a deep, charcoal-black stain. The open pores are filled with a contrasting light ceruse, creating a striking, textural roadmap that highlights the wood's organic movement against a moody, dark backdrop.",
-    idLongDesc: "Berlin Carbon Ash dengan indah memadukan serat katedral ash potongan flat yang melengkung luas dengan pewarnaan hitam arang yang pekat. Pori-pori terbukanya diisi ceruse terang yang kontras, menciptakan peta bertekstur yang mencolok dan menonjolkan gerak organik kayu di atas latar gelap yang muram."
+    longDesc: "Berlin Carbon Ash pairs the broad cathedral grain of flat-cut ash with a deep charcoal-black stain. The open pores are filled with a light ceruse, tracing the grain in pale lines across the dark ground.",
+    idLongDesc: "Berlin Carbon Ash memadukan serat katedral lebar ash potongan flat dengan pewarnaan hitam arang yang pekat. Pori-pori terbukanya diisi ceruse terang, menelusuri serat dalam garis-garis pucat di atas latar gelap."
   },
   {
     id: 'berlin-carbon-oak',
@@ -1167,8 +1167,8 @@ export const PRODUCTS = [
     idBestFor: 'Komersial mebel, minimalis furnitur, arsitektural pintu',
     finish: 'Satin finish',
     idFinish: 'Finishing Satin',
-    longDesc: "Berlin Carbon Oak features a meticulously straight, linear rift-cut grain imbued with a rich, dark carbon-brown tone. This tight, structured pattern minimizes visual clutter while delivering a profound depth of color, making it an ideal anchor for sophisticated, contemporary interiors.",
-    idLongDesc: "Berlin Carbon Oak menampilkan serat potongan rift yang sangat lurus dan linear, diresapi nuansa cokelat karbon gelap yang kaya. Pola rapat dan terstruktur ini meminimalkan keramaian visual sambil menghadirkan kedalaman warna yang mendalam, menjadikannya jangkar ideal untuk interior kontemporer yang canggih."
+    longDesc: "Berlin Carbon Oak has a very straight rift-cut grain in a deep, dark carbon brown. The tight pattern keeps the surface calm and lets the depth of colour do the work, a solid anchor for contemporary interiors.",
+    idLongDesc: "Berlin Carbon Oak memiliki serat potongan rift yang sangat lurus dalam warna cokelat karbon yang pekat. Polanya yang rapat menjaga permukaan tetap tenang dan membiarkan kedalaman warnanya berbicara, jangkar yang kokoh untuk interior kontemporer."
   },
   {
     id: 'berlin-charcoal-oak',
@@ -1186,8 +1186,8 @@ export const PRODUCTS = [
     idBestFor: 'sistem dinding akustik, meja eksekutif, perabot tanam premium',
     finish: 'Matte urethane',
     idFinish: 'Uretan Matte',
-    longDesc: "Berlin Charcoal Oak offers a refined, tightly woven rift-cut texture saturated in a cool, smoky charcoal grey. The monochromatic finish provides a sleek, highly consistent surface that bridges the gap between natural wood warmth and industrial modernism.",
-    idLongDesc: "Berlin Charcoal Oak menawarkan tekstur potongan rift yang halus dan rapat, diresapi warna abu-abu arang berasap yang sejuk. Finishing monokromatiknya memberikan permukaan ramping yang sangat konsisten, menjembatani kehangatan kayu alami dan modernisme industrial."
+    longDesc: "Berlin Charcoal Oak is a fine, tight rift-cut oak in a cool, smoky charcoal grey. The single-tone finish is sleek and very consistent, sitting between the warmth of wood and an industrial modern look.",
+    idLongDesc: "Berlin Charcoal Oak adalah oak potongan rift yang halus dan rapat dalam warna abu-abu arang berasap yang sejuk. Finishing satu warnanya ramping dan sangat konsisten, berada di antara kehangatan kayu dan tampilan modern industrial."
   },
   {
     id: 'berlin-chrome-oak',
@@ -1205,8 +1205,8 @@ export const PRODUCTS = [
     idBestFor: 'Perlengkapan ritel kelas atas, desain hospitality modern, panel aksen',
     finish: 'Satin polish',
     idFinish: 'Poles Satin',
-    longDesc: "Berlin Chrome Oak takes the dependable straight grain of rift-cut oak and elevates it with a unique, silvery-blue metallic wash. This cool, reflective quality interacts beautifully with light, providing an ultra-modern, industrial-chic aesthetic.",
-    idLongDesc: "Berlin Chrome Oak mengambil serat lurus oak potongan rift yang andal dan mengangkatnya dengan sapuan warna metalik biru keperakan yang unik. Kualitas sejuk dan memantul ini berinteraksi indah dengan cahaya, memberikan estetika industrial-chic yang sangat modern."
+    longDesc: "Berlin Chrome Oak gives the straight grain of rift-cut oak an unusual silvery-blue metallic wash. The cool surface catches the light, with a modern, industrial edge.",
+    idLongDesc: "Berlin Chrome Oak memberi serat lurus oak potongan rift sapuan warna metalik biru keperakan yang tidak biasa. Permukaannya yang sejuk menangkap cahaya, dengan kesan modern dan industrial."
   },
   {
     id: 'berlin-cloisonne-square',
@@ -1225,8 +1225,8 @@ export const PRODUCTS = [
     idBestFor: 'lobi hotel butik, panel seni statement, mewah bagian depan bar',
     finish: 'Matte',
     idFinish: 'Matte',
-    longDesc: "Berlin Cloisonne Square is an avant-garde engineered veneer featuring a bold, woven checkerboard pattern. Composed of dark, alternating blocks that play with grain direction, it creates a mesmerizing, highly textural mosaic effect that demands attention.",
-    idLongDesc: "Berlin Cloisonne Square adalah veneer rekayasa avant-garde dengan pola papan catur anyaman yang berani. Tersusun dari blok-blok gelap berselang-seling yang bermain dengan arah serat, veneer ini menciptakan efek mozaik yang memukau dan sangat bertekstur, yang menarik perhatian."
+    longDesc: "Berlin Cloisonne Square is an engineered veneer with a bold, woven checkerboard pattern. Dark blocks alternate their grain direction to build a textured mosaic that is hard to overlook.",
+    idLongDesc: "Berlin Cloisonne Square adalah veneer rekayasa dengan pola papan catur anyaman yang berani. Blok-blok gelap bergantian arah seratnya, membentuk mozaik bertekstur yang sulit diabaikan."
   },
   {
     id: 'berlin-cloudy',
@@ -1244,8 +1244,8 @@ export const PRODUCTS = [
     idBestFor: 'dinding aksen, meja makan custom, aksen residensial dramatis',
     finish: 'Matte lacquer',
     idFinish: 'Pelapis Matte',
-    longDesc: "Berlin Cloudy showcases a dramatic, topographical cathedral grain pattern against a deep, near-black base. The prominent growth rings are highlighted by a soft, white cerused finish, resembling stylized clouds or contour maps for a highly artistic visual.",
-    idLongDesc: "Berlin Cloudy menampilkan pola serat katedral topografis yang dramatis di atas dasar gelap yang nyaris hitam. Lingkar tahun yang menonjol ditegaskan finishing cerused putih yang lembut, menyerupai awan bergaya atau peta kontur untuk tampilan yang sangat artistik."
+    longDesc: "Berlin Cloudy has a dramatic, contour-like cathedral grain on a deep, near-black base. A soft white ceruse picks out the growth rings, so the pattern reads like stylised clouds or a contour map.",
+    idLongDesc: "Berlin Cloudy memiliki serat katedral menyerupai garis kontur yang dramatis di atas dasar nyaris hitam. Ceruse putih yang lembut menonjolkan lingkar tahunnya, sehingga polanya tampak seperti awan bergaya atau peta kontur."
   },
   {
     id: 'berlin-cobalt-ash',
@@ -1263,8 +1263,8 @@ export const PRODUCTS = [
     idBestFor: 'Kontemporer kabinet, Ruang minimalis, panel akustiking',
     finish: 'Clear matte',
     idFinish: 'Matte bening',
-    longDesc: "Berlin Cobalt Ash utilizes the straight, linear grain of quarter-cut ash, cooled down with a sophisticated, greyish-blue cobalt tint. The open pores add subtle texture to the muted color palette, offering a serene and thoroughly modern finish.",
-    idLongDesc: "Berlin Cobalt Ash memanfaatkan serat linear lurus ash potongan quarter, disejukkan dengan tint kobalt biru keabuan yang canggih. Pori-pori terbukanya menambahkan tekstur halus pada palet warna yang lembut, menawarkan finishing yang tenang dan sepenuhnya modern."
+    longDesc: "Berlin Cobalt Ash is a quarter-cut ash with a straight grain, cooled with a greyish-blue cobalt tint. The open pores add a little texture to the muted colour for a calm, modern finish.",
+    idLongDesc: "Berlin Cobalt Ash adalah ash potongan quarter dengan serat lurus, disejukkan dengan tint kobalt biru keabuan. Pori-pori terbukanya menambahkan sedikit tekstur pada warna yang redup, menghasilkan finishing yang tenang dan modern."
   },
   {
     id: 'berlin-deep-ash-brown',
@@ -1283,8 +1283,8 @@ export const PRODUCTS = [
     idBestFor: 'Pertukangan kayu transisional, furnitur custome, ruang rapat korporat',
     finish: 'Hand-rubbed oil',
     idFinish: 'Minyak gosok tangan',
-    longDesc: "Berlin Deep Ash Brown features a highly structured, quarter-cut grain paired with a rich, earthy brown tone. The natural prominence of the ash grain lines adds a tactile, robust character to the wood while maintaining an elegant, linear geometry.",
-    idLongDesc: "Berlin Deep Ash Brown menampilkan serat potongan quarter yang sangat terstruktur, dipadukan dengan nuansa cokelat tanah yang kaya. Garis serat ash yang menonjol secara alami menambahkan karakter yang bertekstur dan kokoh pada kayu, sambil tetap mempertahankan geometri linear yang elegan."
+    longDesc: "Berlin Deep Ash Brown is a quarter-cut ash in a deep, earthy brown. Ash's strong grain lines give it a sturdy, tactile character, while the cut keeps the pattern straight and orderly.",
+    idLongDesc: "Berlin Deep Ash Brown adalah ash potongan quarter dalam warna cokelat tanah yang dalam. Garis serat ash yang kuat memberinya karakter kokoh dan taktil, sementara potongannya menjaga pola tetap lurus dan teratur."
   },
   {
     id: 'berlin-deep-night-ebony',
@@ -1302,8 +1302,8 @@ export const PRODUCTS = [
     idBestFor: 'Suite eksekutif, pembuatan alat musik mewah, mebel yang canggih',
     finish: 'Matte finish',
     idFinish: 'Finishing Matte',
-    longDesc: "Berlin Deep Night Ebony pushes the boundaries of dark wood veneers, offering an intensely saturated, near-black surface. The quarter-cut processing reveals only the faintest whisper of linear grey striping, providing an ultra-sleek, mysterious, and highly luxurious texture.",
-    idLongDesc: "Berlin Deep Night Ebony mendorong batas veneer kayu gelap, menawarkan permukaan yang sangat pekat dan nyaris hitam. Proses potongan quarter hanya memperlihatkan bisikan samar garis abu-abu yang linear, memberikan tekstur yang sangat ramping, misterius, dan sangat mewah."
+    longDesc: "Berlin Deep Night Ebony is about as dark as wood veneer gets, a deeply saturated near-black. The quarter cut leaves only the faintest grey lines visible, for a sleek, quietly luxurious surface.",
+    idLongDesc: "Berlin Deep Night Ebony nyaris segelap veneer kayu bisa dibuat, hitam pekat yang sangat jenuh. Potongan quarter hanya menyisakan garis abu-abu yang sangat samar, menghasilkan permukaan ramping dengan kemewahan yang tenang."
   },
   {
     id: 'berlin-ebony-charcoal',
@@ -1323,8 +1323,8 @@ export const PRODUCTS = [
     idBestFor: 'Modern korporat interior, mebel ramping, residensial mewah',
     finish: 'Matte lacquer',
     idFinish: 'Pelapis Matte',
-    longDesc: "Berlin Ebony Charcoal presents an incredibly tight, linear rift-cut grain saturated in a deep, near-black charcoal tone. The subtle, horizontal textural elements within the dark finish provide a sophisticated, ultra-modern aesthetic that grounds spaces with a quiet authority.",
-    idLongDesc: "Berlin Ebony Charcoal menghadirkan serat potongan rift yang sangat rapat dan linear, diresapi nuansa arang pekat yang nyaris hitam. Elemen tekstur horizontal yang samar di dalam finishing gelapnya memberikan estetika canggih dan sangat modern yang membumikan ruang dengan wibawa yang tenang."
+    longDesc: "Berlin Ebony Charcoal has a very tight rift-cut grain in a deep, near-black charcoal. Faint horizontal marks show through the dark finish, giving a modern surface that settles a room with quiet authority.",
+    idLongDesc: "Berlin Ebony Charcoal memiliki serat potongan rift yang sangat rapat dalam warna arang pekat yang nyaris hitam. Guratan horizontal yang samar terlihat di balik finishing gelapnya, memberi permukaan modern yang menenangkan ruangan dengan wibawa."
   },
   {
     id: 'berlin-fosil-oak',
@@ -1343,8 +1343,8 @@ export const PRODUCTS = [
     idBestFor: 'Minimalis kabinet, panel-panel akustik, Pertukangan kayu transisional',
     finish: 'Satin finish',
     idFinish: 'Finishing Satin',
-    longDesc: "Berlin Fosil Oak features a refined, tightly woven rift-cut texture in an earthy, aged grey-brown tone. Reminiscent of petrified or weathered wood, this highly adaptable veneer brings a sense of history and organic texture to contemporary, clean-lined architectural designs.",
-    idLongDesc: "Berlin Fosil Oak menampilkan tekstur potongan rift yang halus dan rapat dalam nuansa abu-abu kecokelatan yang bersahaja dan tampak menua. Mengingatkan pada kayu yang membatu atau lapuk, veneer yang sangat mudah dipadukan ini menghadirkan kesan sejarah dan tekstur organik pada desain arsitektural kontemporer dengan garis yang bersih."
+    longDesc: "Berlin Fosil Oak is a fine, tight rift-cut oak in an aged, earthy grey-brown. It looks like weathered or petrified timber, adding a sense of age to clean-lined contemporary architecture.",
+    idLongDesc: "Berlin Fosil Oak adalah oak potongan rift yang halus dan rapat dalam warna abu-abu kecokelatan yang tampak menua. Tampilannya seperti kayu lapuk atau membatu, menambahkan kesan usia pada arsitektur kontemporer dengan garis yang bersih."
   },
   {
     id: 'berlin-glacier-oak',
@@ -1363,8 +1363,8 @@ export const PRODUCTS = [
     idBestFor: 'interior cerah dan lapangs, Furnitur modern rumah tangga, dinding aksen',
     finish: 'Matte urethane',
     idFinish: 'Uretan Matte',
-    longDesc: "Berlin Glacier Oak showcases a beautifully textured rift-cut grain brightened by a cool, icy light grey wash. This subtle coloration emphasizes the natural pores of the oak while offering a refreshing, contemporary palette perfectly suited for minimalist and Scandinavian-inspired spaces.",
-    idLongDesc: "Berlin Glacier Oak menampilkan serat potongan rift yang indah bertekstur, dicerahkan sapuan warna abu-abu muda sedingin es. Pewarnaan halus ini menonjolkan pori-pori alami oak sambil menawarkan palet kontemporer yang menyegarkan, sangat cocok untuk ruang minimalis bernuansa Skandinavia."
+    longDesc: "Berlin Glacier Oak is a textured rift-cut oak brightened with a cool, icy light-grey wash. The colour picks out the oak's natural pores, a fresh palette for minimalist and Scandinavian rooms.",
+    idLongDesc: "Berlin Glacier Oak adalah oak potongan rift bertekstur yang dicerahkan sapuan warna abu-abu muda sedingin es. Warnanya menonjolkan pori-pori alami oak, palet segar untuk ruang minimalis dan bernuansa Skandinavia."
   },
   // {
   //   id: 'berlin-graphite-cedar-tree',
@@ -1403,8 +1403,8 @@ export const PRODUCTS = [
     idBestFor: 'lingkungan ritel mewah, panel arsitekturaling, furnitur aksene',
     finish: 'Hand-rubbed oil',
     idFinish: 'Minyak gosok tangan',
-    longDesc: "Berlin Graphite Cedar Tree highlights prominent, swirling cathedral grain patterns in a smoky, medium-dark graphite tone. The natural movement of the wood provides an artistic, organic contrast to strict, modern geometries.",
-    idLongDesc: "Berlin Graphite Cedar Tree menonjolkan pola serat katedral yang menonjol dan berpusar dalam nuansa grafit berasap sedang hingga gelap. Gerak alami kayu memberikan kontras artistik dan organik terhadap geometri modern yang tegas."
+    longDesc: "Berlin Graphite Cedar Tree has a pronounced, swirling cathedral grain in a smoky, medium-dark graphite. The natural movement of the wood softens strict, modern geometry.",
+    idLongDesc: "Berlin Graphite Cedar Tree memiliki serat katedral yang menonjol dan berpusar dalam warna grafit berasap sedang hingga gelap. Gerak alami kayunya melunakkan geometri modern yang kaku."
   },
   {
     id: 'berlin-hawaii-nutwood',
@@ -1422,8 +1422,8 @@ export const PRODUCTS = [
     idBestFor: 'titik fokus tekstural, interior hotel butiks, mebel modern',
     finish: 'Textured matte',
     idFinish: 'Matte bertekstur',
-    longDesc: "Berlin Hawaii Nutwood offers a highly distinctive, tactile surface characterized by a light grey linear grain interrupted by unique, horizontal distressed markings. This engineered veneer provides an eye-catching, rustic-meets-modern texture that demands to be touched.",
-    idLongDesc: "Berlin Hawaii Nutwood menawarkan permukaan bertekstur yang sangat khas, dicirikan serat linear abu-abu muda yang disela tanda usang horizontal yang unik. Veneer rekayasa ini memberikan tekstur perpaduan rustik dan modern yang menarik perhatian dan mengundang untuk disentuh."
+    longDesc: "Berlin Hawaii Nutwood is an engineered veneer with a light grey linear grain broken by distinctive horizontal distressed marks. Part rustic, part modern, it is a surface people will want to touch.",
+    idLongDesc: "Berlin Hawaii Nutwood adalah veneer rekayasa dengan serat linear abu-abu muda yang disela tanda usang horizontal yang khas. Setengah rustik, setengah modern, permukaan ini mengundang untuk disentuh."
   },
   {
     id: 'berlin-iron-pine',
@@ -1441,8 +1441,8 @@ export const PRODUCTS = [
     idBestFor: 'Ruang modern industrial, panel tanpa sambunganing, kontemporer pintu',
     finish: 'Satin polish',
     idFinish: 'Poles Satin',
-    longDesc: "Berlin Iron Pine features a meticulously straight, tight linear grain finished in a cool, dark iron-grey tone. This highly structured and consistent pattern minimizes natural imperfections, making it an excellent choice for sleek, expansive architectural applications.",
-    idLongDesc: "Berlin Iron Pine menampilkan serat linear yang sangat lurus dan rapat dengan finishing abu-abu besi gelap yang sejuk. Pola yang sangat terstruktur dan konsisten ini meminimalkan ketidaksempurnaan alami, menjadikannya pilihan sangat baik untuk aplikasi arsitektural yang ramping dan luas."
+    longDesc: "Berlin Iron Pine has a very straight, tight grain in a cool, dark iron grey. The pattern is so regular that natural irregularities disappear, which makes it a strong choice for large architectural surfaces.",
+    idLongDesc: "Berlin Iron Pine memiliki serat yang sangat lurus dan rapat dalam warna abu-abu besi yang gelap dan sejuk. Polanya begitu teratur sehingga ketidakteraturan alami tersamarkan, menjadikannya pilihan kuat untuk permukaan arsitektural yang luas."
   },
   {
     id: 'berlin-lava-oak',
@@ -1460,8 +1460,8 @@ export const PRODUCTS = [
     idBestFor: 'Pertukangan kayu transisional, perabot tanam custom, interior komersial yang lembuts',
     finish: 'Matte varnish',
     idFinish: 'Pernis Matte',
-    longDesc: "Berlin Lava Oak presents a highly uniform, tight rift-cut grain finished in a versatile, medium-grey lava tone. This adaptable, neutral veneer seamlessly bridges the gap between warm and cool palettes, providing a reliable and elegant foundation for any design.",
-    idLongDesc: "Berlin Lava Oak menghadirkan serat potongan rift yang sangat seragam dan rapat dengan finishing abu-abu lava sedang yang serbaguna. Veneer netral yang mudah dipadukan ini menjembatani palet hangat dan sejuk dengan mulus, memberikan dasar yang andal dan elegan untuk desain apa pun."
+    longDesc: "Berlin Lava Oak has a very even, tight rift-cut grain in a medium lava grey. The neutral tone works with warm and cool palettes alike, a dependable base for most schemes.",
+    idLongDesc: "Berlin Lava Oak memiliki serat potongan rift yang sangat rata dan rapat dalam warna abu-abu lava sedang. Nuansa netralnya cocok dengan palet hangat maupun sejuk, dasar yang bisa diandalkan untuk sebagian besar rancangan."
   },
   {
     id: 'berlin-light-ash-oak',
@@ -1480,8 +1480,8 @@ export const PRODUCTS = [
     idBestFor: 'perlakuan dinding akustik, desain Skandinavia modern, mebel cerah',
     finish: 'Clear oil finish',
     idFinish: 'Finishing minyak bening',
-    longDesc: "Berlin Light Ash Oak is bright, airy, and highly textural, featuring a light grey wash over a prominent, open-pore linear grain structure. The resulting surface is both visually and physically dynamic, bringing an organic freshness to modern, light-filled interiors.",
-    idLongDesc: "Berlin Light Ash Oak tampil cerah, lapang, dan sangat bertekstur, dengan sapuan warna abu-abu muda di atas struktur serat linear berpori terbuka yang menonjol. Permukaan yang dihasilkan dinamis secara visual maupun sentuhan, menghadirkan kesegaran organik pada interior modern yang dipenuhi cahaya."
+    longDesc: "Berlin Light Ash Oak is bright and strongly textured: a light grey wash over a pronounced, open-pored linear grain. The surface has movement you can see and feel, and keeps sunlit modern interiors fresh.",
+    idLongDesc: "Berlin Light Ash Oak tampil cerah dan sangat bertekstur: sapuan abu-abu muda di atas serat linear berpori terbuka yang menonjol. Permukaannya memiliki gerak yang bisa dilihat dan dirasakan, menjaga interior modern yang terang tetap segar."
   },
   {
     id: 'berlin-mandarin-dusk',
@@ -1500,8 +1500,8 @@ export const PRODUCTS = [
     idBestFor: 'Interior residensial hangat interior, mid-century Furnitur moderne, panel-panel akustik',
     finish: 'Satin oil',
     idFinish: 'Minyak Satin',
-    longDesc: "Berlin Mandarin Dusk features a warm, earthy brown base enriched with subtle, dusky orange-brown undertones. The straight, rift-cut grain provides a clean, linear texture that grounds spaces with a welcoming and sophisticated natural warmth.",
-    idLongDesc: "Berlin Mandarin Dusk menampilkan dasar cokelat tanah yang hangat, diperkaya nuansa cokelat oranye senja yang samar. Serat potongan rift yang lurus memberikan tekstur linear yang bersih, yang membumikan ruang dengan kehangatan alami yang mengundang dan canggih."
+    longDesc: "Berlin Mandarin Dusk is a warm, earthy brown with a faint dusky orange undertone. The straight rift-cut grain keeps the texture clean and linear, and the colour makes a room feel warm and settled.",
+    idLongDesc: "Berlin Mandarin Dusk berwarna cokelat tanah yang hangat dengan nuansa oranye senja yang samar. Serat potongan rift yang lurus menjaga teksturnya bersih dan linear, dan warnanya membuat ruangan terasa hangat dan tenang."
   },
   {
     id: 'berlin-misty-wave',
@@ -1520,8 +1520,8 @@ export const PRODUCTS = [
     idBestFor: 'panel seni statement, butik hospitality, furnitur mewah custome',
     finish: 'Matte lacquer',
     idFinish: 'Pelapis Matte',
-    longDesc: "Berlin Misty Wave showcases a highly dynamic, swirling grain pattern reminiscent of rolling fog or water currents. Finished in a soft, misty grey, this highly figured veneer acts as a captivating, organic piece of natural art for feature applications.",
-    idLongDesc: "Berlin Misty Wave menampilkan pola serat berpusar yang sangat dinamis, mengingatkan pada kabut yang bergulung atau arus air. Dengan finishing abu-abu berkabut yang lembut, veneer dengan figur kaya ini menjadi karya seni alam organik yang memikat untuk aplikasi aksen."
+    longDesc: "Berlin Misty Wave has a swirling, heavily figured grain that recalls rolling fog or moving water. Finished in a soft, misty grey, it reads almost like a piece of natural art on a feature wall.",
+    idLongDesc: "Berlin Misty Wave memiliki serat berpusar dengan figur kaya yang mengingatkan pada kabut bergulung atau air yang mengalir. Dengan finishing abu-abu berkabut yang lembut, tampilannya hampir seperti karya seni alam pada dinding aksen."
   },
   {
     id: 'berlin-mystic-oak',
@@ -1539,8 +1539,8 @@ export const PRODUCTS = [
     idBestFor: 'ruang rapat korporat, kontemporer mebel, minimalis pintu',
     finish: 'Satin urethane',
     idFinish: 'Uretan Satin',
-    longDesc: "Berlin Mystic Oak provides a sleek, rift-cut linear texture bathed in a deep, moody, and almost twilight-blue/grey finish. This subdued, enigmatic color palette minimizes the natural warmth of the oak, creating a cool, ultra-modern architectural surface.",
-    idLongDesc: "Berlin Mystic Oak memberikan tekstur linear potongan rift yang ramping, diselimuti finishing biru keabuan yang pekat dan muram, nyaris seperti senja. Palet warna yang kalem dan misterius ini meminimalkan kehangatan alami oak, menciptakan permukaan arsitektural yang sejuk dan sangat modern."
+    longDesc: "Berlin Mystic Oak is a sleek rift-cut oak finished in a deep, moody blue-grey, close to twilight. The colour takes away most of the oak's warmth, leaving a cool, very modern surface.",
+    idLongDesc: "Berlin Mystic Oak adalah oak potongan rift yang ramping dengan finishing biru keabuan yang pekat dan muram, nyaris seperti senja. Warnanya menghilangkan sebagian besar kehangatan oak, menyisakan permukaan yang sejuk dan sangat modern."
   },
   {
     id: 'berlin-nero-ebony',
@@ -1559,8 +1559,8 @@ export const PRODUCTS = [
     idBestFor: 'Kelas atas ritel displays, Suite eksekutif, dramatic dinding aksen',
     finish: 'High-gloss polyurethane',
     idFinish: 'Poliuretan glossy tinggi',
-    longDesc: "Berlin Nero Ebony delivers a powerful, high-contrast aesthetic with intense black and dark charcoal vertical striping. The quarter-cut processing ensures a precise, rhythmic linearity that exudes modern luxury and uncompromising sophistication.",
-    idLongDesc: "Berlin Nero Ebony menghadirkan estetika kuat berkontras tinggi dengan garis vertikal hitam pekat dan arang gelap. Proses potongan quarter menjamin linearitas yang presisi dan berirama, memancarkan kemewahan modern dan kecanggihan tanpa kompromi."
+    longDesc: "Berlin Nero Ebony has strong, high-contrast stripes of deep black and dark charcoal. Cut on the quarter, the lines run precise and even, a modern and uncompromising kind of luxury.",
+    idLongDesc: "Berlin Nero Ebony memiliki garis berkontras tinggi dalam warna hitam pekat dan arang gelap. Dengan potongan quarter, garis-garisnya presisi dan rata, kemewahan modern yang tanpa kompromi."
   },
   {
     id: 'berlin-noir-oak',
@@ -1579,8 +1579,8 @@ export const PRODUCTS = [
     idBestFor: 'mewah kabinet, modern panel arsitekturaling, contrast elements',
     finish: 'Matte',
     idFinish: 'Matte',
-    longDesc: "Berlin Noir Oak features a deeply saturated, near-black finish applied to a meticulously straight rift-cut oak grain. The deep coloration allows the subtle textural lines of the wood's pores to remain visible, offering a sleek, monochromatic look with organic depth.",
-    idLongDesc: "Berlin Noir Oak menampilkan finishing pekat yang nyaris hitam di atas serat oak potongan rift yang sangat lurus. Warnanya yang dalam membuat garis tekstur halus dari pori-pori kayu tetap terlihat, menawarkan tampilan monokromatik yang ramping dengan kedalaman organik."
+    longDesc: "Berlin Noir Oak is a very straight rift-cut oak with a deep, near-black finish. The fine lines of the pores still show through, so the surface is monochrome without losing the depth of real wood.",
+    idLongDesc: "Berlin Noir Oak adalah oak potongan rift yang sangat lurus dengan finishing pekat yang nyaris hitam. Garis halus pori-porinya tetap terlihat, sehingga permukaannya monokrom tanpa kehilangan kedalaman kayu asli."
   },
   {
     id: 'berlin-pale-silver-pearwood',
@@ -1599,8 +1599,8 @@ export const PRODUCTS = [
     idBestFor: 'Fine interior pertukangan kayu, ritel butik, light Ruang minimalis',
     finish: 'Satin pearl',
     idFinish: 'Satin mutiara',
-    longDesc: "Berlin Pale Silver Pearwood offers an exceptionally smooth, fine grain paired with a delicate, silvery-grey wash. The lack of conspicuous pores typical of pearwood creates a velvety, continuous surface that softly reflects light and brightens modern interiors.",
-    idLongDesc: "Berlin Pale Silver Pearwood menawarkan serat yang sangat halus dan lembut, dipadukan dengan sapuan warna abu-abu keperakan yang lembut. Tidak adanya pori-pori mencolok yang khas pada pearwood menciptakan permukaan selembut beludru dan tak terputus, yang memantulkan cahaya dengan lembut dan mencerahkan interior modern."
+    longDesc: "Berlin Pale Silver Pearwood has a very smooth, fine grain under a delicate silvery-grey wash. Like most pearwood it has almost no visible pores, so the surface looks velvety, catches light softly and brightens a modern room.",
+    idLongDesc: "Berlin Pale Silver Pearwood memiliki serat yang sangat halus di bawah sapuan warna abu-abu keperakan yang lembut. Seperti kebanyakan pearwood, pori-porinya hampir tidak terlihat, sehingga permukaannya tampak seperti beludru, memantulkan cahaya dengan lembut, dan mencerahkan ruang modern."
   },
   {
     id: 'berlin-peageon',
@@ -1619,8 +1619,8 @@ export const PRODUCTS = [
     idBestFor: 'Aksen dasbor, tatahan mewah, furnitur statement fronts',
     finish: 'Polished lacquer',
     idFinish: 'Pelapis dipoles',
-    longDesc: "Berlin Peageon presents a mesmerizing, highly figured burl pattern in nuanced shades of pigeon-grey and deep charcoal. The swirling, unpredictable grain clusters create a complex, cloud-like visual texture perfect for luxurious, eye-catching focal points.",
-    idLongDesc: "Berlin Peageon menghadirkan pola burl yang memukau dengan figur kaya dalam gradasi abu-abu merpati dan arang pekat. Gugusan serat yang berpusar dan tak terduga menciptakan tekstur visual kompleks menyerupai awan, sempurna untuk titik fokus mewah yang menarik perhatian."
+    longDesc: "Berlin Peageon is a heavily figured burl in shades of pigeon grey and deep charcoal. Its swirling, unpredictable clusters build a cloud-like texture, best used for a striking focal point.",
+    idLongDesc: "Berlin Peageon adalah burl dengan figur kaya dalam gradasi abu-abu merpati dan arang pekat. Gugusan seratnya yang berpusar dan tak terduga membentuk tekstur menyerupai awan, paling baik untuk titik fokus yang mencolok."
   },
   {
     id: 'berlin-pearl-stripes',
@@ -1640,8 +1640,8 @@ export const PRODUCTS = [
     idBestFor: 'Avant-garde interior, feature bagian depan bar, unique arsitektural pintu',
     finish: 'Matte',
     idFinish: 'Matte',
-    longDesc: "Berlin Pearl Stripes is a striking engineered veneer that features a meticulous arrangement of alternating grey base tones punctuated by dashed, pearlescent white lines. This highly graphic, almost digital texture brings a completely unique, modern rhythm to interior surfaces.",
-    idLongDesc: "Berlin Pearl Stripes adalah veneer rekayasa yang mencolok, dengan susunan cermat nuansa dasar abu-abu yang berselang-seling dan disela garis putih mutiara yang putus-putus. Tekstur yang sangat grafis, nyaris digital ini menghadirkan ritme modern yang benar-benar unik pada permukaan interior."
+    longDesc: "Berlin Pearl Stripes is an engineered veneer of alternating grey tones crossed by dashed, pearly white lines. The pattern is graphic, almost digital, and gives interior surfaces a modern rhythm unlike any natural wood.",
+    idLongDesc: "Berlin Pearl Stripes adalah veneer rekayasa dengan nuansa abu-abu yang berselang-seling dan disela garis putih mutiara yang putus-putus. Polanya grafis, nyaris digital, dan memberi permukaan interior ritme modern yang berbeda dari kayu alami mana pun."
   },
   {
     id: 'berlin-pewter-pearwood',
@@ -1660,8 +1660,8 @@ export const PRODUCTS = [
     idBestFor: 'sistem dinding akustik, premium mebel residensial, modern desks',
     finish: 'Hand-rubbed oil',
     idFinish: 'Minyak gosok tangan',
-    longDesc: "Berlin Pewter Pearwood utilizes the famously fine, uniform texture of quartered pearwood and finishes it in a sophisticated, dark metallic pewter grey. The result is an incredibly sleek, unblemished surface that bridges the warmth of wood with an industrial-modern color palette.",
-    idLongDesc: "Berlin Pewter Pearwood memanfaatkan tekstur pearwood potongan quarter yang terkenal halus dan seragam, lalu memberinya finishing abu-abu pewter metalik gelap yang canggih. Hasilnya adalah permukaan yang sangat ramping dan mulus, yang menjembatani kehangatan kayu dengan palet warna industrial-modern."
+    longDesc: "Berlin Pewter Pearwood takes the famously fine, even texture of quarter-cut pearwood and finishes it in a dark metallic pewter grey. The surface is sleek and unblemished, with the warmth of wood in an industrial palette.",
+    idLongDesc: "Berlin Pewter Pearwood mengambil tekstur pearwood potongan quarter yang terkenal halus dan rata, lalu memberinya finishing abu-abu pewter metalik yang gelap. Permukaannya ramping dan mulus, dengan kehangatan kayu dalam palet industrial."
   },
   {
     id: 'berlin-riverbed-stone',
@@ -1680,8 +1680,8 @@ export const PRODUCTS = [
     idBestFor: 'Dramatic dinding aksen, organic modern interior, artistic focal points',
     finish: 'Textured matte',
     idFinish: 'Matte bertekstur',
-    longDesc: "Berlin Riverbed Stone captures the rugged, flowing beauty of nature with a highly active, undulating grain pattern that mimics sedimentary rock layers or flowing water. Finished in complex, stony grey tones, it provides a striking, organic centerpiece for any room.",
-    idLongDesc: "Berlin Riverbed Stone menangkap keindahan alam yang kasar dan mengalir dengan pola serat bergelombang yang sangat aktif, menyerupai lapisan batuan sedimen atau air yang mengalir. Dengan finishing nuansa abu-abu batu yang kompleks, veneer ini menjadi pusat perhatian organik yang mencolok untuk ruangan mana pun."
+    longDesc: "Berlin Riverbed Stone has a lively, undulating grain like layers of sedimentary rock or running water. Finished in layered stone greys, it makes an organic centrepiece in any room.",
+    idLongDesc: "Berlin Riverbed Stone memiliki serat bergelombang yang hidup, seperti lapisan batuan sedimen atau air yang mengalir. Dengan finishing gradasi abu-abu batu, veneer ini menjadi pusat perhatian organik di ruangan mana pun."
   },
   {
     id: 'berlin-shadow-sandalwood',
@@ -1699,8 +1699,8 @@ export const PRODUCTS = [
     idBestFor: 'Modern kabinet, ramping panel dinding, interior komersials',
     finish: 'Matte',
     idFinish: 'Matte',
-    longDesc: "Berlin Shadow Sandalwood offers an impeccably straight, fine linear grain in a deep, shadowy grey-brown. As an engineered veneer, it provides seamless consistency and a highly contemporary, minimalist texture perfect for expansive architectural applications.",
-    idLongDesc: "Berlin Shadow Sandalwood menawarkan serat linear yang sangat lurus dan halus dalam warna abu-abu kecokelatan yang pekat dan teduh. Sebagai veneer rekayasa, veneer ini memberikan konsistensi mulus dan tekstur minimalis yang sangat kontemporer, sempurna untuk aplikasi arsitektural yang luas."
+    longDesc: "Berlin Shadow Sandalwood has a very straight, fine grain in a deep, shadowy grey-brown. Being engineered, it stays consistent from sheet to sheet, a minimal texture for large architectural surfaces.",
+    idLongDesc: "Berlin Shadow Sandalwood memiliki serat yang sangat lurus dan halus dalam warna abu-abu kecokelatan yang pekat dan teduh. Sebagai veneer rekayasa, warnanya konsisten dari lembar ke lembar, tekstur minimalis untuk permukaan arsitektural yang luas."
   },
   {
     id: 'berlin-shadow',
@@ -1719,8 +1719,8 @@ export const PRODUCTS = [
     idBestFor: 'Moody interior aksen, furnitur custome, ritel butik',
     finish: 'Satin',
     idFinish: 'Satin',
-    longDesc: "Berlin Shadow features the smooth, sweeping cathedrals of flat-cut maple saturated in a deep, atmospheric grey. The subtle, cloud-like movement of the grain adds organic depth to the dark, moody finish, creating a sophisticated backdrop.",
-    idLongDesc: "Berlin Shadow menampilkan katedral maple potongan flat yang halus dan melengkung luas, diresapi warna abu-abu pekat yang atmosferik. Gerak serat yang samar menyerupai awan menambahkan kedalaman organik pada finishing gelap yang muram, menciptakan latar yang canggih."
+    longDesc: "Berlin Shadow is a flat-cut maple with smooth, sweeping cathedrals in a deep, atmospheric grey. The soft, cloud-like movement of the grain gives depth to the dark finish, a refined backdrop for a room.",
+    idLongDesc: "Berlin Shadow adalah maple potongan flat dengan katedral yang halus dan melengkung luas dalam warna abu-abu pekat yang atmosferik. Gerak seratnya yang lembut seperti awan memberi kedalaman pada finishing gelapnya, latar yang halus untuk sebuah ruangan."
   },
   {
     id: 'berlin-silver-ash',
@@ -1738,8 +1738,8 @@ export const PRODUCTS = [
     idBestFor: 'Kontemporer ruang, mebel cerah, panel-panel akustik',
     finish: 'Matte oil',
     idFinish: 'Minyak Matte',
-    longDesc: "Berlin Silver Ash utilizes the pronounced, open linear grain of rift-cut ash and elevates it with a luminous silver-grey wash. This finish highlights the natural texture of the wood while providing a clean, modern color palette.",
-    idLongDesc: "Berlin Silver Ash memanfaatkan serat linear terbuka ash potongan rift yang menonjol dan mengangkatnya dengan sapuan warna abu-abu keperakan yang berkilau. Finishing ini menonjolkan tekstur alami kayu sambil memberikan palet warna yang bersih dan modern."
+    longDesc: "Berlin Silver Ash takes the pronounced, open grain of rift-cut ash and gives it a bright silver-grey wash. The finish brings out the wood's texture in a clean, modern colour.",
+    idLongDesc: "Berlin Silver Ash mengambil serat terbuka ash potongan rift yang menonjol dan memberinya sapuan warna abu-abu keperakan yang cerah. Finishingnya menonjolkan tekstur kayu dalam warna yang bersih dan modern."
   },
   {
     id: 'berlin-slate-brown-walnut',
@@ -1758,8 +1758,8 @@ export const PRODUCTS = [
     idBestFor: 'Mid-century modern designs, furnitur rumah tangga, warm aksen',
     finish: 'Satin polish',
     idFinish: 'Poles Satin',
-    longDesc: "Berlin Slate Brown Walnut marries the rich, organic cathedral patterns of flat-cut walnut with a muted, slate-grey undertone. This sophisticated tint cools the natural warmth of the wood, bridging the gap between classic elegance and contemporary design.",
-    idLongDesc: "Berlin Slate Brown Walnut memadukan pola katedral walnut potongan flat yang kaya dan organik dengan nuansa abu-abu slate yang lembut. Tint yang canggih ini menyejukkan kehangatan alami kayu, menjembatani keanggunan klasik dan desain kontemporer."
+    longDesc: "Berlin Slate Brown Walnut pairs the cathedral pattern of flat-cut walnut with a muted slate-grey undertone. The tint cools the wood's natural warmth, sitting somewhere between classic and contemporary.",
+    idLongDesc: "Berlin Slate Brown Walnut memadukan pola katedral walnut potongan flat dengan nuansa dasar abu-abu slate yang redup. Tint-nya menyejukkan kehangatan alami kayu, berada di antara klasik dan kontemporer."
   },
   {
     id: 'berlin-slate-oak',
@@ -1779,8 +1779,8 @@ export const PRODUCTS = [
     idBestFor: 'Lingkungan korporat, dark panel arsitektural, mewah kabinet',
     finish: 'Matte urethane',
     idFinish: 'Uretan Matte',
-    longDesc: "Berlin Slate Oak presents a tightly woven, rift-cut linear texture bathed in a deep, earthy slate-brown hue. The consistent, straight grain minimizes visual clutter, offering a solid, grounding presence for sophisticated interiors.",
-    idLongDesc: "Berlin Slate Oak menghadirkan tekstur linear potongan rift yang rapat, diselimuti rona cokelat slate yang pekat dan bersahaja. Serat lurus yang konsisten meminimalkan keramaian visual, memberikan kehadiran yang kokoh dan membumi untuk interior yang canggih."
+    longDesc: "Berlin Slate Oak is a tight rift-cut oak in a deep, earthy slate brown. The straight, consistent grain keeps the surface calm and gives a room a solid, grounded feel.",
+    idLongDesc: "Berlin Slate Oak adalah oak potongan rift yang rapat dalam warna cokelat slate yang pekat dan bernuansa tanah. Seratnya yang lurus dan konsisten menjaga permukaan tetap tenang dan memberi ruangan kesan kokoh dan membumi."
   },
   {
     id: 'berlin-stone-ash',
@@ -1799,8 +1799,8 @@ export const PRODUCTS = [
     idBestFor: 'dinding statement, custom pertukangan kayu, modern hospitality',
     finish: 'Satin wax',
     idFinish: 'Lilin Satin',
-    longDesc: "Berlin Stone Ash features the sweeping, bold grain arches typical of flat-cut ash, transformed by a cool, dark stone-grey stain. The contrast between the open pores and the smooth summerwood creates a dynamic, highly tactile surface.",
-    idLongDesc: "Berlin Stone Ash menampilkan lengkung serat yang tegas dan melengkung luas, khas ash potongan flat, yang diubah oleh pewarnaan abu-abu batu gelap yang sejuk. Kontras antara pori-pori terbuka dan bagian kayu akhir yang halus menciptakan permukaan yang dinamis dan sangat bertekstur."
+    longDesc: "Berlin Stone Ash has the bold, sweeping arches of flat-cut ash under a cool, dark stone-grey stain. The open pores and smooth latewood contrast with each other, giving a lively, tactile surface.",
+    idLongDesc: "Berlin Stone Ash memiliki lengkung serat yang tegas dan luas khas ash potongan flat, di bawah pewarnaan abu-abu batu yang gelap dan sejuk. Pori-pori terbuka dan bagian kayu akhir yang halus saling berkontras, memberi permukaan yang hidup dan taktil."
   },
   {
     id: 'berlin-storm',
@@ -1819,8 +1819,8 @@ export const PRODUCTS = [
     idBestFor: 'Dramatic focal points, ritel mewah, high-contrast designs',
     finish: 'Matte lacquer',
     idFinish: 'Pelapis Matte',
-    longDesc: "Berlin Storm captures the turbulent, flowing beauty of flat-cut oak under a deep, blackened-grey finish. The prominent cathedral grain remains distinctly visible, offering an imposing, organic texture that anchors modern spaces with dramatic flair.",
-    idLongDesc: "Berlin Storm menangkap keindahan oak potongan flat yang bergolak dan mengalir di bawah finishing abu-abu kehitaman yang pekat. Serat katedral yang menonjol tetap terlihat jelas, menawarkan tekstur organik yang megah dan menjadi jangkar ruang modern dengan sentuhan dramatis."
+    longDesc: "Berlin Storm is a flat-cut oak under a deep, blackened grey, its grain turbulent and flowing. The cathedral pattern stays clearly visible, giving a modern room a heavy, dramatic texture to settle around.",
+    idLongDesc: "Berlin Storm adalah oak potongan flat di bawah warna abu-abu kehitaman yang pekat, dengan serat yang bergolak dan mengalir. Pola katedralnya tetap terlihat jelas, memberi ruang modern tekstur yang berat dan dramatis sebagai pusatnya."
   },
   {
     id: 'berlin-swiss-pearwood',
@@ -1839,8 +1839,8 @@ export const PRODUCTS = [
     idBestFor: 'Fine interior woodworking, ritel butik, soft aksen residensial',
     finish: 'Hand-rubbed oil',
     idFinish: 'Minyak gosok tangan',
-    longDesc: "Berlin Swiss Pearwood features a wonderfully smooth, closed-pore texture with soft, sweeping cathedrals. Finished in a delicate, cool grey, it provides an exceptionally refined and velvety surface that brings subtle elegance to bespoke applications.",
-    idLongDesc: "Berlin Swiss Pearwood menampilkan tekstur berpori tertutup yang sangat halus dengan katedral lembut yang melengkung luas. Dengan finishing abu-abu sejuk yang lembut, veneer ini memberikan permukaan yang sangat halus dan selembut beludru, menghadirkan keanggunan yang samar pada aplikasi custom."
+    longDesc: "Berlin Swiss Pearwood has a very smooth, closed-pore texture with soft, sweeping cathedrals. Finished in a delicate cool grey, it has a fine, velvety surface suited to bespoke work.",
+    idLongDesc: "Berlin Swiss Pearwood memiliki tekstur berpori tertutup yang sangat halus dengan katedral lembut yang melengkung luas. Dengan finishing abu-abu sejuk yang lembut, permukaannya halus seperti beludru dan cocok untuk pekerjaan custom."
   },
   {
     id: 'berlin-terra-line-oak',
@@ -1860,8 +1860,8 @@ export const PRODUCTS = [
     idBestFor: 'Tactile bagian depan bar, avant-garde interior, feature panel',
     finish: 'Textured matte',
     idFinish: 'Matte bertekstur',
-    longDesc: "Berlin Terra Line Oak breaks from convention with a highly structured, almost woven horizontal and vertical texture over a dark, earthy base. This engineered surface provides a unique, tactile rhythm that adds striking dimension to modern designs.",
-    idLongDesc: "Berlin Terra Line Oak keluar dari kebiasaan dengan tekstur horizontal dan vertikal yang sangat terstruktur, nyaris seperti anyaman, di atas dasar gelap bernuansa tanah. Permukaan rekayasa ini memberikan ritme bertekstur yang unik dan menambahkan dimensi mencolok pada desain modern."
+    longDesc: "Berlin Terra Line Oak is an engineered surface with a tight, almost woven texture of horizontal and vertical lines over a dark, earthy base. It gives modern interiors a tactile rhythm and real depth.",
+    idLongDesc: "Berlin Terra Line Oak adalah permukaan rekayasa dengan tekstur garis horizontal dan vertikal yang rapat, nyaris seperti anyaman, di atas dasar gelap bernuansa tanah. Veneer ini memberi interior modern ritme yang taktil dan kedalaman yang nyata."
   },
   {
     id: 'berlin-volcano-oak',
@@ -1880,8 +1880,8 @@ export const PRODUCTS = [
     idBestFor: 'High-impact dinding aksen, furnitur custome, mewah komersial',
     finish: 'Clear matte',
     idFinish: 'Matte bening',
-    longDesc: "Berlin Volcano Oak delivers an explosive visual contrast, featuring a dark, ash-grey base punctuated by stark white cerused rift-cut grain lines. The rigorous linear texture and high-contrast palette create a powerful, unforgettable architectural surface.",
-    idLongDesc: "Berlin Volcano Oak menghadirkan kontras visual yang meledak, dengan dasar abu-abu ash gelap yang disela garis serat potongan rift ber-cerused putih yang tegas. Tekstur linear yang ketat dan palet berkontras tinggi menciptakan permukaan arsitektural yang kuat dan tak terlupakan."
+    longDesc: "Berlin Volcano Oak is all contrast: a dark ash-grey base cut through with stark white cerused rift-cut grain. The strict linear texture makes a strong, memorable architectural surface.",
+    idLongDesc: "Berlin Volcano Oak sepenuhnya tentang kontras: dasar abu-abu gelap yang disela serat potongan rift ber-cerused putih yang tegas. Tekstur linearnya yang ketat menghasilkan permukaan arsitektural yang kuat dan mudah diingat."
   },
   {
     id: 'cairo-blanc-oak',
@@ -1900,8 +1900,8 @@ export const PRODUCTS = [
     idBestFor: 'Scandinavian interior, airy residensial ruang, light kabinet',
     finish: 'Matte',
     idFinish: 'Matte',
-    longDesc: "Cairo Blanc Oak presents the sweeping, organic cathedrals of flat-cut white oak treated with a bright, bleaching process. The resulting pale, almost white tone offers a fresh, clean canvas perfect for airy, minimalist, and Scandinavian-inspired interiors.",
-    idLongDesc: "Cairo Blanc Oak menghadirkan katedral organik white oak potongan flat yang melengkung luas, diolah dengan proses pemutihan yang cerah. Nuansa pucat yang dihasilkan, nyaris putih, menawarkan kanvas segar dan bersih yang sempurna untuk interior lapang, minimalis, dan bernuansa Skandinavia."
+    longDesc: "Cairo Blanc Oak is a flat-cut white oak with broad, natural cathedrals, bleached to a pale, almost white tone. It is a clean, fresh base for airy, minimalist and Scandinavian interiors.",
+    idLongDesc: "Cairo Blanc Oak adalah white oak potongan flat dengan katedral alami yang lebar, diputihkan hingga nyaris putih. Veneer ini menjadi dasar yang bersih dan segar untuk interior yang lapang, minimalis, dan bernuansa Skandinavia."
   },
   {
     id: 'cairo-bone-oak',
@@ -1920,8 +1920,8 @@ export const PRODUCTS = [
     idBestFor: 'mebel modern, neutral interior panel, subtle furnitur',
     finish: 'Matte lacquer',
     idFinish: 'Pelapis Matte',
-    longDesc: "Cairo Bone Oak offers a highly versatile, neutral grey-beige tone over a straight, rift-cut grain. This subtle, unembellished texture provides a quiet, structural elegance that seamlessly integrates into both warm and cool contemporary palettes.",
-    idLongDesc: "Cairo Bone Oak menawarkan nuansa krem keabuan netral yang sangat serbaguna di atas serat potongan rift yang lurus. Tekstur halus tanpa hiasan ini memberikan keanggunan struktural yang tenang, yang menyatu mulus dengan palet kontemporer hangat maupun sejuk."
+    longDesc: "Cairo Bone Oak is a neutral grey-beige over a straight rift-cut grain. The plain, quiet texture gives a room structure and fits warm and cool palettes alike.",
+    idLongDesc: "Cairo Bone Oak berwarna krem keabuan yang netral di atas serat potongan rift yang lurus. Teksturnya yang polos dan tenang memberi ruangan struktur dan cocok untuk palet hangat maupun sejuk."
   },
   {
     id: 'cairo-buff-oak',
@@ -1939,8 +1939,8 @@ export const PRODUCTS = [
     idBestFor: 'Bright arsitektural woodwork, coastal modern interior, custom pertukangan kayu',
     finish: 'Satin urethane',
     idFinish: 'Uretan Satin',
-    longDesc: "Cairo Buff Oak showcases the linear perfection of rift-cut oak in a warm, pale blonde hue. The natural, light-reflecting qualities of the wood bring an inviting, organic warmth to spaces without overwhelming the visual design.",
-    idLongDesc: "Cairo Buff Oak menampilkan kesempurnaan linear oak potongan rift dalam rona pirang pucat yang hangat. Sifat alami kayu yang memantulkan cahaya menghadirkan kehangatan organik yang mengundang pada ruang tanpa mendominasi desain visual."
+    longDesc: "Cairo Buff Oak is a rift-cut oak with a clean, straight grain in a warm, pale blonde. The light colour reflects well and warms a room without taking over the design.",
+    idLongDesc: "Cairo Buff Oak adalah oak potongan rift dengan serat lurus yang bersih dalam warna pirang pucat yang hangat. Warnanya yang terang memantulkan cahaya dengan baik dan menghangatkan ruangan tanpa mendominasi desain."
   },
   {
     id: 'cairo-butter-oak',
@@ -1958,8 +1958,8 @@ export const PRODUCTS = [
     idBestFor: 'Transisional kabinet, elegant aksen residensial, ritel butik',
     finish: 'Smooth matte',
     idFinish: 'Matte halus',
-    longDesc: "Cairo Butter Oak features a remarkably smooth, tight quarter-cut grain finished in a soft, creamy yellowish-beige. This delicate, even texture provides a luxurious and understated surface that radiates gentle warmth.",
-    idLongDesc: "Cairo Butter Oak menampilkan serat potongan quarter yang sangat halus dan rapat dengan finishing krem kekuningan yang lembut. Tekstur halus dan rata ini memberikan permukaan yang mewah dan bersahaja, yang memancarkan kehangatan lembut."
+    longDesc: "Cairo Butter Oak has a very smooth, tight quarter-cut grain in a soft, creamy yellow-beige. The fine, even texture is understated and gives off a gentle warmth.",
+    idLongDesc: "Cairo Butter Oak memiliki serat potongan quarter yang sangat halus dan rapat dalam warna krem kekuningan yang lembut. Teksturnya yang halus dan rata terasa bersahaja dan memancarkan kehangatan yang lembut."
   },
   {
     id: 'cairo-chalk-oak',
@@ -2004,8 +2004,8 @@ export const PRODUCTS = [
     idBestFor: 'Kelas atas furnitur rumah tangga, warm korporat interior, hospitality panel',
     finish: 'Satin oil',
     idFinish: 'Minyak Satin',
-    longDesc: "Cairo Crema Oak utilizes a strictly linear rift-cut pattern imbued with a warm, rich beige tint. The consistent grain and creamy undertones create an inviting, highly sophisticated architectural surface perfect for enveloping, cozy interiors.",
-    idLongDesc: "Cairo Crema Oak memanfaatkan pola potongan rift yang benar-benar linear, diresapi tint krem yang hangat dan kaya. Serat yang konsisten dan nuansa krem menciptakan permukaan arsitektural yang mengundang dan sangat canggih, sempurna untuk interior yang hangat dan nyaman."
+    longDesc: "Cairo Crema Oak is a strictly linear rift-cut oak with a warm, deep beige tint. The even grain and creamy undertone make a welcoming architectural surface for warm, enclosing interiors.",
+    idLongDesc: "Cairo Crema Oak adalah oak potongan rift yang benar-benar linear dengan tint krem yang hangat dan dalam. Seratnya yang rata dan nuansa krem menghasilkan permukaan arsitektural yang ramah untuk interior yang hangat dan nyaman."
   },
   {
     id: 'cairo-crumble-oak',
@@ -2023,8 +2023,8 @@ export const PRODUCTS = [
     idBestFor: 'Textured panel dinding, akustik features, modern rustic mebel',
     finish: 'Matte varnish',
     idFinish: 'Pernis Matte',
-    longDesc: "Cairo Crumble Oak presents a straight rift-cut grain with a slightly deeper, earthy tan-brown finish. The visibility of the oak's natural pores within this warm, toasted hue offers a grounding, organic texture that feels both modern and deeply natural.",
-    idLongDesc: "Cairo Crumble Oak menghadirkan serat potongan rift yang lurus dengan finishing cokelat tan bernuansa tanah yang sedikit lebih gelap. Pori-pori alami oak yang terlihat dalam rona panggang yang hangat ini menawarkan tekstur organik yang membumi, terasa modern sekaligus sangat alami."
+    longDesc: "Cairo Crumble Oak is a straight rift-cut oak in a slightly deeper, earthy tan-brown. The oak's pores show through the warm, toasted colour, giving a grounded texture that feels both modern and natural.",
+    idLongDesc: "Cairo Crumble Oak adalah oak potongan rift yang lurus dalam warna cokelat tan bernuansa tanah yang sedikit lebih gelap. Pori-pori oak terlihat di balik warna panggangnya yang hangat, memberi tekstur membumi yang terasa modern sekaligus alami."
   },
   {
     id: 'cairo-crumble-pine',
@@ -2043,8 +2043,8 @@ export const PRODUCTS = [
     idBestFor: 'Light interior komersials, kontemporer pintu, subtle mebel',
     finish: 'Clear matte',
     idFinish: 'Matte bening',
-    longDesc: "Cairo Crumble Pine delivers a highly refined, tightly woven linear grain characteristic of strictly rift-cut pine. Its soft, sandy-beige coloration provides a bright, uniform, and slightly softer alternative to traditional hardwoods.",
-    idLongDesc: "Cairo Crumble Pine menghadirkan serat linear yang sangat halus dan rapat, khas pinus potongan rift murni. Warna krem berpasir yang lembut memberikan alternatif yang cerah, seragam, dan sedikit lebih lembut dibanding kayu keras tradisional."
+    longDesc: "Cairo Crumble Pine has the fine, tight linear grain of rift-cut pine in a soft sandy beige. It is bright, even and a little softer in feel than the usual hardwoods.",
+    idLongDesc: "Cairo Crumble Pine memiliki serat linear yang halus dan rapat khas pinus potongan rift, dalam warna krem berpasir yang lembut. Tampilannya cerah, rata, dan sedikit lebih lembut dibanding kayu keras pada umumnya."
   },
   {
     id: 'cairo-dune-oak',
@@ -2062,8 +2062,8 @@ export const PRODUCTS = [
     idBestFor: 'Organic modern ruang, expansive wall treatments, custom shelving',
     finish: 'Hand-rubbed oil',
     idFinish: 'Minyak gosok tangan',
-    longDesc: "Cairo Dune Oak captures the essence of sun-baked sand with its straight, rift-cut grain and warm, muted beige palette. The unpretentious, natural finish highlights the authentic beauty of the oak, bringing a calm, earthy presence to any environment.",
-    idLongDesc: "Cairo Dune Oak menangkap esensi pasir yang terpanggang matahari dengan serat potongan rift yang lurus dan palet krem lembut yang hangat. Finishing alami yang sederhana menonjolkan keindahan autentik oak, menghadirkan kehadiran yang tenang dan membumi di lingkungan apa pun."
+    longDesc: "Cairo Dune Oak has a straight rift-cut grain in a warm, muted beige, the colour of sun-baked sand. The finish is plain and natural, letting the oak itself show and keeping a room calm.",
+    idLongDesc: "Cairo Dune Oak memiliki serat potongan rift yang lurus dalam warna krem redup yang hangat, seperti pasir yang terpanggang matahari. Finishingnya polos dan alami, membiarkan oak itu sendiri terlihat dan menjaga ruangan tetap tenang."
   },
   {
     id: 'cairo-dust-pine',
@@ -2081,8 +2081,8 @@ export const PRODUCTS = [
     idBestFor: 'Minimalis ritel ruang, ramping panel arsitekturaling, modern kabinet',
     finish: 'Satin finish',
     idFinish: 'Finishing Satin',
-    longDesc: "Cairo Dust Pine features an exceptionally fine, straight linear grain enhanced by a cool, pale greyish-blonde tint. The subtle, muted coloration and tight grain structure offer an incredibly clean, highly contemporary aesthetic.",
-    idLongDesc: "Cairo Dust Pine menampilkan serat linear lurus yang sangat halus, diperkuat tint pirang keabuan pucat yang sejuk. Pewarnaan yang samar dan lembut serta struktur serat yang rapat menawarkan estetika yang sangat bersih dan sangat kontemporer."
+    longDesc: "Cairo Dust Pine has a very fine, straight grain with a cool, pale grey-blonde tint. The muted colour and tight grain give a very clean, contemporary look.",
+    idLongDesc: "Cairo Dust Pine memiliki serat lurus yang sangat halus dengan tint pirang keabuan pucat yang sejuk. Warna yang redup dan serat yang rapat memberi tampilan yang sangat bersih dan kontemporer."
   },
   {
     id: 'cairo-latte-oak',
@@ -2100,8 +2100,8 @@ export const PRODUCTS = [
     idBestFor: 'meja eksekutif, Interior residensial hangat perabot tanam, canggih hospitality',
     finish: 'Matte lacquer',
     idFinish: 'Pelapis Matte',
-    longDesc: "Cairo Latte Oak offers a seamless, straight rift-cut texture finished in a smooth, mid-tone creamy brown. This highly adaptable, rich neutral bridges the gap between light and dark wood tones, offering a comforting and elegant architectural foundation.",
-    idLongDesc: "Cairo Latte Oak menawarkan tekstur potongan rift yang mulus dan lurus dengan finishing cokelat krem bernuansa menengah yang halus. Warna netral kaya yang sangat mudah dipadukan ini menjembatani nuansa kayu terang dan gelap, menawarkan dasar arsitektural yang nyaman dan elegan."
+    longDesc: "Cairo Latte Oak is a straight rift-cut oak in a smooth, mid-tone creamy brown. It sits between light and dark woods, a comfortable neutral that works as a base for most schemes.",
+    idLongDesc: "Cairo Latte Oak adalah oak potongan rift yang lurus dalam warna cokelat krem menengah yang halus. Warnanya berada di antara kayu terang dan gelap, netral yang nyaman sebagai dasar sebagian besar rancangan."
   },
   {
     id: 'cairo-light-pine',
@@ -2119,8 +2119,8 @@ export const PRODUCTS = [
     idBestFor: 'Scandinavian interior, airy residensial ruang, modern minimalis mebel',
     finish: 'Matte clear',
     idFinish: 'Matte bening',
-    longDesc: "Cairo Light Pine presents a soft, pale blonde aesthetic with the characteristic straight, subtle grain of rift-cut pine. Its light, airy appearance and minimal grain contrast make it ideal for creating bright, welcoming spaces in modern Scandinavian or minimalist designs.",
-    idLongDesc: "Cairo Light Pine menghadirkan estetika pirang pucat yang lembut dengan serat lurus dan samar yang khas dari pinus potongan rift. Tampilannya yang terang dan lapang serta kontras serat yang minim menjadikannya ideal untuk menciptakan ruang cerah dan mengundang dalam desain Skandinavia modern atau minimalis."
+    longDesc: "Cairo Light Pine is a soft, pale blonde with the straight, faint grain of rift-cut pine. With so little contrast in the grain, it keeps Scandinavian and minimalist rooms bright and open.",
+    idLongDesc: "Cairo Light Pine berwarna pirang pucat yang lembut dengan serat lurus dan samar khas pinus potongan rift. Dengan kontras serat yang sangat sedikit, veneer ini menjaga ruang Skandinavia dan minimalis tetap cerah dan lapang."
   },
   {
     id: 'cairo-milk-pine',
@@ -2138,8 +2138,8 @@ export const PRODUCTS = [
     idBestFor: 'panel tanpa sambungan arsitekturaling, kontemporer pintu, bright kabinet',
     finish: 'Satin',
     idFinish: 'Satin',
-    longDesc: "Cairo Milk Pine features an exceptionally tight, straight vertical grain finished in a warm, milky beige. This highly consistent and refined texture offers a smooth, neutral canvas that effortlessly complements a wide variety of contemporary interior styles.",
-    idLongDesc: "Cairo Milk Pine menampilkan serat vertikal lurus yang sangat rapat dengan finishing krem seperti susu yang hangat. Tekstur yang sangat konsisten dan halus ini menawarkan kanvas netral yang mulus, yang dengan mudah melengkapi beragam gaya interior kontemporer."
+    longDesc: "Cairo Milk Pine has a very tight, straight vertical grain in a warm, milky beige. The texture is consistent and fine, a smooth neutral that sits well with most contemporary styles.",
+    idLongDesc: "Cairo Milk Pine memiliki serat vertikal lurus yang sangat rapat dalam warna krem seperti susu yang hangat. Teksturnya konsisten dan halus, netral yang mulus dan cocok dengan sebagian besar gaya kontemporer."
   },
   {
     id: 'cairo-milktea-pearwood',
@@ -2158,8 +2158,8 @@ export const PRODUCTS = [
     idBestFor: 'Fine interior pertukangan kayu, ritel butik, elegant aksen residensial',
     finish: 'Smooth matte',
     idFinish: 'Matte halus',
-    longDesc: "Cairo Milktea Pearwood showcases the famously smooth, fine texture of quartered pearwood, bathed in a warm, muted brownish-taupe reminiscent of milk tea. The absence of prominent pores creates a velvety, sophisticated surface perfect for elegant custom woodworking.",
-    idLongDesc: "Cairo Milktea Pearwood menampilkan tekstur pearwood potongan quarter yang terkenal halus dan lembut, diselimuti taupe kecokelatan yang hangat dan lembut seperti teh susu. Tidak adanya pori-pori yang menonjol menciptakan permukaan selembut beludru yang canggih, sempurna untuk pengerjaan kayu custom yang elegan."
+    longDesc: "Cairo Milktea Pearwood has the famously smooth, fine texture of quarter-cut pearwood in a warm, muted brownish taupe, much like milk tea. With no prominent pores, the surface is velvety and suits fine custom joinery.",
+    idLongDesc: "Cairo Milktea Pearwood memiliki tekstur pearwood potongan quarter yang terkenal halus, dalam warna taupe kecokelatan yang hangat dan redup, mirip teh susu. Tanpa pori-pori yang menonjol, permukaannya selembut beludru dan cocok untuk pengerjaan kayu custom yang halus."
   },
   {
     id: 'cairo-moss-beige-oak',
@@ -2177,8 +2177,8 @@ export const PRODUCTS = [
     idBestFor: 'Lingkungan korporat, perlakuan dinding akustik, subtle transisional furnitur',
     finish: 'Matte varnish',
     idFinish: 'Pernis Matte',
-    longDesc: "Cairo Moss Beige Oak pairs the structured, linear grain of rift-cut white oak with a unique beige finish that carries the faintest hint of earthy, mossy grey-green undertones. This complex neutral brings organic depth and subtle warmth to architectural woodwork.",
-    idLongDesc: "Cairo Moss Beige Oak memadukan serat linear terstruktur white oak potongan rift dengan finishing krem unik yang membawa semburat paling samar nuansa hijau keabuan seperti lumut dan tanah. Warna netral yang kompleks ini menghadirkan kedalaman organik dan kehangatan halus pada pengerjaan kayu arsitektural."
+    longDesc: "Cairo Moss Beige Oak is a rift-cut white oak with a straight, ordered grain and a beige finish carrying the faintest hint of mossy grey-green. It is a layered neutral that adds depth and warmth to architectural joinery.",
+    idLongDesc: "Cairo Moss Beige Oak adalah white oak potongan rift dengan serat lurus dan teratur, serta finishing krem dengan semburat hijau keabuan seperti lumut yang sangat samar. Netral berlapis ini menambahkan kedalaman dan kehangatan pada pengerjaan kayu arsitektural."
   },
   {
     id: 'cairo-natural-white-oak',
@@ -2197,8 +2197,8 @@ export const PRODUCTS = [
     idBestFor: 'Classic furnitur rumah tangga, traditional pertukangan kayu, dinding statement',
     finish: 'Clear satin',
     idFinish: 'Satin bening',
-    longDesc: "Cairo Natural White Oak celebrates the timeless beauty of plain-sliced white oak, featuring prominent, sweeping cathedral arches in a warm, natural tan. Its authentic, unadulterated character provides a classic and grounding presence for both traditional and modern spaces.",
-    idLongDesc: "Cairo Natural White Oak merayakan keindahan abadi white oak potongan plain, dengan lengkung katedral yang menonjol dan melengkung luas dalam warna tan alami yang hangat. Karakternya yang autentik dan apa adanya memberikan kehadiran klasik yang membumi untuk ruang tradisional maupun modern."
+    longDesc: "Cairo Natural White Oak is plain-sliced white oak with broad, sweeping cathedrals in a warm natural tan. Left close to how it grows, it is a classic that suits traditional and modern rooms alike.",
+    idLongDesc: "Cairo Natural White Oak adalah white oak potongan plain dengan katedral lebar yang melengkung dalam warna tan alami yang hangat. Dibiarkan dekat dengan bentuk aslinya, veneer klasik ini cocok untuk ruang tradisional maupun modern."
   },
   {
     id: 'cairo-nismu-natural',
@@ -2216,8 +2216,8 @@ export const PRODUCTS = [
     idBestFor: 'titik fokus tekstural, interior rustic modern, perabot tanam custom',
     finish: 'Raw matte',
     idFinish: 'Matte natural',
-    longDesc: "Cairo Nismu Natural highlights a highly textured, open-pore linear grain with a raw, tactile quality. Presented in a pale, natural blonde hue, this uniquely finished veneer brings an authentic, organic energy to light-filled spaces and custom millwork.",
-    idLongDesc: "Cairo Nismu Natural menonjolkan serat linear berpori terbuka yang sangat bertekstur, dengan kualitas sentuhan yang mentah. Hadir dalam rona pirang alami yang pucat, veneer dengan finishing unik ini menghadirkan energi organik yang autentik pada ruang yang dipenuhi cahaya dan pekerjaan kayu custom."
+    longDesc: "Cairo Nismu Natural has a deeply textured, open-pored linear grain with a raw feel to the touch. In a pale natural blonde, it brings an honest, organic quality to bright rooms and custom joinery.",
+    idLongDesc: "Cairo Nismu Natural memiliki serat linear berpori terbuka yang sangat bertekstur, dengan sentuhan yang terasa mentah. Dalam warna pirang alami yang pucat, veneer ini menghadirkan kesan jujur dan organik pada ruang yang terang dan pekerjaan kayu custom."
   },
   {
     id: 'cairo-oat-oak',
@@ -2235,8 +2235,8 @@ export const PRODUCTS = [
     idBestFor: 'Minimalis perabot tanam, light komersial ruang, calming interior',
     finish: 'Satin urethane',
     idFinish: 'Uretan Satin',
-    longDesc: "Cairo Oat Oak offers a tight, straight rift-cut grain finished in a comforting, warm oat-beige. This versatile, highly consistent veneer provides a soft, structural backdrop that beautifully bridges the gap between minimalist geometry and natural warmth.",
-    idLongDesc: "Cairo Oat Oak menawarkan serat potongan rift yang rapat dan lurus dengan finishing krem gandum yang hangat dan nyaman. Veneer serbaguna yang sangat konsisten ini memberikan latar struktural yang lembut, yang dengan indah menjembatani geometri minimalis dan kehangatan alami."
+    longDesc: "Cairo Oat Oak has a tight, straight rift-cut grain in a warm oat beige. It is very consistent, a soft backdrop that brings natural warmth to minimal, geometric interiors.",
+    idLongDesc: "Cairo Oat Oak memiliki serat potongan rift yang rapat dan lurus dalam warna krem gandum yang hangat. Veneer ini sangat konsisten, latar lembut yang membawa kehangatan alami ke interior minimalis dan geometris."
   },
   {
     id: 'cairo-pale-beige-chestnut',
@@ -2255,8 +2255,8 @@ export const PRODUCTS = [
     idBestFor: 'Canggih rustic-modern desain, panel aksen, warm kabinet',
     finish: 'Hand-rubbed oil',
     idFinish: 'Minyak gosok tangan',
-    longDesc: "Cairo Pale Beige Chestnut features a distinct, slightly sweeping flat-cut grain with prominent pores, softened by a delicate pale beige wash. This combination of strong natural character and muted, refined coloration creates a highly sophisticated aesthetic.",
-    idLongDesc: "Cairo Pale Beige Chestnut menampilkan serat potongan flat yang khas dan sedikit melengkung dengan pori-pori yang menonjol, dilembutkan sapuan warna krem pucat yang halus. Perpaduan karakter alami yang kuat dan pewarnaan yang lembut serta halus ini menciptakan estetika yang sangat canggih."
+    longDesc: "Cairo Pale Beige Chestnut has a distinct, gently sweeping flat-cut grain with prominent pores, softened by a pale beige wash. The strong natural character and muted colour balance each other well.",
+    idLongDesc: "Cairo Pale Beige Chestnut memiliki serat potongan flat yang khas dan sedikit melengkung dengan pori-pori yang menonjol, dilembutkan sapuan warna krem pucat. Karakter alaminya yang kuat dan warnanya yang redup saling menyeimbangkan dengan baik."
   },
   {
     id: 'cairo-pale-tiger-eye',
@@ -2274,8 +2274,8 @@ export const PRODUCTS = [
     idBestFor: 'perlengkapan ritel mewah, seamless curved panel, luminous aksen',
     finish: 'Polished lacquer',
     idFinish: 'Pelapis dipoles',
-    longDesc: "Cairo Pale Tiger Eye is characterized by its smooth, subtly mottled rotary-cut surface and creamy, off-white palette. The gentle, flowing figure of the wood catches the light beautifully, offering a soft, luminous quality ideal for high-end luxury interiors.",
-    idLongDesc: "Cairo Pale Tiger Eye dicirikan oleh permukaan potongan rotary yang halus dengan belang samar, serta palet putih gading yang lembut. Figur kayu yang lembut dan mengalir menangkap cahaya dengan indah, menawarkan kualitas lembut dan bercahaya yang ideal untuk interior mewah kelas atas."
+    longDesc: "Cairo Pale Tiger Eye is a rotary-cut veneer with a smooth, softly mottled surface in creamy off-white. Its gentle, flowing figure catches the light, giving a soft glow to high-end interiors.",
+    idLongDesc: "Cairo Pale Tiger Eye adalah veneer potongan rotary dengan permukaan halus berbelang samar dalam warna putih gading. Figurnya yang lembut dan mengalir menangkap cahaya, memberi kilau lembut pada interior kelas atas."
   },
   {
     id: 'cairo-powder-pine',
@@ -2293,8 +2293,8 @@ export const PRODUCTS = [
     idBestFor: 'Clean arsitektural lines, Ruang minimalis, bright interior pintu',
     finish: 'Matte',
     idFinish: 'Matte',
-    longDesc: "Cairo Powder Pine presents an incredibly straight, fine linear grain in a delicate, powdery light beige. This ultra-refined and highly consistent texture minimizes visual noise, providing a sleek, modern finish that brightens and opens up interior spaces.",
-    idLongDesc: "Cairo Powder Pine menghadirkan serat linear yang sangat lurus dan halus dalam warna krem muda sehalus bedak. Tekstur yang sangat halus dan konsisten ini meminimalkan keramaian visual, memberikan finishing ramping dan modern yang mencerahkan dan membuat ruang interior terasa lebih lapang."
+    longDesc: "Cairo Powder Pine has a very straight, fine grain in a delicate, powdery light beige. The texture is so even that the surface reads as calm and modern, and it helps a room feel brighter and larger.",
+    idLongDesc: "Cairo Powder Pine memiliki serat yang sangat lurus dan halus dalam warna krem muda sehalus bedak. Teksturnya begitu rata sehingga permukaannya tampak tenang dan modern, serta membantu ruangan terasa lebih terang dan luas."
   },
   {
     id: 'cairo-sand-elm',
@@ -2313,8 +2313,8 @@ export const PRODUCTS = [
     idBestFor: 'Casual modern interior, residensial kabinet, warm arsitektural aksen',
     finish: 'Matte',
     idFinish: 'Matte',
-    longDesc: "Cairo Sand Elm showcases the distinctive, jagged cathedral grain typical of flat-cut elm, set against a warm, sandy beige background. The prominent darker pores add an organic, slightly rustic texture that remains elegant and highly versatile for relaxed contemporary spaces.",
-    idLongDesc: "Cairo Sand Elm menampilkan serat katedral bergerigi yang khas dari elm potongan flat, di atas latar krem berpasir yang hangat. Pori-pori gelap yang menonjol menambahkan tekstur organik yang sedikit rustik, namun tetap elegan dan sangat serbaguna untuk ruang kontemporer yang santai."
+    longDesc: "Cairo Sand Elm has the jagged cathedral grain typical of flat-cut elm on a warm, sandy beige ground. Darker pores add a slightly rustic texture that still looks refined in relaxed, contemporary spaces.",
+    idLongDesc: "Cairo Sand Elm memiliki serat katedral bergerigi khas elm potongan flat di atas latar krem berpasir yang hangat. Pori-pori yang lebih gelap menambahkan tekstur yang sedikit rustik namun tetap halus di ruang kontemporer yang santai."
   },
   {
     id: 'cairo-sand-pearwood',
@@ -2332,8 +2332,8 @@ export const PRODUCTS = [
     idBestFor: 'Fine interior pertukangan kayu, ritel butik, elegant furnitur custome',
     finish: 'Hand-rubbed oil',
     idFinish: 'Minyak gosok tangan',
-    longDesc: "Cairo Sand Pearwood offers an impeccably smooth, fine-textured surface in a warm, medium sand-brown hue. The quarter-cut processing ensures a clean, consistent linear look without conspicuous pores, providing a velvety and highly sophisticated finish.",
-    idLongDesc: "Cairo Sand Pearwood menawarkan permukaan bertekstur halus yang sangat mulus dalam rona cokelat pasir sedang yang hangat. Proses potongan quarter menjamin tampilan linear yang bersih dan konsisten tanpa pori-pori mencolok, memberikan finishing selembut beludru yang sangat canggih."
+    longDesc: "Cairo Sand Pearwood has a very smooth, fine texture in a warm, medium sand brown. The quarter cut keeps it clean and linear with no visible pores, for a velvety, refined finish.",
+    idLongDesc: "Cairo Sand Pearwood memiliki tekstur yang sangat halus dalam warna cokelat pasir sedang yang hangat. Potongan quarter menjaganya tetap bersih dan linear tanpa pori-pori yang terlihat, menghasilkan finishing yang halus seperti beludru."
   },
   {
     id: 'cairo-savanna-acacia',
@@ -2352,8 +2352,8 @@ export const PRODUCTS = [
     idBestFor: 'Airy residensial interior, coastal designs, modern light kabinet',
     finish: 'Satin clear',
     idFinish: 'Satin bening',
-    longDesc: "Cairo Savanna Acacia features a pale, sun-bleached aesthetic with a very fine, tight linear grain. The subtle grey-white coloration and gentle texture evoke the light, airy feel of coastal or relaxed minimalist environments.",
-    idLongDesc: "Cairo Savanna Acacia menampilkan estetika pucat seperti dipudarkan matahari dengan serat linear yang sangat halus dan rapat. Warna putih keabuan yang samar dan tekstur yang lembut menghadirkan nuansa ringan dan lapang khas lingkungan pesisir atau minimalis yang santai."
+    longDesc: "Cairo Savanna Acacia has a pale, sun-bleached look and a very fine, tight linear grain. The soft grey-white colour and gentle texture recall relaxed coastal or minimalist interiors.",
+    idLongDesc: "Cairo Savanna Acacia tampil pucat seperti dipudarkan matahari, dengan serat linear yang sangat halus dan rapat. Warna putih keabuan yang lembut dan teksturnya yang halus mengingatkan pada interior pesisir atau minimalis yang santai."
   },
   {
     id: 'cairo-soft-white-oak',
@@ -2372,8 +2372,8 @@ export const PRODUCTS = [
     idBestFor: 'Minimalis perabot tanam, clean panel arsitektural, bright interior',
     finish: 'Matte urethane',
     idFinish: 'Uretan Matte',
-    longDesc: "Cairo Soft White Oak provides a seamless, flawlessly straight rift-cut grain in a delicate, soft cream tone. This highly refined and consistent veneer minimizes visual noise, acting as a serene, neutral canvas for contemporary design.",
-    idLongDesc: "Cairo Soft White Oak memberikan serat potongan rift yang mulus dan lurus sempurna dalam nuansa krem yang lembut. Veneer yang sangat halus dan konsisten ini meminimalkan keramaian visual, menjadi kanvas netral yang tenang untuk desain kontemporer."
+    longDesc: "Cairo Soft White Oak has a perfectly straight rift-cut grain in a soft, delicate cream. It is fine and consistent, a calm neutral surface for contemporary design.",
+    idLongDesc: "Cairo Soft White Oak memiliki serat potongan rift yang lurus sempurna dalam warna krem yang lembut. Veneer ini halus dan konsisten, permukaan netral yang tenang untuk desain kontemporer."
   },
   {
     id: 'cairo-sunbleach-oak',
@@ -2392,8 +2392,8 @@ export const PRODUCTS = [
     idBestFor: 'Scandinavian furnitur, wide panel arsitektural, casual mewah ruang',
     finish: 'Clear matte',
     idFinish: 'Matte bening',
-    longDesc: "Cairo Sunbleach Oak highlights the organic, sweeping cathedral arches of plain-sliced oak, brightened by a sun-bleached, sandy blonde finish. It offers a warm, natural character that feels both authentic and refreshingly light.",
-    idLongDesc: "Cairo Sunbleach Oak menonjolkan lengkung katedral organik oak potongan plain yang melengkung luas, dicerahkan finishing pirang berpasir yang tampak dipudarkan matahari. Veneer ini menawarkan karakter alami yang hangat, terasa autentik sekaligus ringan menyegarkan."
+    longDesc: "Cairo Sunbleach Oak has the broad, natural cathedral arches of plain-sliced oak, lightened to a sun-bleached sandy blonde. It feels warm and genuine, and light enough to keep a room fresh.",
+    idLongDesc: "Cairo Sunbleach Oak memiliki lengkung katedral alami yang lebar khas oak potongan plain, dicerahkan menjadi pirang berpasir seperti dipudarkan matahari. Kesannya hangat dan jujur, serta cukup terang untuk menjaga ruangan tetap segar."
   },
   {
     id: 'cairo-tuscan',
@@ -2409,8 +2409,8 @@ export const PRODUCTS = [
     // product rather than after the file; see ProductDetail.
     image: '/assets/image/CANNES BIRCHWOOD.webp',
     hiResImage: '/assets/hires/CANNES BIRCHWOOD.jpeg',
-    longDesc: "Cairo Tuscan is a showstopping veneer featuring a wild, highly figured rotary cut. Bold, topographical swirls and dark, contrasting eye-like knots dance across a pale, pinkish-beige background, offering a captivating and highly organic piece of natural artistry.",
-    idLongDesc: "Cairo Tuscan adalah veneer memukau dengan potongan rotary yang liar dan berfigur kaya. Pusaran topografis yang tegas dan mata kayu gelap yang kontras menari di atas latar krem kemerahmudaan yang pucat, menawarkan karya seni alam yang memikat dan sangat organik."
+    longDesc: "Cairo Tuscan is a wild, heavily figured rotary cut. Bold, contour-like swirls and dark, eye-like knots run across a pale pinkish-beige ground, a striking piece of natural pattern.",
+    idLongDesc: "Cairo Tuscan adalah potongan rotary yang liar dengan figur yang kaya. Pusaran tegas menyerupai garis kontur dan mata kayu gelap tersebar di atas latar krem kemerahmudaan yang pucat, pola alami yang mencolok."
   },
   {
     id: 'cairo-vanilla-oak',
@@ -2428,8 +2428,8 @@ export const PRODUCTS = [
     idBestFor: 'Modern interior komersials, expansive neutral pelapis dinding, subtle custom pertukangan kayu',
     finish: 'Satin lacquer',
     idFinish: 'Pelapis Satin',
-    longDesc: "Cairo Vanilla Oak features a remarkably uniform, tightly woven rift-cut linear texture in a warm, creamy vanilla-beige. This versatile and highly consistent finish provides a soft, structural elegance suitable for a wide variety of upscale applications.",
-    idLongDesc: "Cairo Vanilla Oak menampilkan tekstur linear potongan rift yang sangat seragam dan rapat dalam warna krem vanila yang hangat. Finishing serbaguna yang sangat konsisten ini memberikan keanggunan struktural yang lembut, cocok untuk beragam aplikasi kelas atas."
+    longDesc: "Cairo Vanilla Oak has a very even, tight rift-cut grain in a warm, creamy vanilla beige. It is consistent from sheet to sheet, a soft and structured surface for a wide range of upscale interiors.",
+    idLongDesc: "Cairo Vanilla Oak memiliki serat potongan rift yang sangat rata dan rapat dalam warna krem vanila yang hangat. Warnanya konsisten dari lembar ke lembar, permukaan yang lembut dan terstruktur untuk beragam interior kelas atas."
   },
   {
     id: 'cannes-african-sandalwood',
@@ -2448,8 +2448,8 @@ export const PRODUCTS = [
     idBestFor: 'perlengkapan ritel mewah, executive boardrooms, warm Furnitur moderne',
     finish: 'Polished oil',
     idFinish: 'Minyak dipoles',
-    longDesc: "Cannes African Sandalwood displays a vibrant, warm reddish-orange-brown palette characterized by distinct, fine linear striping. The quarter-cut orientation emphasizes the wood's natural geometry, creating a rich, dynamic surface that exudes exotic luxury.",
-    idLongDesc: "Cannes African Sandalwood menampilkan palet cokelat oranye kemerahan yang hidup dan hangat, dicirikan garis linear halus yang khas. Orientasi potongan quarter menonjolkan geometri alami kayu, menciptakan permukaan yang kaya dan dinamis yang memancarkan kemewahan eksotis."
+    longDesc: "Cannes African Sandalwood is a warm reddish orange-brown with fine, distinct stripes. Cut on the quarter, the lines run straight, giving a rich, lively surface with an exotic feel.",
+    idLongDesc: "Cannes African Sandalwood berwarna cokelat oranye kemerahan yang hangat dengan garis-garis halus yang khas. Dengan potongan quarter, garis-garisnya lurus, memberi permukaan yang kaya dan hidup dengan kesan eksotis."
   },
   {
     id: 'cannes-birchwood',
@@ -2469,8 +2469,8 @@ export const PRODUCTS = [
     idBestFor: 'panel seni statement, butik hospitality, dramatic focal points',
     finish: 'Matte lacquer',
     idFinish: 'Pelapis Matte',
-    longDesc: "Cannes Birchwood is a showstopping veneer featuring a wild, highly figured rotary cut. Bold, topographical swirls and dark, contrasting eye-like knots dance across a pale, pinkish-beige background, offering a captivating and highly organic piece of natural artistry.",
-    idLongDesc: "Cannes Birchwood adalah veneer memukau dengan potongan rotary yang liar dan berfigur kaya. Pusaran topografis yang tegas dan mata kayu gelap yang kontras menari di atas latar krem kemerahmudaan yang pucat, menawarkan karya seni alam yang memikat dan sangat organik."
+    longDesc: "Cannes Birchwood is a rotary cut with a wild, heavily figured grain. Bold, contour-like swirls and dark, eye-like knots cover a pale pinkish-beige ground, giving it the look of natural artwork.",
+    idLongDesc: "Cannes Birchwood adalah potongan rotary dengan serat liar yang kaya figur. Pusaran tegas menyerupai garis kontur dan mata kayu gelap memenuhi latar krem kemerahmudaan yang pucat, memberinya tampilan seperti karya seni alam."
   },
   {
     id: 'cannes-blonde-oak',
@@ -2488,8 +2488,8 @@ export const PRODUCTS = [
     idBestFor: 'Scandinavian desain, airy residensial ruang, light modern kabinet',
     finish: 'Matte clear',
     idFinish: 'Matte bening',
-    longDesc: "Cannes Blonde Oak features a finely textured, tightly woven rift-cut grain in a pale, sun-washed blonde hue. This bright, unembellished finish highlights the natural linear pores of the oak, providing a fresh, calming canvas for minimalist and contemporary interiors.",
-    idLongDesc: "Cannes Blonde Oak menampilkan serat potongan rift yang bertekstur halus dan rapat dalam rona pirang pucat seperti tersapu matahari. Finishing cerah tanpa hiasan ini menonjolkan pori-pori linear alami oak, memberikan kanvas segar dan menenangkan untuk interior minimalis dan kontemporer."
+    longDesc: "Cannes Blonde Oak is a fine, tight rift-cut oak in a pale, sun-washed blonde. The plain, bright finish lets the oak's natural pores show, a fresh and calm base for minimalist and contemporary rooms.",
+    idLongDesc: "Cannes Blonde Oak adalah oak potongan rift yang halus dan rapat dalam warna pirang pucat seperti tersapu matahari. Finishingnya yang polos dan cerah membiarkan pori-pori alami oak terlihat, dasar yang segar dan tenang untuk ruang minimalis dan kontemporer."
   },
   {
     id: 'cannes-box-wood',
@@ -2527,8 +2527,8 @@ export const PRODUCTS = [
     idBestFor: 'Mid-century Furnitur moderne, warm aksen residensial, mewah panel',
     finish: 'Hand-rubbed oil',
     idFinish: 'Minyak gosok tangan',
-    longDesc: "Cannes Butter Walnut showcases the sweeping, organic cathedrals of flat-cut walnut bathed in a rich, buttery light brown. The warm, inviting coloration and dynamic grain patterns bring a timeless, mid-century elegance to bespoke woodworking projects.",
-    idLongDesc: "Cannes Butter Walnut menampilkan katedral organik walnut potongan flat yang melengkung luas, diselimuti warna cokelat muda seperti mentega yang kaya. Pewarnaan yang hangat dan mengundang serta pola serat yang dinamis menghadirkan keanggunan mid-century yang abadi pada proyek pengerjaan kayu custom."
+    longDesc: "Cannes Butter Walnut has the broad, natural cathedrals of flat-cut walnut in a buttery light brown. The warm colour and lively grain suit bespoke joinery with a mid-century feel.",
+    idLongDesc: "Cannes Butter Walnut memiliki katedral alami yang lebar khas walnut potongan flat, dalam warna cokelat muda seperti mentega. Warnanya yang hangat dan seratnya yang hidup cocok untuk pengerjaan kayu custom bernuansa mid-century."
   },
   {
     id: 'cannes-camel-oak',
@@ -2547,8 +2547,8 @@ export const PRODUCTS = [
     idBestFor: 'Pertukangan kayu transisional, perabot tanam custom, classic interior pintu',
     finish: 'Matte varnish',
     idFinish: 'Pernis Matte',
-    longDesc: "Cannes Camel Oak pairs the prominent, arched grain of plain-sliced white oak with a warm, earthy camel-brown stain. The deep, rich coloration fills the open pores of the wood, creating a highly textured and classic architectural surface.",
-    idLongDesc: "Cannes Camel Oak memadukan serat melengkung white oak potongan plain yang menonjol dengan pewarnaan cokelat unta bernuansa tanah yang hangat. Warna yang dalam dan kaya mengisi pori-pori terbuka kayu, menciptakan permukaan arsitektural klasik yang sangat bertekstur."
+    longDesc: "Cannes Camel Oak is a plain-sliced white oak with a pronounced arched grain and a warm, earthy camel-brown stain. The colour settles into the open pores, giving a well-textured, classic architectural surface.",
+    idLongDesc: "Cannes Camel Oak adalah white oak potongan plain dengan serat melengkung yang menonjol dan pewarnaan cokelat unta bernuansa tanah yang hangat. Warnanya meresap ke pori-pori terbuka, memberi permukaan arsitektural klasik yang bertekstur."
   },
   {
     id: 'cannes-caramel-walnut',
@@ -2567,8 +2567,8 @@ export const PRODUCTS = [
     idBestFor: 'meja eksekutif, Perlengkapan ritel kelas atas, kontemporer pertukangan kayu',
     finish: 'Satin urethane',
     idFinish: 'Uretan Satin',
-    longDesc: "Cannes Caramel Walnut features a highly structured, straight vertical grain in a warm, inviting caramel brown. The quarter-cut processing highlights the refined, linear geometry of the walnut, providing a sophisticated backdrop for modern luxury spaces.",
-    idLongDesc: "Cannes Caramel Walnut menampilkan serat vertikal lurus yang sangat terstruktur dalam warna cokelat karamel yang hangat dan mengundang. Proses potongan quarter menonjolkan geometri linear walnut yang halus, memberikan latar yang canggih untuk ruang mewah modern."
+    longDesc: "Cannes Caramel Walnut has a straight, ordered vertical grain in a warm caramel brown. The quarter cut brings out walnut's fine, linear pattern, a refined backdrop for modern luxury interiors.",
+    idLongDesc: "Cannes Caramel Walnut memiliki serat vertikal yang lurus dan teratur dalam warna cokelat karamel yang hangat. Potongan quarter menonjolkan pola linear walnut yang halus, latar yang halus untuk interior mewah modern."
   },
   {
     id: 'cannes-contour-walnut',
@@ -2587,8 +2587,8 @@ export const PRODUCTS = [
     idBestFor: 'panel seni statement, butik hospitality, dramatic focal points',
     finish: 'Polished lacquer',
     idFinish: 'Pelapis dipoles',
-    longDesc: "Cannes Contour Walnut is a dramatic, highly figured veneer characterized by swirling, topographical grain patterns and deep, contrasting shades of espresso and warm brown. It acts as a captivating, organic piece of natural art for feature applications.",
-    idLongDesc: "Cannes Contour Walnut adalah veneer dramatis berfigur kaya yang dicirikan pola serat topografis yang berpusar serta gradasi kontras espresso pekat dan cokelat hangat. Veneer ini menjadi karya seni alam organik yang memikat untuk aplikasi aksen."
+    longDesc: "Cannes Contour Walnut is a heavily figured veneer with swirling, contour-like grain in contrasting shades of espresso and warm brown. It works like a piece of natural art on a feature surface.",
+    idLongDesc: "Cannes Contour Walnut adalah veneer berfigur kaya dengan serat berpusar menyerupai garis kontur, dalam gradasi kontras espresso dan cokelat hangat. Veneer ini tampil seperti karya seni alam pada permukaan aksen."
   },
   {
     id: 'cannes-copper-walnut',
@@ -2607,8 +2607,8 @@ export const PRODUCTS = [
     idBestFor: 'Warm modern ruang, residensial mewah pintu, bespoke kabinet',
     finish: 'Matte oil',
     idFinish: 'Minyak Matte',
-    longDesc: "Cannes Copper Walnut offers the precise, straight lines of a quarter-cut log enhanced by a rich, metallic copper-brown tint. This coloration adds a subtle warmth and vibrancy to the walnut, creating an elegant, tightly woven architectural texture.",
-    idLongDesc: "Cannes Copper Walnut menawarkan garis lurus yang presisi dari kayu potongan quarter, diperkaya tint cokelat tembaga metalik yang kaya. Pewarnaan ini menambahkan kehangatan dan semangat yang samar pada walnut, menciptakan tekstur arsitektural yang elegan dan rapat."
+    longDesc: "Cannes Copper Walnut has the precise, straight lines of quarter-cut walnut with a deep, metallic copper-brown tint. The colour gives the walnut a little more warmth and life, in a fine, tight architectural texture.",
+    idLongDesc: "Cannes Copper Walnut memiliki garis lurus yang presisi khas walnut potongan quarter, dengan tint cokelat tembaga metalik yang dalam. Warnanya memberi walnut sedikit lebih banyak kehangatan dan kesan hidup, dalam tekstur arsitektural yang halus dan rapat."
   },
   {
     id: 'cannes-eclipse',
@@ -2627,8 +2627,8 @@ export const PRODUCTS = [
     idBestFor: 'Dramatic dinding aksen, executive boardrooms, mewah aksen',
     finish: 'Satin finish',
     idFinish: 'Finishing Satin',
-    longDesc: "Cannes Eclipse captures a moody, dramatic aesthetic with rich, sweeping horizontal grain lines in deep shades of chocolate and reddish-brown. This bold, expressive veneer provides a powerful and sophisticated anchor for high-end interior designs.",
-    idLongDesc: "Cannes Eclipse menangkap estetika yang muram dan dramatis dengan garis serat horizontal yang kaya dan melengkung luas dalam gradasi cokelat pekat dan cokelat kemerahan. Veneer yang berani dan ekspresif ini memberikan jangkar yang kuat dan canggih untuk desain interior kelas atas."
+    longDesc: "Cannes Eclipse has broad, sweeping horizontal grain in deep chocolate and reddish brown. It is a bold, moody veneer that gives a high-end interior a strong anchor.",
+    idLongDesc: "Cannes Eclipse memiliki serat horizontal yang lebar dan melengkung dalam warna cokelat pekat dan cokelat kemerahan. Veneer yang berani dan muram ini memberi interior kelas atas jangkar yang kuat."
   },
   {
     id: 'cannes-golden-teak',
@@ -2647,8 +2647,8 @@ export const PRODUCTS = [
     idBestFor: 'Marine-inspired interior, modern organic ruang, premium mebel',
     finish: 'Clear matte',
     idFinish: 'Matte bening',
-    longDesc: "Cannes Golden Teak showcases the iconic, straight linear grain and warm, honey-golden tones that make teak highly prized. Its clean, quarter-cut presentation brings a refined, natural warmth to contemporary, high-end architectural environments.",
-    idLongDesc: "Cannes Golden Teak menampilkan serat linear lurus yang ikonis dan nuansa emas madu yang hangat, yang membuat jati sangat dihargai. Tampilan potongan quarter yang bersih menghadirkan kehangatan alami yang halus pada lingkungan arsitektural kontemporer kelas atas."
+    longDesc: "Cannes Golden Teak has the straight grain and warm, honey-gold tone that teak is prized for. The clean quarter cut brings natural warmth to contemporary, high-end architecture.",
+    idLongDesc: "Cannes Golden Teak memiliki serat lurus dan warna emas madu yang hangat, yang membuat jati begitu dihargai. Potongan quarter yang bersih membawa kehangatan alami ke arsitektur kontemporer kelas atas."
   },
   {
     id: 'cannes-golden-walnut',
@@ -2667,8 +2667,8 @@ export const PRODUCTS = [
     idBestFor: 'Classic furnitur rumah tangga, inviting interior panel, custom shelving',
     finish: 'Smooth satin',
     idFinish: 'Satin halus',
-    longDesc: "Cannes Golden Walnut presents the beautiful, organic cathedrals of flat-cut walnut in a surprisingly light, warm golden-brown hue. The flowing movement of the wood grain offers a welcoming, sophisticated texture that softens strict architectural lines.",
-    idLongDesc: "Cannes Golden Walnut menghadirkan katedral organik walnut potongan flat yang indah dalam rona cokelat keemasan yang hangat dan terang secara mengejutkan. Gerak serat kayu yang mengalir menawarkan tekstur yang mengundang dan canggih, yang melembutkan garis arsitektural yang tegas."
+    longDesc: "Cannes Golden Walnut has the natural cathedrals of flat-cut walnut in an unexpectedly light, warm golden brown. The flowing grain softens strict architectural lines.",
+    idLongDesc: "Cannes Golden Walnut memiliki katedral alami walnut potongan flat dalam warna cokelat keemasan yang hangat dan terang secara tak terduga. Seratnya yang mengalir melembutkan garis arsitektur yang kaku."
   },
   {
     id: 'cannes-ivory-dune-oak',
@@ -2687,8 +2687,8 @@ export const PRODUCTS = [
     idBestFor: 'interior minimalis, bright panel arsitektural, mebel modern',
     finish: 'Matte clear',
     idFinish: 'Matte bening',
-    longDesc: "Cannes Ivory Dune Oak presents a flawlessly straight, fine linear grain characteristic of premium rift-cut oak. The ultra-light, sandy ivory coloration provides a luminous, consistent surface that serves as a serene, neutral foundation for contemporary spaces.",
-    idLongDesc: "Cannes Ivory Dune Oak menghadirkan serat linear yang lurus sempurna dan halus, khas oak potongan rift premium. Warna gading berpasir yang sangat terang memberikan permukaan bercahaya dan konsisten, yang menjadi dasar netral yang tenang untuk ruang kontemporer."
+    longDesc: "Cannes Ivory Dune Oak has the perfectly straight, fine grain of good rift-cut oak in a very light, sandy ivory. The surface is bright and consistent, a calm neutral base for contemporary rooms.",
+    idLongDesc: "Cannes Ivory Dune Oak memiliki serat lurus sempurna dan halus khas oak potongan rift berkualitas, dalam warna gading berpasir yang sangat terang. Permukaannya cerah dan konsisten, dasar netral yang tenang untuk ruang kontemporer."
   },
   {
     id: 'cannes-ivory-pine',
@@ -2707,8 +2707,8 @@ export const PRODUCTS = [
     idBestFor: 'Casual furnitur rumah tangga, warm interior cladding, light kabinet',
     finish: 'Satin',
     idFinish: 'Satin',
-    longDesc: "Cannes Ivory Pine features a gentle, sweeping flat-cut grain bathed in a warm, peachy-ivory tone. The subtle movement of the grain combined with the soft, inviting color palette creates a welcoming, relaxed aesthetic perfect for comfortable living spaces.",
-    idLongDesc: "Cannes Ivory Pine menampilkan serat potongan flat yang lembut dan melengkung luas, diselimuti nuansa gading kepersikan yang hangat. Gerak serat yang samar berpadu dengan palet warna yang lembut dan mengundang, menciptakan estetika yang ramah dan santai, sempurna untuk ruang hunian yang nyaman."
+    longDesc: "Cannes Ivory Pine has a gentle, sweeping flat-cut grain in a warm, peachy ivory. The soft movement and colour make it relaxed and easy to live with, well suited to comfortable living spaces.",
+    idLongDesc: "Cannes Ivory Pine memiliki serat potongan flat yang lembut dan melengkung dalam warna gading kepersikan yang hangat. Gerak serat dan warnanya yang lembut membuatnya terasa santai dan nyaman, cocok untuk ruang hunian yang nyaman."
   },
   {
     id: 'cannes-natural-pine',
@@ -2726,8 +2726,8 @@ export const PRODUCTS = [
     idBestFor: 'Scandinavian desain, linear panel dinding, modern rustic aksen',
     finish: 'Matte varnish',
     idFinish: 'Pernis Matte',
-    longDesc: "Cannes Natural Pine highlights the striking, tight vertical grain of strictly rift-cut pine. Its authentic, warm golden-sand hue and highly ordered linear texture offer a refined, architectural take on a classic wood species.",
-    idLongDesc: "Cannes Natural Pine menonjolkan serat vertikal rapat yang mencolok dari pinus potongan rift murni. Rona pasir keemasan yang autentik dan hangat serta tekstur linear yang sangat teratur menawarkan tafsir arsitektural yang halus atas spesies kayu klasik."
+    longDesc: "Cannes Natural Pine has the tight, striking vertical grain of rift-cut pine in a warm golden-sand tone. The ordered texture gives a classic species a more architectural look.",
+    idLongDesc: "Cannes Natural Pine memiliki serat vertikal rapat yang mencolok khas pinus potongan rift, dalam warna pasir keemasan yang hangat. Teksturnya yang teratur memberi spesies klasik ini tampilan yang lebih arsitektural."
   },
   {
     id: 'cannes-natural-teak',
@@ -2746,8 +2746,8 @@ export const PRODUCTS = [
     idBestFor: 'Marine-inspired mewah, executive offices, mid-century furnitur',
     finish: 'Hand-rubbed oil',
     idFinish: 'Minyak gosok tangan',
-    longDesc: "Cannes Natural Teak displays the iconic, rich medium-brown base and distinct, darker linear striping that define premium quarter-cut teak. This timeless veneer exudes organic luxury and brings profound warmth and sophistication to high-end interiors.",
-    idLongDesc: "Cannes Natural Teak menampilkan dasar cokelat sedang yang kaya dan ikonis serta garis linear lebih gelap yang khas, yang menjadi ciri jati potongan quarter premium. Veneer abadi ini memancarkan kemewahan organik dan menghadirkan kehangatan serta kecanggihan mendalam pada interior kelas atas."
+    longDesc: "Cannes Natural Teak has the rich medium-brown base and darker straight stripes that mark good quarter-cut teak. A veneer that does not date, it brings deep warmth to high-end interiors.",
+    idLongDesc: "Cannes Natural Teak memiliki dasar cokelat sedang yang kaya dan garis lurus lebih gelap yang menjadi ciri jati potongan quarter berkualitas. Veneer yang tidak lekang oleh waktu ini membawa kehangatan yang dalam ke interior kelas atas."
   },
   {
     id: 'cannes-oak-burl',
@@ -2766,8 +2766,8 @@ export const PRODUCTS = [
     idBestFor: 'furnitur statement, mewah automotive interior, decorative aksen',
     finish: 'Polished gloss or Satin',
     idFinish: 'Glossy dipoles atau Satin',
-    longDesc: "Cannes Oak Burl is a highly decorative veneer characterized by intricate, swirling circular grain patterns and tight clusters of \"eyes.\" Set in a warm, medium-brown tone, this organic masterpiece functions as a captivating focal point for bespoke applications.",
-    idLongDesc: "Cannes Oak Burl adalah veneer yang sangat dekoratif, dicirikan pola serat melingkar berpusar yang rumit dan gugusan \"mata\" yang rapat. Dalam nuansa cokelat sedang yang hangat, mahakarya organik ini menjadi titik fokus yang memikat untuk aplikasi custom."
+    longDesc: "Cannes Oak Burl is a decorative veneer with intricate, swirling circular grain and tight clusters of \"eyes\". In a warm medium brown, it makes a strong focal point for bespoke pieces.",
+    idLongDesc: "Cannes Oak Burl adalah veneer dekoratif dengan serat melingkar yang berpusar dan rumit, serta gugusan \"mata\" yang rapat. Dalam warna cokelat sedang yang hangat, veneer ini menjadi titik fokus yang kuat untuk karya custom."
   },
   {
     id: 'cannes-pebble-brown',
@@ -2786,8 +2786,8 @@ export const PRODUCTS = [
     idBestFor: 'Butik hospitality, dramatic dinding aksen, artful kabinet',
     finish: 'Satin lacquer',
     idFinish: 'Pelapis Satin',
-    longDesc: "Cannes Pebble Brown captures an extraordinary topographical landscape with its wavy, swirling figured grain. The interplay between the warm, sandy brown background and the darker, concentric contour lines creates a visually arresting, highly dynamic surface.",
-    idLongDesc: "Cannes Pebble Brown menangkap lanskap topografis yang luar biasa dengan serat berfigur yang bergelombang dan berpusar. Perpaduan latar cokelat berpasir yang hangat dan garis kontur konsentris yang lebih gelap menciptakan permukaan yang memikat mata dan sangat dinamis."
+    longDesc: "Cannes Pebble Brown has a wavy, swirling figure that looks like a contour map. Darker concentric lines run across a warm, sandy brown ground, making a lively, eye-catching surface.",
+    idLongDesc: "Cannes Pebble Brown memiliki figur bergelombang dan berpusar yang tampak seperti peta kontur. Garis konsentris yang lebih gelap membentang di atas latar cokelat berpasir yang hangat, menghasilkan permukaan yang hidup dan menarik perhatian."
   },
   {
     id: 'cannes-red-rose',
@@ -2806,8 +2806,8 @@ export const PRODUCTS = [
     idBestFor: 'Classic elegant furnitur, rich panel arsitekturaling, traditional ruang',
     finish: 'Smooth satin',
     idFinish: 'Satin halus',
-    longDesc: "Cannes Red Rose features a deep, romantic reddish-terracotta hue over a subtle, sweeping flat-cut grain. The warm, saturated color and delicate wood texture combine to create an atmosphere of traditional elegance and refined luxury.",
-    idLongDesc: "Cannes Red Rose menampilkan rona terakota kemerahan yang dalam dan romantis di atas serat potongan flat yang samar dan melengkung luas. Warna yang hangat dan pekat serta tekstur kayu yang halus berpadu menciptakan suasana keanggunan tradisional dan kemewahan yang halus."
+    longDesc: "Cannes Red Rose is a deep reddish terracotta over a soft, sweeping flat-cut grain. The warm, saturated colour and fine texture give a room a traditional, quietly luxurious feel.",
+    idLongDesc: "Cannes Red Rose berwarna terakota kemerahan yang dalam di atas serat potongan flat yang lembut dan melengkung. Warnanya yang hangat dan pekat serta teksturnya yang halus memberi ruangan kesan tradisional yang mewah dengan tenang."
   },
   {
     id: 'cannes-russet',
@@ -2827,8 +2827,8 @@ export const PRODUCTS = [
     idBestFor: 'High-contrast focal points, avant-garde interior, tactile surfaces',
     finish: 'Matte textured',
     idFinish: 'Matte bertekstur',
-    longDesc: "Cannes Russet offers a dramatic, highly figured swirling grain enhanced by a striking cerused finish. White pigment fills the deep, erratic pores against a cool, earthy grey-brown base, creating an intense, visually captivating contrast and a rich tactile experience.",
-    idLongDesc: "Cannes Russet menawarkan serat berpusar yang dramatis dan berfigur kaya, diperkuat finishing cerused yang mencolok. Pigmen putih mengisi pori-pori yang dalam dan tak beraturan di atas dasar abu-abu kecokelatan bernuansa tanah yang sejuk, menciptakan kontras yang intens dan memikat secara visual serta pengalaman sentuhan yang kaya."
+    longDesc: "Cannes Russet has a dramatic, heavily figured swirling grain with a cerused finish. White pigment fills the deep, irregular pores against a cool, earthy grey-brown, so the contrast is strong and the surface rich to the touch.",
+    idLongDesc: "Cannes Russet memiliki serat berpusar yang dramatis dan kaya figur dengan finishing cerused. Pigmen putih mengisi pori-pori yang dalam dan tak beraturan di atas dasar abu-abu kecokelatan yang sejuk, sehingga kontrasnya kuat dan permukaannya kaya saat disentuh."
   },
   {
     id: 'cannes-sand-ash',
@@ -2847,8 +2847,8 @@ export const PRODUCTS = [
     idBestFor: 'Airy Ruang minimalis, seamless modern pertukangan kayu, light interior pintu',
     finish: 'Clear matte',
     idFinish: 'Matte bening',
-    longDesc: "Cannes Sand Ash is defined by its exceptionally pale, sandy-peach coloration and remarkably subtle flat-cut grain. The barely-there cathedral arches provide just enough organic texture to warm a space while maintaining an ultra-clean, minimalist aesthetic.",
-    idLongDesc: "Cannes Sand Ash ditandai warna persik berpasir yang sangat pucat dan serat potongan flat yang sangat samar. Lengkung katedral yang nyaris tak terlihat memberikan tekstur organik secukupnya untuk menghangatkan ruang, sambil tetap mempertahankan estetika minimalis yang sangat bersih."
+    longDesc: "Cannes Sand Ash is a very pale, sandy peach with a faint flat-cut grain. The cathedral arches are barely there, just enough texture to warm a room while keeping it clean and minimal.",
+    idLongDesc: "Cannes Sand Ash berwarna persik berpasir yang sangat pucat dengan serat potongan flat yang samar. Lengkung katedralnya nyaris tak terlihat, cukup bertekstur untuk menghangatkan ruangan sambil tetap menjaganya bersih dan minimalis."
   },
   {
     id: 'cannes-sand-walnut',
@@ -2868,8 +2868,8 @@ export const PRODUCTS = [
     idBestFor: 'Canggih Lingkungan korporat, neutral perabot tanam custom, transisional desain',
     finish: 'Matte oil',
     idFinish: 'Minyak Matte',
-    longDesc: "Cannes Sand Walnut utilizes the refined, straight linear geometry of quarter-cut walnut, transformed by a muted, sandy-taupe finish. This sophisticated, desaturated coloration cools the natural wood, offering a highly versatile and contemporary architectural neutral.",
-    idLongDesc: "Cannes Sand Walnut memanfaatkan geometri linear lurus walnut potongan quarter yang halus, diubah oleh finishing taupe berpasir yang lembut. Pewarnaan yang canggih dan redup ini menyejukkan kayu alami, menawarkan warna netral arsitektural yang sangat serbaguna dan kontemporer."
+    longDesc: "Cannes Sand Walnut has the straight, refined lines of quarter-cut walnut in a muted, sandy taupe. The softened colour cools the wood, making it an easy contemporary neutral.",
+    idLongDesc: "Cannes Sand Walnut memiliki garis lurus yang halus khas walnut potongan quarter, dalam warna taupe berpasir yang redup. Warnanya yang dilembutkan menyejukkan kayu, menjadikannya netral kontemporer yang mudah dipadukan."
   },
   {
     id: 'cannes-sunset-teak',
@@ -2887,8 +2887,8 @@ export const PRODUCTS = [
     idBestFor: 'Mid-century furnitur, warm panel arsitekturaling, mewah marine-inspired ruang',
     finish: 'Satin oil',
     idFinish: 'Minyak Satin',
-    longDesc: "Cannes Sunset Teak exhibits a rich, warm reddish-orange tone reminiscent of a golden hour glow. Its strict quarter-cut linear grain offers a highly structured, elegant texture that brings profound warmth and mid-century sophistication to high-end interiors.",
-    idLongDesc: "Cannes Sunset Teak memperlihatkan nuansa oranye kemerahan yang kaya dan hangat, mengingatkan pada cahaya keemasan senja. Serat linear potongan quarter yang tegas menawarkan tekstur yang sangat terstruktur dan elegan, menghadirkan kehangatan mendalam serta kecanggihan mid-century pada interior kelas atas."
+    longDesc: "Cannes Sunset Teak is a deep, warm reddish orange, like late-afternoon light. Its strict quarter-cut grain is ordered and refined, bringing warmth and a mid-century feel to high-end interiors.",
+    idLongDesc: "Cannes Sunset Teak berwarna oranye kemerahan yang hangat dan dalam, seperti cahaya sore hari. Serat potongan quarter-nya yang tegas tampak teratur dan halus, membawa kehangatan dan nuansa mid-century ke interior kelas atas."
   },
   {
     id: 'cannes-tinted-oak',
@@ -2907,8 +2907,8 @@ export const PRODUCTS = [
     idBestFor: 'Kontemporer mebel, seamless pelapis dinding, Interior residensial hangat interior',
     finish: 'Matte',
     idFinish: 'Matte',
-    longDesc: "Cannes Tinted Oak features the flawless, straight linear grain of rift-cut oak enhanced by a warm, inviting medium-tan tint. This subtle coloration enriches the wood's natural texture, providing a highly versatile and structurally elegant foundation for modern design.",
-    idLongDesc: "Cannes Tinted Oak menampilkan serat linear lurus yang sempurna dari oak potongan rift, diperkaya tint tan sedang yang hangat dan mengundang. Pewarnaan halus ini memperkaya tekstur alami kayu, memberikan dasar yang sangat serbaguna dan elegan secara struktural untuk desain modern."
+    longDesc: "Cannes Tinted Oak has the clean, straight grain of rift-cut oak with a warm medium-tan tint. The colour deepens the natural texture and works as a flexible base for modern design.",
+    idLongDesc: "Cannes Tinted Oak memiliki serat lurus yang bersih khas oak potongan rift, dengan tint tan sedang yang hangat. Warnanya memperdalam tekstur alami dan bisa menjadi dasar yang fleksibel untuk desain modern."
   },
   {
     id: 'cannes-warm-walnut',
@@ -2927,8 +2927,8 @@ export const PRODUCTS = [
     idBestFor: 'Executive lingkungan, residensial mewah pertukangan kayu, bespoke furnitur',
     finish: 'Matte oil',
     idFinish: 'Minyak Matte',
-    longDesc: "Cannes Warm Walnut pairs the disciplined, straight vertical lines of quarter-cut walnut with a complex, muted grey-brown finish. This rich, warm neutral softens the strict architectural grain, creating a highly sophisticated and inviting surface for luxury applications.",
-    idLongDesc: "Cannes Warm Walnut memadukan garis vertikal lurus walnut potongan quarter yang disiplin dengan finishing abu-abu kecokelatan yang kompleks dan lembut. Warna netral hangat yang kaya ini melembutkan serat arsitektural yang tegas, menciptakan permukaan yang sangat canggih dan mengundang untuk aplikasi mewah."
+    longDesc: "Cannes Warm Walnut pairs the straight, disciplined lines of quarter-cut walnut with a muted grey-brown finish. The warm neutral softens the strict grain, an inviting surface for luxury interiors.",
+    idLongDesc: "Cannes Warm Walnut memadukan garis lurus yang disiplin khas walnut potongan quarter dengan finishing abu-abu kecokelatan yang redup. Netral hangat ini melembutkan seratnya yang tegas, permukaan yang ramah untuk interior mewah."
   },
   {
     id: 'cannes-washed-oak',
@@ -2947,8 +2947,8 @@ export const PRODUCTS = [
     idBestFor: 'Bright residensial ruang, casual Furnitur moderne, expansive dinding aksen',
     finish: 'Clear matte',
     idFinish: 'Matte bening',
-    longDesc: "Cannes Washed Oak highlights the graceful, flowing cathedral arches of plain-sliced oak, softened by a delicate, pale wash. This brightening treatment maintains the wood's organic character while offering a light, airy aesthetic perfect for casual luxury and contemporary spaces.",
-    idLongDesc: "Cannes Washed Oak menonjolkan lengkung katedral oak potongan plain yang anggun dan mengalir, dilembutkan sapuan warna pucat yang halus. Perlakuan pencerah ini mempertahankan karakter organik kayu sambil menawarkan estetika yang ringan dan lapang, sempurna untuk kemewahan kasual dan ruang kontemporer."
+    longDesc: "Cannes Washed Oak has the graceful, flowing cathedrals of plain-sliced oak under a pale wash. The lighter colour keeps the wood's natural character and gives a relaxed, airy kind of luxury.",
+    idLongDesc: "Cannes Washed Oak memiliki lengkung katedral yang anggun dan mengalir khas oak potongan plain, di bawah sapuan warna pucat. Warnanya yang lebih terang mempertahankan karakter alami kayu dan memberi kesan mewah yang santai dan lapang."
   },
   {
     id: 'cannes-wheat-walnut',
@@ -2967,8 +2967,8 @@ export const PRODUCTS = [
     idBestFor: 'Modern korporat interior, transisional kabinet, neutral arsitektural aksen',
     finish: 'Satin urethane',
     idFinish: 'Uretan Satin',
-    longDesc: "Cannes Wheat Walnut showcases the rigorous, straight-line geometry of quarter-cut walnut in a soft, desaturated wheat-brown hue. This elegant, highly consistent finish subdues the natural contrast of the wood, providing a serene and refined architectural backdrop.",
-    idLongDesc: "Cannes Wheat Walnut menampilkan geometri garis lurus walnut potongan quarter yang tegas dalam rona cokelat gandum yang lembut dan redup. Finishing elegan yang sangat konsisten ini meredam kontras alami kayu, memberikan latar arsitektural yang tenang dan halus."
+    longDesc: "Cannes Wheat Walnut has the strict, straight lines of quarter-cut walnut in a soft, muted wheat brown. The even finish quietens the wood's natural contrast for a calm, refined backdrop.",
+    idLongDesc: "Cannes Wheat Walnut memiliki garis lurus yang tegas khas walnut potongan quarter, dalam warna cokelat gandum yang lembut dan redup. Finishingnya yang rata meredam kontras alami kayu, menghasilkan latar yang tenang dan halus."
   },
   {
     id: 'oslo-alabaster-oak',
@@ -2987,8 +2987,8 @@ export const PRODUCTS = [
     idBestFor: 'Scandinavian Ruang minimalis, clean panel arsitektural, light kabinet',
     finish: 'Matte clear',
     idFinish: 'Matte bening',
-    longDesc: "Oslo Alabaster Oak presents a tightly woven, straight rift-cut grain bathed in a cool, desaturated alabaster-grey tone. This highly refined and muted veneer provides a serene, airy foundation perfect for minimalist and Nordic-inspired interior designs.",
-    idLongDesc: "Oslo Alabaster Oak menghadirkan serat potongan rift yang rapat dan lurus, diselimuti nuansa abu-abu alabaster yang sejuk dan redup. Veneer yang sangat halus dan lembut ini memberikan dasar yang tenang dan lapang, sempurna untuk desain interior minimalis bernuansa Nordik."
+    longDesc: "Oslo Alabaster Oak is a tight, straight rift-cut oak in a cool, muted alabaster grey. Quiet and airy, it suits minimalist and Nordic interiors.",
+    idLongDesc: "Oslo Alabaster Oak adalah oak potongan rift yang rapat dan lurus dalam warna abu-abu alabaster yang sejuk dan redup. Tenang dan lapang, veneer ini cocok untuk interior minimalis dan bernuansa Nordik."
   },
   {
     id: 'oslo-almond-walnut',
@@ -3007,8 +3007,8 @@ export const PRODUCTS = [
     idBestFor: 'Furnitur modern rumah tangga, canggih dinding aksen, Ruang transisional',
     finish: 'Matte lacquer',
     idFinish: 'Pelapis Matte',
-    longDesc: "Oslo Almond Walnut transforms the classic, sweeping cathedral grain of flat-cut walnut with a complex, muted almond-grey wash. The stark contrast of the dark pores against the cool, lightened background creates a striking yet sophisticated architectural surface.",
-    idLongDesc: "Oslo Almond Walnut mengubah serat katedral klasik walnut potongan flat yang melengkung luas dengan sapuan warna abu-abu almond yang kompleks dan lembut. Kontras tegas pori-pori gelap di atas latar terang yang sejuk menciptakan permukaan arsitektural yang mencolok namun tetap canggih."
+    longDesc: "Oslo Almond Walnut takes the broad cathedral grain of flat-cut walnut and lightens it with a muted almond-grey wash. The dark pores stand out sharply against the cool, pale ground.",
+    idLongDesc: "Oslo Almond Walnut mengambil serat katedral lebar walnut potongan flat dan mencerahkannya dengan sapuan warna abu-abu almond yang redup. Pori-pori gelapnya tampak tegas di atas latar pucat yang sejuk."
   },
   {
     id: 'oslo-antique-grey',
@@ -3026,8 +3026,8 @@ export const PRODUCTS = [
     idBestFor: 'Seamless kontemporer pintu, subtle mebel, quiet interior backgrounds',
     finish: 'Smooth satin',
     idFinish: 'Satin halus',
-    longDesc: "Oslo Antique Grey offers an incredibly smooth, low-contrast surface with the subtle, flowing character of rotary-cut maple. Finished in a soft, solid antique grey, it serves as a quiet, monolithic canvas that effortlessly blends into modern, refined environments.",
-    idLongDesc: "Oslo Antique Grey menawarkan permukaan yang sangat halus dan berkontras rendah dengan karakter mengalir yang samar dari maple potongan rotary. Dengan finishing abu-abu antik yang lembut dan solid, veneer ini menjadi kanvas monolitik yang tenang, yang dengan mudah menyatu dengan lingkungan modern yang halus."
+    longDesc: "Oslo Antique Grey is a rotary-cut maple with a very smooth, low-contrast surface and a soft, flowing figure. Finished in a solid antique grey, it reads almost as one quiet plane in a modern room.",
+    idLongDesc: "Oslo Antique Grey adalah maple potongan rotary dengan permukaan yang sangat halus, kontras rendah, dan figur yang lembut mengalir. Dengan finishing abu-abu antik yang solid, tampilannya nyaris seperti satu bidang yang tenang di ruang modern."
   },
   {
     id: 'oslo-beige-pearwood',
@@ -3045,8 +3045,8 @@ export const PRODUCTS = [
     idBestFor: 'perlengkapan ritel mewah, fine custom pertukangan kayu, elegant aksen residensial',
     finish: 'Hand-rubbed oil',
     idFinish: 'Minyak gosok tangan',
-    longDesc: "Oslo Beige Pearwood showcases the exceptionally fine, poreless texture of quarter-cut pearwood in a highly sophisticated, cool beige-taupe hue. The rigorous linear grain and velvety finish offer an atmosphere of understated luxury and bespoke craftsmanship.",
-    idLongDesc: "Oslo Beige Pearwood menampilkan tekstur pearwood potongan quarter yang sangat halus dan tanpa pori dalam rona taupe krem yang sejuk dan sangat canggih. Serat linear yang tegas dan finishing selembut beludru menawarkan suasana kemewahan yang bersahaja dan keahlian custom."
+    longDesc: "Oslo Beige Pearwood has the very fine, almost poreless texture of quarter-cut pearwood in a cool beige taupe. The straight grain and velvety finish suit understated, bespoke work.",
+    idLongDesc: "Oslo Beige Pearwood memiliki tekstur pearwood potongan quarter yang sangat halus dan nyaris tanpa pori, dalam warna taupe krem yang sejuk. Seratnya yang lurus dan finishing selembut beludru cocok untuk pekerjaan custom yang bersahaja."
   },
   {
     id: 'oslo-camel-oak',
@@ -3064,8 +3064,8 @@ export const PRODUCTS = [
     idBestFor: 'Lingkungan korporat, warm minimalis kabinet, panel akustiking',
     finish: 'Matte urethane',
     idFinish: 'Uretan Matte',
-    longDesc: "Oslo Camel Oak features a flawless, straight rift-cut grain imbued with a warm, desaturated camel-taupe finish. This highly structured and consistent veneer bridges the gap between cool greys and warm browns, making it a perfectly balanced architectural neutral.",
-    idLongDesc: "Oslo Camel Oak menampilkan serat potongan rift yang lurus sempurna, diresapi finishing taupe unta yang hangat dan redup. Veneer yang sangat terstruktur dan konsisten ini menjembatani abu-abu sejuk dan cokelat hangat, menjadikannya warna netral arsitektural yang seimbang sempurna."
+    longDesc: "Oslo Camel Oak has a clean, straight rift-cut grain in a warm, muted camel taupe. It sits evenly between cool greys and warm browns, a balanced architectural neutral.",
+    idLongDesc: "Oslo Camel Oak memiliki serat potongan rift yang lurus dan bersih dalam warna taupe unta yang hangat dan redup. Warnanya berada tepat di antara abu-abu sejuk dan cokelat hangat, netral arsitektural yang seimbang."
   },
   {
     id: 'oslo-cement-grey-oak',
@@ -3084,8 +3084,8 @@ export const PRODUCTS = [
     idBestFor: 'Ruang modern industrial, moody interior aksen, komersial mebel',
     finish: 'Matte varnish',
     idFinish: 'Pernis Matte',
-    longDesc: "Oslo Cement Grey Oak delivers a strong, linear aesthetic with its strict rift-cut grain, darkened by a cool, industrial cement-grey stain. The deep, uniform coloration provides a grounding, modern presence that pairs beautifully with concrete and metal elements.",
-    idLongDesc: "Oslo Cement Grey Oak menghadirkan estetika linear yang kuat dengan serat potongan rift yang tegas, digelapkan pewarnaan abu-abu semen industrial yang sejuk. Warna yang dalam dan seragam memberikan kehadiran modern yang membumi, yang berpadu indah dengan elemen beton dan logam."
+    longDesc: "Oslo Cement Grey Oak is a strict rift-cut oak darkened with a cool, industrial cement-grey stain. The colour is deep and even, grounding a room and sitting well beside concrete and metal.",
+    idLongDesc: "Oslo Cement Grey Oak adalah oak potongan rift yang tegas, digelapkan dengan pewarnaan abu-abu semen industrial yang sejuk. Warnanya dalam dan rata, membuat ruangan terasa membumi dan serasi dengan beton dan logam."
   },
   {
     id: 'oslo-champagne-elm',
@@ -3104,8 +3104,8 @@ export const PRODUCTS = [
     idBestFor: 'Kelas atas hospitality, elegant furnitur rumah tangga, unique panel aksen',
     finish: 'Satin polish',
     idFinish: 'Poles Satin',
-    longDesc: "Oslo Champagne Elm captures the distinct, slightly jagged cathedral patterns characteristic of flat-cut elm, softened by a luminous, pale champagne-taupe wash. This delicate interplay of robust grain and elegant color creates a uniquely sophisticated, textured surface.",
-    idLongDesc: "Oslo Champagne Elm menangkap pola katedral yang khas dan sedikit bergerigi dari elm potongan flat, dilembutkan sapuan warna taupe sampanye pucat yang berkilau. Perpaduan halus antara serat yang kokoh dan warna yang elegan ini menciptakan permukaan bertekstur yang canggih dan unik."
+    longDesc: "Oslo Champagne Elm has the distinct, slightly jagged cathedrals of flat-cut elm under a pale, luminous champagne-taupe wash. The strong grain and soft colour make an unusual, textured surface.",
+    idLongDesc: "Oslo Champagne Elm memiliki katedral khas elm potongan flat yang sedikit bergerigi, di bawah sapuan warna taupe sampanye yang pucat dan berkilau. Seratnya yang kuat dan warnanya yang lembut menghasilkan permukaan bertekstur yang tidak biasa."
   },
   {
     id: 'oslo-champagne-pearwood',
@@ -3123,8 +3123,8 @@ export const PRODUCTS = [
     idBestFor: 'interior butiks, ramping panel arsitekturaling, mewah perabot tanam custom',
     finish: 'Smooth matte',
     idFinish: 'Matte halus',
-    longDesc: "Oslo Champagne Pearwood offers a flawlessly straight, incredibly fine linear grain finished in an ultra-light, glowing champagne-grey. The lack of prominent pores and the delicate coloration result in a pristine, luminous finish ideal for high-end minimalist design.",
-    idLongDesc: "Oslo Champagne Pearwood menawarkan serat linear yang lurus sempurna dan sangat halus, dengan finishing abu-abu sampanye bercahaya yang sangat terang. Tidak adanya pori-pori menonjol dan warnanya yang lembut menghasilkan finishing bersih dan bercahaya, ideal untuk desain minimalis kelas atas."
+    longDesc: "Oslo Champagne Pearwood has a perfectly straight, very fine grain in a very light, glowing champagne grey. With no prominent pores, the finish is clean and luminous, made for high-end minimalist rooms.",
+    idLongDesc: "Oslo Champagne Pearwood memiliki serat yang lurus sempurna dan sangat halus dalam warna abu-abu sampanye yang sangat terang dan bercahaya. Tanpa pori-pori yang menonjol, finishingnya bersih dan bercahaya, dibuat untuk ruang minimalis kelas atas."
   },
   {
     id: 'oslo-cobalt-oak',
@@ -3143,8 +3143,8 @@ export const PRODUCTS = [
     idBestFor: 'Kontemporer office ruang, cool-toned residensial desain, seamless pertukangan kayu',
     finish: 'Matte',
     idFinish: 'Matte',
-    longDesc: "Oslo Cobalt Oak utilizes the highly consistent, straight grain of rift-cut oak, tinted with a complex mid-tone grey that carries subtle, cool slate undertones. This sophisticated, desaturated finish provides a calm, structured backdrop for modern architectural applications.",
-    idLongDesc: "Oslo Cobalt Oak memanfaatkan serat lurus oak potongan rift yang sangat konsisten, diberi tint abu-abu bernuansa menengah yang kompleks dengan nuansa slate sejuk yang samar. Finishing yang canggih dan redup ini memberikan latar yang tenang dan terstruktur untuk aplikasi arsitektural modern."
+    longDesc: "Oslo Cobalt Oak is a very consistent, straight rift-cut oak tinted a mid-tone grey with faint, cool slate undertones. The muted finish is a calm, ordered backdrop for modern architecture.",
+    idLongDesc: "Oslo Cobalt Oak adalah oak potongan rift yang lurus dan sangat konsisten, diberi tint abu-abu menengah dengan nuansa slate sejuk yang samar. Finishingnya yang redup menjadi latar yang tenang dan teratur untuk arsitektur modern."
   },
   {
     id: 'oslo-crema-pine',
@@ -3163,8 +3163,8 @@ export const PRODUCTS = [
     idBestFor: 'Airy interior minimalis, Scandinavian-style furnitur, bright interior pintu',
     finish: 'Clear matte',
     idFinish: 'Matte bening',
-    longDesc: "Oslo Crema Pine presents an exceptionally tight, straight vertical grain in a frosty, pale crema-grey tone. This highly refined, bleached pine veneer minimizes visual noise, offering a sleek, icy-cool finish that brilliantly brightens and opens up interior spaces.",
-    idLongDesc: "Oslo Crema Pine menghadirkan serat vertikal lurus yang sangat rapat dalam nuansa abu-abu krem pucat seperti embun beku. Veneer pinus yang diputihkan dan sangat halus ini meminimalkan keramaian visual, menawarkan finishing ramping sesejuk es yang mencerahkan dan membuat ruang interior terasa lebih lapang."
+    longDesc: "Oslo Crema Pine is a bleached pine with a very tight, straight vertical grain in a frosty, pale cream-grey. Clean and cool, it brightens a room and makes it feel more open.",
+    idLongDesc: "Oslo Crema Pine adalah pinus yang diputihkan dengan serat vertikal lurus yang sangat rapat dalam warna abu-abu krem pucat seperti embun beku. Bersih dan sejuk, veneer ini mencerahkan ruangan dan membuatnya terasa lebih lapang."
   },
   {
     id: 'oslo-dark-wenge',
@@ -3182,8 +3182,8 @@ export const PRODUCTS = [
     idBestFor: 'mewah komersial, modern kabinet, panel arsitektural ramping',
     finish: 'Matte lacquer',
     idFinish: 'Pelapis Matte',
-    longDesc: "Oslo Dark Wenge features a very tight, straight linear grain characteristic of premium quarter-cut wenge, presented in a deeply saturated, shadowy grey-brown. This robust and highly consistent texture offers a profound, grounding presence for contemporary architectural applications.",
-    idLongDesc: "Oslo Dark Wenge menampilkan serat linear lurus yang sangat rapat, khas wenge potongan quarter premium, dalam warna abu-abu kecokelatan yang pekat dan teduh. Tekstur yang kokoh dan sangat konsisten ini menawarkan kehadiran yang mendalam dan membumi untuk aplikasi arsitektural kontemporer."
+    longDesc: "Oslo Dark Wenge has the very tight, straight grain of good quarter-cut wenge in a deep, shadowy grey-brown. The texture is sturdy and consistent, giving contemporary architecture a grounded presence.",
+    idLongDesc: "Oslo Dark Wenge memiliki serat yang sangat rapat dan lurus khas wenge potongan quarter berkualitas, dalam warna abu-abu kecokelatan yang pekat dan teduh. Teksturnya kokoh dan konsisten, memberi arsitektur kontemporer kehadiran yang membumi."
   },
   {
     id: 'oslo-dragon-grain',
@@ -3202,8 +3202,8 @@ export const PRODUCTS = [
     idBestFor: 'Dramatic dinding aksen, avant-garde furnitur, ritel mewah',
     finish: 'Satin polish',
     idFinish: 'Poles Satin',
-    longDesc: "Oslo Dragon Grain is a bold, high-contrast veneer showcasing thick, wavy bands of pale silver-white and deep charcoal-brown. This striking, almost primal grain pattern acts as a captivating focal point, delivering an exotic and highly dynamic visual impact.",
-    idLongDesc: "Oslo Dragon Grain adalah veneer berani berkontras tinggi yang menampilkan pita tebal bergelombang berwarna putih keperakan pucat dan cokelat arang pekat. Pola serat yang mencolok dan nyaris primal ini menjadi titik fokus yang memikat, menghadirkan dampak visual yang eksotis dan sangat dinamis."
+    longDesc: "Oslo Dragon Grain has thick, wavy bands of pale silver-white and deep charcoal brown in strong contrast. The grain feels almost primal, and it holds the eye wherever it is used.",
+    idLongDesc: "Oslo Dragon Grain memiliki pita tebal bergelombang berwarna putih keperakan pucat dan cokelat arang pekat dengan kontras yang kuat. Seratnya terasa nyaris primal dan menarik perhatian di mana pun ia dipakai."
   },
   {
     id: 'oslo-flax-oak',
@@ -3221,8 +3221,8 @@ export const PRODUCTS = [
     idBestFor: 'Kontemporer mebel, interior minimalis, panel akustiking',
     finish: 'Matte urethane',
     idFinish: 'Uretan Matte',
-    longDesc: "Oslo Flax Oak offers a meticulously straight, rift-cut grain enveloped in a cool, desaturated flaxen-grey tone. The unembellished linear texture and muted coloration provide a highly versatile, calming canvas for modern and Scandinavian-inspired designs.",
-    idLongDesc: "Oslo Flax Oak menawarkan serat potongan rift yang sangat lurus, diselimuti nuansa abu-abu rami yang sejuk dan redup. Tekstur linear tanpa hiasan dan warna yang lembut memberikan kanvas yang sangat serbaguna dan menenangkan untuk desain modern bernuansa Skandinavia."
+    longDesc: "Oslo Flax Oak has a very straight rift-cut grain in a cool, muted flaxen grey. Plain and calm, it is an easy base for modern and Scandinavian interiors.",
+    idLongDesc: "Oslo Flax Oak memiliki serat potongan rift yang sangat lurus dalam warna abu-abu rami yang sejuk dan redup. Polos dan tenang, veneer ini menjadi dasar yang mudah untuk interior modern dan bernuansa Skandinavia."
   },
   {
     id: 'oslo-graffite',
@@ -3240,8 +3240,8 @@ export const PRODUCTS = [
     idBestFor: 'Industrial modern desain, moody dinding aksen, tactile surfaces',
     finish: 'Textured matte',
     idFinish: 'Matte bertekstur',
-    longDesc: "Oslo Graffite breaks away from traditional finishes by showcasing a highly textured, erratic grain pattern submerged in a deep, moody graphite-grey. This rugged, almost stone-like surface brings a strong industrial and tactile edge to bespoke interiors.",
-    idLongDesc: "Oslo Graffite keluar dari finishing tradisional dengan menampilkan pola serat yang sangat bertekstur dan tak beraturan, terbenam dalam warna abu-abu grafit yang pekat dan muram. Permukaan kasar yang nyaris menyerupai batu ini menghadirkan sentuhan industrial dan taktil yang kuat pada interior custom."
+    longDesc: "Oslo Graffite has a heavily textured, irregular grain sunk into a deep, moody graphite grey. The rugged, almost stone-like surface gives bespoke interiors an industrial, tactile edge.",
+    idLongDesc: "Oslo Graffite memiliki serat yang sangat bertekstur dan tak beraturan, tenggelam dalam warna abu-abu grafit yang pekat dan muram. Permukaannya yang kasar dan nyaris menyerupai batu memberi interior custom kesan industrial dan taktil."
   },
   {
     id: 'oslo-grain-oak',
@@ -3280,8 +3280,8 @@ export const PRODUCTS = [
     idBestFor: 'Transisional residensial desain, interior hotel butiks, mebel modern',
     finish: 'Matte oil',
     idFinish: 'Minyak Matte',
-    longDesc: "Oslo Haze Walnut captures the sweeping, organic cathedrals of flat-cut walnut veiled under a cool, muted grey-brown haze. This sophisticated wash cools the natural warmth of the walnut, creating an elegant, atmospheric surface for luxury environments.",
-    idLongDesc: "Oslo Haze Walnut menangkap katedral organik walnut potongan flat yang melengkung luas, terselubung kabut abu-abu kecokelatan yang sejuk dan lembut. Sapuan warna yang canggih ini menyejukkan kehangatan alami walnut, menciptakan permukaan elegan dan atmosferik untuk lingkungan mewah."
+    longDesc: "Oslo Haze Walnut has the broad, natural cathedrals of flat-cut walnut under a cool, muted grey-brown haze. The wash cools walnut's natural warmth, leaving a soft, atmospheric surface for luxury interiors.",
+    idLongDesc: "Oslo Haze Walnut memiliki katedral alami yang lebar khas walnut potongan flat, di bawah kabut abu-abu kecokelatan yang sejuk dan redup. Sapuan warnanya menyejukkan kehangatan alami walnut, menyisakan permukaan yang lembut dan atmosferik untuk interior mewah."
   },
   {
     id: 'oslo-indigo-rose',
@@ -3300,8 +3300,8 @@ export const PRODUCTS = [
     idBestFor: 'Coastal modern mewah, tactile dinding aksen, unique kabinet',
     finish: 'Matte textured',
     idFinish: 'Matte bertekstur',
-    longDesc: "Oslo Indigo Rose blends a prominent, heavily textured vertical grain with a complex, weathered finish. Pale, icy washes contrast beautifully against a deep, muted indigo-rose base, offering a highly tactile and artistically layered architectural veneer.",
-    idLongDesc: "Oslo Indigo Rose memadukan serat vertikal yang menonjol dan sangat bertekstur dengan finishing lapuk yang kompleks. Sapuan warna pucat sedingin es berkontras indah dengan dasar indigo kemerahan yang pekat dan lembut, menawarkan veneer arsitektural yang sangat taktil dan berlapis secara artistik."
+    longDesc: "Oslo Indigo Rose has a pronounced, heavily textured vertical grain with a layered, weathered finish. Pale, icy washes sit over a deep, muted indigo-rose base, a tactile and painterly architectural veneer.",
+    idLongDesc: "Oslo Indigo Rose memiliki serat vertikal yang menonjol dan sangat bertekstur dengan finishing lapuk yang berlapis. Sapuan warna pucat sedingin es berada di atas dasar indigo kemerahan yang pekat dan redup, veneer arsitektural yang taktil dan bernuansa lukisan."
   },
   {
     id: 'oslo-ivory-oak',
@@ -3319,8 +3319,8 @@ export const PRODUCTS = [
     idBestFor: 'Bright modern ruang, airy residensial desain, ramping arsitektural woodwork',
     finish: 'Smooth matte',
     idFinish: 'Matte halus',
-    longDesc: "Oslo Ivory Oak presents an impeccably straight and fine rift-cut grain bathed in a soft, luminous ivory tone. This pristine, highly consistent veneer minimizes visual noise, providing a bright and sophisticated foundation for modern interiors.",
-    idLongDesc: "Oslo Ivory Oak menghadirkan serat potongan rift yang sangat lurus dan halus, diselimuti nuansa gading yang lembut dan bercahaya. Veneer yang bersih dan sangat konsisten ini meminimalkan keramaian visual, memberikan dasar yang cerah dan canggih untuk interior modern."
+    longDesc: "Oslo Ivory Oak has a very straight, fine rift-cut grain in a soft, luminous ivory. Clean and consistent, it is a bright, calm base for modern interiors.",
+    idLongDesc: "Oslo Ivory Oak memiliki serat potongan rift yang sangat lurus dan halus dalam warna gading yang lembut dan bercahaya. Bersih dan konsisten, veneer ini menjadi dasar yang cerah dan tenang untuk interior modern."
   },
   {
     id: 'oslo-jade-ash',
@@ -3338,8 +3338,8 @@ export const PRODUCTS = [
     idBestFor: 'High-contrast modern interior, bespoke furnitur, dramatic panel arsitektural',
     finish: 'Matte varnish',
     idFinish: 'Pernis Matte',
-    longDesc: "Oslo Jade Ash features the bold, sweeping cathedrals of flat-cut ash, highlighted by a stark white cerused effect over a complex, earthy grey-green base. This dynamic interplay of color and texture creates an unforgettable, highly tactile design element.",
-    idLongDesc: "Oslo Jade Ash menampilkan katedral ash potongan flat yang tegas dan melengkung luas, ditonjolkan efek cerused putih yang tegas di atas dasar hijau keabuan bernuansa tanah yang kompleks. Perpaduan warna dan tekstur yang dinamis ini menciptakan elemen desain yang tak terlupakan dan sangat taktil."
+    longDesc: "Oslo Jade Ash has the bold, sweeping cathedrals of flat-cut ash, picked out in white ceruse over an earthy grey-green base. The colour and texture together make a feature that stays with you.",
+    idLongDesc: "Oslo Jade Ash memiliki katedral ash potongan flat yang tegas dan melengkung, ditonjolkan dengan ceruse putih di atas dasar hijau keabuan bernuansa tanah. Warna dan teksturnya bersama-sama menghasilkan elemen yang mudah diingat."
   },
   {
     id: 'oslo-jade-oak',
@@ -3358,8 +3358,8 @@ export const PRODUCTS = [
     idBestFor: 'Subtle kontemporer mebel, elegant pelapis dinding, calming interior',
     finish: 'Satin urethane',
     idFinish: 'Uretan Satin',
-    longDesc: "Oslo Jade Oak utilizes the highly consistent, linear grain of rift-cut oak, tinted with a sophisticated, earthy jade-grey hue. The subtle white pores add delicate depth and structure to this exceptionally calming and modern architectural finish.",
-    idLongDesc: "Oslo Jade Oak memanfaatkan serat linear oak potongan rift yang sangat konsisten, diberi tint hijau giok keabuan bernuansa tanah yang canggih. Pori-pori putih yang samar menambahkan kedalaman dan struktur halus pada finishing arsitektural modern yang sangat menenangkan ini."
+    longDesc: "Oslo Jade Oak is a very consistent rift-cut oak tinted an earthy jade grey. Faint white pores add fine depth to a calm, modern architectural finish.",
+    idLongDesc: "Oslo Jade Oak adalah oak potongan rift yang sangat konsisten, diberi tint hijau giok keabuan bernuansa tanah. Pori-pori putih yang samar menambahkan kedalaman halus pada finishing arsitektural yang tenang dan modern."
   },
   {
     id: 'oslo-jade-pearwood',
@@ -3377,8 +3377,8 @@ export const PRODUCTS = [
     idBestFor: 'ritel butik, fine kabinet, subtle aksen residensial',
     finish: 'Smooth matte',
     idFinish: 'Matte halus',
-    longDesc: "Oslo Jade Pearwood offers an impeccably smooth, fine-textured quarter-cut grain tinged with a delicate, earthy jade-grey. The absence of prominent pores gives this veneer a velvety, sophisticated appearance perfect for elegant custom woodworking.",
-    idLongDesc: "Oslo Jade Pearwood menawarkan serat potongan quarter yang sangat mulus dan bertekstur halus, diwarnai semburat hijau giok keabuan bernuansa tanah yang lembut. Tidak adanya pori-pori yang menonjol memberi veneer ini tampilan selembut beludru yang canggih, sempurna untuk pengerjaan kayu custom yang elegan."
+    longDesc: "Oslo Jade Pearwood has a very smooth, fine quarter-cut grain with a soft, earthy jade-grey tint. With almost no visible pores, it has a velvety look suited to fine custom joinery.",
+    idLongDesc: "Oslo Jade Pearwood memiliki serat potongan quarter yang sangat mulus dan halus dengan tint hijau giok keabuan yang lembut. Dengan pori-pori yang hampir tidak terlihat, tampilannya selembut beludru dan cocok untuk pengerjaan kayu custom yang halus."
   },
   {
     id: 'oslo-light-grey-oak',
@@ -3396,8 +3396,8 @@ export const PRODUCTS = [
     idBestFor: 'Scandinavian interior, modern minimalis perabot tanam, clean panel arsitektural',
     finish: 'Matte urethane',
     idFinish: 'Uretan Matte',
-    longDesc: "Oslo Light Grey Oak presents a flawlessly straight, fine linear grain in a soft, desaturated light grey. This highly refined and muted veneer minimizes visual noise, providing a serene, airy foundation for contemporary and Nordic-inspired designs.",
-    idLongDesc: "Oslo Light Grey Oak menghadirkan serat linear yang lurus sempurna dan halus dalam warna abu-abu muda yang lembut dan redup. Veneer yang sangat halus dan lembut ini meminimalkan keramaian visual, memberikan dasar yang tenang dan lapang untuk desain kontemporer bernuansa Nordik."
+    longDesc: "Oslo Light Grey Oak has a perfectly straight, fine grain in a soft, muted light grey. Quiet and airy, it is a calm base for contemporary and Nordic interiors.",
+    idLongDesc: "Oslo Light Grey Oak memiliki serat yang lurus sempurna dan halus dalam warna abu-abu muda yang lembut dan redup. Tenang dan lapang, veneer ini menjadi dasar yang tenang untuk interior kontemporer dan bernuansa Nordik."
   },
   {
     id: 'oslo-light-grey-pine',
@@ -3415,8 +3415,8 @@ export const PRODUCTS = [
     idBestFor: 'Airy Ruang minimalis, kontemporer pintu, bright kabinet',
     finish: 'Matte clear',
     idFinish: 'Matte bening',
-    longDesc: "Oslo Light Grey Pine features a tight, straight vertical grain bathed in a cool, pale grey wash. This highly consistent and refined texture offers a smooth, neutral canvas that effortlessly complements a wide variety of modern interior styles.",
-    idLongDesc: "Oslo Light Grey Pine menampilkan serat vertikal yang rapat dan lurus, diselimuti sapuan warna abu-abu pucat yang sejuk. Tekstur yang sangat konsisten dan halus ini menawarkan kanvas netral yang mulus, yang dengan mudah melengkapi beragam gaya interior modern."
+    longDesc: "Oslo Light Grey Pine has a tight, straight vertical grain under a cool, pale grey wash. Consistent and fine, it is a smooth neutral that works with most modern styles.",
+    idLongDesc: "Oslo Light Grey Pine memiliki serat vertikal yang rapat dan lurus di bawah sapuan warna abu-abu pucat yang sejuk. Konsisten dan halus, veneer ini adalah netral yang mulus dan cocok dengan sebagian besar gaya modern."
   },
   {
     id: 'oslo-linen-elm',
@@ -3435,8 +3435,8 @@ export const PRODUCTS = [
     idBestFor: 'Kelas atas hospitality, elegant furnitur rumah tangga, soft panel aksen',
     finish: 'Satin polish',
     idFinish: 'Poles Satin',
-    longDesc: "Oslo Linen Elm captures the distinct, gently flowing cathedral patterns of flat-cut elm, softened by a delicate linen-grey wash. The interplay between the natural wood grain and the pale, muted coloration creates a uniquely sophisticated and highly tactile surface.",
-    idLongDesc: "Oslo Linen Elm menangkap pola katedral elm potongan flat yang khas dan mengalir lembut, dilembutkan sapuan warna abu-abu linen yang halus. Perpaduan antara serat kayu alami dan warna pucat yang redup menciptakan permukaan yang sangat taktil dan canggih secara unik."
+    longDesc: "Oslo Linen Elm has the distinct, gently flowing cathedrals of flat-cut elm under a soft linen-grey wash. Natural grain and pale, muted colour combine in an unusual, very tactile surface.",
+    idLongDesc: "Oslo Linen Elm memiliki katedral khas elm potongan flat yang mengalir lembut, di bawah sapuan warna abu-abu linen yang halus. Serat alami dan warna pucat yang redup berpadu menjadi permukaan yang tidak biasa dan sangat taktil."
   },
   {
     id: 'oslo-mist-cat-eye',
@@ -3455,8 +3455,8 @@ export const PRODUCTS = [
     idBestFor: 'furnitur statement, dramatic focal points, perlengkapan ritel mewah',
     finish: 'Satin lacquer',
     idFinish: 'Pelapis Satin',
-    longDesc: "Oslo Mist Cat Eye is a highly decorative veneer characterized by intricate, swirling circular grain patterns and tight clusters of \"eyes\" set in a cool, misty grey-brown. This organic, almost mesmerizing masterpiece functions as a captivating focal point for bespoke applications.",
-    idLongDesc: "Oslo Mist Cat Eye adalah veneer yang sangat dekoratif, dicirikan pola serat melingkar berpusar yang rumit dan gugusan \"mata\" yang rapat dalam warna abu-abu kecokelatan berkabut yang sejuk. Mahakarya organik yang nyaris memukau ini menjadi titik fokus yang memikat untuk aplikasi custom."
+    longDesc: "Oslo Mist Cat Eye is a decorative veneer with intricate, swirling circular grain and tight clusters of \"eyes\", in a cool, misty grey-brown. It is hard to look away from, and makes a strong focal point for bespoke pieces.",
+    idLongDesc: "Oslo Mist Cat Eye adalah veneer dekoratif dengan serat melingkar yang berpusar dan rumit, serta gugusan \"mata\" yang rapat, dalam warna abu-abu kecokelatan berkabut yang sejuk. Sulit untuk berpaling darinya, dan veneer ini menjadi titik fokus yang kuat untuk karya custom."
   },
   {
     id: 'oslo-moss-pearwood',
@@ -3474,8 +3474,8 @@ export const PRODUCTS = [
     idBestFor: 'mewah perabot tanam custom, fine interior pertukangan kayu, elegant arsitektural aksen',
     finish: 'Hand-rubbed oil',
     idFinish: 'Minyak gosok tangan',
-    longDesc: "Oslo Moss Pearwood showcases the exceptionally fine, poreless texture of quarter-cut pearwood in a sophisticated, earthy moss-grey hue. The rigorous linear grain and velvety finish offer an atmosphere of understated luxury and bespoke craftsmanship.",
-    idLongDesc: "Oslo Moss Pearwood menampilkan tekstur pearwood potongan quarter yang sangat halus dan tanpa pori dalam rona abu-abu lumut bernuansa tanah yang canggih. Serat linear yang tegas dan finishing selembut beludru menawarkan suasana kemewahan yang bersahaja dan keahlian custom."
+    longDesc: "Oslo Moss Pearwood has the very fine, almost poreless texture of quarter-cut pearwood in an earthy moss grey. The straight grain and velvety finish suit understated, bespoke work.",
+    idLongDesc: "Oslo Moss Pearwood memiliki tekstur pearwood potongan quarter yang sangat halus dan nyaris tanpa pori, dalam warna abu-abu lumut bernuansa tanah. Seratnya yang lurus dan finishing selembut beludru cocok untuk pekerjaan custom yang bersahaja."
   },
   {
     id: 'oslo-nordic-oak',
@@ -3494,8 +3494,8 @@ export const PRODUCTS = [
     idBestFor: 'Scandinavian-style furnitur, warm minimalis kabinet, panel akustiking',
     finish: 'Matte varnish',
     idFinish: 'Pernis Matte',
-    longDesc: "Oslo Nordic Oak features a seamless, straight rift-cut grain imbued with a warm, desaturated grey-taupe finish. This highly structured and consistent veneer perfectly balances cool greys and warm browns, capturing the essence of Scandinavian architectural design.",
-    idLongDesc: "Oslo Nordic Oak menampilkan serat potongan rift yang mulus dan lurus, diresapi finishing taupe keabuan yang hangat dan redup. Veneer yang sangat terstruktur dan konsisten ini menyeimbangkan abu-abu sejuk dan cokelat hangat dengan sempurna, menangkap esensi desain arsitektural Skandinavia."
+    longDesc: "Oslo Nordic Oak has a clean, straight rift-cut grain in a warm, muted grey taupe. It balances cool grey and warm brown in the way Scandinavian architecture often does.",
+    idLongDesc: "Oslo Nordic Oak memiliki serat potongan rift yang lurus dan bersih dalam warna taupe keabuan yang hangat dan redup. Veneer ini menyeimbangkan abu-abu sejuk dan cokelat hangat seperti yang sering dilakukan arsitektur Skandinavia."
   },
   {
     id: 'oslo-olive-walnut',
@@ -3514,8 +3514,8 @@ export const PRODUCTS = [
     idBestFor: 'Transisional residensial desain, interior hotel butiks, mebel modern',
     finish: 'Matte oil',
     idFinish: 'Minyak Matte',
-    longDesc: "Oslo Olive Walnut captures the sweeping, organic cathedrals of flat-cut walnut veiled under a cool, muted olive-grey haze. This sophisticated tint cools the natural warmth of the walnut, creating an elegant, atmospheric surface for luxury environments.",
-    idLongDesc: "Oslo Olive Walnut menangkap katedral organik walnut potongan flat yang melengkung luas, terselubung kabut abu-abu zaitun yang sejuk dan lembut. Tint yang canggih ini menyejukkan kehangatan alami walnut, menciptakan permukaan elegan dan atmosferik untuk lingkungan mewah."
+    longDesc: "Oslo Olive Walnut has the broad, natural cathedrals of flat-cut walnut under a cool, muted olive-grey haze. The tint cools walnut's natural warmth, leaving a soft, atmospheric surface for luxury interiors.",
+    idLongDesc: "Oslo Olive Walnut memiliki katedral alami yang lebar khas walnut potongan flat, di bawah kabut abu-abu zaitun yang sejuk dan redup. Tint-nya menyejukkan kehangatan alami walnut, menyisakan permukaan yang lembut dan atmosferik untuk interior mewah."
   },
   {
     id: 'oslo-pale-ash',
@@ -3534,8 +3534,8 @@ export const PRODUCTS = [
     idBestFor: 'Airy Ruang minimalis, seamless modern pertukangan kayu, light interior pintu',
     finish: 'Clear matte',
     idFinish: 'Matte bening',
-    longDesc: "Oslo Pale Ash is defined by its exceptionally pale, icy-blonde coloration and subtle flat-cut grain. The gentle cathedral arches provide just enough organic texture to warm a space while maintaining an ultra-clean, bright, and minimalist aesthetic.",
-    idLongDesc: "Oslo Pale Ash ditandai warna pirang pucat sedingin es yang sangat terang dan serat potongan flat yang samar. Lengkung katedral yang lembut memberikan tekstur organik secukupnya untuk menghangatkan ruang, sambil tetap mempertahankan estetika minimalis yang sangat bersih dan cerah."
+    longDesc: "Oslo Pale Ash is a very pale, icy blonde with a faint flat-cut grain. The soft cathedral arches give just enough texture to warm a room while keeping it clean, bright and minimal.",
+    idLongDesc: "Oslo Pale Ash berwarna pirang pucat sedingin es dengan serat potongan flat yang samar. Lengkung katedralnya yang lembut memberi tekstur secukupnya untuk menghangatkan ruangan sambil tetap menjaganya bersih, cerah, dan minimalis."
   },
   {
     id: 'oslo-pale-sand-oak',
@@ -3554,8 +3554,8 @@ export const PRODUCTS = [
     idBestFor: 'Casual mewah ruang, Interior residensial hangat interior, expansive dinding aksen',
     finish: 'Smooth satin',
     idFinish: 'Satin halus',
-    longDesc: "Oslo Pale Sand Oak highlights the graceful, flowing cathedral arches of plain-sliced oak, softened by a delicate, pale sandy wash. This brightening treatment maintains the wood's organic character while offering a light, airy aesthetic perfect for casual contemporary spaces.",
-    idLongDesc: "Oslo Pale Sand Oak menonjolkan lengkung katedral oak potongan plain yang anggun dan mengalir, dilembutkan sapuan warna pasir pucat yang halus. Perlakuan pencerah ini mempertahankan karakter organik kayu sambil menawarkan estetika yang ringan dan lapang, sempurna untuk ruang kontemporer yang santai."
+    longDesc: "Oslo Pale Sand Oak has the graceful, flowing cathedrals of plain-sliced oak under a pale sandy wash. The lighter colour keeps the wood's natural character and suits relaxed, contemporary rooms.",
+    idLongDesc: "Oslo Pale Sand Oak memiliki lengkung katedral yang anggun dan mengalir khas oak potongan plain, di bawah sapuan warna pasir pucat. Warnanya yang lebih terang mempertahankan karakter alami kayu dan cocok untuk ruang kontemporer yang santai."
   },
   {
     id: 'oslo-pastel-walnut',
@@ -3573,8 +3573,8 @@ export const PRODUCTS = [
     idBestFor: 'Modern interior komersials, muted residensial palettes, ramping perabot tanam',
     finish: 'Matte lacquer',
     idFinish: 'Pelapis Matte',
-    longDesc: "Oslo Pastel Walnut softens the rigid geometry of quarter-cut walnut with a highly sophisticated, desaturated pastel-grey wash. The resulting texture is incredibly refined, offering a cool, muted architectural neutral that pairs beautifully with minimalist designs.",
-    idLongDesc: "Oslo Pastel Walnut melembutkan geometri kaku walnut potongan quarter dengan sapuan warna abu-abu pastel yang redup dan sangat canggih. Tekstur yang dihasilkan sangat halus, menawarkan warna netral arsitektural yang sejuk dan lembut, yang berpadu indah dengan desain minimalis."
+    longDesc: "Oslo Pastel Walnut softens the strict lines of quarter-cut walnut with a muted pastel-grey wash. The result is fine and cool, a quiet neutral that sits well in minimalist design.",
+    idLongDesc: "Oslo Pastel Walnut melembutkan garis tegas walnut potongan quarter dengan sapuan warna abu-abu pastel yang redup. Hasilnya halus dan sejuk, netral yang tenang dan serasi dengan desain minimalis."
   },
   {
     id: 'oslo-pearl-oak',
@@ -3593,8 +3593,8 @@ export const PRODUCTS = [
     idBestFor: 'ritel butik, bright residensial ruang, elegant arsitektural aksen',
     finish: 'Smooth satin',
     idFinish: 'Satin halus',
-    longDesc: "Oslo Pearl Oak features a flawless, straight linear grain enhanced by a delicate, pearlescent pinkish-beige wash. This luminous and highly consistent veneer captures the light, providing a soft, glowing canvas that feels exceptionally elegant and airy.",
-    idLongDesc: "Oslo Pearl Oak menampilkan serat linear yang lurus sempurna, diperkaya sapuan warna krem kemerahmudaan berkilau mutiara yang lembut. Veneer yang bercahaya dan sangat konsisten ini menangkap cahaya, memberikan kanvas lembut yang berpendar dan terasa sangat elegan serta lapang."
+    longDesc: "Oslo Pearl Oak has a clean, straight grain under a soft, pearly pinkish-beige wash. Very consistent, it catches the light with a gentle glow and keeps a room light and refined.",
+    idLongDesc: "Oslo Pearl Oak memiliki serat lurus yang bersih di bawah sapuan warna krem kemerahmudaan berkilau mutiara yang lembut. Sangat konsisten, veneer ini menangkap cahaya dengan kilau lembut dan menjaga ruangan tetap terang dan halus."
   },
   {
     id: 'oslo-rose-oak',
@@ -3613,8 +3613,8 @@ export const PRODUCTS = [
     idBestFor: 'Warm kontemporer mebel, hospitality mewah, refined interior pintu',
     finish: 'Matte urethane',
     idFinish: 'Uretan Matte',
-    longDesc: "Oslo Rose Oak utilizes the disciplined, straight lines of rift-cut oak, enriched by a muted, dusty-rose and taupe tint. This subtle, warm coloration brings a soft, romantic undertone to the strict linear grain, creating a beautifully balanced architectural finish.",
-    idLongDesc: "Oslo Rose Oak memanfaatkan garis lurus oak potongan rift yang disiplin, diperkaya tint merah mawar pudar dan taupe yang lembut. Pewarnaan halus dan hangat ini menghadirkan nuansa lembut dan romantis pada serat linear yang tegas, menciptakan finishing arsitektural yang seimbang dengan indah."
+    longDesc: "Oslo Rose Oak has the straight, disciplined lines of rift-cut oak with a muted dusty-rose and taupe tint. The soft, warm colour takes the edge off the strict grain for a well-balanced finish.",
+    idLongDesc: "Oslo Rose Oak memiliki garis lurus yang disiplin khas oak potongan rift, dengan tint merah mawar pudar dan taupe yang redup. Warnanya yang lembut dan hangat melunakkan serat yang tegas, menghasilkan finishing yang seimbang."
   },
   {
     id: 'oslo-rustic-ash',
@@ -3633,8 +3633,8 @@ export const PRODUCTS = [
     idBestFor: 'Textured dinding aksen, casual Furnitur moderne, organic interior',
     finish: 'Matte textured',
     idFinish: 'Matte bertekstur',
-    longDesc: "Oslo Rustic Ash showcases the dynamic, sweeping cathedral patterns of flat-cut ash, tempered by a cool, weathered grey-taupe finish. The prominent grain and tactile surface offer an organic, slightly rustic character that beautifully contrasts with sleek, modern elements.",
-    idLongDesc: "Oslo Rustic Ash menampilkan pola katedral ash potongan flat yang dinamis dan melengkung luas, diredam finishing taupe keabuan lapuk yang sejuk. Serat yang menonjol dan permukaan yang bertekstur menawarkan karakter organik yang sedikit rustik, yang berkontras indah dengan elemen modern yang ramping."
+    longDesc: "Oslo Rustic Ash has the lively, sweeping cathedrals of flat-cut ash under a cool, weathered grey-taupe. The strong grain and textured surface feel slightly rustic, a good contrast to sleek, modern details.",
+    idLongDesc: "Oslo Rustic Ash memiliki katedral ash potongan flat yang hidup dan melengkung, di bawah warna taupe keabuan yang sejuk dan tampak lapuk. Seratnya yang kuat dan permukaannya yang bertekstur terasa sedikit rustik, kontras yang baik untuk detail modern yang ramping."
   },
   {
     id: 'oslo-silk-grain-oak',
@@ -3653,8 +3653,8 @@ export const PRODUCTS = [
     idBestFor: 'panel tanpa sambungan arsitekturaling, minimalis perabot tanam, clean lingkungan',
     finish: 'Smooth matte',
     idFinish: 'Matte halus',
-    longDesc: "Oslo Silk Grain Oak delivers an exceptionally fine, tightly woven rift-cut texture in a warm, versatile sandy-taupe. Its ultra-smooth appearance and minimal contrast provide a quiet, silky surface that acts as a flawless neutral background for upscale design.",
-    idLongDesc: "Oslo Silk Grain Oak menghadirkan tekstur potongan rift yang sangat halus dan rapat dalam warna taupe berpasir yang hangat dan serbaguna. Tampilannya yang sangat mulus dan kontras yang minim memberikan permukaan tenang selembut sutra, yang menjadi latar netral sempurna untuk desain kelas atas."
+    longDesc: "Oslo Silk Grain Oak has a very fine, tight rift-cut texture in a warm sandy taupe. Smooth and low in contrast, it gives a quiet, silky background for upscale design.",
+    idLongDesc: "Oslo Silk Grain Oak memiliki tekstur potongan rift yang sangat halus dan rapat dalam warna taupe berpasir yang hangat. Mulus dan berkontras rendah, veneer ini memberi latar yang tenang dan selembut sutra untuk desain kelas atas."
   },
   {
     id: 'oslo-silver-beech',
@@ -3672,8 +3672,8 @@ export const PRODUCTS = [
     idBestFor: 'Modern korporat ruang, luminous dinding aksen, kontemporer kabinet',
     finish: 'Satin polish',
     idFinish: 'Poles Satin',
-    longDesc: "Oslo Silver Beech features the fine, straight grain typical of quarter-cut beech, elevated by a sophisticated, cool silver-grey wash. The subtle metallic undertones catch the light, adding depth and a sleek, contemporary edge to the wood's natural texture.",
-    idLongDesc: "Oslo Silver Beech menampilkan serat halus dan lurus yang khas dari beech potongan quarter, diangkat dengan sapuan warna abu-abu keperakan yang sejuk dan canggih. Nuansa metalik yang samar menangkap cahaya, menambahkan kedalaman serta sentuhan ramping dan kontemporer pada tekstur alami kayu."
+    longDesc: "Oslo Silver Beech has the fine, straight grain of quarter-cut beech under a cool silver-grey wash. Faint metallic undertones catch the light, adding depth and a contemporary edge to the natural texture.",
+    idLongDesc: "Oslo Silver Beech memiliki serat halus dan lurus khas beech potongan quarter, di bawah sapuan warna abu-abu keperakan yang sejuk. Nuansa metalik yang samar menangkap cahaya, menambahkan kedalaman dan kesan kontemporer pada tekstur alaminya."
   },
   {
     id: 'oslo-silver-walnut',
@@ -3692,8 +3692,8 @@ export const PRODUCTS = [
     idBestFor: 'Transisional residensial desain, elegant furnitur, cool-toned interior',
     finish: 'Matte oil',
     idFinish: 'Minyak Matte',
-    longDesc: "Oslo Silver Walnut transforms the organic, flowing cathedrals of plain-sliced walnut with a calming, silver-grey finish. This specialized tint cools the inherent warmth of the walnut, resulting in a highly refined and atmospheric architectural surface.",
-    idLongDesc: "Oslo Silver Walnut mengubah katedral organik walnut potongan plain yang mengalir dengan finishing abu-abu keperakan yang menenangkan. Tint khusus ini menyejukkan kehangatan bawaan walnut, menghasilkan permukaan arsitektural yang sangat halus dan atmosferik."
+    longDesc: "Oslo Silver Walnut has the flowing, natural cathedrals of plain-sliced walnut under a calm silver-grey finish. The tint cools walnut's natural warmth, giving a fine, atmospheric architectural surface.",
+    idLongDesc: "Oslo Silver Walnut memiliki katedral alami yang mengalir khas walnut potongan plain, di bawah finishing abu-abu keperakan yang tenang. Tint-nya menyejukkan kehangatan alami walnut, memberi permukaan arsitektural yang halus dan atmosferik."
   },
   {
     id: 'oslo-starlight',
@@ -3712,8 +3712,8 @@ export const PRODUCTS = [
     idBestFor: 'perlengkapan ritel mewah, luminous kontemporer panel, seamless pertukangan kayu',
     finish: 'Satin clear',
     idFinish: 'Satin bening',
-    longDesc: "Oslo Starlight presents an ultra-fine, perfectly straight linear grain in a pale, glowing blonde-grey. As an engineered veneer, it offers flawless consistency, while its subtle luminous quality brings a sense of light and spaciousness to minimalist environments.",
-    idLongDesc: "Oslo Starlight menghadirkan serat linear yang sangat halus dan lurus sempurna dalam warna abu-abu pirang pucat yang berpendar. Sebagai veneer rekayasa, veneer ini menawarkan konsistensi sempurna, sementara kualitas bercahayanya yang samar menghadirkan kesan terang dan lapang pada lingkungan minimalis."
+    longDesc: "Oslo Starlight has a very fine, perfectly straight grain in a pale, glowing blonde grey. Being engineered, it is consistent from sheet to sheet, and its soft luminosity makes minimalist rooms feel lighter and more spacious.",
+    idLongDesc: "Oslo Starlight memiliki serat yang sangat halus dan lurus sempurna dalam warna abu-abu pirang pucat yang berpendar. Sebagai veneer rekayasa, warnanya konsisten dari lembar ke lembar, dan kilau lembutnya membuat ruang minimalis terasa lebih terang dan lapang."
   },
   {
     id: 'oslo-steel-oak',
@@ -3731,8 +3731,8 @@ export const PRODUCTS = [
     idBestFor: 'Moody interior aksen, industrial modern desain, korporat mebel',
     finish: 'Matte varnish',
     idFinish: 'Pernis Matte',
-    longDesc: "Oslo Steel Oak grounds a space with its strong, linear rift-cut grain and a deep, cool steel-grey stain. The uniform, dark coloration provides a powerful architectural anchor, pairing perfectly with raw concrete, metal, and high-contrast contemporary palettes.",
-    idLongDesc: "Oslo Steel Oak membumikan ruang dengan serat potongan rift yang kuat dan linear serta pewarnaan abu-abu baja yang pekat dan sejuk. Warna gelap yang seragam memberikan jangkar arsitektural yang kuat, berpadu sempurna dengan beton ekspos, logam, dan palet kontemporer berkontras tinggi."
+    longDesc: "Oslo Steel Oak is a strong, linear rift-cut oak with a deep, cool steel-grey stain. The even, dark colour anchors a room and works well with raw concrete, metal and high-contrast contemporary palettes.",
+    idLongDesc: "Oslo Steel Oak adalah oak potongan rift yang tegas dan linear dengan pewarnaan abu-abu baja yang pekat dan sejuk. Warnanya yang gelap dan rata menjadi jangkar ruangan dan serasi dengan beton ekspos, logam, serta palet kontemporer berkontras tinggi."
   },
   {
     id: 'oslo-taupe-oak',
@@ -3750,8 +3750,8 @@ export const PRODUCTS = [
     idBestFor: 'Versatile interior komersials, warm minimalis desain, panel-panel akustik',
     finish: 'Satin urethane',
     idFinish: 'Uretan Satin',
-    longDesc: "Oslo Taupe Oak offers the structural perfection of a straight, rift-cut grain enveloped in a balanced mid-tone taupe. This highly adaptable neutral seamlessly bridges warm and cool color schemes, providing a comforting yet structured foundation for upscale interiors.",
-    idLongDesc: "Oslo Taupe Oak menawarkan kesempurnaan struktural serat potongan rift yang lurus, diselimuti taupe bernuansa menengah yang seimbang. Warna netral yang sangat mudah dipadukan ini menjembatani skema warna hangat dan sejuk dengan mulus, memberikan dasar yang nyaman namun terstruktur untuk interior kelas atas."
+    longDesc: "Oslo Taupe Oak has a clean, straight rift-cut grain in a balanced mid-tone taupe. It moves easily between warm and cool schemes, a comfortable, ordered base for upscale interiors.",
+    idLongDesc: "Oslo Taupe Oak memiliki serat potongan rift yang lurus dan bersih dalam warna taupe menengah yang seimbang. Warnanya mudah berpindah antara skema hangat dan sejuk, dasar yang nyaman dan teratur untuk interior kelas atas."
   },
   {
     id: 'oslo-wavemist-oak',
@@ -3767,8 +3767,8 @@ export const PRODUCTS = [
     // after the product rather than after the file; see ProductDetail.
     image: '/assets/image/CANNES RUSSET.webp',
     hiResImage: '/assets/hires/OSLO WAVEMIST OAK.jpeg',
-    longDesc: "Oslo Wavemist Oak offers a dramatic, highly figured swirling grain enhanced by a striking cerused finish. White pigment fills the deep, erratic pores against a cool, earthy grey-brown base, creating an intense, visually captivating contrast and a rich tactile experience.",
-    idLongDesc: "Oslo Wavemist Oak menawarkan serat berpusar yang dramatis dan berfigur kaya, diperkuat finishing cerused yang mencolok. Pigmen putih mengisi pori-pori yang dalam dan tak beraturan di atas dasar abu-abu kecokelatan bernuansa tanah yang sejuk, menciptakan kontras yang intens dan memikat secara visual serta pengalaman sentuhan yang kaya."
+    longDesc: "Oslo Wavemist Oak has a dramatic, heavily figured swirling grain with a cerused finish. White pigment fills the deep, irregular pores against a cool, earthy grey-brown, so the contrast is strong and the surface rich to the touch.",
+    idLongDesc: "Oslo Wavemist Oak memiliki serat berpusar yang dramatis dan kaya figur dengan finishing cerused. Pigmen putih mengisi pori-pori yang dalam dan tak beraturan di atas dasar abu-abu kecokelatan yang sejuk, sehingga kontrasnya kuat dan permukaannya kaya saat disentuh."
   },
   {
     id: 'zurich-amethyst',
@@ -3788,8 +3788,8 @@ export const PRODUCTS = [
     idBestFor: 'Playful ritel lingkungan, creative office ruang, unique panel akustiking',
     finish: 'Matte clear',
     idFinish: 'Matte bening',
-    longDesc: "Zurich Amethyst brings a lively, fabric-like quality to wood veneer. Set against a pale, silvery-grey linear background, vibrant flecks of amethyst red, deep blue, and charcoal are woven into the grain, creating a highly unique, dynamic surface that blurs the line between textile and timber.",
-    idLongDesc: "Zurich Amethyst menghadirkan kualitas hidup menyerupai kain pada veneer kayu. Di atas latar linear abu-abu keperakan yang pucat, bintik-bintik cerah merah ametis, biru tua, dan arang teranyam ke dalam serat, menciptakan permukaan dinamis yang sangat unik dan mengaburkan batas antara tekstil dan kayu."
+    longDesc: "Zurich Amethyst looks almost like fabric. Flecks of amethyst red, deep blue and charcoal are worked into a pale, silvery-grey linear grain, a lively surface that sits somewhere between textile and timber.",
+    idLongDesc: "Zurich Amethyst tampak hampir seperti kain. Bintik-bintik merah ametis, biru tua, dan arang menyatu dalam serat linear abu-abu keperakan yang pucat, permukaan yang hidup di antara tekstil dan kayu."
   },
   {
     id: 'zurich-black-pearl',
@@ -3808,8 +3808,8 @@ export const PRODUCTS = [
     idBestFor: 'interior mewah komersials, executive furnitur, dramatic pelapis dinding',
     finish: 'High gloss or satin',
     idFinish: 'Glossy tinggi atau Satin',
-    longDesc: "Zurich Black Pearl is a striking study in contrast and precision. This engineered veneer features a deep, light-absorbing black background punctuated by ultra-thin, perfectly spaced luminous silver-white pinstripes, delivering a formal, tailored aesthetic reminiscent of haute couture.",
-    idLongDesc: "Zurich Black Pearl adalah studi kontras dan presisi yang mencolok. Veneer rekayasa ini menampilkan latar hitam pekat yang menyerap cahaya, disela garis tipis putih keperakan bercahaya yang sangat tipis dan berjarak sempurna, menghadirkan estetika formal dan rapi yang mengingatkan pada adibusana."
+    longDesc: "Zurich Black Pearl is an engineered veneer built on contrast and precision. A deep black ground is crossed by very thin, evenly spaced silver-white pinstripes, formal and tailored, like a fine suit.",
+    idLongDesc: "Zurich Black Pearl adalah veneer rekayasa yang dibangun di atas kontras dan presisi. Latar hitam pekat disela garis tipis putih keperakan yang sangat halus dan berjarak rata, formal dan rapi seperti setelan jas yang bagus."
   },
   {
     id: 'zurich-carbernet',
@@ -3827,8 +3827,8 @@ export const PRODUCTS = [
     idBestFor: 'Butik hospitality, moody residensial kabinet, canggih wine cellars',
     finish: 'Matte lacquer',
     idFinish: 'Pelapis Matte',
-    longDesc: "Zurich Carbernet utilizes a fine, straight linear grain enhanced by a complex, muted purplish-grey tint. This sophisticated, wine-inspired coloration cools the natural wood tones, offering a rich, atmospheric surface that exudes quiet luxury and refined taste.",
-    idLongDesc: "Zurich Carbernet memanfaatkan serat linear lurus yang halus, diperkaya tint abu-abu keunguan yang kompleks dan lembut. Pewarnaan canggih yang terinspirasi anggur ini menyejukkan nuansa kayu alami, menawarkan permukaan kaya dan atmosferik yang memancarkan kemewahan tenang dan selera yang halus."
+    longDesc: "Zurich Carbernet has a fine, straight grain with a muted purplish-grey tint, the colour of red wine. It cools the natural wood tone and gives a deep, atmospheric surface with a quiet sense of luxury.",
+    idLongDesc: "Zurich Carbernet memiliki serat lurus yang halus dengan tint abu-abu keunguan yang redup, sewarna anggur merah. Warnanya menyejukkan nuansa kayu alami dan memberi permukaan yang dalam dan atmosferik dengan kesan mewah yang tenang."
   },
   {
     id: 'zurich-chasing-waves',
@@ -3848,8 +3848,8 @@ export const PRODUCTS = [
     idBestFor: 'Avant-garde dinding aksen, dramatic focal points, perlengkapan ritel mewah',
     finish: 'Textured matte',
     idFinish: 'Matte bertekstur',
-    longDesc: "Zurich Chasing Waves is a wildly expressive veneer featuring jagged, horizontal bands of dark charcoal crashing across a textured, warm grey background. This highly dynamic, almost animalistic pattern injects fierce energy and movement into bold interior spaces.",
-    idLongDesc: "Zurich Chasing Waves adalah veneer yang sangat ekspresif, dengan pita horizontal bergerigi berwarna arang gelap yang menghantam latar abu-abu hangat yang bertekstur. Pola yang sangat dinamis dan nyaris liar ini menyuntikkan energi dan gerak yang kuat ke ruang interior yang berani."
+    longDesc: "Zurich Chasing Waves has jagged horizontal bands of dark charcoal breaking across a textured, warm grey ground. The pattern is wild and full of movement, for interiors that want energy.",
+    idLongDesc: "Zurich Chasing Waves memiliki pita horizontal bergerigi berwarna arang gelap yang memecah latar abu-abu hangat yang bertekstur. Polanya liar dan penuh gerak, untuk interior yang menginginkan energi."
   },
   {
     id: 'zurich-chenille-stripes',
@@ -3868,8 +3868,8 @@ export const PRODUCTS = [
     idBestFor: 'Cozy komersial ruang, tactile wall panel, innovative furnitur desain',
     finish: 'Satin textured',
     idFinish: 'Satin bertekstur',
-    longDesc: "Zurich Chenille Stripes masterfully mimics the comforting, tactile appearance of heavy woven fabric. Through advanced engineering, the wood grain forms a fine, horizontal and vertical cross-hatch pattern in warm greys, offering the durability of wood with the visual softness of textile.",
-    idLongDesc: "Zurich Chenille Stripes dengan piawai meniru tampilan kain tenun tebal yang nyaman dan taktil. Melalui rekayasa canggih, serat kayu membentuk pola arsir silang horizontal dan vertikal yang halus dalam nuansa abu-abu hangat, menawarkan ketahanan kayu dengan kelembutan visual tekstil."
+    longDesc: "Zurich Chenille Stripes is engineered to look like heavy woven fabric. The grain forms a fine cross-hatch of horizontal and vertical lines in warm greys, with the softness of textile and the durability of wood.",
+    idLongDesc: "Zurich Chenille Stripes direkayasa agar tampak seperti kain tenun tebal. Seratnya membentuk arsir silang halus dari garis horizontal dan vertikal dalam nuansa abu-abu hangat, dengan kelembutan tekstil dan ketahanan kayu."
   },
   {
     id: 'zurich-chenille-weave',
@@ -3888,8 +3888,8 @@ export const PRODUCTS = [
     idBestFor: 'statement interior pintu, dynamic dinding aksen, modern hospitality',
     finish: 'Smooth matte',
     idFinish: 'Matte halus',
-    longDesc: "Zurich Chenille Weave utilizes engineered veneer technology to create a mesmerizing, continuous chevron or herringbone zig-zag pattern. The shifting grey tones within the geometric structure play with light, resulting in a highly graphic, three-dimensional visual effect.",
-    idLongDesc: "Zurich Chenille Weave memanfaatkan teknologi veneer rekayasa untuk menciptakan pola chevron atau herringbone zig-zag yang memukau dan tak terputus. Nuansa abu-abu yang bergeser dalam struktur geometrisnya bermain dengan cahaya, menghasilkan efek visual tiga dimensi yang sangat grafis."
+    longDesc: "Zurich Chenille Weave is an engineered veneer with a continuous chevron, or herringbone, zigzag. The shifting greys catch the light differently across the pattern, giving a graphic, almost three-dimensional effect.",
+    idLongDesc: "Zurich Chenille Weave adalah veneer rekayasa dengan pola zig-zag chevron, atau herringbone, yang tak terputus. Nuansa abu-abunya yang bergeser menangkap cahaya secara berbeda di sepanjang pola, memberi efek grafis yang nyaris tiga dimensi."
   },
   {
     id: 'zurich-color-pop',
@@ -3909,8 +3909,8 @@ export const PRODUCTS = [
     idBestFor: 'Artistic installations, vibrant ritel ruang, bespoke Furnitur kontemporere',
     finish: 'Polished natural',
     idFinish: 'Natural dipoles',
-    longDesc: "Zurich Color Pop is a triumph of avant-garde woodworking. By layering and sculpting deeply dyed veneers in vibrant shades of mustard, pink, crimson, navy, and olive, this highly abstract, topographic surface reads more like a fluid modern art piece than traditional timber.",
-    idLongDesc: "Zurich Color Pop adalah puncak pengerjaan kayu avant-garde. Dengan melapis dan membentuk veneer yang diwarnai pekat dalam nuansa cerah mustard, merah muda, merah tua, biru dongker, dan zaitun, permukaan topografis yang sangat abstrak ini lebih terbaca sebagai karya seni modern yang cair daripada kayu tradisional."
+    longDesc: "Zurich Color Pop is made by layering and sculpting deeply dyed veneers in mustard, pink, crimson, navy and olive. The abstract, contour-like surface reads more like modern art than timber.",
+    idLongDesc: "Zurich Color Pop dibuat dengan melapis dan membentuk veneer yang diwarnai pekat dalam warna mustard, merah muda, merah tua, biru dongker, dan zaitun. Permukaannya yang abstrak dan menyerupai garis kontur lebih terlihat seperti seni modern daripada kayu."
   },
   {
     id: 'zurich-crimson-red',
@@ -3930,8 +3930,8 @@ export const PRODUCTS = [
     idBestFor: 'High-impact dinding aksen, dramatic custom pertukangan kayu, theatrical interior',
     finish: 'High gloss or satin',
     idFinish: 'Glossy tinggi atau Satin',
-    longDesc: "Zurich Crimson Red pairs the aggressive, sweeping cathedrals of heavily figured ash with an intense, blood-red dye. The deep black grain lines strike a powerful contrast against the vibrant crimson base, creating a wildly dramatic and unforgettable architectural surface.",
-    idLongDesc: "Zurich Crimson Red memadukan katedral ash berfigur kaya yang agresif dan melengkung luas dengan pewarna merah darah yang intens. Garis serat hitam pekat menciptakan kontras kuat terhadap dasar merah tua yang cerah, menghasilkan permukaan arsitektural yang sangat dramatis dan tak terlupakan."
+    longDesc: "Zurich Crimson Red sets the bold, sweeping cathedrals of heavily figured ash in an intense blood-red dye. Deep black grain lines cut sharply against the bright crimson, a dramatic surface few people forget.",
+    idLongDesc: "Zurich Crimson Red menghadirkan katedral ash berfigur kaya yang tegas dan melengkung dalam pewarna merah darah yang intens. Garis serat hitam pekat berkontras tajam dengan merah tua yang cerah, permukaan dramatis yang sulit dilupakan."
   },
   {
     id: 'zurich-domino',
@@ -3951,8 +3951,8 @@ export const PRODUCTS = [
     idBestFor: 'Psychedelic dinding aksen, retro-modern lingkungan, exclusive club interior',
     finish: 'Smooth polish',
     idFinish: 'Poles halus',
-    longDesc: "Zurich Domino commands attention with undulating, organic layers of stark black and creamy white. Reminiscent of contour maps or retro-psychedelic art, this heavily engineered, high-contrast veneer provides an incredibly bold, mesmerizing visual rhythm.",
-    idLongDesc: "Zurich Domino menarik perhatian dengan lapisan organik bergelombang berwarna hitam pekat dan putih krem. Mengingatkan pada peta kontur atau seni retro-psikedelik, veneer rekayasa berkontras tinggi ini memberikan ritme visual yang sangat berani dan memukau."
+    longDesc: "Zurich Domino is built from undulating layers of stark black and creamy white. Somewhere between a contour map and retro psychedelic art, it is a bold, high-contrast engineered veneer with a strong rhythm.",
+    idLongDesc: "Zurich Domino tersusun dari lapisan bergelombang berwarna hitam pekat dan putih krem. Berada di antara peta kontur dan seni psikedelik retro, veneer rekayasa berkontras tinggi ini berani dan memiliki ritme yang kuat."
   },
   {
     id: 'zurich-foresta',
@@ -3971,8 +3971,8 @@ export const PRODUCTS = [
     idBestFor: 'Tranquil spa lingkungan, ethereal bedroom suite, butik desain yang unik',
     finish: 'Soft matte',
     idFinish: 'Matte lembut',
-    longDesc: "Zurich Foresta transforms highly figured, blistered wood grain into a surreal sylvan fantasy. Dyed in a soft, ethereal palette of pale blue, green, and misty grey, the organic, swirling patterns evoke the dappled light and shadowy depths of a quiet, enchanted forest.",
-    idLongDesc: "Zurich Foresta mengubah serat kayu berfigur kaya yang bergelembung menjadi fantasi hutan yang surealis. Diwarnai palet biru pucat, hijau, dan abu-abu berkabut yang lembut dan halus, pola organik yang berpusar menghadirkan cahaya yang menembus dedaunan dan kedalaman teduh hutan ajaib yang tenang."
+    longDesc: "Zurich Foresta turns a heavily figured, blistered grain into something close to a dream of a forest. Dyed in soft pale blue, green and misty grey, the swirls recall dappled light and shade under trees.",
+    idLongDesc: "Zurich Foresta mengubah serat bergelembung yang kaya figur menjadi sesuatu yang mendekati mimpi tentang hutan. Diwarnai biru pucat, hijau, dan abu-abu berkabut yang lembut, pusarannya mengingatkan pada cahaya dan bayangan di bawah pepohonan."
   },
   {
     id: 'zurich-midnight',
@@ -3991,8 +3991,8 @@ export const PRODUCTS = [
     idBestFor: 'Dramatic kabinet, panel dinding statement, ritel mewah interior',
     finish: 'Matte lacquer',
     idFinish: 'Pelapis Matte',
-    longDesc: "Zurich Midnight plunges into deep, saturated indigo tones, highlighting a wildly swirling, organic figured grain. This intensely dyed veneer evokes the mysterious depths of the ocean or a twilight sky, creating a moody, atmospheric focal point for avant-garde design.",
-    idLongDesc: "Zurich Midnight menyelami nuansa indigo yang dalam dan pekat, menonjolkan serat berfigur organik yang berpusar liar. Veneer yang diwarnai pekat ini menghadirkan kedalaman misterius samudra atau langit senja, menciptakan titik fokus yang muram dan atmosferik untuk desain avant-garde."
+    longDesc: "Zurich Midnight is dyed a deep, saturated indigo that brings out a wildly swirling figure. It recalls deep ocean or a late evening sky, a moody focal point for experimental design.",
+    idLongDesc: "Zurich Midnight diwarnai indigo yang dalam dan pekat, menonjolkan figur yang berpusar liar. Veneer ini mengingatkan pada laut dalam atau langit malam, titik fokus yang muram untuk desain eksperimental."
   },
   {
     id: 'zurich-mono-weave',
@@ -4011,8 +4011,8 @@ export const PRODUCTS = [
     idBestFor: 'Modern dinding aksen, panel-panel akustik, ramping kontemporer pintu',
     finish: 'Matte',
     idFinish: 'Matte',
-    longDesc: "Zurich Mono Weave utilizes precision engineering to create a high-frequency, monochromatic chevron pattern. The tight zig-zag of dark brown, black, and grey mimics the appearance of a finely woven heavy textile, offering both strict geometric structure and visual texture.",
-    idLongDesc: "Zurich Mono Weave memanfaatkan rekayasa presisi untuk menciptakan pola chevron monokromatik berfrekuensi tinggi. Zig-zag rapat cokelat tua, hitam, dan abu-abu meniru tampilan tekstil tebal yang ditenun halus, menawarkan struktur geometris yang tegas sekaligus tekstur visual."
+    longDesc: "Zurich Mono Weave is a tight, monochrome chevron made with precise engineering. The small zigzags of dark brown, black and grey look like finely woven heavy cloth, both strictly geometric and textured.",
+    idLongDesc: "Zurich Mono Weave adalah pola chevron monokrom yang rapat, dibuat dengan rekayasa presisi. Zig-zag kecil berwarna cokelat tua, hitam, dan abu-abu tampak seperti kain tebal yang ditenun halus, geometris sekaligus bertekstur."
   },
   {
     id: 'zurich-monochrome-tiles',
@@ -4032,8 +4032,8 @@ export const PRODUCTS = [
     idBestFor: 'Graphic dinding aksen, playful ritel counters, artistic pertukangan kayu',
     finish: 'Textured matte',
     idFinish: 'Matte bertekstur',
-    longDesc: "Zurich Monochrome Tiles deconstructs traditional wood grain into a captivating, pixelated mosaic. Featuring irregular blocks of black, white, and varied greys, this highly engineered surface delivers a digital, architectural block effect that functions as an immersive optical pattern.",
-    idLongDesc: "Zurich Monochrome Tiles mengurai serat kayu tradisional menjadi mozaik berpiksel yang memikat. Dengan blok-blok tak beraturan berwarna hitam, putih, dan beragam abu-abu, permukaan hasil rekayasa ini menghadirkan efek blok arsitektural yang digital dan berfungsi sebagai pola optik yang imersif."
+    longDesc: "Zurich Monochrome Tiles breaks wood grain into a pixel-like mosaic. Irregular blocks of black, white and assorted greys build a digital, architectural pattern that plays tricks on the eye.",
+    idLongDesc: "Zurich Monochrome Tiles memecah serat kayu menjadi mozaik menyerupai piksel. Blok-blok tak beraturan berwarna hitam, putih, dan beragam abu-abu membentuk pola arsitektural bernuansa digital yang mengecoh mata."
   },
   {
     id: 'zurich-moonstone',
@@ -4052,8 +4052,8 @@ export const PRODUCTS = [
     idBestFor: 'Avant-garde furnitur, artistic focal points, vibrant bespoke interior',
     finish: 'Polished natural',
     idFinish: 'Natural dipoles',
-    longDesc: "Zurich Moonstone is a sculptural masterpiece, featuring topographic layers of stark white interwoven with fluid ribbons of teal, green, and rust red. Resembling polished agate or a colorful contour map, this heavily manipulated veneer serves as a stunning piece of functional modern art.",
-    idLongDesc: "Zurich Moonstone adalah mahakarya skulptural dengan lapisan topografis putih tegas yang berjalin dengan pita mengalir berwarna teal, hijau, dan merah karat. Menyerupai batu akik yang dipoles atau peta kontur berwarna, veneer yang diolah intensif ini menjadi karya seni modern fungsional yang menakjubkan."
+    longDesc: "Zurich Moonstone is a sculpted veneer: contour-like layers of stark white run with flowing ribbons of teal, green and rust red. It looks like polished agate or a coloured contour map, functional art for a wall or a piece of furniture.",
+    idLongDesc: "Zurich Moonstone adalah veneer yang dibentuk: lapisan putih tegas menyerupai garis kontur berjalin dengan pita mengalir berwarna teal, hijau, dan merah karat. Tampilannya seperti batu akik yang dipoles atau peta kontur berwarna, karya seni fungsional untuk dinding atau furnitur."
   },
   {
     id: 'zurich-parchment',
@@ -4072,8 +4072,8 @@ export const PRODUCTS = [
     idBestFor: 'High-contrast interior, dynamic panel arsitektural, statement pintu',
     finish: 'Matte clear',
     idFinish: 'Matte bening',
-    longDesc: "Zurich Parchment delivers a striking optical effect with its crisp, high-contrast chevron pattern. Alternating sharp zig-zags of deep charcoal and creamy off-white create a bold, rhythmic surface that brings dynamic energy and graphic precision to contemporary spaces.",
-    idLongDesc: "Zurich Parchment menghadirkan efek optik yang mencolok dengan pola chevron yang tajam dan berkontras tinggi. Zig-zag tajam berselang-seling antara arang pekat dan putih krem menciptakan permukaan yang berani dan berirama, menghadirkan energi dinamis dan presisi grafis pada ruang kontemporer."
+    longDesc: "Zurich Parchment is a crisp, high-contrast chevron. Sharp zigzags of deep charcoal and creamy off-white alternate across the sheet, giving contemporary spaces a bold rhythm and graphic precision.",
+    idLongDesc: "Zurich Parchment adalah pola chevron yang tajam dan berkontras tinggi. Zig-zag tegas berwarna arang pekat dan putih krem berselang-seling di sepanjang lembaran, memberi ruang kontemporer ritme yang berani dan presisi grafis."
   },
   {
     id: 'zurich-rustic-cedar-burl',
@@ -4092,8 +4092,8 @@ export const PRODUCTS = [
     idBestFor: 'Rustic modern ruang, organic dinding aksen, bespoke kabinet',
     finish: 'Matte textured',
     idFinish: 'Matte bertekstur',
-    longDesc: "Zurich Rustic Cedar Burl celebrates the raw, chaotic beauty of natural burls, presented in a subdued, weathered grey-brown palette. The large, flowing swirls and intricate eyes offer a highly organic, tactile surface that balances rustic charm with modern refinement.",
-    idLongDesc: "Zurich Rustic Cedar Burl merayakan keindahan burl alami yang mentah dan tak beraturan, dalam palet abu-abu kecokelatan lapuk yang kalem. Pusaran besar yang mengalir dan mata kayu yang rumit menawarkan permukaan yang sangat organik dan taktil, menyeimbangkan pesona rustik dengan kehalusan modern."
+    longDesc: "Zurich Rustic Cedar Burl keeps the raw, irregular character of natural burl in a subdued, weathered grey-brown. Large flowing swirls and intricate eyes give a tactile surface that is rustic and refined at once.",
+    idLongDesc: "Zurich Rustic Cedar Burl mempertahankan karakter burl alami yang mentah dan tak beraturan, dalam warna abu-abu kecokelatan lapuk yang kalem. Pusaran besar yang mengalir dan mata kayu yang rumit memberi permukaan taktil yang rustik sekaligus halus."
   },
   {
     id: 'zurich-sangria',
@@ -4113,8 +4113,8 @@ export const PRODUCTS = [
     idBestFor: 'Vibrant hospitality ruang, eclectic ritel, playful artistic aksen',
     finish: 'Satin',
     idFinish: 'Satin',
-    longDesc: "Zurich Sangria erupts with a festive, pixelated mosaic of color. Tiny, irregular blocks of deep red, mustard yellow, forest green, azure blue, and crisp white are engineered together to create an incredibly vibrant, textile-like surface full of eclectic energy.",
-    idLongDesc: "Zurich Sangria meledak dengan mozaik warna berpiksel yang meriah. Blok-blok kecil tak beraturan berwarna merah tua, kuning mustard, hijau hutan, biru langit, dan putih bersih direkayasa bersama untuk menciptakan permukaan menyerupai tekstil yang sangat hidup dan penuh energi eklektik."
+    longDesc: "Zurich Sangria is a festive, pixel-like mosaic. Tiny irregular blocks of deep red, mustard, forest green, azure and white are engineered together into a bright, textile-like surface full of eclectic energy.",
+    idLongDesc: "Zurich Sangria adalah mozaik meriah menyerupai piksel. Blok-blok kecil tak beraturan berwarna merah tua, mustard, hijau hutan, biru langit, dan putih direkayasa bersama menjadi permukaan cerah menyerupai tekstil yang penuh energi eklektik."
   },
   {
     id: 'zurich-sapphire',
@@ -4133,8 +4133,8 @@ export const PRODUCTS = [
     idBestFor: 'Bold Furnitur kontemporere, theatrical ruang, high-impact panel',
     finish: 'High gloss or satin',
     idFinish: 'Glossy tinggi atau Satin',
-    longDesc: "Zurich Sapphire makes a fearless statement by saturating the broad, sweeping cathedrals of a flat-cut grain with an intense, electric royal blue. The striking contrast between the deep dye and the lighter grain lines creates a dramatic, jewel-toned architectural finish.",
-    idLongDesc: "Zurich Sapphire membuat pernyataan berani dengan meresapi katedral serat potongan flat yang lebar dan melengkung luas dengan biru royal elektrik yang intens. Kontras mencolok antara pewarna yang pekat dan garis serat yang lebih terang menciptakan finishing arsitektural yang dramatis bernuansa permata."
+    longDesc: "Zurich Sapphire saturates the broad cathedrals of a flat-cut grain with an intense, electric royal blue. The lighter grain lines stand out against the deep dye, a dramatic, jewel-toned finish.",
+    idLongDesc: "Zurich Sapphire meresapi katedral lebar serat potongan flat dengan biru royal elektrik yang intens. Garis serat yang lebih terang tampak menonjol di atas pewarna yang pekat, finishing dramatis bernuansa permata."
   },
   {
     id: 'zurich-starry-sky',
@@ -4153,8 +4153,8 @@ export const PRODUCTS = [
     idBestFor: 'Nightclub interior, moody ritel ruang, mewah Dinding aksen',
     finish: 'Matte',
     idFinish: 'Matte',
-    longDesc: "Zurich Starry Sky features a profound, shadow-black background illuminated by delicate, scattered vertical striations of pale yellow, pink, light blue, and white. This highly engineered linear veneer creates a mesmerizing effect reminiscent of a meteor shower or a vibrant night sky.",
-    idLongDesc: "Zurich Starry Sky menampilkan latar hitam pekat yang mendalam, diterangi guratan vertikal halus yang tersebar berwarna kuning pucat, merah muda, biru muda, dan putih. Veneer linear hasil rekayasa ini menciptakan efek memukau yang mengingatkan pada hujan meteor atau langit malam yang semarak."
+    longDesc: "Zurich Starry Sky is a deep black ground lit by fine, scattered vertical streaks of pale yellow, pink, light blue and white. The engineered linear pattern recalls a meteor shower across a night sky.",
+    idLongDesc: "Zurich Starry Sky adalah latar hitam pekat yang diterangi guratan vertikal halus dan tersebar berwarna kuning pucat, merah muda, biru muda, dan putih. Pola linear hasil rekayasa ini mengingatkan pada hujan meteor di langit malam."
   },
   {
     id: 'zurich-stone-flower',
@@ -4174,8 +4174,8 @@ export const PRODUCTS = [
     idBestFor: 'Tactile interior walls, kontemporer mebel, monochromatic desain',
     finish: 'Textured matte',
     idFinish: 'Matte bertekstur',
-    longDesc: "Zurich Stone Flower offers a highly rhythmic, textile-like aesthetic. Against a dark slate-grey base, precise, dashed vertical lines of white are staggered to create a stitched or woven appearance, delivering a highly structured and intriguing tactile surface.",
-    idLongDesc: "Zurich Stone Flower menawarkan estetika menyerupai tekstil yang sangat berirama. Di atas dasar abu-abu slate gelap, garis vertikal putih putus-putus yang presisi disusun berselang untuk menciptakan tampilan seperti jahitan atau tenunan, menghadirkan permukaan taktil yang sangat terstruktur dan menarik."
+    longDesc: "Zurich Stone Flower has a rhythmic, textile-like look. On a dark slate-grey base, short white vertical dashes are staggered to look stitched or woven, an ordered surface that invites a closer look.",
+    idLongDesc: "Zurich Stone Flower memiliki tampilan berirama menyerupai tekstil. Di atas dasar abu-abu slate yang gelap, garis vertikal putih putus-putus disusun berselang hingga tampak seperti jahitan atau tenunan, permukaan teratur yang mengundang untuk dilihat lebih dekat."
   },
   {
     id: 'zurich-stripes',
@@ -4194,8 +4194,8 @@ export const PRODUCTS = [
     idBestFor: 'panel-panel akustik, high-energy komersial ruang, optical dinding aksen',
     finish: 'Matte',
     idFinish: 'Matte',
-    longDesc: "Zurich Stripes presents a mesmerizing optical effect through meticulously engineered vertical dashes. The high-contrast interplay of dark charcoal and pale grey creates a rhythmic, barcode-like pattern that brings intense dynamic energy and a digital aesthetic to modern architectural surfaces.",
-    idLongDesc: "Zurich Stripes menghadirkan efek optik yang memukau melalui garis putus-putus vertikal yang direkayasa dengan cermat. Perpaduan berkontras tinggi antara arang gelap dan abu-abu pucat menciptakan pola berirama menyerupai barcode, yang menghadirkan energi dinamis yang intens dan estetika digital pada permukaan arsitektural modern."
+    longDesc: "Zurich Stripes is made of precisely engineered vertical dashes in dark charcoal and pale grey. The high-contrast, barcode-like pattern gives modern architecture a strong, digital rhythm.",
+    idLongDesc: "Zurich Stripes tersusun dari garis vertikal putus-putus hasil rekayasa presisi dalam warna arang gelap dan abu-abu pucat. Pola berkontras tinggi menyerupai barcode ini memberi arsitektur modern ritme digital yang kuat."
   },
   {
     id: 'zurich-terrazo',
@@ -4215,8 +4215,8 @@ export const PRODUCTS = [
     idBestFor: 'Kontemporer hospitality, statement panel dinding, textured furnitur',
     finish: 'Satin textured',
     idFinish: 'Satin bertekstur',
-    longDesc: "Zurich Terrazo utilizes precision engineering to craft a continuous, high-frequency chevron pattern in warm, earthy tones. Blending sandy browns and dark charcoal, this architectural veneer mimics the tight weave of a heavy textile, offering both strict geometric structure and inviting warmth.",
-    idLongDesc: "Zurich Terrazo memanfaatkan rekayasa presisi untuk menghasilkan pola chevron berfrekuensi tinggi yang tak terputus dalam nuansa tanah yang hangat. Memadukan cokelat berpasir dan arang gelap, veneer arsitektural ini meniru tenunan rapat tekstil tebal, menawarkan struktur geometris yang tegas sekaligus kehangatan yang mengundang."
+    longDesc: "Zurich Terrazo is a tight, continuous chevron in warm, earthy tones, made with precise engineering. Sandy browns and dark charcoal mimic the close weave of heavy cloth, geometric but warm.",
+    idLongDesc: "Zurich Terrazo adalah pola chevron yang rapat dan tak terputus dalam nuansa tanah yang hangat, dibuat dengan rekayasa presisi. Cokelat berpasir dan arang gelap meniru tenunan rapat kain tebal, geometris namun tetap hangat."
   },
   {
     id: 'zurich-vibrant-jade',
@@ -4236,8 +4236,8 @@ export const PRODUCTS = [
     idBestFor: 'Artistic installations, eclectic ritel, vibrant bespoke furnitur',
     finish: 'Polished natural',
     idFinish: 'Natural dipoles',
-    longDesc: "Zurich Vibrant Jade is a riot of color and movement. By layering and sculpting deeply dyed veneers in a striking palette of jade green, mustard, rust red, and slate blue, this dynamic, diagonal wave pattern serves as a breathtaking, highly expressive functional art piece.",
-    idLongDesc: "Zurich Vibrant Jade adalah ledakan warna dan gerak. Dengan melapis dan membentuk veneer yang diwarnai pekat dalam palet hijau giok, mustard, merah karat, dan biru slate yang mencolok, pola gelombang diagonal yang dinamis ini menjadi karya seni fungsional yang memukau dan sangat ekspresif."
+    longDesc: "Zurich Vibrant Jade is all colour and movement. Deeply dyed veneers in jade green, mustard, rust red and slate blue are layered and sculpted into a diagonal wave, an expressive piece of functional art.",
+    idLongDesc: "Zurich Vibrant Jade sepenuhnya tentang warna dan gerak. Veneer yang diwarnai pekat dalam hijau giok, mustard, merah karat, dan biru slate dilapis dan dibentuk menjadi gelombang diagonal, karya seni fungsional yang ekspresif."
   },
   {
     id: 'zurich-walnut-grid',
@@ -4257,8 +4257,8 @@ export const PRODUCTS = [
     idBestFor: 'Arsitektural pelapis dinding, geometric mebel, modern retro interior',
     finish: 'Matte lacquer',
     idFinish: 'Pelapis Matte',
-    longDesc: "Zurich Walnut Grid deconstructs the classic warmth of walnut into a precise, geometric tile pattern. Featuring perfectly aligned squares separated by delicate, pale contrasting lines, this engineered surface bridges the gap between traditional wood warmth and strict modernist grid structures.",
-    idLongDesc: "Zurich Walnut Grid mengurai kehangatan klasik walnut menjadi pola ubin geometris yang presisi. Dengan kotak-kotak yang tersusun sempurna dan dipisahkan garis pucat yang kontras dan halus, permukaan rekayasa ini menjembatani kehangatan kayu tradisional dan struktur grid modernis yang tegas."
+    longDesc: "Zurich Walnut Grid cuts walnut into a precise, geometric tile pattern. Perfectly aligned squares are separated by fine, pale lines, an engineered surface that pairs walnut's warmth with a strict modernist grid.",
+    idLongDesc: "Zurich Walnut Grid memotong walnut menjadi pola ubin geometris yang presisi. Kotak-kotak yang tersusun rapi dipisahkan garis pucat yang halus, permukaan rekayasa yang memadukan kehangatan walnut dengan grid modernis yang tegas."
   },
   {
     id: 'zurich-wave-sandalwood',
@@ -4276,8 +4276,8 @@ export const PRODUCTS = [
     idBestFor: 'Tactile dinding aksen, moody hospitality lingkungan, dramatic focal points',
     finish: 'Deeply textured matte',
     idFinish: 'Matte bertekstur dalam',
-    longDesc: "Zurich Wave Sandalwood offers an intensely tactile, organic aesthetic. Jagged, horizontal ripples of dark charcoal and ashen brown mimic the rugged look of charred bark or ancient stone strata, providing a powerful, moody architectural surface that demands to be touched.",
-    idLongDesc: "Zurich Wave Sandalwood menawarkan estetika organik yang sangat taktil. Riak horizontal bergerigi berwarna arang gelap dan cokelat keabuan meniru tampilan kasar kulit kayu hangus atau lapisan batuan purba, memberikan permukaan arsitektural yang kuat dan muram yang mengundang untuk disentuh."
+    longDesc: "Zurich Wave Sandalwood has jagged horizontal ripples of dark charcoal and ashen brown, like charred bark or old layers of rock. It is a moody, strongly tactile surface people tend to reach out and touch.",
+    idLongDesc: "Zurich Wave Sandalwood memiliki riak horizontal bergerigi berwarna arang gelap dan cokelat keabuan, seperti kulit kayu hangus atau lapisan batuan tua. Permukaannya muram dan sangat taktil, membuat orang ingin menyentuhnya."
   },
 ];
 
@@ -4381,7 +4381,7 @@ export const PROJECTS = [
 ];
 
 export const SERVICES = [
-  { num:'01', title:'Veneer', idTitle:'Veneer', desc:" A curated selection of natural veneers, chosen to complement your project’s character, palette, and specifications.", idDesc:"Pilihan veneer alami yang dikurasi, dipilih untuk melengkapi karakter, palet, dan spesifikasi proyek Anda." },
+  { num:'01', title:'Veneer', idTitle:'Veneer', desc:"Veneer from our six collections, chosen with you to suit the project’s palette and specification.", idDesc:"Veneer dari enam koleksi kami, dipilih bersama Anda sesuai palet dan spesifikasi proyek." },
   { num:'02', title:'Panel Fabrication', idTitle:'Fabrikasi Panel', desc:"Veneer applied onto HMR or plywood, creating a ready-to-use surface tailored to your project’s needs.", idDesc:"Veneer diaplikasikan pada HMR atau plywood, menciptakan permukaan siap pakai yang disesuaikan dengan kebutuhan proyek Anda." },
   { num:'03', title:'Natural Finishing', idTitle:'Finishing Alami', desc:"Finished with our water-based, food-grade Hard Oil Wax. Chosen to protect the surface while keeping the natural texture, warmth, and tactile character of the wood intact.", idDesc:"Difinishing dengan Hard Oil Wax berbahan dasar air dan food-grade dari kami. Dipilih untuk melindungi permukaan sambil menjaga tekstur alami, kehangatan, dan karakter taktil kayu tetap utuh." },
   ];
