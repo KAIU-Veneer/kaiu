@@ -853,7 +853,7 @@ export const PRODUCTS = [
     finish: 'Satin urethane',
     idFinish: 'Uretan Satin',
     longDesc: "Athens Sterling Mist is a tight, linear rift-cut oak under a cool, silvery-grey wash. The finish is understated and calm, made for modern and minimalist rooms.",
-    idLongDesc: "Athens Sterling Mist adalah oak potongan rift yang rapat dan linear dengan sapuan warna abu-abu keperakan yang sejuk. Finishingnya bersahaja dan tenang, dibuat untuk ruang modern dan minimalis."
+    idLongDesc: "Athens Sterling Mist adalah oak potongan rift yang rapat dan linear dengan sapuan warna abu-abu keperakan yang dingin. Finishingnya bersahaja dan tenang, dibuat untuk ruang modern dan minimalis."
   },
   {
     id: 'athens-tan-walnut',
@@ -894,7 +894,7 @@ export const PRODUCTS = [
     finish: 'Matte varnish',
     idFinish: 'Pernis Matte',
     longDesc: "Athens Taupe Oak has a consistent rift-cut grain in a muted, earthy taupe. It sits between warm and cool tones, so it works as a base for a wide range of palettes.",
-    idLongDesc: "Athens Taupe Oak memiliki serat potongan rift yang konsisten dalam warna taupe yang redup dan bernuansa tanah. Warnanya berada di antara nuansa hangat dan sejuk, sehingga bisa menjadi dasar untuk beragam palet."
+    idLongDesc: "Athens Taupe Oak memiliki serat potongan rift yang konsisten dalam warna taupe yang redup dan bernuansa tanah. Warnanya berada di antara nuansa hangat dan dingin, sehingga bisa menjadi dasar untuk beragam palet."
   },
   {
     id: 'athens-taupe-walnut',
@@ -999,7 +999,7 @@ export const PRODUCTS = [
     finish: 'Matte',
     idFinish: 'Matte',
     longDesc: "Berlin Arrow Slate presents an ultra-fine, straight linear grain in a cool, silvery-slate grey. Its consistent pattern offers a sleek, minimalist texture ideal for expansive contemporary spaces.",
-    idLongDesc: "Berlin Arrow Slate menghadirkan serat linear lurus yang sangat halus dalam warna abu-abu slate keperakan yang sejuk. Polanya yang konsisten memberi tekstur minimalis yang cocok untuk ruang kontemporer yang luas."
+    idLongDesc: "Berlin Arrow Slate menghadirkan serat linear lurus yang sangat halus dalam warna abu-abu slate keperakan yang dingin. Polanya yang konsisten memberi tekstur minimalis yang cocok untuk ruang kontemporer yang luas."
   },
   {
     id: 'berlin-ashen-oak',
@@ -1126,7 +1126,7 @@ export const PRODUCTS = [
     finish: 'Clear matte',
     idFinish: 'Matte bening',
     longDesc: "Berlin Brown Ash takes the open grain of rift-cut ash and quietens it with a cool, dark brown stain. The surface stays textured but even in colour, an understated choice for modern interiors.",
-    idLongDesc: "Berlin Brown Ash mengambil serat terbuka ash potongan rift dan meredamnya dengan pewarnaan cokelat tua yang sejuk. Permukaannya tetap bertekstur namun warnanya rata, pilihan yang bersahaja untuk interior modern."
+    idLongDesc: "Berlin Brown Ash mengambil serat terbuka ash potongan rift dan meredamnya dengan pewarnaan cokelat tua yang dingin. Permukaannya tetap bertekstur namun warnanya rata, pilihan yang bersahaja untuk interior modern."
   },
   // {
   //   id: 'berlin-brown-pearwood',
@@ -1188,7 +1188,7 @@ export const PRODUCTS = [
     finish: 'Matte',
     idFinish: 'Matte',
     longDesc: "Berlin Brushed Elm is a quarter-cut elm, wire-brushed to open the grain and finished in a deep, cool charcoal grey. You can feel the texture as well as see it, which gives contemporary interiors a tactile surface.",
-    idLongDesc: "Berlin Brushed Elm adalah elm potongan quarter yang disikat kawat untuk membuka seratnya, dengan finishing abu-abu arang yang pekat dan sejuk. Teksturnya bisa dirasakan sekaligus dilihat, memberi interior kontemporer permukaan yang taktil."
+    idLongDesc: "Berlin Brushed Elm adalah elm potongan quarter yang disikat kawat untuk membuka seratnya, dengan finishing abu-abu arang yang pekat dan dingin. Teksturnya bisa dirasakan sekaligus dilihat, memberi interior kontemporer permukaan yang taktil."
   },
   {
     id: 'berlin-carbon-ash',
@@ -1249,7 +1249,7 @@ export const PRODUCTS = [
     finish: 'Matte urethane',
     idFinish: 'Uretan Matte',
     longDesc: "Berlin Charcoal Oak is a fine, tight rift-cut oak in a cool, smoky charcoal grey. The single-tone finish is sleek and very consistent, sitting between the warmth of wood and an industrial modern look.",
-    idLongDesc: "Berlin Charcoal Oak adalah oak potongan rift yang halus dan rapat dalam warna abu-abu arang berasap yang sejuk. Finishing satu warnanya ramping dan sangat konsisten, berada di antara kehangatan kayu dan tampilan modern industrial."
+    idLongDesc: "Berlin Charcoal Oak adalah oak potongan rift yang halus dan rapat dalam warna abu-abu arang berasap yang dingin. Finishing satu warnanya ramping dan sangat konsisten, berada di antara kehangatan kayu dan tampilan modern industrial."
   },
   {
     id: 'berlin-chrome-oak',
@@ -1269,7 +1269,7 @@ export const PRODUCTS = [
     finish: 'Satin polish',
     idFinish: 'Poles Satin',
     longDesc: "Berlin Chrome Oak gives the straight grain of rift-cut oak an unusual silvery-blue metallic wash. The cool surface catches the light, with a modern, industrial edge.",
-    idLongDesc: "Berlin Chrome Oak memberi serat lurus oak potongan rift sapuan warna metalik biru keperakan yang tidak biasa. Permukaannya yang sejuk menangkap cahaya, dengan kesan modern dan industrial."
+    idLongDesc: "Berlin Chrome Oak memberi serat lurus oak potongan rift sapuan warna metalik biru keperakan yang tidak biasa. Permukaannya yang bernuansa dingin menangkap cahaya, dengan kesan modern dan industrial."
   },
   {
     id: 'berlin-cloisonne-square',
@@ -1330,7 +1330,7 @@ export const PRODUCTS = [
     finish: 'Clear matte',
     idFinish: 'Matte bening',
     longDesc: "Berlin Cobalt Ash is a quarter-cut ash with a straight grain, cooled with a greyish-blue cobalt tint. The open pores add a little texture to the muted colour for a calm, modern finish.",
-    idLongDesc: "Berlin Cobalt Ash adalah ash potongan quarter dengan serat lurus, disejukkan dengan tint kobalt biru keabuan. Pori-pori terbukanya menambahkan sedikit tekstur pada warna yang redup, menghasilkan finishing yang tenang dan modern."
+    idLongDesc: "Berlin Cobalt Ash adalah ash potongan quarter dengan serat lurus, diberi tint kobalt biru keabuan yang dingin. Pori-pori terbukanya menambahkan sedikit tekstur pada warna yang redup, menghasilkan finishing yang tenang dan modern."
   },
   {
     id: 'berlin-deep-ash-brown',
@@ -1516,7 +1516,7 @@ export const PRODUCTS = [
     finish: 'Satin polish',
     idFinish: 'Poles Satin',
     longDesc: "Berlin Iron Pine has a very straight, tight grain in a cool, dark iron grey. The pattern is so regular that natural irregularities disappear, which makes it a strong choice for large architectural surfaces.",
-    idLongDesc: "Berlin Iron Pine memiliki serat yang sangat lurus dan rapat dalam warna abu-abu besi yang gelap dan sejuk. Polanya begitu teratur sehingga ketidakteraturan alami tersamarkan, menjadikannya pilihan kuat untuk permukaan arsitektural yang luas."
+    idLongDesc: "Berlin Iron Pine memiliki serat yang sangat lurus dan rapat dalam warna abu-abu besi yang gelap dan dingin. Polanya begitu teratur sehingga ketidakteraturan alami tersamarkan, menjadikannya pilihan kuat untuk permukaan arsitektural yang luas."
   },
   {
     id: 'berlin-lava-oak',
@@ -1536,7 +1536,7 @@ export const PRODUCTS = [
     finish: 'Matte varnish',
     idFinish: 'Pernis Matte',
     longDesc: "Berlin Lava Oak has a very even, tight rift-cut grain in a medium lava grey. The neutral tone works with warm and cool palettes alike, a dependable base for most schemes.",
-    idLongDesc: "Berlin Lava Oak memiliki serat potongan rift yang sangat rata dan rapat dalam warna abu-abu lava sedang. Nuansa netralnya cocok dengan palet hangat maupun sejuk, dasar yang bisa diandalkan untuk sebagian besar rancangan."
+    idLongDesc: "Berlin Lava Oak memiliki serat potongan rift yang sangat rata dan rapat dalam warna abu-abu lava sedang. Nuansa netralnya cocok dengan palet hangat maupun dingin, dasar yang bisa diandalkan untuk sebagian besar rancangan."
   },
   {
     id: 'berlin-light-ash-oak',
@@ -1619,7 +1619,7 @@ export const PRODUCTS = [
     finish: 'Satin urethane',
     idFinish: 'Uretan Satin',
     longDesc: "Berlin Mystic Oak is a sleek rift-cut oak finished in a deep, moody blue-grey, close to twilight. The colour takes away most of the oak's warmth, leaving a cool, very modern surface.",
-    idLongDesc: "Berlin Mystic Oak adalah oak potongan rift yang ramping dengan finishing biru keabuan yang pekat dan muram, nyaris seperti senja. Warnanya menghilangkan sebagian besar kehangatan oak, menyisakan permukaan yang sejuk dan sangat modern."
+    idLongDesc: "Berlin Mystic Oak adalah oak potongan rift yang ramping dengan finishing biru keabuan yang pekat dan muram, nyaris seperti senja. Warnanya menghilangkan sebagian besar kehangatan oak, menyisakan permukaan bernuansa dingin yang sangat modern."
   },
   {
     id: 'berlin-nero-ebony',
@@ -1849,7 +1849,7 @@ export const PRODUCTS = [
     finish: 'Satin polish',
     idFinish: 'Poles Satin',
     longDesc: "Berlin Slate Brown Walnut pairs the cathedral pattern of flat-cut walnut with a muted slate-grey undertone. The tint cools the wood's natural warmth, sitting somewhere between classic and contemporary.",
-    idLongDesc: "Berlin Slate Brown Walnut memadukan pola katedral walnut potongan flat dengan nuansa dasar abu-abu slate yang redup. Tint-nya menyejukkan kehangatan alami kayu, berada di antara klasik dan kontemporer."
+    idLongDesc: "Berlin Slate Brown Walnut memadukan pola katedral walnut potongan flat dengan nuansa dasar abu-abu slate yang redup. Tint-nya meredam kehangatan alami kayu, berada di antara klasik dan kontemporer."
   },
   {
     id: 'berlin-slate-oak',
@@ -1892,7 +1892,7 @@ export const PRODUCTS = [
     finish: 'Satin wax',
     idFinish: 'Lilin Satin',
     longDesc: "Berlin Stone Ash has the bold, sweeping arches of flat-cut ash under a cool, dark stone-grey stain. The open pores and smooth latewood contrast with each other, giving a lively, tactile surface.",
-    idLongDesc: "Berlin Stone Ash memiliki lengkung serat yang tegas dan luas khas ash potongan flat, di bawah pewarnaan abu-abu batu yang gelap dan sejuk. Pori-pori terbuka dan bagian kayu akhir yang halus saling berkontras, memberi permukaan yang hidup dan taktil."
+    idLongDesc: "Berlin Stone Ash memiliki lengkung serat yang tegas dan luas khas ash potongan flat, di bawah pewarnaan abu-abu batu yang gelap dan dingin. Pori-pori terbuka dan bagian kayu akhir yang halus saling berkontras, memberi permukaan yang hidup dan taktil."
   },
   {
     id: 'berlin-storm',
@@ -1934,7 +1934,7 @@ export const PRODUCTS = [
     finish: 'Hand-rubbed oil',
     idFinish: 'Minyak gosok tangan',
     longDesc: "Berlin Swiss Pearwood has a very smooth, closed-pore texture with soft, sweeping cathedrals. Finished in a delicate cool grey, it has a fine, velvety surface suited to bespoke work.",
-    idLongDesc: "Berlin Swiss Pearwood memiliki tekstur berpori tertutup yang sangat halus dengan katedral lembut yang melengkung luas. Dengan finishing abu-abu sejuk yang lembut, permukaannya halus seperti beludru dan cocok untuk pekerjaan custom."
+    idLongDesc: "Berlin Swiss Pearwood memiliki tekstur berpori tertutup yang sangat halus dengan katedral lembut yang melengkung luas. Dengan finishing abu-abu dingin yang lembut, permukaannya halus seperti beludru dan cocok untuk pekerjaan custom."
   },
   {
     id: 'berlin-terra-line-oak',
@@ -2019,7 +2019,7 @@ export const PRODUCTS = [
     finish: 'Matte lacquer',
     idFinish: 'Pelapis Matte',
     longDesc: "Cairo Bone Oak is a neutral grey-beige over a straight rift-cut grain. The plain, quiet texture gives a room structure and fits warm and cool palettes alike.",
-    idLongDesc: "Cairo Bone Oak berwarna krem keabuan yang netral di atas serat potongan rift yang lurus. Teksturnya yang polos dan tenang memberi ruangan struktur dan cocok untuk palet hangat maupun sejuk."
+    idLongDesc: "Cairo Bone Oak berwarna krem keabuan yang netral di atas serat potongan rift yang lurus. Teksturnya yang polos dan tenang memberi ruangan struktur dan cocok untuk palet hangat maupun dingin."
   },
   {
     id: 'cairo-buff-oak',
@@ -2189,7 +2189,7 @@ export const PRODUCTS = [
     finish: 'Satin finish',
     idFinish: 'Finishing Satin',
     longDesc: "Cairo Dust Pine has a very fine, straight grain with a cool, pale grey-blonde tint. The muted colour and tight grain give a very clean, contemporary look.",
-    idLongDesc: "Cairo Dust Pine memiliki serat lurus yang sangat halus dengan tint pirang keabuan pucat yang sejuk. Warna yang redup dan serat yang rapat memberi tampilan yang sangat bersih dan kontemporer."
+    idLongDesc: "Cairo Dust Pine memiliki serat lurus yang sangat halus dengan tint pirang keabuan pucat yang dingin. Warna yang redup dan serat yang rapat memberi tampilan yang sangat bersih dan kontemporer."
   },
   {
     id: 'cairo-latte-oak',
@@ -2973,7 +2973,7 @@ export const PRODUCTS = [
     finish: 'Matte textured',
     idFinish: 'Matte bertekstur',
     longDesc: "Cannes Russet has a dramatic, heavily figured swirling grain with a cerused finish. White pigment fills the deep, irregular pores against a cool, earthy grey-brown, so the contrast is strong and the surface rich to the touch.",
-    idLongDesc: "Cannes Russet memiliki serat berpusar yang dramatis dan kaya figur dengan finishing cerused. Pigmen putih mengisi pori-pori yang dalam dan tak beraturan di atas dasar abu-abu kecokelatan yang sejuk, sehingga kontrasnya kuat dan permukaannya kaya saat disentuh."
+    idLongDesc: "Cannes Russet memiliki serat berpusar yang dramatis dan kaya figur dengan finishing cerused. Pigmen putih mengisi pori-pori yang dalam dan tak beraturan di atas dasar abu-abu kecokelatan yang dingin, sehingga kontrasnya kuat dan permukaannya kaya saat disentuh."
   },
   {
     id: 'cannes-sand-ash',
@@ -3016,7 +3016,7 @@ export const PRODUCTS = [
     finish: 'Matte oil',
     idFinish: 'Minyak Matte',
     longDesc: "Cannes Sand Walnut has the straight, refined lines of quarter-cut walnut in a muted, sandy taupe. The softened colour cools the wood, making it an easy contemporary neutral.",
-    idLongDesc: "Cannes Sand Walnut memiliki garis lurus yang halus khas walnut potongan quarter, dalam warna taupe berpasir yang redup. Warnanya yang dilembutkan menyejukkan kayu, menjadikannya netral kontemporer yang mudah dipadukan."
+    idLongDesc: "Cannes Sand Walnut memiliki garis lurus yang halus khas walnut potongan quarter, dalam warna taupe berpasir yang redup. Warnanya yang dilembutkan memberi nuansa dingin pada kayu, menjadikannya netral kontemporer yang mudah dipadukan."
   },
   {
     id: 'cannes-sunset-teak',
@@ -3141,7 +3141,7 @@ export const PRODUCTS = [
     finish: 'Matte clear',
     idFinish: 'Matte bening',
     longDesc: "Oslo Alabaster Oak is a tight, straight rift-cut oak in a cool, muted alabaster grey. Quiet and airy, it suits minimalist and Nordic interiors.",
-    idLongDesc: "Oslo Alabaster Oak adalah oak potongan rift yang rapat dan lurus dalam warna abu-abu alabaster yang sejuk dan redup. Tenang dan lapang, veneer ini cocok untuk interior minimalis dan bernuansa Nordik."
+    idLongDesc: "Oslo Alabaster Oak adalah oak potongan rift yang rapat dan lurus dalam warna abu-abu alabaster yang dingin dan redup. Tenang dan lapang, veneer ini cocok untuk interior minimalis dan bernuansa Nordik."
   },
   {
     id: 'oslo-almond-walnut',
@@ -3162,7 +3162,7 @@ export const PRODUCTS = [
     finish: 'Matte lacquer',
     idFinish: 'Pelapis Matte',
     longDesc: "Oslo Almond Walnut takes the broad cathedral grain of flat-cut walnut and lightens it with a muted almond-grey wash. The dark pores stand out sharply against the cool, pale ground.",
-    idLongDesc: "Oslo Almond Walnut mengambil serat katedral lebar walnut potongan flat dan mencerahkannya dengan sapuan warna abu-abu almond yang redup. Pori-pori gelapnya tampak tegas di atas latar pucat yang sejuk."
+    idLongDesc: "Oslo Almond Walnut mengambil serat katedral lebar walnut potongan flat dan mencerahkannya dengan sapuan warna abu-abu almond yang redup. Pori-pori gelapnya tampak tegas di atas latar pucat yang dingin."
   },
   {
     id: 'oslo-antique-grey',
@@ -3202,7 +3202,7 @@ export const PRODUCTS = [
     finish: 'Hand-rubbed oil',
     idFinish: 'Minyak gosok tangan',
     longDesc: "Oslo Beige Pearwood has the very fine, almost poreless texture of quarter-cut pearwood in a cool beige taupe. The straight grain and velvety finish suit understated, bespoke work.",
-    idLongDesc: "Oslo Beige Pearwood memiliki tekstur pearwood potongan quarter yang sangat halus dan nyaris tanpa pori, dalam warna taupe krem yang sejuk. Seratnya yang lurus dan finishing selembut beludru cocok untuk pekerjaan custom yang bersahaja."
+    idLongDesc: "Oslo Beige Pearwood memiliki tekstur pearwood potongan quarter yang sangat halus dan nyaris tanpa pori, dalam warna taupe krem yang dingin. Seratnya yang lurus dan finishing selembut beludru cocok untuk pekerjaan custom yang bersahaja."
   },
   {
     id: 'oslo-camel-oak',
@@ -3222,7 +3222,7 @@ export const PRODUCTS = [
     finish: 'Matte urethane',
     idFinish: 'Uretan Matte',
     longDesc: "Oslo Camel Oak has a clean, straight rift-cut grain in a warm, muted camel taupe. It sits evenly between cool greys and warm browns, a balanced architectural neutral.",
-    idLongDesc: "Oslo Camel Oak memiliki serat potongan rift yang lurus dan bersih dalam warna taupe unta yang hangat dan redup. Warnanya berada tepat di antara abu-abu sejuk dan cokelat hangat, netral arsitektural yang seimbang."
+    idLongDesc: "Oslo Camel Oak memiliki serat potongan rift yang lurus dan bersih dalam warna taupe unta yang hangat dan redup. Warnanya berada tepat di antara abu-abu dingin dan cokelat hangat, netral arsitektural yang seimbang."
   },
   {
     id: 'oslo-cement-grey-oak',
@@ -3243,7 +3243,7 @@ export const PRODUCTS = [
     finish: 'Matte varnish',
     idFinish: 'Pernis Matte',
     longDesc: "Oslo Cement Grey Oak is a strict rift-cut oak darkened with a cool, industrial cement-grey stain. The colour is deep and even, grounding a room and sitting well beside concrete and metal.",
-    idLongDesc: "Oslo Cement Grey Oak adalah oak potongan rift yang tegas, digelapkan dengan pewarnaan abu-abu semen industrial yang sejuk. Warnanya dalam dan rata, membuat ruangan terasa membumi dan serasi dengan beton dan logam."
+    idLongDesc: "Oslo Cement Grey Oak adalah oak potongan rift yang tegas, digelapkan dengan pewarnaan abu-abu semen industrial yang dingin. Warnanya dalam dan rata, membuat ruangan terasa membumi dan serasi dengan beton dan logam."
   },
   {
     id: 'oslo-champagne-elm',
@@ -3305,7 +3305,7 @@ export const PRODUCTS = [
     finish: 'Matte',
     idFinish: 'Matte',
     longDesc: "Oslo Cobalt Oak is a very consistent, straight rift-cut oak tinted a mid-tone grey with faint, cool slate undertones. The muted finish is a calm, ordered backdrop for modern architecture.",
-    idLongDesc: "Oslo Cobalt Oak adalah oak potongan rift yang lurus dan sangat konsisten, diberi tint abu-abu menengah dengan nuansa slate sejuk yang samar. Finishingnya yang redup menjadi latar yang tenang dan teratur untuk arsitektur modern."
+    idLongDesc: "Oslo Cobalt Oak adalah oak potongan rift yang lurus dan sangat konsisten, diberi tint abu-abu menengah dengan nuansa slate dingin yang samar. Finishingnya yang redup menjadi latar yang tenang dan teratur untuk arsitektur modern."
   },
   {
     id: 'oslo-crema-pine',
@@ -3387,7 +3387,7 @@ export const PRODUCTS = [
     finish: 'Matte urethane',
     idFinish: 'Uretan Matte',
     longDesc: "Oslo Flax Oak has a very straight rift-cut grain in a cool, muted flaxen grey. Plain and calm, it is an easy base for modern and Scandinavian interiors.",
-    idLongDesc: "Oslo Flax Oak memiliki serat potongan rift yang sangat lurus dalam warna abu-abu rami yang sejuk dan redup. Polos dan tenang, veneer ini menjadi dasar yang mudah untuk interior modern dan bernuansa Skandinavia."
+    idLongDesc: "Oslo Flax Oak memiliki serat potongan rift yang sangat lurus dalam warna abu-abu rami yang dingin dan redup. Polos dan tenang, veneer ini menjadi dasar yang mudah untuk interior modern dan bernuansa Skandinavia."
   },
   {
     id: 'oslo-graffite',
@@ -3428,7 +3428,7 @@ export const PRODUCTS = [
     finish: 'Satin clear',
     idFinish: 'Satin bening',
     longDesc: "Oslo Grain Oak features a consistent linear grain with distinct, alternating pinstripes of warm brown and cool grey. Its precise pattern suits expansive architectural installations.",
-    idLongDesc: "Oslo Grain Oak menampilkan serat linear yang konsisten dengan garis-garis tipis berselang-seling dalam warna cokelat hangat dan abu-abu sejuk. Polanya yang presisi cocok untuk instalasi arsitektural yang luas."
+    idLongDesc: "Oslo Grain Oak menampilkan serat linear yang konsisten dengan garis-garis tipis berselang-seling dalam warna cokelat hangat dan abu-abu dingin. Polanya yang presisi cocok untuk instalasi arsitektural yang luas."
   },
   {
     id: 'oslo-haze-walnut',
@@ -3449,7 +3449,7 @@ export const PRODUCTS = [
     finish: 'Matte oil',
     idFinish: 'Minyak Matte',
     longDesc: "Oslo Haze Walnut has the broad, natural cathedrals of flat-cut walnut under a cool, muted grey-brown haze. The wash cools walnut's natural warmth, leaving a soft, atmospheric surface for luxury interiors.",
-    idLongDesc: "Oslo Haze Walnut memiliki katedral alami yang lebar khas walnut potongan flat, di bawah kabut abu-abu kecokelatan yang sejuk dan redup. Sapuan warnanya menyejukkan kehangatan alami walnut, menyisakan permukaan yang lembut dan atmosferik untuk interior mewah."
+    idLongDesc: "Oslo Haze Walnut memiliki katedral alami yang lebar khas walnut potongan flat, di bawah kabut abu-abu kecokelatan yang dingin dan redup. Sapuan warnanya meredam kehangatan alami walnut, menyisakan permukaan yang lembut dan atmosferik untuk interior mewah."
   },
   {
     id: 'oslo-indigo-rose',
@@ -3591,7 +3591,7 @@ export const PRODUCTS = [
     finish: 'Matte clear',
     idFinish: 'Matte bening',
     longDesc: "Oslo Light Grey Pine has a tight, straight vertical grain under a cool, pale grey wash. Consistent and fine, it is a smooth neutral that works with most modern styles.",
-    idLongDesc: "Oslo Light Grey Pine memiliki serat vertikal yang rapat dan lurus di bawah sapuan warna abu-abu pucat yang sejuk. Konsisten dan halus, veneer ini adalah netral yang mulus dan cocok dengan sebagian besar gaya modern."
+    idLongDesc: "Oslo Light Grey Pine memiliki serat vertikal yang rapat dan lurus di bawah sapuan warna abu-abu pucat yang dingin. Konsisten dan halus, veneer ini adalah netral yang mulus dan cocok dengan sebagian besar gaya modern."
   },
   {
     id: 'oslo-linen-elm',
@@ -3633,7 +3633,7 @@ export const PRODUCTS = [
     finish: 'Satin lacquer',
     idFinish: 'Pelapis Satin',
     longDesc: "Oslo Mist Cat Eye is a decorative veneer with intricate, swirling circular grain and tight clusters of \"eyes\", in a cool, misty grey-brown. It is hard to look away from, and makes a strong focal point for bespoke pieces.",
-    idLongDesc: "Oslo Mist Cat Eye adalah veneer dekoratif dengan serat melingkar yang berpusar dan rumit, serta gugusan \"mata\" yang rapat, dalam warna abu-abu kecokelatan berkabut yang sejuk. Sulit untuk berpaling darinya, dan veneer ini menjadi titik fokus yang kuat untuk karya custom."
+    idLongDesc: "Oslo Mist Cat Eye adalah veneer dekoratif dengan serat melingkar yang berpusar dan rumit, serta gugusan \"mata\" yang rapat, dalam warna abu-abu kecokelatan berkabut yang dingin. Sulit untuk berpaling darinya, dan veneer ini menjadi titik fokus yang kuat untuk karya custom."
   },
   {
     id: 'oslo-moss-pearwood',
@@ -3674,7 +3674,7 @@ export const PRODUCTS = [
     finish: 'Matte varnish',
     idFinish: 'Pernis Matte',
     longDesc: "Oslo Nordic Oak has a clean, straight rift-cut grain in a warm, muted grey taupe. It balances cool grey and warm brown in the way Scandinavian architecture often does.",
-    idLongDesc: "Oslo Nordic Oak memiliki serat potongan rift yang lurus dan bersih dalam warna taupe keabuan yang hangat dan redup. Veneer ini menyeimbangkan abu-abu sejuk dan cokelat hangat seperti yang sering dilakukan arsitektur Skandinavia."
+    idLongDesc: "Oslo Nordic Oak memiliki serat potongan rift yang lurus dan bersih dalam warna taupe keabuan yang hangat dan redup. Veneer ini menyeimbangkan abu-abu dingin dan cokelat hangat seperti yang sering dilakukan arsitektur Skandinavia."
   },
   {
     id: 'oslo-olive-walnut',
@@ -3695,7 +3695,7 @@ export const PRODUCTS = [
     finish: 'Matte oil',
     idFinish: 'Minyak Matte',
     longDesc: "Oslo Olive Walnut has the broad, natural cathedrals of flat-cut walnut under a cool, muted olive-grey haze. The tint cools walnut's natural warmth, leaving a soft, atmospheric surface for luxury interiors.",
-    idLongDesc: "Oslo Olive Walnut memiliki katedral alami yang lebar khas walnut potongan flat, di bawah kabut abu-abu zaitun yang sejuk dan redup. Tint-nya menyejukkan kehangatan alami walnut, menyisakan permukaan yang lembut dan atmosferik untuk interior mewah."
+    idLongDesc: "Oslo Olive Walnut memiliki katedral alami yang lebar khas walnut potongan flat, di bawah kabut abu-abu zaitun yang dingin dan redup. Tint-nya meredam kehangatan alami walnut, menyisakan permukaan yang lembut dan atmosferik untuk interior mewah."
   },
   {
     id: 'oslo-pale-ash',
@@ -3757,7 +3757,7 @@ export const PRODUCTS = [
     finish: 'Matte lacquer',
     idFinish: 'Pelapis Matte',
     longDesc: "Oslo Pastel Walnut softens the strict lines of quarter-cut walnut with a muted pastel-grey wash. The result is fine and cool, a quiet neutral that sits well in minimalist design.",
-    idLongDesc: "Oslo Pastel Walnut melembutkan garis tegas walnut potongan quarter dengan sapuan warna abu-abu pastel yang redup. Hasilnya halus dan sejuk, netral yang tenang dan serasi dengan desain minimalis."
+    idLongDesc: "Oslo Pastel Walnut melembutkan garis tegas walnut potongan quarter dengan sapuan warna abu-abu pastel yang redup. Hasilnya halus dengan nuansa dingin, netral yang tenang dan serasi dengan desain minimalis."
   },
   {
     id: 'oslo-pearl-oak',
@@ -3820,7 +3820,7 @@ export const PRODUCTS = [
     finish: 'Matte textured',
     idFinish: 'Matte bertekstur',
     longDesc: "Oslo Rustic Ash has the lively, sweeping cathedrals of flat-cut ash under a cool, weathered grey-taupe. The strong grain and textured surface feel slightly rustic, a good contrast to sleek, modern details.",
-    idLongDesc: "Oslo Rustic Ash memiliki katedral ash potongan flat yang hidup dan melengkung, di bawah warna taupe keabuan yang sejuk dan tampak lapuk. Seratnya yang kuat dan permukaannya yang bertekstur terasa sedikit rustik, kontras yang baik untuk detail modern yang ramping."
+    idLongDesc: "Oslo Rustic Ash memiliki katedral ash potongan flat yang hidup dan melengkung, di bawah warna taupe keabuan yang dingin dan tampak lapuk. Seratnya yang kuat dan permukaannya yang bertekstur terasa sedikit rustik, kontras yang baik untuk detail modern yang ramping."
   },
   {
     id: 'oslo-silk-grain-oak',
@@ -3861,7 +3861,7 @@ export const PRODUCTS = [
     finish: 'Satin polish',
     idFinish: 'Poles Satin',
     longDesc: "Oslo Silver Beech has the fine, straight grain of quarter-cut beech under a cool silver-grey wash. Faint metallic undertones catch the light, adding depth and a contemporary edge to the natural texture.",
-    idLongDesc: "Oslo Silver Beech memiliki serat halus dan lurus khas beech potongan quarter, di bawah sapuan warna abu-abu keperakan yang sejuk. Nuansa metalik yang samar menangkap cahaya, menambahkan kedalaman dan kesan kontemporer pada tekstur alaminya."
+    idLongDesc: "Oslo Silver Beech memiliki serat halus dan lurus khas beech potongan quarter, di bawah sapuan warna abu-abu keperakan yang dingin. Nuansa metalik yang samar menangkap cahaya, menambahkan kedalaman dan kesan kontemporer pada tekstur alaminya."
   },
   {
     id: 'oslo-silver-walnut',
@@ -3882,7 +3882,7 @@ export const PRODUCTS = [
     finish: 'Matte oil',
     idFinish: 'Minyak Matte',
     longDesc: "Oslo Silver Walnut has the flowing, natural cathedrals of plain-sliced walnut under a calm silver-grey finish. The tint cools walnut's natural warmth, giving a fine, atmospheric architectural surface.",
-    idLongDesc: "Oslo Silver Walnut memiliki katedral alami yang mengalir khas walnut potongan plain, di bawah finishing abu-abu keperakan yang tenang. Tint-nya menyejukkan kehangatan alami walnut, memberi permukaan arsitektural yang halus dan atmosferik."
+    idLongDesc: "Oslo Silver Walnut memiliki katedral alami yang mengalir khas walnut potongan plain, di bawah finishing abu-abu keperakan yang tenang. Tint-nya meredam kehangatan alami walnut, memberi permukaan arsitektural yang halus dan atmosferik."
   },
   {
     id: 'oslo-starlight',
@@ -3923,7 +3923,7 @@ export const PRODUCTS = [
     finish: 'Matte varnish',
     idFinish: 'Pernis Matte',
     longDesc: "Oslo Steel Oak is a strong, linear rift-cut oak with a deep, cool steel-grey stain. The even, dark colour anchors a room and works well with raw concrete, metal and high-contrast contemporary palettes.",
-    idLongDesc: "Oslo Steel Oak adalah oak potongan rift yang tegas dan linear dengan pewarnaan abu-abu baja yang pekat dan sejuk. Warnanya yang gelap dan rata menjadi jangkar ruangan dan serasi dengan beton ekspos, logam, serta palet kontemporer berkontras tinggi."
+    idLongDesc: "Oslo Steel Oak adalah oak potongan rift yang tegas dan linear dengan pewarnaan abu-abu baja yang pekat dan dingin. Warnanya yang gelap dan rata menjadi jangkar ruangan dan serasi dengan beton ekspos, logam, serta palet kontemporer berkontras tinggi."
   },
   {
     id: 'oslo-taupe-oak',
@@ -3943,7 +3943,7 @@ export const PRODUCTS = [
     finish: 'Satin urethane',
     idFinish: 'Uretan Satin',
     longDesc: "Oslo Taupe Oak has a clean, straight rift-cut grain in a balanced mid-tone taupe. It moves easily between warm and cool schemes, a comfortable, ordered base for upscale interiors.",
-    idLongDesc: "Oslo Taupe Oak memiliki serat potongan rift yang lurus dan bersih dalam warna taupe menengah yang seimbang. Warnanya mudah berpindah antara skema hangat dan sejuk, dasar yang nyaman dan teratur untuk interior kelas atas."
+    idLongDesc: "Oslo Taupe Oak memiliki serat potongan rift yang lurus dan bersih dalam warna taupe menengah yang seimbang. Warnanya mudah berpindah antara skema hangat dan dingin, dasar yang nyaman dan teratur untuk interior kelas atas."
   },
   {
     id: 'oslo-wavemist-oak',
@@ -3961,7 +3961,7 @@ export const PRODUCTS = [
     image: '/assets/image/CANNES RUSSET.webp',
     hiResImage: '/assets/hires/OSLO WAVEMIST OAK.jpeg',
     longDesc: "Oslo Wavemist Oak has a dramatic, heavily figured swirling grain with a cerused finish. White pigment fills the deep, irregular pores against a cool, earthy grey-brown, so the contrast is strong and the surface rich to the touch.",
-    idLongDesc: "Oslo Wavemist Oak memiliki serat berpusar yang dramatis dan kaya figur dengan finishing cerused. Pigmen putih mengisi pori-pori yang dalam dan tak beraturan di atas dasar abu-abu kecokelatan yang sejuk, sehingga kontrasnya kuat dan permukaannya kaya saat disentuh."
+    idLongDesc: "Oslo Wavemist Oak memiliki serat berpusar yang dramatis dan kaya figur dengan finishing cerused. Pigmen putih mengisi pori-pori yang dalam dan tak beraturan di atas dasar abu-abu kecokelatan yang dingin, sehingga kontrasnya kuat dan permukaannya kaya saat disentuh."
   },
   {
     id: 'zurich-amethyst',
@@ -4024,7 +4024,7 @@ export const PRODUCTS = [
     finish: 'Matte lacquer',
     idFinish: 'Pelapis Matte',
     longDesc: "Zurich Carbernet has a fine, straight grain with a muted purplish-grey tint, the colour of red wine. It cools the natural wood tone and gives a deep, atmospheric surface with a quiet sense of luxury.",
-    idLongDesc: "Zurich Carbernet memiliki serat lurus yang halus dengan tint abu-abu keunguan yang redup, sewarna anggur merah. Warnanya menyejukkan nuansa kayu alami dan memberi permukaan yang dalam dan atmosferik dengan kesan mewah yang tenang."
+    idLongDesc: "Zurich Carbernet memiliki serat lurus yang halus dengan tint abu-abu keunguan yang redup, sewarna anggur merah. Warnanya mendinginkan nuansa kayu alami dan memberi permukaan yang dalam dan atmosferik dengan kesan mewah yang tenang."
   },
   {
     id: 'zurich-chasing-waves',

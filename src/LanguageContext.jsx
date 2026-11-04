@@ -319,7 +319,7 @@ const TRANSLATIONS = {
     products: {
       title: 'Koleksi veneer',
       toneLabel: 'Nuansa',
-      tones: { all: 'Semua nuansa', light: 'Terang', warm: 'Hangat', cool: 'Sejuk', dark: 'Gelap', colorful: 'Berwarna' },
+      tones: { all: 'Semua nuansa', light: 'Terang', warm: 'Hangat', cool: 'Dingin', dark: 'Gelap', colorful: 'Berwarna' },
       searchLabel: 'Cari', searchPlaceholder: 'oak, burl, sapphire…',
       resultOne: 'hasil', resultMany: 'hasil',
       empty: 'Tidak ada veneer yang cocok dengan filter ini.', reset: 'Hapus filter', showMore: 'Tampilkan lebih banyak',
