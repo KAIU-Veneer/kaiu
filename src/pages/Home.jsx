@@ -11,11 +11,11 @@ import "./Home.css";
 // Seven real sheets from the range, light to dark, standing edge to edge.
 // One is open at a time so its grain reads; the rest show as narrow strips.
 const SHEET_IDS = [
-  'cairo-buff-oak',
-  'cairo-vanilla-oak',
+  'cairo-soft-white-oak',
+  'cairo-sand-elm',
   'oslo-cement-grey-oak',
   'cannes-oak-burl',
-  'athens-brown-walnut',
+  'athens-cocoa-elm',
   'athens-java-smoked-oak',
   'berlin-black-oakwood',
 ];
