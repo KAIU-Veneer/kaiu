@@ -69,12 +69,12 @@ const TRANSLATIONS = {
       w4t: 'End to end support', w4d: 'Guidance from material selection through application',
 
 
-            processTitle1: 'What we do', processTitle2: 'with veneer',
-      processDesc: 'High-quality materials, expert fabrication and natural finishing for a surface that lasts.',
+            processTitle1: 'From a single sheet', processTitle2: 'to a finished panel',
+      processDesc: 'Over 200 veneers, pressed and finished in our own workshop. Delivered ready to use.',
       p1t: 'Veneer selection', p1d: 'Choose from our curated veneer collection.',
       p2t: 'Panel fabrication', p2d: 'Veneer applied onto HMR or plywood with precision.',
       p3t: 'Natural finishing', p3d: 'Finished with water-based, food-grade hard oil wax.',
-      processLink: 'See our services',
+      processLink: 'See how it works',
       videoTitleTop: 'A conversation', videoTitleBottom: 'from the workshop',
       videoDesc: 'A member of our workshop team shares a closer look at the craft behind KAIU veneer.',
 
@@ -266,12 +266,12 @@ const TRANSLATIONS = {
       w4t: 'Dukungan menyeluruh', w4d: 'Panduan dari pemilihan material hingga penerapan',
 
 
-            processTitle1: 'Apa yang kami kerjakan', processTitle2: 'dengan veneer',
-      processDesc: 'Material berkualitas, fabrikasi ahli, dan finishing alami untuk permukaan yang tahan lama.',
+            processTitle1: 'Dari selembar veneer', processTitle2: 'hingga panel jadi',
+      processDesc: 'Lebih dari 200 veneer, dipres dan difinishing di workshop kami sendiri. Dikirim siap pakai.',
       p1t: 'Pemilihan veneer', p1d: 'Pilih dari koleksi veneer pilihan kami.',
       p2t: 'Fabrikasi panel', p2d: 'Veneer diaplikasikan pada HMR atau plywood dengan presisi.',
       p3t: 'Finishing alami', p3d: 'Diselesaikan dengan hard oil wax berbahan air, food-grade.',
-      processLink: 'Lihat layanan kami',
+      processLink: 'Lihat cara kerjanya',
       videoTitleTop: 'Percakapan', videoTitleBottom: 'dari workshop',
       videoDesc: 'Anggota tim workshop kami berbagi cerita tentang keterampilan di balik veneer KAIU.',
 
