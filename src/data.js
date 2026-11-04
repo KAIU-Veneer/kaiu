@@ -4542,8 +4542,8 @@ export const PROJECTS = [
       { src: '/assets/projects/teazzi/5.webp', w: 1448, h: 1086 },
       { src: '/assets/projects/teazzi/6.webp', w: 1086, h: 1448 },
     ],
-    longDesc: "Located at Mall Ciputra Jakarta, Teazzi brings a contemporary interpretation of a modern tea space, with material and spatial details working together to create a distinctive customer experience. Sapphire runs across the shopfront, the ceiling of the service area and the planters that edge the seating, its grain reading as fine blue contour lines over every panel. Set against black tile and greenery, that blue is what makes the unit recognisable from across the mall floor.",
-    idLongDesc: "Berlokasi di Mall Ciputra Jakarta, Teazzi menghadirkan interpretasi kontemporer dari ruang teh modern, dengan detail material dan ruang yang bekerja bersama menciptakan pengalaman pelanggan yang khas. Sapphire mengisi bagian depan gerai, plafon area layanan, dan pot tanaman yang membatasi area duduk, dengan seratnya yang terbaca seperti garis kontur biru halus pada setiap panel. Berpadu dengan keramik hitam dan tanaman hijau, warna biru inilah yang membuat gerai ini mudah dikenali dari kejauhan."
+    longDesc: "At Teazzi's tea shop in Mall Ciputra Jakarta, Sapphire runs across the shopfront, the ceiling of the service area and the planters that edge the seating, its grain reading as fine blue contour lines over every panel. Set against black tile and greenery, that blue is what makes the unit recognisable from across the mall floor.",
+    idLongDesc: "Di kedai teh Teazzi di Mall Ciputra Jakarta, Sapphire mengisi bagian depan gerai, plafon area layanan, dan pot tanaman yang membatasi area duduk, dengan seratnya yang terbaca seperti garis kontur biru halus pada setiap panel. Berpadu dengan keramik hitam dan tanaman hijau, warna biru inilah yang membuat gerai ini mudah dikenali dari kejauhan."
   },
   {
     id: 'teazzi-bandung',
@@ -4593,8 +4593,8 @@ export const PROJECTS = [
       { src: '/assets/projects/pesta-kebun/4.webp', w: 1500, h: 2000 },
       { src: '/assets/projects/pesta-kebun/5.webp', w: 1600, h: 2000 },
     ],
-    longDesc: "A contemporary dining space in Blok M where material, atmosphere, and detail come together to create a warm and inviting environment. Foresta runs along the planter boxes that frame the dining floor, its olive green sitting between the terracotta pots and the planting they hold. Under the restaurant's warm lighting the veneer's rippled figure reads as a quiet texture rather than a feature, which is what lets the room keep its garden.",
-    idLongDesc: "Ruang makan kontemporer di Blok M tempat material, suasana, dan detail berpadu menciptakan lingkungan yang hangat dan mengundang. Foresta mengisi kotak-kotak tanaman yang membingkai area makan, warna hijau zaitunnya berpadu dengan pot terakota dan tanaman di dalamnya. Di bawah pencahayaan hangat restoran, corak bergelombang veneer ini terbaca sebagai tekstur yang tenang, bukan sebagai aksen mencolok, sehingga suasana taman di ruangan ini tetap terjaga."
+    longDesc: "At Pesta Kebun in Blok M, Foresta runs along the planter boxes that frame the dining floor, its olive green sitting between the terracotta pots and the planting they hold. Under the restaurant's warm lighting the veneer's rippled figure reads as a quiet texture, so the room still feels like a garden.",
+    idLongDesc: "Di Pesta Kebun, Blok M, Foresta mengisi kotak-kotak tanaman yang membingkai area makan, warna hijau zaitunnya berpadu dengan pot terakota dan tanaman di dalamnya. Di bawah pencahayaan hangat restoran, corak bergelombang veneer ini terbaca sebagai tekstur yang tenang, sehingga ruangan tetap terasa seperti taman."
   },
 ];
 
