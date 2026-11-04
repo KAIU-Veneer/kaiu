@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/build-sitemap.mjs && vite build",
+    "build": "node scripts/build-sitemap.mjs && vite build && node scripts/build-prerender.mjs",
+    "prerender": "node scripts/build-prerender.mjs",
     "preview": "vite preview",
     "textures": "node scripts/build-veneer-textures.mjs",
     "rooms": "node scripts/build-room-views.mjs",

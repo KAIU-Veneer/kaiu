@@ -1,36 +1,9 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
+import { STATIC_META } from './siteMeta.js';
 
 const TRANSLATIONS = {
   en: {
-    // What a search result shows for each page that is not a veneer or a
-    // project; those two take their wording from the catalogue itself.
-    meta: {
-      home: {
-        title: 'KAIU - Wood Veneer Supplier in Jakarta',
-        description: 'KAIU supplies premium wood veneer to architects, designers, manufacturers and homeowners in Jakarta. Six collections, consistent sheet after sheet.',
-      },
-      about: {
-        title: 'About KAIU - More Than a Surface',
-        description: 'How KAIU selects veneer logs, slices them and pairs each face, for people who want the character of real timber without compromise.',
-      },
-      products: {
-        title: 'Veneer Collections - Athens, Berlin, Cairo, Cannes, Oslo, Zurich',
-        description: 'Browse every KAIU veneer across six collections, from pale Scandinavian oak to deep smoke-dark walnut. Hi-res sheets and room views for each.',
-      },
-      projects: {
-        title: 'Projects - Interiors Finished in KAIU Veneer',
-        description: 'Recent fit-outs across Jakarta in KAIU veneer, from a private residence in Kuningan to a tea shop in Ciputra Mall and a restaurant in Blok M.',
-      },
-      services: {
-        title: 'Services - From Veneer to Finished Surface',
-        description: 'Veneer supply, matching, pressing and finishing. What KAIU can take on between choosing a sheet and installing the surface.',
-      },
-      contact: {
-        title: 'Contact KAIU - Wood Veneer, North Jakarta',
-        description: 'Talk to the KAIU team about a project or request a sample. Studio in Pluit, North Jakarta, open Monday to Friday.',
-      },
-      notFound: { title: 'Page Not Found', description: '' },
-    },
+    meta: STATIC_META.en,
     nav: { home: 'Home', about: 'About', products: 'Products', projects: 'Projects', services: 'Services', contact: 'Contact', inquire: 'Inquire now' },
     a11y: {
       openMenu: 'Open menu', closeMenu: 'Close menu', switchLanguage: 'Ganti ke Bahasa Indonesia',
@@ -201,33 +174,7 @@ const TRANSLATIONS = {
     },
   },
   id: {
-    meta: {
-      home: {
-        title: 'KAIU - Supplier Veneer Kayu di Jakarta',
-        description: 'KAIU memasok veneer kayu alami premium untuk arsitek, desainer, produsen, dan pemilik rumah di Jakarta. Enam koleksi, dipotong dan dipasangkan sesuai pesanan.',
-      },
-      about: {
-        title: 'Tentang KAIU - Lebih dari Sekadar Permukaan',
-        description: 'Bagaimana KAIU memilih log veneer, mengirisnya, dan memasangkan setiap permukaan, untuk mereka yang menginginkan karakter kayu asli tanpa kompromi.',
-      },
-      products: {
-        title: 'Koleksi Veneer - Athens, Berlin, Cairo, Cannes, Oslo, Zurich',
-        description: 'Jelajahi seluruh veneer KAIU dalam enam koleksi, dari oak Skandinavia yang pucat hingga walnut gelap berasap. Lembaran resolusi tinggi dan tampilan ruangan.',
-      },
-      projects: {
-        title: 'Proyek - Interior dengan Veneer KAIU',
-        description: 'Pengerjaan terbaru di Jakarta dengan veneer KAIU, dari hunian pribadi di Kuningan hingga kedai teh di Mal Ciputra dan restoran di Blok M.',
-      },
-      services: {
-        title: 'Layanan - Dari Veneer hingga Permukaan Akhir',
-        description: 'Penyediaan veneer, pencocokan, pengepresan, dan finishing. Apa yang dapat KAIU kerjakan antara memilih lembaran dan memasang permukaannya.',
-      },
-      contact: {
-        title: 'Hubungi KAIU - Veneer Kayu, Jakarta Utara',
-        description: 'Bicarakan proyek Anda dengan tim KAIU atau minta sampel. Studio di Pluit, Jakarta Utara, buka Senin sampai Jumat.',
-      },
-      notFound: { title: 'Halaman Tidak Ditemukan', description: '' },
-    },
+    meta: STATIC_META.id,
     nav: { home: 'Beranda', about: 'Tentang', products: 'Produk', projects: 'Proyek', services: 'Layanan', contact: 'Kontak', inquire: 'Hubungi kami' },
     a11y: {
       openMenu: 'Buka menu', closeMenu: 'Tutup menu', switchLanguage: 'Switch to English',

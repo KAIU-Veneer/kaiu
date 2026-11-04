@@ -14,6 +14,81 @@ export const SITE_URL = 'https://www.kaiuveneer.co.id';
 /** Appended to every title, so a result reads as one site. */
 export const TITLE_SUFFIX = 'KAIU';
 
+/**
+ * What a search result shows for each page that is not a veneer or a project;
+ * those two take their wording from the catalogue itself.
+ *
+ * It lives here rather than in LanguageContext so the prerender step can read
+ * it: that script runs in Node, which cannot import a file containing JSX.
+ * LanguageContext imports it straight back as `t.meta`.
+ */
+export const STATIC_META = {
+  en: {
+    home: {
+      title: 'KAIU - Wood Veneer Supplier in Jakarta',
+      description: 'KAIU supplies premium wood veneer to architects, designers, manufacturers and homeowners in Jakarta. Six collections, consistent sheet after sheet.',
+    },
+    about: {
+      title: 'About KAIU - More Than a Surface',
+      description: 'How KAIU selects veneer logs, slices them and pairs each face, for people who want the character of real timber without compromise.',
+    },
+    products: {
+      title: 'Veneer Collections - Athens, Berlin, Cairo, Cannes, Oslo, Zurich',
+      description: 'Browse every KAIU veneer across six collections, from pale Scandinavian oak to deep smoke-dark walnut. Hi-res sheets and room views for each.',
+    },
+    projects: {
+      title: 'Projects - Interiors Finished in KAIU Veneer',
+      description: 'Recent fit-outs across Jakarta in KAIU veneer, from a private residence in Kuningan to a tea shop in Ciputra Mall and a restaurant in Blok M.',
+    },
+    services: {
+      title: 'Services - From Veneer to Finished Surface',
+      description: 'Veneer supply, matching, pressing and finishing. What KAIU can take on between choosing a sheet and installing the surface.',
+    },
+    contact: {
+      title: 'Contact KAIU - Wood Veneer, North Jakarta',
+      description: 'Talk to the KAIU team about a project or request a sample. Studio in Pluit, North Jakarta, open Monday to Friday.',
+    },
+    notFound: { title: 'Page Not Found', description: '' },
+  },
+  id: {
+    home: {
+      title: 'KAIU - Supplier Veneer Kayu di Jakarta',
+      description: 'KAIU memasok veneer kayu alami premium untuk arsitek, desainer, produsen, dan pemilik rumah di Jakarta. Enam koleksi, dipotong dan dipasangkan sesuai pesanan.',
+    },
+    about: {
+      title: 'Tentang KAIU - Lebih dari Sekadar Permukaan',
+      description: 'Bagaimana KAIU memilih log veneer, mengirisnya, dan memasangkan setiap permukaan, untuk mereka yang menginginkan karakter kayu asli tanpa kompromi.',
+    },
+    products: {
+      title: 'Koleksi Veneer - Athens, Berlin, Cairo, Cannes, Oslo, Zurich',
+      description: 'Jelajahi seluruh veneer KAIU dalam enam koleksi, dari oak Skandinavia yang pucat hingga walnut gelap berasap. Lembaran resolusi tinggi dan tampilan ruangan.',
+    },
+    projects: {
+      title: 'Proyek - Interior dengan Veneer KAIU',
+      description: 'Pengerjaan terbaru di Jakarta dengan veneer KAIU, dari hunian pribadi di Kuningan hingga kedai teh di Mal Ciputra dan restoran di Blok M.',
+    },
+    services: {
+      title: 'Layanan - Dari Veneer hingga Permukaan Akhir',
+      description: 'Penyediaan veneer, pencocokan, pengepresan, dan finishing. Apa yang dapat KAIU kerjakan antara memilih lembaran dan memasang permukaannya.',
+    },
+    contact: {
+      title: 'Hubungi KAIU - Veneer Kayu, Jakarta Utara',
+      description: 'Bicarakan proyek Anda dengan tim KAIU atau minta sampel. Studio di Pluit, Jakarta Utara, buka Senin sampai Jumat.',
+    },
+    notFound: { title: 'Halaman Tidak Ditemukan', description: '' },
+  },
+};
+
+/** Which static path each STATIC_META key answers on. */
+export const STATIC_META_PATHS = {
+  '/': 'home',
+  '/about': 'about',
+  '/products': 'products',
+  '/projects': 'projects',
+  '/services': 'services',
+  '/contact': 'contact',
+};
+
 /** The paths that exist regardless of the catalogue. */
 export const STATIC_PATHS = ['/', '/about', '/products', '/projects', '/services', '/contact'];
 

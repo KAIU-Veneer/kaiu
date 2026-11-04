@@ -33,6 +33,20 @@ const meta = (name) =>
   });
 
 /**
+ * The social card. The prerender step writes the right one into each page's
+ * HTML, which is what a scraper reads, so this only keeps the live document
+ * honest once React has moved the visitor to another page.
+ */
+const og = (property, value) => {
+  const el = head(`meta[property="${property}"]`, () => {
+    const node = document.createElement('meta');
+    node.setAttribute('property', property);
+    return node;
+  });
+  el.setAttribute('content', value);
+};
+
+/**
  * A veneer or project page also says where it sits in the site, as a
  * breadcrumb trail a search result can show in place of the bare address.
  * `breadcrumbs` is a list of [name, path] from the home page down to this
@@ -58,6 +72,14 @@ const breadcrumbScript = (breadcrumbs) => {
   if (!existing) document.head.appendChild(el);
 };
 
+/**
+ * The page the visitor landed on was prerendered with its own structured data
+ * (a veneer's Product, a project's CreativeWork). Once they navigate within
+ * the app that description belongs to a page they have left, so it goes with
+ * them; the site-wide Organization and WebSite graph in index.html stays.
+ */
+const FIRST_PATH = typeof window === 'undefined' ? null : window.location.pathname;
+
 export default function useDocumentMeta({ title, description, noindex = false, breadcrumbs = null }) {
   const { pathname } = useLocation();
   const trail = breadcrumbs && JSON.stringify(breadcrumbs);
@@ -80,6 +102,14 @@ export default function useDocumentMeta({ title, description, noindex = false, b
       el.setAttribute('rel', 'canonical');
       return el;
     }).setAttribute('href', SITE_URL + pathname);
+
+    if (pathname !== FIRST_PATH) {
+      document.querySelectorAll('script.page-ld').forEach((el) => el.remove());
+    }
+
+    if (title) og('og:title', title);
+    if (description) og('og:description', description);
+    og('og:url', SITE_URL + pathname);
 
     // Only the not-found page asks to be left out, and the tag has to go again
     // when the visitor moves on, or the next page inherits it.
