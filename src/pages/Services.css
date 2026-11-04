@@ -1,57 +1,62 @@
-/* Phone: heading, the sample photograph, then the three services.
-   Wide screens: heading and services in one text column on the left,
-   the photograph beside them on the right. Space does the separating;
-   no rules or numbers. */
-.services-intro { padding: var(--page-top) var(--page-x) var(--section-y); }
-.services-head h1 { margin: 0; max-width: 14ch; font-size: clamp(38px, 4.4vw, 62px); }
-.services-head p { margin: 18px 0 0; max-width: 48ch; font-size: 16px; line-height: 1.8; color: var(--kaiu-muted); }
-
-/* The sheets were shot on white. Each one is its own crop of the photograph
-   and multiply drops any white left at its edges into the page's ivory, so
-   they sit on the page rather than in a box. */
-.services-photo { position: relative; margin-top: 40px; aspect-ratio: 1448 / 1086; }
-.services-sample {
-  --sheet-scale: .93;
-  --sheet-lift: -6px;
-  position: absolute;
-  background-repeat: no-repeat;
-  mix-blend-mode: multiply;
-  transform: scale(var(--sheet-scale));
-  transition: transform .35s cubic-bezier(.16, 1, .3, 1), box-shadow .35s cubic-bezier(.16, 1, .3, 1);
+/* The first section is a wall of sample sheets, edge to edge, with the
+   heading and the services on an ivory panel laid over it. On a phone the
+   wall shows above the panel and down its sides; on a wide screen the panel
+   sits on the left and the wall fills the rest. */
+.services-intro {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: calc(100svh - var(--header-height));
+  padding: 92px 12px 12px;
+  background: var(--kaiu-cream);
 }
-/* In the photograph the rows sit only a few pixels apart, so a lifted sheet
-   would touch the row above. Each sheet shrinks a little about its own
-   centre to open the gaps; on a phone, where the photograph is smallest,
-   a little more, and it rises a little less. */
-@media (max-width: 600px) {
-  .services-sample { --sheet-scale: .9; --sheet-lift: -4px; }
+.services-wall {
+  position: absolute;
+  inset: 0;
+  display: grid;
+}
+.services-panel {
+  position: relative;
+  max-width: 600px;
+  padding: 22px 18px 22px;
+  background: var(--kaiu-cream);
+  box-shadow: 0 24px 60px -30px rgba(51, 40, 36, .45);
+}
+.services-head h1 { margin: 0; max-width: 14ch; font-size: clamp(30px, 4.4vw, 56px); }
+.services-head p { margin: 10px 0 0; max-width: 52ch; font-size: 14px; line-height: 1.6; color: var(--kaiu-muted); }
+
+/* Each sheet is its own crop from inside a sample, all one shape, so it
+   can lift on its own. */
+.services-sample {
+  --sheet-lift: -4px;
+  background-repeat: no-repeat;
+  transition: transform .35s cubic-bezier(.16, 1, .3, 1), box-shadow .35s cubic-bezier(.16, 1, .3, 1);
 }
 /* Only the sheet under the pointer rises, a few pixels, with a soft shadow
    beneath it. Touch screens have no hover, so a tap lifts the sheet the
    same way and lets it straight back down. */
 @media (hover: hover) {
   .services-sample:hover {
-    transform: translateY(var(--sheet-lift)) scale(var(--sheet-scale));
-    box-shadow: 0 14px 22px -12px rgba(51, 40, 36, .45);
+    transform: translateY(var(--sheet-lift));
+    box-shadow: 0 12px 20px -10px rgba(51, 40, 36, .55);
   }
 }
 .services-sample.is-tapped { animation: services-sample-tap .6s ease-in-out; }
 @keyframes services-sample-tap {
-  0%, 100% { transform: scale(var(--sheet-scale)); box-shadow: none; }
-  40% {
-    transform: translateY(var(--sheet-lift)) scale(var(--sheet-scale));
-    box-shadow: 0 14px 22px -12px rgba(51, 40, 36, .45);
-  }
+  0%, 100% { transform: none; box-shadow: none; }
+  40% { transform: translateY(var(--sheet-lift)); box-shadow: 0 12px 20px -10px rgba(51, 40, 36, .55); }
 }
 @media (prefers-reduced-motion: reduce) {
   .services-sample { transition: none; }
   .services-sample.is-tapped { animation: none; }
 }
 
-.services-list { list-style: none; display: grid; gap: 36px; margin: 48px 0 0; padding: 0; }
-.services-list h2 { margin: 0; font-size: clamp(22px, 2vw, 26px); font-weight: 500; line-height: 1.25; }
-.services-list p { margin: 10px 0 0; max-width: 44ch; font-size: 15px; line-height: 1.8; color: var(--kaiu-muted); }
-.services-list .text-cta { margin-top: 18px; }
+.services-list { list-style: none; display: grid; gap: 16px; margin: 18px 0 0; padding: 0; }
+.services-list h2 { margin: 0; font-size: clamp(19px, 1.7vw, 23px); font-weight: 500; line-height: 1.25; }
+.services-list p { margin: 4px 0 0; max-width: 44ch; font-size: 13.5px; line-height: 1.55; color: var(--kaiu-muted); }
+.services-list .text-cta { margin-top: 8px; }
 
 .services-cta {
   display: flex;
@@ -66,15 +71,14 @@
 .services-cta p { margin: 0; max-width: 520px; font-size: 15px; line-height: 1.8; color: var(--kaiu-muted); }
 
 @media (min-width: 901px) {
-  /* The photograph is 1448px wide, so it is held to 720px: sharp on
-     high-density screens. */
-  .services-intro {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 720px);
-    grid-template-rows: auto 1fr;
-    column-gap: clamp(48px, 6vw, 112px);
-  }
-  .services-head { grid-column: 1; grid-row: 1; }
-  .services-list { grid-column: 1; grid-row: 2; align-self: start; gap: 40px; margin-top: 64px; }
-  .services-photo { grid-column: 2; grid-row: 1 / 3; align-self: center; margin-top: 0; }
+  /* One screen tall below the header: the panel sits in the middle of the
+     left side, the three services side by side inside it, and the wall
+     shows all round. */
+  .services-intro { justify-content: center; padding: 40px var(--page-x); }
+  .services-sample { --sheet-lift: -6px; }
+  .services-panel { max-width: 860px; padding: clamp(28px, 4vh, 48px) clamp(28px, 3vw, 48px); }
+  .services-head p { font-size: 15.5px; line-height: 1.7; }
+  .services-list { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; margin-top: clamp(24px, 4vh, 40px); }
+  .services-list p { font-size: 14.5px; line-height: 1.6; }
+  .services-list .text-cta { margin-top: 12px; }
 }

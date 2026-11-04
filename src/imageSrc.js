@@ -37,6 +37,9 @@ const pick = (image, widths, fullWidth) => ({
   srcSet: widths.map((w) => candidate(image, w, fullWidth)).join(', '),
 });
 
+/** One copy of a photograph by width, for a CSS background. */
+export const imageAt = (image, width) => variant(image, width);
+
 /**
  * A veneer swatch in one of the card grids: small on screen and many to a
  * page, so the narrowest copy is the floor.
