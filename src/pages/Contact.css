@@ -87,11 +87,6 @@
 .contact-form .contact-form-field textarea[aria-invalid='true'] {
   border-color: #a4332b;
 }
-.contact-form .contact-optional {
-  font-weight: 400;
-  letter-spacing: .04em;
-  text-transform: none;
-}
 .contact-form .contact-form-field textarea {
   min-height: 100px;
   resize: vertical;

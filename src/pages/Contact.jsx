@@ -220,8 +220,8 @@ export default function Contact() {
               <input id="contact-email" type="email" name="email" required maxLength={254} autoComplete="email" placeholder={t.contact.emailPh} aria-invalid={rejected('email')} />
             </div>
             <div className="contact-form-field">
-              <label htmlFor="contact-phone">{t.contact.phoneField} <span className="contact-optional">({t.contact.optional})</span></label>
-              <input id="contact-phone" type="tel" name="phone" maxLength={40} autoComplete="tel" placeholder={t.contact.phonePh} aria-invalid={rejected('phone')} />
+              <label htmlFor="contact-phone">{t.contact.phoneField}</label>
+              <input id="contact-phone" type="tel" name="phone" required maxLength={40} autoComplete="tel" placeholder={t.contact.phonePh} aria-invalid={rejected('phone')} />
             </div>
             <div className="contact-form-field">
               <label htmlFor="contact-project-type">{t.contact.projectType}</label>
