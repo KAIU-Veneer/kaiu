@@ -200,6 +200,18 @@ export default function Contact() {
 
   return (
     <div className="contact-body page-section" data-header-surface="light">
+      <img
+        className="contact-bg-img"
+        src="/assets/stock%20images/contact-room-w800.webp"
+        srcSet="/assets/stock%20images/contact-room-w800.webp 800w, /assets/stock%20images/contact-room.webp 1234w"
+        sizes="100vw"
+        width="1234"
+        height="1274"
+        alt=""
+        aria-hidden="true"
+        fetchpriority="high"
+      />
+      <div className="contact-bg-wash" aria-hidden="true" />
       <div className="contact-heading">
         <h1>{t.contact.title}</h1>
         <p>{t.contact.intro}</p>
