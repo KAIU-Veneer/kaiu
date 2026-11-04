@@ -11,41 +11,21 @@
    they sit on the page rather than in a box. */
 .services-photo { position: relative; margin-top: 40px; aspect-ratio: 1448 / 1086; }
 .services-sample {
-  --sheet-scale: 1;
-  --sheet-lift: -6px;
   position: absolute;
   background-repeat: no-repeat;
   mix-blend-mode: multiply;
-  transform: scale(var(--sheet-scale));
   transition: transform .35s cubic-bezier(.16, 1, .3, 1), box-shadow .35s cubic-bezier(.16, 1, .3, 1);
 }
-/* On a phone the photograph is small enough that the gaps between sheets
-   are only a few pixels, so a lifted sheet would touch the row above.
-   Each sheet shrinks a little about its own centre to open the gaps,
-   and rises a little less. */
-@media (max-width: 600px) {
-  .services-sample { --sheet-scale: .9; --sheet-lift: -4px; }
-}
 /* Only the sheet under the pointer rises, a few pixels, with a soft shadow
-   beneath it. Touch screens have no hover, so a tap lifts the sheet the
-   same way and lets it straight back down. */
+   beneath it. Touch screens have no hover, so they keep the still photo. */
 @media (hover: hover) {
   .services-sample:hover {
-    transform: translateY(var(--sheet-lift)) scale(var(--sheet-scale));
-    box-shadow: 0 14px 22px -12px rgba(51, 40, 36, .45);
-  }
-}
-.services-sample.is-tapped { animation: services-sample-tap .6s ease-in-out; }
-@keyframes services-sample-tap {
-  0%, 100% { transform: scale(var(--sheet-scale)); box-shadow: none; }
-  40% {
-    transform: translateY(var(--sheet-lift)) scale(var(--sheet-scale));
+    transform: translateY(-6px);
     box-shadow: 0 14px 22px -12px rgba(51, 40, 36, .45);
   }
 }
 @media (prefers-reduced-motion: reduce) {
   .services-sample { transition: none; }
-  .services-sample.is-tapped { animation: none; }
 }
 
 .services-list { list-style: none; display: grid; gap: 36px; margin: 48px 0 0; padding: 0; }
