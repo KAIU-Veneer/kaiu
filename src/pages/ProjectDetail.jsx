@@ -23,6 +23,11 @@ export default function ProjectDetail() {
       ? {
           title: projectTitle(project),
           description: clampDescription(lang === 'id' ? project.idLongDesc : project.longDesc),
+          breadcrumbs: [
+            [t.productDetail.home, '/'],
+            [t.nav.projects, '/projects'],
+            [project.title, `/projects/${project.id}`],
+          ],
         }
       : { title: t.projectDetail.notFound, noindex: true }
   );

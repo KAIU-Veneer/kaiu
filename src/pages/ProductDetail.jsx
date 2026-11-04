@@ -88,6 +88,11 @@ export default function ProductDetail() {
       ? {
           title: productTitle(product, lang),
           description: clampDescription(lang === 'id' ? product.idLongDesc : product.longDesc),
+          breadcrumbs: [
+            [t.productDetail.home, '/'],
+            [t.products.title, '/products'],
+            [product.name, `/products/${product.id}`],
+          ],
         }
       : { title: t.productDetail.notFound, noindex: true }
   );

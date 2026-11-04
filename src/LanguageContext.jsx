@@ -6,7 +6,7 @@ const TRANSLATIONS = {
     // project; those two take their wording from the catalogue itself.
     meta: {
       home: {
-        title: 'KAIU - Wood Veneer',
+        title: 'KAIU - Wood Veneer Supplier in Jakarta',
         description: 'KAIU supplies premium wood veneer to architects, designers, manufacturers and homeowners in Jakarta. Six collections, consistent sheet after sheet.',
       },
       about: {
@@ -120,7 +120,7 @@ const TRANSLATIONS = {
       ctaButton: 'Inquire now',
     },
     products: {
-      title: 'Collections',
+      title: 'Veneer collections',
       toneLabel: 'Tone',
       tones: { all: 'All tones', light: 'Light', warm: 'Warm', cool: 'Cool', dark: 'Dark', colorful: 'Colorful' },
       searchLabel: 'Search', searchPlaceholder: 'oak, burl, sapphire…',
@@ -203,7 +203,7 @@ const TRANSLATIONS = {
   id: {
     meta: {
       home: {
-        title: 'KAIU - Veneer Kayu',
+        title: 'KAIU - Supplier Veneer Kayu di Jakarta',
         description: 'KAIU memasok veneer kayu alami premium untuk arsitek, desainer, produsen, dan pemilik rumah di Jakarta. Enam koleksi, dipotong dan dipasangkan sesuai pesanan.',
       },
       about: {
@@ -317,7 +317,7 @@ const TRANSLATIONS = {
       ctaButton: 'Hubungi kami',
     },
     products: {
-      title: 'Koleksi',
+      title: 'Koleksi veneer',
       toneLabel: 'Nuansa',
       tones: { all: 'Semua nuansa', light: 'Terang', warm: 'Hangat', cool: 'Sejuk', dark: 'Gelap', colorful: 'Berwarna' },
       searchLabel: 'Cari', searchPlaceholder: 'oak, burl, sapphire…',

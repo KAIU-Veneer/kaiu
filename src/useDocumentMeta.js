@@ -32,8 +32,39 @@ const meta = (name) =>
     return el;
   });
 
-export default function useDocumentMeta({ title, description, noindex = false }) {
+/**
+ * A veneer or project page also says where it sits in the site, as a
+ * breadcrumb trail a search result can show in place of the bare address.
+ * `breadcrumbs` is a list of [name, path] from the home page down to this
+ * page; pages without one remove the trail the previous page left behind.
+ */
+const breadcrumbScript = (breadcrumbs) => {
+  const existing = document.getElementById('breadcrumbs-ld');
+  if (!breadcrumbs) {
+    existing?.remove();
+    return;
+  }
+  const el = existing || Object.assign(document.createElement('script'), { id: 'breadcrumbs-ld', type: 'application/ld+json' });
+  el.textContent = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: breadcrumbs.map(([name, path], i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name,
+      item: SITE_URL + path,
+    })),
+  });
+  if (!existing) document.head.appendChild(el);
+};
+
+export default function useDocumentMeta({ title, description, noindex = false, breadcrumbs = null }) {
   const { pathname } = useLocation();
+  const trail = breadcrumbs && JSON.stringify(breadcrumbs);
+
+  useEffect(() => {
+    breadcrumbScript(trail && JSON.parse(trail));
+  }, [trail]);
 
   useEffect(() => {
     if (title) document.title = title;
