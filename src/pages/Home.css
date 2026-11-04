@@ -211,7 +211,14 @@
   min-height: 640px;
   padding: var(--section-y) var(--page-x);
   overflow: hidden;
-  background: var(--section-bg-alt);
+  /* Starts on the ivory of the section above and settles into the tan, so
+     there is no line where the two sections meet. */
+  background: linear-gradient(180deg,
+    rgb(255 248 240) 0%,
+    rgb(253 246 237) 8%,
+    rgb(250 242 232) 16%,
+    rgb(247 238 227) 26%,
+    rgb(243 232 220) 38%);
 }
 .process-photo {
   position: absolute;
@@ -224,9 +231,9 @@
   object-fit: cover;
   object-position: 40% center;
   mix-blend-mode: multiply;
-  /* Fade the photograph's own edge so no seam shows where it starts. */
-  -webkit-mask-image: linear-gradient(180deg, transparent, #000 30%);
-  mask-image: linear-gradient(180deg, transparent, #000 30%);
+  /* Fade every edge of the photograph so no seam shows where it starts. */
+  -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 30%, #000 88%, transparent 100%);
+  mask-image: linear-gradient(180deg, transparent 0%, #000 30%, #000 88%, transparent 100%);
 }
 .process-wash {
   position: absolute;
@@ -237,6 +244,9 @@
     rgb(243 232 220 / .96) 40%,
     rgb(243 232 220 / .55) 56%,
     rgb(243 232 220 / 0) 74%);
+  /* Let the section's ivory-to-tan start show through at the top. */
+  -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 30%);
+  mask-image: linear-gradient(180deg, transparent 0%, #000 30%);
 }
 .process-copy { position: relative; max-width: 560px; }
 .process-copy h2 { margin: 0; font-size: clamp(32px, 3.6vw, 50px); }
@@ -252,8 +262,14 @@
     top: 0;
     width: 64%;
     height: 100%;
-    -webkit-mask-image: linear-gradient(90deg, transparent, #000 30%);
-    mask-image: linear-gradient(90deg, transparent, #000 30%);
+    -webkit-mask-image:
+      linear-gradient(90deg, transparent 0%, rgb(0 0 0 / .2) 9%, rgb(0 0 0 / .55) 18%, rgb(0 0 0 / .88) 26%, #000 34%),
+      linear-gradient(180deg, transparent 0%, #000 24%, #000 84%, transparent 100%);
+    -webkit-mask-composite: source-in;
+    mask-image:
+      linear-gradient(90deg, transparent 0%, rgb(0 0 0 / .2) 9%, rgb(0 0 0 / .55) 18%, rgb(0 0 0 / .88) 26%, #000 34%),
+      linear-gradient(180deg, transparent 0%, #000 24%, #000 84%, transparent 100%);
+    mask-composite: intersect;
   }
   .process-wash {
     background: linear-gradient(90deg,
@@ -262,6 +278,8 @@
       rgb(243 232 220 / .7) 46%,
       rgb(243 232 220 / .15) 60%,
       rgb(243 232 220 / 0) 70%);
+    -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 34%);
+    mask-image: linear-gradient(180deg, transparent 0%, #000 34%);
   }
   .process-copy { width: min(44%, 560px); }
 }
