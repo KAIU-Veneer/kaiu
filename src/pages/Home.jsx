@@ -8,12 +8,12 @@ import useDocumentMeta from '../useDocumentMeta.js';
 import WorkshopVideo from "../components/WorkshopVideo.jsx";
 import "./Home.css";
 
-// Seven real sheets from the range, light to dark, standing edge to edge.
+// Seven real sheets from the range, grey first, then pale to dark, standing edge to edge.
 // One is open at a time so its grain reads; the rest show as narrow strips.
 const SHEET_IDS = [
-  'cairo-soft-white-oak',
-  'cairo-sand-elm',
   'oslo-cement-grey-oak',
+  'cairo-crema-oak',
+  'cannes-sand-walnut',
   'cannes-oak-burl',
   'athens-cocoa-elm',
   'athens-java-smoked-oak',
