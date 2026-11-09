@@ -126,3 +126,22 @@ export const sitemapPaths = (products, projects) => [
   ...projects.map((p) => `/projects/${p.id}`),
   ...products.map((p) => `/products/${p.id}`),
 ];
+
+/**
+ * The two languages each have their own address: English at the root, the
+ * same page in Indonesian under /id. A search engine can only rank what has
+ * an address, so a language chosen by a switch alone is invisible to anyone
+ * searching in it.
+ */
+export const LANG_PREFIX = { en: '', id: '/id' };
+
+export const langFromPath = (pathname) =>
+  pathname === '/id' || pathname.startsWith('/id/') ? 'id' : 'en';
+
+/** `/id/products/x` -> `/products/x`; `/id` -> `/`. */
+export const withoutLang = (pathname) =>
+  langFromPath(pathname) === 'id' ? pathname.slice(3) || '/' : pathname;
+
+/** `/products/x` and 'id' -> `/id/products/x`; `/` and 'id' -> `/id`. */
+export const pathInLang = (route, lang) =>
+  LANG_PREFIX[lang] + (route === '/' && LANG_PREFIX[lang] ? '' : route);

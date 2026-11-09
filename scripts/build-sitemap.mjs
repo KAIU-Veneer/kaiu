@@ -18,7 +18,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { PRODUCTS, PROJECTS } from '../src/data.js';
-import { SITE_URL, sitemapPaths } from '../src/siteMeta.js';
+import { SITE_URL, pathInLang, sitemapPaths } from '../src/siteMeta.js';
 
 const OUT = 'public';
 
@@ -29,12 +29,26 @@ const xml = (s) =>
 
 const paths = sitemapPaths(PRODUCTS, PROJECTS);
 
+// Every page is listed in both languages, each entry naming the other, which
+// is what connects the two versions as one page in two languages.
+const entry = (p, lang) => {
+  const en = xml(SITE_URL + p);
+  const id = xml(SITE_URL + pathInLang(p, 'id'));
+  return [
+    `  <url><loc>${lang === 'id' ? id : en}</loc>`,
+    `    <xhtml:link rel="alternate" hreflang="en" href="${en}"/>`,
+    `    <xhtml:link rel="alternate" hreflang="id" href="${id}"/>`,
+    `    <xhtml:link rel="alternate" hreflang="x-default" href="${en}"/>`,
+    '  </url>',
+  ].join('\n');
+};
+
 // No lastmod: a build timestamp would say every page changed on every deploy,
 // and a date that is not true is worse than no date at all. No changefreq or
 // priority either — Google ignores both.
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${paths.map((p) => `  <url><loc>${xml(SITE_URL + p)}</loc></url>`).join('\n')}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+${paths.flatMap((p) => ['en', 'id'].map((lang) => entry(p, lang))).join('\n')}
 </urlset>
 `;
 
@@ -48,6 +62,6 @@ fs.writeFileSync(path.join(OUT, 'sitemap.xml'), sitemap);
 fs.writeFileSync(path.join(OUT, 'robots.txt'), robots);
 
 console.log(
-  `\nsitemap.xml: ${paths.length} urls (${PRODUCTS.length} veneers, ${PROJECTS.length} projects) at ${SITE_URL}`
+  `\nsitemap.xml: ${paths.length * 2} urls, ${paths.length} pages in two languages (${PRODUCTS.length} veneers, ${PROJECTS.length} projects) at ${SITE_URL}`
 );
 console.log('robots.txt: allows everything, points at the sitemap\n');

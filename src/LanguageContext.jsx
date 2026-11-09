@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
-import { STATIC_META } from './siteMeta.js';
+import { STATIC_META, langFromPath, pathInLang, withoutLang } from './siteMeta.js';
 
 const TRANSLATIONS = {
   en: {
@@ -348,19 +348,55 @@ const TRANSLATIONS = {
 
 const LanguageContext = createContext(null);
 
+/**
+ * The address decides the language, so a page and its language can be linked,
+ * shared and indexed together. The one exception is a visitor who has chosen
+ * Indonesian before and arrives at an English address: they are moved to the
+ * same page under /id before anything renders. Crawlers keep no storage, so
+ * they always get the page they asked for.
+ */
+function languageOnArrival() {
+  const { pathname, search, hash } = window.location;
+  const fromPath = langFromPath(pathname);
+  let saved = null;
+  try { saved = localStorage.getItem('kaiu-lang'); } catch {}
+  if (fromPath === 'en' && saved === 'id') {
+    window.history.replaceState(window.history.state, '', pathInLang(pathname, 'id') + search + hash);
+    return 'id';
+  }
+  return fromPath;
+}
+
 export function LanguageProvider({ children }) {
-  const [lang, setLang] = useState(() => {
-    try { return localStorage.getItem('kaiu-lang') || 'en'; } catch { return 'en'; }
-  });
+  const [lang, setLang] = useState(languageOnArrival);
 
   useEffect(() => {
-    try { localStorage.setItem('kaiu-lang', lang); } catch {}
     // Tells a browser, a screen reader and a crawler which language they are
-    // reading; the markup declares English and the switch has to update it.
+    // reading; the markup declares one and moving between them has to update it.
     document.documentElement.lang = lang;
   }, [lang]);
 
-  const toggle = () => setLang((l) => (l === 'en' ? 'id' : 'en'));
+  // Back and forward can cross from one language's address to the other's.
+  useEffect(() => {
+    const onPop = () => setLang(langFromPath(window.location.pathname));
+    window.addEventListener('popstate', onPop);
+    return () => window.removeEventListener('popstate', onPop);
+  }, []);
+
+  // Moves to the same page in the other language without reloading. The
+  // router restarts on the new address (see main.jsx); the `resume` state is
+  // what tells the page to keep the visitor's place and any filters.
+  const toggle = () => {
+    const next = lang === 'en' ? 'id' : 'en';
+    try { localStorage.setItem('kaiu-lang', next); } catch {}
+    const { pathname, search, hash } = window.location;
+    window.history.pushState(
+      { usr: { resume: true }, key: Math.random().toString(36).slice(2, 10), idx: (window.history.state?.idx ?? 0) + 1 },
+      '',
+      pathInLang(withoutLang(pathname), next) + search + hash
+    );
+    setLang(next);
+  };
 
   const value = { lang, toggle, t: TRANSLATIONS[lang] };
   return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>;

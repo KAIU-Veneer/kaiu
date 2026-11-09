@@ -57,7 +57,7 @@ export default function ScrollToTop() {
 
   useEffect(() => {
     let wanted = 0;
-    if (navigationType === 'POP') wanted = byEntry.get(key) || 0;
+    if (navigationType === 'POP') wanted = byEntry.get(key) || (resuming && byPath.get(pathname)) || 0;
     else if (resuming) wanted = byPath.get(pathname) || 0;
 
     if (!wanted) {

@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { SITE_URL } from './siteMeta.js';
+import { SITE_URL, pathInLang } from './siteMeta.js';
+import { useLanguage } from './LanguageContext.jsx';
 
 /**
  * Gives the page its own title, description and canonical link.
@@ -52,7 +53,7 @@ const og = (property, value) => {
  * `breadcrumbs` is a list of [name, path] from the home page down to this
  * page; pages without one remove the trail the previous page left behind.
  */
-const breadcrumbScript = (breadcrumbs) => {
+const breadcrumbScript = (breadcrumbs, lang) => {
   const existing = document.getElementById('breadcrumbs-ld');
   if (!breadcrumbs) {
     existing?.remove();
@@ -66,7 +67,7 @@ const breadcrumbScript = (breadcrumbs) => {
       '@type': 'ListItem',
       position: i + 1,
       name,
-      item: SITE_URL + path,
+      item: SITE_URL + pathInLang(path, lang),
     })),
   });
   if (!existing) document.head.appendChild(el);
@@ -78,18 +79,39 @@ const breadcrumbScript = (breadcrumbs) => {
  * the app that description belongs to a page they have left, so it goes with
  * them; the site-wide Organization and WebSite graph in index.html stays.
  */
+/**
+ * Each page names its version in the other language, and hreflang tells a
+ * search engine to show whichever suits the person searching. They are left
+ * off a page that is asking not to be indexed.
+ */
+const hreflang = (code, href) => {
+  const selector = `link[rel="alternate"][hreflang="${code}"]`;
+  if (!href) {
+    document.head.querySelector(selector)?.remove();
+    return;
+  }
+  head(selector, () => {
+    const el = document.createElement('link');
+    el.setAttribute('rel', 'alternate');
+    el.setAttribute('hreflang', code);
+    return el;
+  }).setAttribute('href', href);
+};
+
 const FIRST_PATH = typeof window === 'undefined' ? null : window.location.pathname;
 
 export default function useDocumentMeta({ title, description, noindex = false, breadcrumbs = null }) {
   const { pathname } = useLocation();
+  const { lang } = useLanguage();
   const trail = breadcrumbs && JSON.stringify(breadcrumbs);
 
   useEffect(() => {
-    breadcrumbScript(trail && JSON.parse(trail));
-  }, [trail]);
+    breadcrumbScript(trail && JSON.parse(trail), lang);
+  }, [trail, lang]);
 
   useEffect(() => {
     if (title) document.title = title;
+    const url = SITE_URL + pathInLang(pathname, lang);
 
     // Removed rather than left alone when a page has none, or the description
     // of whichever page came before would stay behind and describe this one.
@@ -101,20 +123,24 @@ export default function useDocumentMeta({ title, description, noindex = false, b
       const el = document.createElement('link');
       el.setAttribute('rel', 'canonical');
       return el;
-    }).setAttribute('href', SITE_URL + pathname);
+    }).setAttribute('href', url);
 
-    if (pathname !== FIRST_PATH) {
+    hreflang('en', noindex ? null : SITE_URL + pathname);
+    hreflang('id', noindex ? null : SITE_URL + pathInLang(pathname, 'id'));
+    hreflang('x-default', noindex ? null : SITE_URL + pathname);
+
+    if (pathInLang(pathname, lang) !== FIRST_PATH) {
       document.querySelectorAll('script.page-ld').forEach((el) => el.remove());
     }
 
     if (title) og('og:title', title);
     if (description) og('og:description', description);
-    og('og:url', SITE_URL + pathname);
+    og('og:url', url);
 
     // Only the not-found page asks to be left out, and the tag has to go again
     // when the visitor moves on, or the next page inherits it.
     const robots = document.head.querySelector('meta[name="robots"]');
     if (noindex) meta('robots').setAttribute('content', 'noindex');
     else if (robots) robots.remove();
-  }, [title, description, noindex, pathname]);
+  }, [title, description, noindex, pathname, lang]);
 }

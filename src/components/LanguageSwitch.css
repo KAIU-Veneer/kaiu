@@ -6,6 +6,7 @@
   border: 1px solid rgba(255,248,240,.4);
   border-radius: var(--radius-pill);
   background-color: transparent;
+  text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
