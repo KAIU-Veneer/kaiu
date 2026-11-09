@@ -14,9 +14,9 @@ const STRIP_IMAGES = [
 
 export default function NotFound() {
   const { t } = useLanguage();
-  // Every unknown address is answered with this page and a 200, since the
-  // rewrite hands them all to index.html. Asking to be left out is what
-  // keeps them from being indexed as if each one were a real page.
+  // An unknown address arrives as dist/404.html with a 404 status, which
+  // already asks to be left out; this keeps that true when the visitor
+  // reaches an unknown address from inside the app.
   useDocumentMeta({ ...t.meta.notFound, noindex: true });
   const copyRef = useReveal();
 

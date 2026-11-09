@@ -21,7 +21,7 @@
  */
 import fs from 'node:fs';
 import path from 'node:path';
-import { PRODUCTS, PROJECTS, DEFAULT_DIMENSION } from '../src/data.js';
+import { PRODUCTS, PROJECTS, SERVICES, DEFAULT_DIMENSION } from '../src/data.js';
 import {
   SITE_URL,
   STATIC_META,
@@ -110,9 +110,42 @@ const crumbs = (trail) => ({
 const pages = new Map();
 
 // ---- the pages that exist regardless of the catalogue ----
+// The listing pages also carry their links in the <noscript> block, so a
+// crawler's first pass reaches every veneer and project from them, not only
+// from the sitemap.
+const collections = [...new Set(PRODUCTS.map((p) => p.collectionLabel))];
+const STATIC_NOSCRIPT = {
+  '/products': [
+    '  <h1>Wood veneer collections</h1>',
+    `  <p>${PRODUCTS.length} KAIU veneers across six collections: ${collections.map(esc).join(', ')}.`,
+    `     Standard sheet size ${esc(DEFAULT_DIMENSION)}.</p>`,
+    ...collections.flatMap((label) => [
+      `  <h2>${esc(label)}</h2>`,
+      '  <ul>',
+      ...PRODUCTS.filter((p) => p.collectionLabel === label).map(
+        (p) => `    <li><a href="/products/${esc(p.id)}">${esc(p.name)}</a></li>`
+      ),
+      '  </ul>',
+    ]),
+  ].join('\n'),
+  '/projects': [
+    '  <h1>Projects finished in KAIU veneer</h1>',
+    '  <ul>',
+    ...PROJECTS.map(
+      (p) => `    <li><a href="/projects/${esc(p.id)}">${esc(p.title)}</a>, ${esc(p.room)} in ${esc(p.location)}</li>`
+    ),
+    '  </ul>',
+  ].join('\n'),
+  '/services': [
+    '  <h1>Services</h1>',
+    ...SERVICES.flatMap((s) => [`  <h2>${esc(s.title)}</h2>`, `  <p>${esc(s.desc.trim())}</p>`]),
+    '  <p><a href="/products">Browse the veneer collections</a> · <a href="/contact">Talk to the KAIU team</a></p>',
+  ].join('\n'),
+};
+
 for (const [route, key] of Object.entries(STATIC_META_PATHS)) {
   const { title, description } = STATIC_META.en[key];
-  pages.set(route, { title, description });
+  pages.set(route, { title, description, noscript: STATIC_NOSCRIPT[route] });
 }
 
 // ---- one veneer ----
@@ -235,6 +268,20 @@ for (const route of sitemapPaths(PRODUCTS, PROJECTS)) {
   fs.mkdirSync(path.dirname(file), { recursive: true });
   fs.writeFileSync(file, html);
   written += 1;
+}
+
+// ---- the page for every address that is not one of the above ----
+// Vercel answers any path with no file of its own with dist/404.html and a
+// 404 status, so a mistyped or retired address is reported as missing rather
+// than indexed as a copy of the home page. React still boots and shows the
+// not-found page.
+{
+  let html = render('/', { ...STATIC_META.en.notFound, title: `${STATIC_META.en.notFound.title} - KAIU` });
+  html = html
+    .replace(/\s*<link rel="canonical" href="[^"]*">/, '')
+    .replace(/\s*<meta name="description" content="[^"]*">/, '')
+    .replace('</title>', '</title>\n<meta name="robots" content="noindex">');
+  fs.writeFileSync(path.join(DIST, '404.html'), html);
 }
 
 console.log(

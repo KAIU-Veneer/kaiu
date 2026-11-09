@@ -33,15 +33,15 @@ export const STATIC_META = {
       description: 'How KAIU selects veneer logs, slices them and pairs each face, for people who want the character of real timber without compromise.',
     },
     products: {
-      title: 'Veneer Collections - Athens, Berlin, Cairo, Cannes, Oslo, Zurich',
-      description: 'Browse every KAIU veneer across six collections, from pale Scandinavian oak to deep smoke-dark walnut. Hi-res sheets and room views for each.',
+      title: 'Wood Veneer Collections - Oak, Walnut and Burl - KAIU',
+      description: 'Browse every KAIU wood veneer across six collections, Athens, Berlin, Cairo, Cannes, Oslo and Zurich, from pale oak to smoke-dark walnut.',
     },
     projects: {
       title: 'Projects - Interiors Finished in KAIU Veneer',
       description: 'Recent fit-outs across Jakarta in KAIU veneer, from a private residence in Kuningan to a tea shop in Ciputra Mall and a restaurant in Blok M.',
     },
     services: {
-      title: 'Services - From Veneer to Finished Surface',
+      title: 'Veneer Services - Supply, Panels and Finishing - KAIU',
       description: 'Veneer supply, matching, pressing and finishing. What KAIU can take on between choosing a sheet and installing the surface.',
     },
     contact: {
@@ -60,7 +60,7 @@ export const STATIC_META = {
       description: 'Bagaimana KAIU memilih log veneer, mengirisnya, dan memasangkan setiap permukaan, untuk mereka yang menginginkan karakter kayu asli tanpa kompromi.',
     },
     products: {
-      title: 'Koleksi Veneer - Athens, Berlin, Cairo, Cannes, Oslo, Zurich',
+      title: 'Koleksi Veneer Kayu - Oak, Walnut dan Burl - KAIU',
       description: 'Jelajahi seluruh veneer KAIU dalam enam koleksi, dari oak Skandinavia yang pucat hingga walnut gelap berasap. Lembaran resolusi tinggi dan tampilan ruangan.',
     },
     projects: {
@@ -68,7 +68,7 @@ export const STATIC_META = {
       description: 'Pengerjaan terbaru di Jakarta dengan veneer KAIU, dari hunian pribadi di Kuningan hingga kedai teh di Mal Ciputra dan restoran di Blok M.',
     },
     services: {
-      title: 'Layanan - Dari Veneer hingga Permukaan Akhir',
+      title: 'Layanan Veneer - Suplai, Panel dan Finishing - KAIU',
       description: 'Penyediaan veneer, pencocokan, pengepresan, dan finishing. Apa yang dapat KAIU kerjakan antara memilih lembaran dan memasang permukaannya.',
     },
     contact: {
