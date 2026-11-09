@@ -4630,6 +4630,32 @@ export const PROJECTS = [
     idLongDesc: "Gerai Teazzi di Bandung membawa warna biru merek ini keluar dari papan nama dan masuk ke dalam arsitekturnya. Sapphire mengisi dinding berblok yang memanjang di sepanjang area duduk, berdampingan dengan Pale Tiger Eye, Slate Oak, Golden Walnut, dan Butter Walnut dalam susunan menyerupai grid Mondrian, lalu hadir kembali sebagai bilah menonjol pada meja pemesanan dan sebagai bidang di belakang logo gelas yang menyala. Dilihat dari dekat, seratnya terbaca seperti garis kontur halus yang tergambar di permukaan, dan gerak itulah yang menjaga biru sepekat ini tetap hidup di antara empat kayu yang lebih tenang."
   },
   {
+    id: 'ssc',
+    homeImage: { src: '/assets/projects/ssc/4.webp', w: 1122, h: 1402 },
+    title: 'Sahir Sudirman Center',
+    location: 'Central Jakarta',
+    idLocation: 'Jakarta Pusat',
+    designer: 'SATU ARSITEK',
+    idDesigner: 'SATU ARSITEK',
+    room: 'Office',
+    idRoom: 'Kantor',
+    veneers: ['athens-cider-oak'],
+    images: [
+      { src: '/assets/projects/ssc/1.webp', w: 1600, h: 900 },
+      { src: '/assets/projects/ssc/2.webp', w: 1122, h: 1402 },
+      { src: '/assets/projects/ssc/3.webp', w: 1519, h: 941 },
+      { src: '/assets/projects/ssc/4.webp', w: 1122, h: 1402 },
+      { src: '/assets/projects/ssc/5.webp', w: 1600, h: 811 },
+      { src: '/assets/projects/ssc/6.webp', w: 1122, h: 1402 },
+      { src: '/assets/projects/ssc/7.webp', w: 1122, h: 1402 },
+      { src: '/assets/projects/ssc/8.webp', w: 1600, h: 900 },
+      { src: '/assets/projects/ssc/9.webp', w: 1066, h: 1422 },
+      { src: '/assets/projects/ssc/10.webp', w: 1600, h: 900 },
+    ],
+    longDesc: "An office floor high above Central Jakarta, where Cider Oak carries the warmth through a palette of marble, glass and black steel. It wraps the reception desk, lines the ceiling rafts over the lobby and the boardroom, clads the private offices behind their glazed walls, and returns as the worktops running the length of the open floor. Rift-cut, so the grain stays straight and quiet at the scale of a whole storey, its golden cider tone is what keeps so much stone and glass from reading cold.",
+    idLongDesc: "Satu lantai kantor di ketinggian Jakarta Pusat, tempat Cider Oak membawa kehangatan ke dalam palet marmer, kaca, dan baja hitam. Veneer ini membungkus meja resepsionis, melapisi bidang plafon di atas lobi dan ruang rapat, menutup ruang-ruang kerja pribadi di balik dinding kaca, lalu hadir kembali sebagai meja kerja yang memanjang di area terbuka. Dipotong rift, sehingga seratnya tetap lurus dan tenang pada skala satu lantai penuh, nuansa cider keemasannya itulah yang menjaga begitu banyak batu dan kaca agar tidak terasa dingin."
+  },
+  {
     id: 'pesta-kebun',
     homeImage: { src: '/assets/projects/pesta-kebun/3.webp?v=2', w: 1500, h: 1850 },
     title: 'Pesta Kebun - Blok M',
