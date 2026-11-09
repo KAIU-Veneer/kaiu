@@ -199,7 +199,7 @@ export default function Products() {
   const q = query.trim().toLowerCase();
   const filtered = q
     ? byCollection.filter((p) =>
-        [p.name, p.collectionLabel, p.cut, p.idCut, p.species, p.idSpecies]
+        [p.name, p.collectionLabel, p.species, p.idSpecies]
           .filter(Boolean)
           .some((field) => field.toLowerCase().includes(q))
       )

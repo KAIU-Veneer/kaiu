@@ -53,7 +53,7 @@ export const STATIC_META = {
   id: {
     home: {
       title: 'KAIU - Supplier Veneer Kayu di Jakarta',
-      description: 'KAIU memasok veneer kayu alami premium untuk arsitek, desainer, produsen, dan pemilik rumah di Jakarta. Enam koleksi, dipotong dan dipasangkan sesuai pesanan.',
+      description: 'KAIU memasok veneer kayu premium untuk arsitek, desainer, produsen, dan pemilik rumah di Jakarta. Enam koleksi, konsisten dari lembar ke lembar.',
     },
     about: {
       title: 'Tentang KAIU - Lebih dari Sekadar Permukaan',

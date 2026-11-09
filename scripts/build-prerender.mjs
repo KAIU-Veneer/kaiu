@@ -109,7 +109,7 @@ function render(route, page, lang = 'en') {
 const WORDS = {
   en: {
     home: 'Home', products: 'Products', projects: 'Projects',
-    collection: 'Collection', cut: 'Cut', species: 'Species', sheetSize: 'Sheet size', finish: 'Finish',
+    collection: 'Collection', species: 'Species', sheetSize: 'Sheet size', finish: 'Finish',
     veneerName: (name) => `${name} veneer`,
     collectionCategory: (label) => `${label} veneer`,
     allVeneers: 'All KAIU veneers', requestSample: 'Request a sample',
@@ -126,7 +126,7 @@ const WORDS = {
   },
   id: {
     home: 'Beranda', products: 'Produk', projects: 'Proyek',
-    collection: 'Koleksi', cut: 'Potongan', species: 'Spesies', sheetSize: 'Ukuran lembar', finish: 'Finishing',
+    collection: 'Koleksi', species: 'Spesies', sheetSize: 'Ukuran lembar', finish: 'Finishing',
     veneerName: (name) => `Veneer ${name}`,
     collectionCategory: (label) => `Veneer ${label}`,
     allVeneers: 'Semua veneer KAIU', requestSample: 'Minta sampel',
@@ -242,7 +242,6 @@ function buildPages(lang) {
     const description = clampDescription(longDesc);
     const image = socialImage(product.image);
     const dimension = product.dimension || DEFAULT_DIMENSION;
-    const cut = pick(product, 'cut', lang);
     const species = pick(product, 'species', lang);
 
     pages.set(route, {
@@ -274,7 +273,6 @@ function buildPages(lang) {
           },
           additionalProperty: [
             { '@type': 'PropertyValue', name: w.collection, value: product.collectionLabel },
-            { '@type': 'PropertyValue', name: w.cut, value: cut },
             { '@type': 'PropertyValue', name: w.sheetSize, value: dimension },
             { '@type': 'PropertyValue', name: w.finish, value: pick(product, 'finish', lang) },
           ].filter((p) => p.value),
@@ -289,8 +287,8 @@ function buildPages(lang) {
       noscript: [
         `  <h1>${esc(w.veneerName(product.name))}</h1>`,
         `  <p>${esc(longDesc)}</p>`,
-        `  <p>${w.collection}: ${esc(product.collectionLabel)}. ${w.cut}: ${esc(cut)}.`,
-        `     ${w.species}: ${esc(species)}. ${w.sheetSize}: ${esc(dimension)}.</p>`,
+        `  <p>${w.collection}: ${esc(product.collectionLabel)}. ${w.species}: ${esc(species)}.`,
+        `     ${w.sheetSize}: ${esc(dimension)}.</p>`,
         `  <p><a href="${link('/products')}">${esc(w.allVeneers)}</a> · <a href="${link('/contact')}">${esc(w.requestSample)}</a></p>`,
       ].join('\n'),
     });
