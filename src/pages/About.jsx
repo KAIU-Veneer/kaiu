@@ -15,10 +15,10 @@ const heroShot = PROJECTS.find((p) => p.id === 'teazzi-bandung') || PROJECTS[0];
    shots and never shows the same green swatch twice. */
 const ALL_PROJECT_IMAGES = PROJECTS.flatMap((project) => project.images);
 const CTA_SHOTS = [
-  '/assets/projects/jln-denpasar-kuningan/6.webp',
+  '/assets/projects/jln-denpasar-kuningan/6.webp?v=2',
   '/assets/projects/teazzi/6.webp',
   '/assets/projects/teazzi-bandung/10.webp',
-  '/assets/projects/jln-denpasar-kuningan/3.webp',
+  '/assets/projects/jln-denpasar-kuningan/3.webp?v=2',
   '/assets/projects/teazzi-bandung/7.webp',
 ]
   .map((src) => ALL_PROJECT_IMAGES.find((image) => image.src === src))

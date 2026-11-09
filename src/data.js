@@ -4564,18 +4564,20 @@ export const PROJECTS = [
     // Sizes are the file's own, so the browser can hold the space before the
     // photograph arrives.
     images: [
-      { src: '/assets/projects/jln-denpasar-kuningan/3.webp', w: 1600, h: 2000 },
-      { src: '/assets/projects/jln-denpasar-kuningan/4.webp', w: 1600, h: 2000 },
+      { src: '/assets/projects/jln-denpasar-kuningan/3.webp?v=2', w: 1600, h: 1850 },
+      { src: '/assets/projects/jln-denpasar-kuningan/4.webp?v=2', w: 1600, h: 1850 },
       { src: '/assets/projects/jln-denpasar-kuningan/1.webp?v=2', w: 1600, h: 2133 },
       { src: '/assets/projects/jln-denpasar-kuningan/2.webp?v=2', w: 1600, h: 2133 },
       { src: '/assets/projects/jln-denpasar-kuningan/5.webp?v=2', w: 1600, h: 2133 },
-      { src: '/assets/projects/jln-denpasar-kuningan/6.webp', w: 1600, h: 2000 },
+      { src: '/assets/projects/jln-denpasar-kuningan/6.webp?v=2', w: 1600, h: 1850 },
     ],
     longDesc: "A children's room off Jalan Denpasar in Kuningan, South Jakarta, fitted out for Mr. L in Foresta paired with pale oak. The green figured veneer carries the wardrobe fronts and the panelling that wraps the lower wall, while the oak is kept for the shelves, the drawer stack and the soft-cornered open box above them. Holding the figure to the lower half of the room lets its pattern read up close, at a child's eye level, without crowding the space.",
     idLongDesc: "Kamar anak di Jalan Denpasar, Kuningan, Jakarta Selatan, dikerjakan untuk Bapak L dengan Foresta yang dipadukan bersama oak pucat. Veneer hijau bercorak ini mengisi pintu lemari dan panel yang melingkupi bagian bawah dinding, sementara oak dipakai untuk rak, laci, dan kotak terbuka bersudut lembut di atasnya. Dengan menahan corak hanya di separuh bawah ruangan, polanya tetap terbaca dari dekat, sejajar pandangan anak, tanpa membuat ruang terasa penuh."
   },
   {
     id: 'teazzi',
+    // The home page leads with the veneer itself rather than the shop's sign.
+    homeImage: { src: '/assets/projects/teazzi/4.webp', w: 1086, h: 1448 },
     title: 'Teazzi - Ciputra Mall Jakarta',
     location: 'Ciputra Mall Jakarta',
     idLocation: 'Mal Ciputra Jakarta',
@@ -4597,6 +4599,7 @@ export const PROJECTS = [
   },
   {
     id: 'teazzi-bandung',
+    homeImage: { src: '/assets/projects/teazzi-bandung/6.webp', w: 1121, h: 1403 },
     title: 'Teazzi - Bandung',
     location: 'Bandung, West Java',
     idLocation: 'Bandung, Jawa Barat',
@@ -4628,6 +4631,7 @@ export const PROJECTS = [
   },
   {
     id: 'pesta-kebun',
+    homeImage: { src: '/assets/projects/pesta-kebun/3.webp?v=2', w: 1500, h: 1850 },
     title: 'Pesta Kebun - Blok M',
     location: 'Blok M, South Jakarta',
     idLocation: 'Blok M, Jakarta Selatan',
@@ -4637,11 +4641,11 @@ export const PROJECTS = [
     idRoom: 'Restoran',
     veneers: ['zurich-foresta'],
     images: [
-      { src: '/assets/projects/pesta-kebun/1.webp', w: 1500, h: 2000 },
-      { src: '/assets/projects/pesta-kebun/2.webp', w: 1500, h: 2000 },
-      { src: '/assets/projects/pesta-kebun/3.webp', w: 1500, h: 2000 },
-      { src: '/assets/projects/pesta-kebun/4.webp', w: 1500, h: 2000 },
-      { src: '/assets/projects/pesta-kebun/5.webp', w: 1600, h: 2000 },
+      { src: '/assets/projects/pesta-kebun/1.webp?v=2', w: 1500, h: 1850 },
+      { src: '/assets/projects/pesta-kebun/2.webp?v=2', w: 1500, h: 1850 },
+      { src: '/assets/projects/pesta-kebun/3.webp?v=2', w: 1500, h: 1850 },
+      { src: '/assets/projects/pesta-kebun/4.webp?v=2', w: 1500, h: 1850 },
+      { src: '/assets/projects/pesta-kebun/5.webp?v=2', w: 1600, h: 1850 },
     ],
     longDesc: "At Pesta Kebun in Blok M, Foresta runs along the planter boxes that frame the dining floor, its olive green sitting between the terracotta pots and the planting they hold. Under the restaurant's warm lighting the veneer's rippled figure reads as a quiet texture, so the room still feels like a garden.",
     idLongDesc: "Di Pesta Kebun, Blok M, Foresta mengisi kotak-kotak tanaman yang membingkai area makan, warna hijau zaitunnya berpadu dengan pot terakota dan tanaman di dalamnya. Di bawah pencahayaan hangat restoran, corak bergelombang veneer ini terbaca sebagai tekstur yang tenang, sehingga ruangan tetap terasa seperti taman."

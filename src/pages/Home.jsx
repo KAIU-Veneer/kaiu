@@ -21,6 +21,9 @@ const SHEET_IDS = [
 ];
 const SHEETS = SHEET_IDS.map((id) => PRODUCTS.find((p) => p.id === id));
 
+// A project may name its own photograph for this page; otherwise its lead one.
+const homePhoto = (project) => project.homeImage || project.images[0];
+
 export default function Home() {
   const { t, lang } = useLanguage();
   useDocumentMeta(t.meta.home);
@@ -140,7 +143,7 @@ export default function Home() {
           {heroProjects.map((pr, i) => (
             <img
               key={pr.id}
-              {...projectPhoto(pr.images[0].src)}
+              {...projectPhoto(homePhoto(pr).src)}
               sizes="100vw"
               className={`hero-img${i === slide ? ' is-active' : ''}`}
               alt=""
@@ -271,10 +274,10 @@ export default function Home() {
             <Link key={project.id} to={`/projects/${project.id}`} className="work-card">
               <div className="work-card-image">
                 <img
-                  {...projectPhoto(project.images[0].src)}
+                  {...projectPhoto(homePhoto(project).src)}
                   sizes={IMAGE_SIZES.projectLead}
-                  width={project.images[0].w}
-                  height={project.images[0].h}
+                  width={homePhoto(project).w}
+                  height={homePhoto(project).h}
                   alt={`${project.title}, ${lang === 'id' ? project.idRoom : project.room}`}
                   loading="lazy"
                   decoding="async"
