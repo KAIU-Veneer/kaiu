@@ -3788,6 +3788,8 @@ export const PROJECTS = [
       { src: '/assets/projects/sky/5.webp', w: 1079, h: 1438 },
       { src: '/assets/projects/sky/6.webp', w: 1600, h: 2133 },
       { src: '/assets/projects/sky/7.webp', w: 1600, h: 2133 },
+      { src: '/assets/projects/sky/8.webp', w: 1086, h: 1448 },
+      { src: '/assets/projects/sky/9.webp', w: 1500, h: 2000 },
     ],
     longDesc: "A compact apartment at Sky House BSD, where Butter Walnut lines almost every vertical surface: the full-height wardrobe and door fronts, the joinery that wraps the entry, and the turned base of the dining table beneath a curved cove ceiling. Oak Burl appears only once, as a narrow band set into the pale field, and that single stripe of figure is what keeps a room this quiet from going flat.",
     idLongDesc: "Sebuah apartemen ringkas di Sky House BSD, tempat Butter Walnut melapisi hampir seluruh bidang vertikalnya: muka lemari dan pintu setinggi plafon, kabinet yang membungkus area masuk, dan kaki meja makan di bawah plafon melengkung. Oak Burl hadir hanya sekali, sebagai bilah sempit yang disisipkan pada bidang pucat itu, dan satu guratan figur itulah yang menjaga ruang setenang ini agar tidak terasa datar."
