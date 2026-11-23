@@ -3770,6 +3770,29 @@ export const PROJECTS = [
     idLongDesc: "Gerai Teazzi di Bandung membawa warna biru merek ini keluar dari papan nama dan masuk ke dalam arsitekturnya. Sapphire mengisi dinding berblok yang memanjang di sepanjang area duduk, berdampingan dengan Pale Tiger Eye, Slate Oak, Golden Walnut, dan Butter Walnut dalam susunan menyerupai grid Mondrian, lalu hadir kembali sebagai bilah menonjol pada meja pemesanan dan sebagai bidang di belakang logo gelas yang menyala. Dilihat dari dekat, seratnya terbaca seperti garis kontur halus yang tergambar di permukaan, dan gerak itulah yang menjaga biru sepekat ini tetap hidup di antara empat kayu yang lebih tenang."
   },
   {
+    id: 'skyhouse-bsd',
+    homeImage: { src: '/assets/projects/sky/4.webp', w: 1086, h: 1448 },
+    title: 'Skyhouse Apartment - BSD City',
+    location: 'BSD City, South Tangerang',
+    idLocation: 'BSD City, Tangerang Selatan',
+    designer: 'MIMIC Concept',
+    idDesigner: 'MIMIC Concept',
+    room: 'Private Residence',
+    idRoom: 'Hunian Pribadi',
+    veneers: ['cannes-butter-walnut', 'cannes-oak-burl'],
+    images: [
+      { src: '/assets/projects/sky/1.webp', w: 1086, h: 1448 },
+      { src: '/assets/projects/sky/2.webp', w: 1087, h: 1447 },
+      { src: '/assets/projects/sky/3.webp', w: 1087, h: 1447 },
+      { src: '/assets/projects/sky/4.webp', w: 1086, h: 1448 },
+      { src: '/assets/projects/sky/5.webp', w: 1079, h: 1438 },
+      { src: '/assets/projects/sky/6.webp', w: 1600, h: 2133 },
+      { src: '/assets/projects/sky/7.webp', w: 1600, h: 2133 },
+    ],
+    longDesc: "A compact apartment at Skyhouse BSD, where Butter Walnut lines almost every vertical surface: the full-height wardrobe and door fronts, the joinery that wraps the entry, and the turned base of the dining table beneath a curved cove ceiling. Oak Burl appears only once, as a narrow band set into the pale field, and that single stripe of figure is what keeps a room this quiet from going flat.",
+    idLongDesc: "Sebuah apartemen ringkas di Skyhouse BSD, tempat Butter Walnut melapisi hampir seluruh bidang vertikalnya: muka lemari dan pintu setinggi plafon, kabinet yang membungkus area masuk, dan kaki meja makan di bawah plafon melengkung. Oak Burl hadir hanya sekali, sebagai bilah sempit yang disisipkan pada bidang pucat itu, dan satu guratan figur itulah yang menjaga ruang setenang ini agar tidak terasa datar."
+  },
+  {
     id: 'ssc',
     homeImage: { src: '/assets/projects/ssc/4.webp', w: 1122, h: 1402 },
     title: 'Sahir Sudirman Center',
