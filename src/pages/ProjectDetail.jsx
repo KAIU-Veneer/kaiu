@@ -21,7 +21,7 @@ export default function ProjectDetail() {
   useDocumentMeta(
     project
       ? {
-          title: projectTitle(project),
+          title: projectTitle(project, lang),
           description: clampDescription(lang === 'id' ? project.idLongDesc : project.longDesc),
           breadcrumbs: [
             [t.productDetail.home, '/'],

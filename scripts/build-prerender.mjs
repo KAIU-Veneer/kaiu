@@ -308,7 +308,7 @@ function buildPages(lang) {
       .filter(Boolean);
 
     pages.set(route, {
-      title: projectTitle(project),
+      title: projectTitle(project, lang),
       description,
       image,
       ogType: 'article',

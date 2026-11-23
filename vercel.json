@@ -5,6 +5,12 @@
   "framework": "vite",
   "redirects": [
     {
+      "source": "/:path(.*)",
+      "has": [{ "type": "host", "value": "kaiuveneer.co.id" }],
+      "destination": "https://www.kaiuveneer.co.id/:path",
+      "permanent": true
+    },
+    {
       "source": "/products/berlin-graphite-chedar-tree",
       "destination": "/products/berlin-graphite-cedar-tree",
       "permanent": true

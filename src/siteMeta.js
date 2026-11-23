@@ -25,8 +25,8 @@ export const TITLE_SUFFIX = 'KAIU';
 export const STATIC_META = {
   en: {
     home: {
-      title: 'KAIU - Wood Veneer Supplier in Jakarta',
-      description: 'KAIU supplies premium wood veneer to architects, designers, manufacturers and homeowners in Jakarta. Six collections, consistent sheet after sheet.',
+      title: 'KAIU - Wood Veneer Supplier in Jakarta, Indonesia',
+      description: 'Premium wood veneer supplier in Jakarta for architects, designers, manufacturers and homeowners. Six collections, consistent sheets. Request a sample.',
     },
     about: {
       title: 'About KAIU - More Than a Surface',
@@ -52,15 +52,15 @@ export const STATIC_META = {
   },
   id: {
     home: {
-      title: 'KAIU - Supplier Veneer Kayu di Jakarta',
-      description: 'KAIU memasok veneer kayu premium untuk arsitek, desainer, produsen, dan pemilik rumah di Jakarta. Enam koleksi, konsisten dari lembar ke lembar.',
+      title: 'KAIU - Jual Veneer Kayu Jakarta, Supplier Veneer Premium',
+      description: 'Supplier veneer kayu di Jakarta untuk arsitek, desainer, produsen, dan pemilik rumah. Enam koleksi, konsisten dari lembar ke lembar. Minta sampel.',
     },
     about: {
       title: 'Tentang KAIU - Lebih dari Sekadar Permukaan',
       description: 'Bagaimana KAIU memilih log veneer, mengirisnya, dan memasangkan setiap permukaan, untuk mereka yang menginginkan karakter kayu asli tanpa kompromi.',
     },
     products: {
-      title: 'Koleksi Veneer Kayu - Oak, Walnut dan Burl - KAIU',
+      title: 'Jual Veneer Kayu - Koleksi Oak, Walnut dan Burl - KAIU',
       description: 'Jelajahi seluruh veneer KAIU dalam enam koleksi, dari oak Skandinavia yang pucat hingga walnut gelap berasap. Lembaran resolusi tinggi dan tampilan ruangan.',
     },
     projects: {
@@ -117,8 +117,13 @@ export const productTitle = (product, lang = 'en') =>
     ? `Veneer ${shortProductName(product)} - ${product.collectionLabel} - ${TITLE_SUFFIX}`
     : `${shortProductName(product)} Veneer - ${product.collectionLabel} - ${TITLE_SUFFIX}`;
 
-/** The title bar for one project, e.g. "Teazzi - Blok M - KAIU". */
-export const projectTitle = (project) => `${project.title} - ${TITLE_SUFFIX}`;
+/** The title bar for one project, e.g. "Teazzi - Ciputra Mall Jakarta - Tea Shop in KAIU Veneer". */
+export const projectTitle = (project, lang = 'en') => {
+  const room = (lang === 'id' && project.idRoom) || project.room;
+  return lang === 'id'
+    ? `${project.title} - ${room} dengan Veneer ${TITLE_SUFFIX}`
+    : `${project.title} - ${room} in ${TITLE_SUFFIX} Veneer`;
+};
 
 /** Every page the sitemap should list, in the order a visitor would meet them. */
 export const sitemapPaths = (products, projects) => [
