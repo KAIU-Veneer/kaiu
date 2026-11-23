@@ -624,6 +624,7 @@ export const PRODUCTS = [
     tones: ['cool'],
     species: 'American Black Walnut (Juglans nigra)',
     idSpecies: 'Walnut Hitam Amerika (Juglans nigra)',
+    hiResImage: '/assets/hires/ATHENS ROAST WALNUT.png',
     image: '/assets/image/ATHENS ROAST WALNUT.webp',
     bestFor: 'High-end millwork, luxury hotel interiors, statement desks',
     idBestFor: 'pengerjaan kayu kelas atas, interior hotel mewah, meja kerja statement',
