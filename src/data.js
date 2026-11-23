@@ -410,6 +410,7 @@ export const PRODUCTS = [
     tones: ['cool', 'dark'],
     species: 'Sandalwood (Santalum album)',
     idSpecies: 'Cendana (Santalum album)',
+    hiResImage: '/assets/hires/ATHENS IMPERIAL SANDALWOOD.png',
     image: '/assets/image/ATHENS IMPERIAL SANDALWOOD.webp',
     bestFor: 'Luxury humidors, premium accents, executive suites',
     idBestFor: 'humidor mewah, aksen premium, suite eksekutif',
