@@ -3100,13 +3100,13 @@ export const PRODUCTS = [
     species: 'White Oak (Quercus alba)',
     idSpecies: 'Oak Putih (Quercus alba)',
     hiResImage: '/assets/hires/OSLO PEARL OAK.png',
-    image: '/assets/image/OSLO PEARL OAK.webp',
+    image: '/assets/image/OSLO PEARL OAK.webp?v=2',
     bestFor: 'Boutique retail, bright residential spaces, elegant architectural accents',
     idBestFor: 'ritel butik, ruang residensial yang cerah, aksen arsitektural elegan',
     finish: 'Smooth satin',
     idFinish: 'Satin halus',
-    longDesc: "Oslo Pearl Oak has a clean, straight grain under a soft, pearly pinkish-beige wash. Very consistent, it catches the light with a gentle glow and keeps a room light and refined.",
-    idLongDesc: "Oslo Pearl Oak memiliki serat lurus yang bersih di bawah sapuan warna krem kemerahmudaan berkilau mutiara yang lembut. Sangat konsisten, veneer ini menangkap cahaya dengan kilau lembut dan menjaga ruangan tetap terang dan halus."
+    longDesc: "Oslo Pearl Oak has a straight, close grain under a pale cream-grey wash with a soft pearly sheen. Fine, darker pore lines run the length of the leaf, giving the calm, even surface a quiet texture that keeps a room light and refined.",
+    idLongDesc: "Oslo Pearl Oak memiliki serat lurus dan rapat di bawah sapuan warna krem keabuan yang pucat, dengan kilau mutiara yang lembut. Garis pori halus yang lebih gelap mengalir sepanjang lembaran, memberi tekstur tenang pada permukaan yang rata dan menjaga ruangan tetap terang dan halus."
   },
   {
     id: 'oslo-rose-oak',
