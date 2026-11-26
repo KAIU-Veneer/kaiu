@@ -930,7 +930,7 @@ export const PRODUCTS = [
     species: 'Engineered Wood',
     idSpecies: 'Kayu Rekayasa',
     hiResImage: '/assets/hires/BERLIN BLACK OUT.png',
-    image: '/assets/image/BERLIN BLACK OUT.webp',
+    image: '/assets/image/BERLIN BLACK OUT.webp?v=2',
     bestFor: 'Bar fronts, dramatic accent walls, tactile focal points',
     idBestFor: 'muka bar, dinding aksen dramatis, titik fokus taktil',
     finish: 'Textured matte',
