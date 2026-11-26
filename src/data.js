@@ -3147,7 +3147,7 @@ export const PRODUCTS = [
     tones: ['warm'],
     species: 'White Oak (Quercus alba)',
     idSpecies: 'Oak Putih (Quercus alba)',
-    image: '/assets/image/OSLO SILK GRAIN OAK.webp',
+    image: '/assets/image/OSLO SILK GRAIN OAK.webp?v=2',
     hiResImage: '/assets/hires/OSLO SILK GRAIN OAK.jpg',
     bestFor: 'Seamless architectural paneling, minimalist built-ins, clean environments',
     idBestFor: 'panel arsitektural tanpa sambungan, perabot tanam minimalis, ruang yang bersih',
