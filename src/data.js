@@ -2765,7 +2765,7 @@ export const PRODUCTS = [
     tones: ['light', 'cool'],
     species: 'Engineered Exotic Wood',
     idSpecies: 'Kayu Eksotis Rekayasa',
-    image: '/assets/image/OSLO DRAGON GRAIN.webp',
+    image: '/assets/image/OSLO DRAGON GRAIN.webp?v=2',
     hiResImage: '/assets/hires/OSLO DRAGON GRAIN.png',
     bestFor: 'Dramatic feature walls, avant-garde furniture, luxury retail',
     idBestFor: 'dinding aksen dramatis, furnitur avant-garde, ritel mewah',
