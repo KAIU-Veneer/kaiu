@@ -3033,7 +3033,7 @@ export const PRODUCTS = [
     species: 'American Black Walnut (Juglans nigra)',
     idSpecies: 'Walnut Hitam Amerika (Juglans nigra)',
     hiResImage: '/assets/hires/OSLO OLIVE WALNUT.webp',
-    image: '/assets/image/OSLO OLIVE WALNUT.webp',
+    image: '/assets/image/OSLO OLIVE WALNUT.webp?v=2',
     bestFor: 'Transitional residential design, boutique hotel interiors, modern casework',
     idBestFor: 'desain residensial transisional, interior hotel butik, kabinet modern',
     finish: 'Matte oil',
