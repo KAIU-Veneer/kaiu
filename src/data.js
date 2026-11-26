@@ -2867,7 +2867,7 @@ export const PRODUCTS = [
     tones: ['warm'],
     species: 'White Oak (Quercus alba)',
     idSpecies: 'Oak Putih (Quercus alba)',
-    image: '/assets/image/OSLO IVORY OAK.webp',
+    image: '/assets/image/OSLO IVORY OAK.webp?v=2',
     bestFor: 'Bright modern spaces, airy residential design, sleek architectural woodwork',
     idBestFor: 'ruang modern cerah, desain residensial lapang, pengerjaan kayu arsitektural ramping',
     finish: 'Smooth matte',
