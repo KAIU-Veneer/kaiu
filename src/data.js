@@ -1284,7 +1284,7 @@ export const PRODUCTS = [
     tones: ['cool'],
     species: 'White Oak (Quercus alba)',
     idSpecies: 'Oak Putih (Quercus alba)',
-    image: '/assets/image/BERLIN LAVA OAK.webp?v=2',
+    image: '/assets/image/BERLIN LAVA OAK.webp?v=3',
     bestFor: 'Transitional millwork, custom built-ins, subtle commercial interiors',
     idBestFor: 'pengerjaan kayu transisional, perabot tanam custom, interior komersial halus',
     finish: 'Matte varnish',
