@@ -1437,7 +1437,7 @@ export const PRODUCTS = [
     species: 'Engineered Wood',
     idSpecies: 'Kayu Rekayasa',
     hiResImage: '/assets/hires/BERLIN PEARL STRIPES.png',
-    image: '/assets/image/BERLIN PEARL STRIPES.webp?v=2',
+    image: '/assets/image/BERLIN PEARL STRIPES.webp?v=3',
     bestFor: 'Avant-garde interiors, feature bar fronts, unique architectural doors',
     idBestFor: 'interior avant-garde, muka bar aksen, pintu arsitektural unik',
     finish: 'Matte',
