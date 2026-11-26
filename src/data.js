@@ -3083,7 +3083,7 @@ export const PRODUCTS = [
     tones: ['warm'],
     species: 'American Black Walnut (Juglans nigra)',
     idSpecies: 'Walnut Hitam Amerika (Juglans nigra)',
-    image: '/assets/image/OSLO PASTEL WALNUT.webp?v=5',
+    image: '/assets/image/OSLO PASTEL WALNUT.webp?v=6',
     bestFor: 'Modern commercial interiors, muted residential palettes, sleek built-ins',
     idBestFor: 'interior komersial modern, palet residensial redup, perabot tanam ramping',
     finish: 'Matte lacquer',
