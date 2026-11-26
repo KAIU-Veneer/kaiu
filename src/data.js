@@ -2850,7 +2850,7 @@ export const PRODUCTS = [
     tones: ['cool'],
     species: 'Engineered Rosewood',
     idSpecies: 'Rosewood Rekayasa',
-    image: '/assets/image/OSLO INDIGO ROSE.webp?v=2',
+    image: '/assets/image/OSLO INDIGO ROSE.webp?v=3',
     hiResImage: '/assets/hires/OSLO INDIGO ROSE.png',
     bestFor: 'Coastal modern luxury, tactile feature walls, unique cabinetry',
     idBestFor: 'kemewahan pesisir modern, dinding aksen taktil, kabinet unik',
