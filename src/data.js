@@ -2978,7 +2978,7 @@ export const PRODUCTS = [
     tones: ['cool'],
     species: 'Engineered/Exotic',
     idSpecies: 'Rekayasa/Eksotis',
-    image: '/assets/image/OSLO MIST CAT EYE.webp',
+    image: '/assets/image/OSLO MIST CAT EYE.webp?v=2',
     hiResImage: '/assets/hires/OSLO MIST CAT EYE.png',
     bestFor: 'Statement furniture, dramatic focal points, luxury retail fixtures',
     idBestFor: 'furnitur statement, titik fokus dramatis, perlengkapan ritel mewah',
