@@ -1927,7 +1927,7 @@ export const PRODUCTS = [
     tones: ['warm'],
     species: 'Oak or Ash',
     idSpecies: 'Oak atau Ash',
-    image: '/assets/image/CAIRO NISMU NATURAL.webp',
+    image: '/assets/image/CAIRO NISMU NATURAL.webp?v=2',
     bestFor: 'Tactile focal points, modern rustic interiors, custom built-ins',
     idBestFor: 'titik fokus taktil, interior rustic modern, perabot tanam custom',
     finish: 'Raw matte',
