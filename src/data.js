@@ -2618,7 +2618,7 @@ export const PRODUCTS = [
     tones: ['cool'],
     species: 'Maple (Acer)',
     idSpecies: 'Maple (Acer)',
-    image: '/assets/image/OSLO ANTIQUE GREY.webp?v=2',
+    image: '/assets/image/OSLO ANTIQUE GREY.webp?v=3',
     bestFor: 'Seamless contemporary doors, subtle casework, quiet interior backgrounds',
     idBestFor: 'pintu kontemporer tanpa sambungan, kabinet halus, latar interior yang tenang',
     finish: 'Smooth satin',
