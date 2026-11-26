@@ -2947,7 +2947,7 @@ export const PRODUCTS = [
     tones: ['warm'],
     species: 'Pine (Pinus)',
     idSpecies: 'Pinus (Pinus)',
-    image: '/assets/image/OSLO LIGHT GREY PINE.webp?v=2',
+    image: '/assets/image/OSLO LIGHT GREY PINE.webp?v=3',
     bestFor: 'Airy minimalist spaces, contemporary doors, bright cabinetry',
     idBestFor: 'ruang minimalis lapang, pintu kontemporer, kabinet cerah',
     finish: 'Matte clear',
