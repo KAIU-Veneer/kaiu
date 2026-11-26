@@ -2883,7 +2883,7 @@ export const PRODUCTS = [
     tones: ['cool'],
     species: 'White Ash (Fraxinus americana)',
     idSpecies: 'Ash Putih (Fraxinus americana)',
-    image: '/assets/image/OSLO JADE ASH.webp',
+    image: '/assets/image/OSLO JADE ASH.webp?v=2',
     bestFor: 'High-contrast modern interiors, bespoke furniture, dramatic architectural panels',
     idBestFor: 'interior modern kontras tinggi, furnitur custom, panel arsitektural dramatis',
     finish: 'Matte varnish',
