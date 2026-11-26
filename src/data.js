@@ -3050,7 +3050,7 @@ export const PRODUCTS = [
     species: 'White Ash (Fraxinus americana)',
     idSpecies: 'Ash Putih (Fraxinus americana)',
     hiResImage: '/assets/hires/OSLO PALE ASH.png',
-    image: '/assets/image/OSLO PALE ASH.webp',
+    image: '/assets/image/OSLO PALE ASH.webp?v=2',
     bestFor: 'Airy minimalist spaces, seamless modern joinery, light interior doors',
     idBestFor: 'ruang minimalis lapang, pengerjaan kayu modern tanpa sambungan, pintu interior terang',
     finish: 'Clear matte',
