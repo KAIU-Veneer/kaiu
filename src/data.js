@@ -3200,7 +3200,7 @@ export const PRODUCTS = [
     species: 'Engineered Wood',
     idSpecies: 'Kayu Rekayasa',
     hiResImage: '/assets/hires/OSLO STARLIGHT.png',
-    image: '/assets/image/OSLO STARLIGHT.webp',
+    image: '/assets/image/OSLO STARLIGHT.webp?v=2',
     bestFor: 'Luxury retail fixtures, luminous contemporary panels, seamless joinery',
     idBestFor: 'perlengkapan ritel mewah, panel kontemporer bercahaya, pengerjaan kayu tanpa sambungan',
     finish: 'Satin clear',
