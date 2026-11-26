@@ -842,7 +842,7 @@ export const PRODUCTS = [
     tones: ['light', 'cool'],
     species: 'Engineered Wood',
     idSpecies: 'Kayu Rekayasa',
-    image: '/assets/image/BERLIN ARROW SLATE.webp?v=2',
+    image: '/assets/image/BERLIN ARROW SLATE.webp?v=3',
     hiResImage: '/assets/hires/BERLIN ARROW SLATE.png',
     bestFor: 'Modern minimalist cabinetry, architectural panels, commercial interiors',
     idBestFor: 'kabinet minimalis modern, panel arsitektural, interior komersial',
