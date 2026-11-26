@@ -2583,7 +2583,7 @@ export const PRODUCTS = [
     tones: ['cool'],
     species: 'White Oak (Quercus alba)',
     idSpecies: 'Oak Putih (Quercus alba)',
-    image: '/assets/image/OSLO ALABASTER OAK.webp?v=2',
+    image: '/assets/image/OSLO ALABASTER OAK.webp?v=3',
     hiResImage: '/assets/hires/OSLO ALABASTER OAK.png',
     bestFor: 'Scandinavian minimalist spaces, clean architectural panels, light cabinetry',
     idBestFor: 'ruang minimalis Skandinavia, panel arsitektural bersih, kabinet terang',
