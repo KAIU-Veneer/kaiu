@@ -2682,7 +2682,7 @@ export const PRODUCTS = [
     tones: ['warm'],
     species: 'Elm (Ulmus)',
     idSpecies: 'Elm (Ulmus)',
-    image: '/assets/image/OSLO CHAMPAGNE ELM.webp?v=3',
+    image: '/assets/image/OSLO CHAMPAGNE ELM.webp?v=4',
     hiResImage: '/assets/hires/OSLO CHAMPAGNE ELM.png',
     bestFor: 'High-end hospitality, elegant residential furniture, unique feature panels',
     idBestFor: 'hospitality kelas atas, furnitur residensial elegan, panel aksen unik',
