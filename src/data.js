@@ -3217,7 +3217,7 @@ export const PRODUCTS = [
     tones: ['cool'],
     species: 'White Oak (Quercus alba)',
     idSpecies: 'Oak Putih (Quercus alba)',
-    image: '/assets/image/OSLO STEEL OAK.webp?v=2',
+    image: '/assets/image/OSLO STEEL OAK.webp?v=3',
     bestFor: 'Moody interior accents, industrial modern design, corporate casework',
     idBestFor: 'aksen interior temaram, desain modern industrial, kabinet korporat',
     finish: 'Matte varnish',
