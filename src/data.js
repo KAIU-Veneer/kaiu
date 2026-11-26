@@ -2750,7 +2750,7 @@ export const PRODUCTS = [
     tones: ['cool'],
     species: 'Wenge (Millettia laurentii)',
     idSpecies: 'Wenge (Millettia laurentii)',
-    image: '/assets/image/OSLO DARK WENGE.webp',
+    image: '/assets/image/OSLO DARK WENGE.webp?v=2',
     bestFor: 'Luxury commercial, modern cabinetry, sleek architectural panels',
     idBestFor: 'komersial mewah, kabinet modern, panel arsitektural ramping',
     finish: 'Matte lacquer',
