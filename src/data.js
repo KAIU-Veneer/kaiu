@@ -2916,7 +2916,7 @@ export const PRODUCTS = [
     tones: ['cool'],
     species: 'Swiss Pear (Pyrus communis)',
     idSpecies: 'Pir Swiss (Pyrus communis)',
-    image: '/assets/image/OSLO JADE PEARWOOD.webp?v=2',
+    image: '/assets/image/OSLO JADE PEARWOOD.webp?v=3',
     bestFor: 'Boutique retail, fine cabinetry, subtle residential accents',
     idBestFor: 'ritel butik, kabinet halus, aksen residensial halus',
     finish: 'Smooth matte',
